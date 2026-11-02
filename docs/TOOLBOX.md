@@ -52,7 +52,7 @@ The status applies to our project, not to the general quality of the external to
 - **Project fit:** Core.
 - **Use:** Generate full musical interpretations from perceptual, stylistic, structural, and lyrical descriptions; compare prompt variants and audio references.
 - **Current observations:** The user's experiments suggest that culturally recognizable rhythmic language and performance descriptions can communicate certain complex rhythmic behaviors more effectively than raw arithmetic. This is an empirical hypothesis, not a universal rule.
-- **Important product distinction:** Suno Studio's time-signature grid is an editing aid; the signature is not necessarily passed to the generation model. Meter and structural behavior must be requested in the prompt and checked in the resulting audio.
+- **Important product distinction:** Suno Studio's time-signature selector adjusts the editing grid and metronome; it is not sent to the generation model. Meter and structural behavior must be requested in the prompt and checked in the resulting audio.
 - **Versioning:** Record model/version, mode, sliders, reference inputs, lyrics field, style field, exclusions, and date for every run. Historical prompt limits and token conventions must not be assumed to remain current.
 - **Integration note:** An official Suno MCP beta was announced on 2026-10-28. It requires a separate user-authorized connection. No Suno integration is configured in this project yet.
 
