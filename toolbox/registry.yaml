@@ -1,0 +1,218 @@
+schema_version: 1
+inventory_date: "2026-11-01"
+project: KleineMcKnightMusic
+status_vocabulary:
+  core: "Clear place in the intended workflow."
+  candidate: "Potentially useful; requires local testing or deeper review."
+  reference: "Useful for ideas or examples; not a proposed dependency."
+  experimental: "User-created prototype or unvalidated research direction."
+  hold: "A limitation, maintenance issue, rights question, or integration cost argues against adoption for now."
+
+entries:
+  - id: sonic-pi
+    name: Sonic Pi
+    category: composition_execution
+    status: core
+    role: "Executable composition environment and structural laboratory."
+    source_url: "https://github.com/sonic-pi-net/sonic-pi"
+    upstream_default_branch: dev
+    user_environment_baseline:
+      sonic_pi: "4.5.1 (8oh8)"
+      operating_system: "Windows 10 22H2"
+      verification: "Recorded in supplied environment notes; current installation not reconfirmed."
+    license: "Main source MIT; repository license notes GPLv3-linked components and separate web-app terms."
+    evidence_level: "README and LICENSE.md reviewed; user environment notes available."
+    next_action: "Confirm installed version; validate local cheatsheet and timing behavior."
+
+  - id: sonicpi-metre
+    name: sonicpi-metre
+    category: composition_structure
+    status: candidate
+    role: "Reference implementation for nested metrical trees, rational durations, and probabilistic microtiming."
+    source_url: "https://github.com/MaxTheComputerer/sonicpi-metre"
+    license: "MIT reported in prior first-pass review; recheck before reuse."
+    evidence_level: "Selected source review; not a full audit."
+    risks:
+      - "Uses Sonic Pi internals such as __thread_locals and SonicPi::Core::SPRand."
+    next_action: "Extract metrical concepts into a version-independent model before considering any code reuse."
+
+  - id: sonic-pi-tool
+    name: sonic-pi-tool
+    category: composition_execution
+    status: candidate
+    role: "CLI runner, evaluation, recording, stopping, and OSC control reference."
+    source_url: "https://github.com/emlyn/sonic-pi-tool"
+    license: "MPL-2.0 reported in prior first-pass review; recheck before reuse."
+    evidence_level: "README review in prior conversation."
+    risks:
+      - "README documents a limitation around starting the Sonic Pi server on Windows."
+    next_action: "Test execution and recording against the user's Windows Sonic Pi installation."
+
+  - id: suno
+    name: Suno
+    category: generative_music
+    status: core
+    role: "Primary black-box music-generation system and prompt-experiment target."
+    source_url: "https://suno.com/"
+    license: "Hosted service; platform terms and output rights must be checked for each intended use."
+    evidence_level: "User experiments plus official product/help material reviewed in prior conversation."
+    next_action: "Record model, mode, sliders, prompt fields, exclusions, references, date, and output evaluation for every run."
+    notes:
+      - "Official MCP beta announced 2026-10-28; separate user authorization required."
+      - "Do not assume Studio time-signature grid settings are passed to the generation model."
+
+  - id: audiocraft-musicgen
+    name: AudioCraft / MusicGen
+    category: generative_music
+    status: candidate
+    role: "Alternate generative backend for comparative experiments."
+    source_url: "https://github.com/facebookresearch/audiocraft"
+    license:
+      code: MIT
+      model_weights: "CC-BY-NC 4.0 stated by upstream README for repository model weights."
+    evidence_level: "Upstream README and LICENSE reviewed."
+    next_action: "Check specific checkpoint terms, hardware needs, and feasibility of a controlled prompt comparison."
+    notes:
+      - "AudioCraft README also lists MusicGen Style and JASCO, described as conditioning on chords, melodies, and drum tracks."
+
+  - id: bark
+    name: Bark
+    category: vocal_generation
+    status: candidate
+    role: "Speech and general text-to-audio generation; possible guide-vocal and phonetic stimulus source."
+    source_url: "https://github.com/suno-ai/bark"
+    license:
+      code: MIT
+      checkpoints: "Upstream README states pretrained checkpoints are available for commercial use; verify exact checkpoint terms."
+    evidence_level: "Upstream README and LICENSE reviewed."
+    next_action: "Test speech, nonverbal vocalization, and singing suitability separately; do not assume precise lyric alignment."
+
+  - id: rvc
+    name: Retrieval-based Voice Conversion WebUI
+    category: vocal_transformation
+    status: candidate
+    role: "Voice conversion and voice-model training."
+    source_url: "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI"
+    license:
+      code: MIT
+      data_and_models: "Training recordings, datasets, pretrained models, and individual voice-model rights require separate review."
+    evidence_level: "Upstream README and LICENSE reviewed."
+    next_action: "Evaluate a consented test dataset and compare source-performance quality before and after conversion."
+
+  - id: demucs
+    name: Demucs
+    category: audio_analysis
+    status: hold
+    role: "Music source separation for vocal, drum, bass, and accompaniment analysis."
+    source_url: "https://github.com/facebookresearch/demucs"
+    license: MIT
+    evidence_level: "Upstream README and LICENSE reviewed."
+    risks:
+      - "Upstream repository is archived."
+      - "README states original maintenance has stopped and the linked fork is also not actively maintained."
+    next_action: "Pin and test a known version; compare maintained alternatives before selecting a long-term dependency."
+
+  - id: pedalboard
+    name: Pedalboard
+    category: audio_processing
+    status: candidate
+    role: "Audio I/O, effects, resampling, and rendering from Python."
+    source_url: "https://github.com/spotify/pedalboard"
+    license: GPL-3.0
+    evidence_level: "Upstream README and LICENSE reviewed."
+    risks:
+      - "GPL-3.0 creates distribution and integration constraints."
+    next_action: "Prototype behind an optional adapter and review license compatibility before bundling or distributing."
+
+  - id: vocalis-ai
+    name: Vocalis.ai / Big Pickle
+    category: pipeline_reference
+    status: reference
+    role: "Example architecture combining MusicGen, Bark/XTTS, RVC, Demucs, Pedalboard, and a web backend."
+    source_url: "https://github.com/denizcihatgunsel-star/vocalis.ai"
+    license: "No LICENSE file found in inspected default branch."
+    evidence_level: "README and selected implementation files reviewed in prior conversation; one recorded commit dated 2026-09-10."
+    risks:
+      - "README claims exceed some behaviors visible in inspected implementation."
+      - "Prior first-pass review identified frontend/backend integration concerns."
+    next_action: "Use as architectural reference only; do not adopt or copy code absent license clarification and tests."
+
+  - id: sonicpi-compositions
+    name: sonicPi-compositions
+    category: composition_reference
+    status: reference
+    role: "Examples of live_loop, effects, parameter control, and OSC composition patterns."
+    source_url: "https://github.com/dcts/sonicPi-compositions"
+    evidence_level: "Selected README/source review in prior conversation."
+    next_action: "Select individual examples for version compatibility and license review."
+
+  - id: sonicpi-tutorials
+    name: SonicPi-Tutorials
+    category: learning_reference
+    status: reference
+    role: "Tutorials and educational Sonic Pi examples."
+    source_url: "https://github.com/rbnpi/SonicPi-Tutorials"
+    evidence_level: "README review in prior conversation."
+    risks:
+      - "Materials were written for older Sonic Pi versions."
+    next_action: "Use for concepts, not copy-paste assumptions."
+
+  - id: shader-pi
+    name: shader-pi
+    category: visualization
+    status: reference
+    role: "Sonic Pi and OpenGL shader visualization."
+    source_url: "https://github.com/josephwilk/shader-pi"
+    evidence_level: "Selected repository review in prior conversation."
+    next_action: "Revisit if real-time visual feedback becomes a project requirement."
+
+  - id: sonicpi-unity-osc
+    name: SonicPi-Unity-OSC-Experiment
+    category: visualization
+    status: reference
+    role: "OSC bridge between Sonic Pi and Unity visualization."
+    source_url: "https://github.com/JonLevin25/SonicPi-Unity-OSC-Experiment"
+    evidence_level: "Selected repository review in prior conversation."
+    next_action: "Revisit after the core event/timing model stabilizes."
+
+  - id: user-drum-tab
+    name: Drum-tab converter prototype
+    category: user_authored_composition
+    status: experimental
+    role: "Convert a compact text drum notation into simultaneous sample events and bars."
+    source_artifact: "BIGMOOSIK.txt"
+    license: "User-authored source; publication status not yet authorized."
+    evidence_level: "Prototype description and code located in supplied file; not audited."
+    next_action: "Extract unchanged, write tests for bar parsing, simultaneous lines, sample mapping, and unfinished flam behavior."
+
+  - id: user-codewalker
+    name: CODEWALKER chord path prototype
+    category: user_authored_composition
+    status: experimental
+    role: "Normalize chord inputs and find a stepwise path between chord note collections."
+    source_artifact: "BIGMOOSIK.txt"
+    license: "User-authored source; publication status not yet authorized."
+    evidence_level: "Prototype description and code located in supplied file; not audited."
+    next_action: "Extract unchanged; test inversions, unequal chord sizes, duplicate notes, octave handling, and path optimality."
+
+  - id: geneclect-corpus
+    name: GENECLECT terminology corpus
+    category: musical_knowledge
+    status: experimental
+    role: "Working vocabulary of genre, tradition, technique, and sound descriptors."
+    source_artifact: "geneclect_terminology_corpus.csv and related GENRELAB materials"
+    evidence_level: "304-entry working CSV; not a verified dictionary."
+    next_action: "Deduplicate, normalize, classify, add provenance, and distinguish established terms from coined labels."
+
+  - id: suno-prompt-corpus
+    name: Suno prompt experiment corpus
+    category: experimental_learning
+    status: experimental
+    role: "Preserve and compare prompt grammar, hypotheses, and evaluated outputs."
+    source_artifacts:
+      - "SONGPLAY.txt"
+      - "GOODSONG EXPERIMENTS.txt"
+      - "GENRELAB conversation exports"
+      - "File Set Overview conversation export"
+    evidence_level: "Original prompts and user observations exist; output/settings linkage is incomplete."
+    next_action: "Preserve originals verbatim and create structured experiment records with model/version/settings and human evaluation."
