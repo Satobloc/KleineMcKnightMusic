@@ -1,0 +1,194 @@
+schema_version: 1
+manifest_date: "2026-11-01"
+policy:
+  - "A source being present in this manifest does not grant permission to republish it."
+  - "Preserve original user artifacts verbatim in a private working corpus."
+  - "Only move material into the public repository after authorship, provenance, license, and privacy review."
+  - "Record software-code licenses separately from model-weight, dataset, sample, and generated-output terms."
+
+external_sources:
+  - id: audiocraft
+    url: "https://github.com/facebookresearch/audiocraft"
+    source_type: software_repository
+    reviewed_material: ["README.md", "LICENSE"]
+    license_summary: "Code MIT; repository model weights stated as CC-BY-NC 4.0."
+    review_scope: "README and license review, not dependency or model audit."
+
+  - id: bark
+    url: "https://github.com/suno-ai/bark"
+    source_type: software_repository
+    reviewed_material: ["README.md", "LICENSE"]
+    license_summary: "MIT code; upstream README describes pretrained checkpoints as available for commercial use."
+    review_scope: "README and license review."
+
+  - id: rvc
+    url: "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI"
+    source_type: software_repository
+    reviewed_material: ["README.md", "LICENSE"]
+    license_summary: "MIT code; training data, model weights, and voice rights are separate."
+    review_scope: "README and license review."
+
+  - id: demucs
+    url: "https://github.com/facebookresearch/demucs"
+    source_type: software_repository
+    reviewed_material: ["README.md", "LICENSE"]
+    license_summary: "MIT code."
+    maintenance_note: "Repository archived; README says it is no longer maintained."
+    review_scope: "README and license review."
+
+  - id: pedalboard
+    url: "https://github.com/spotify/pedalboard"
+    source_type: software_repository
+    reviewed_material: ["README.md", "LICENSE"]
+    license_summary: "GPL-3.0."
+    review_scope: "README and license review."
+
+  - id: sonic_pi
+    url: "https://github.com/sonic-pi-net/sonic-pi"
+    source_type: software_repository
+    reviewed_material: ["README.md", "LICENSE.md"]
+    license_summary: "Main source code MIT; LICENSE.md notes GPLv3-linked components and separate web-app terms."
+    review_scope: "README and license overview review."
+
+  - id: vocalis_ai
+    url: "https://github.com/denizcihatgunsel-star/vocalis.ai"
+    source_type: software_repository
+    reviewed_material: ["README.md", "selected backend and ML pipeline files"]
+    license_summary: "No LICENSE file found in inspected default branch."
+    maintenance_note: "One recorded commit dated 2026-09-10."
+    review_scope: "Selected-file first-pass review, not full audit."
+
+  - id: sonicpi_metre
+    url: "https://github.com/MaxTheComputerer/sonicpi-metre"
+    source_type: software_repository
+    license_summary: "MIT recorded in prior first-pass review; recheck before reuse."
+    review_scope: "Selected source review; internal Sonic Pi APIs identified."
+
+  - id: sonic_pi_tool
+    url: "https://github.com/emlyn/sonic-pi-tool"
+    source_type: software_repository
+    license_summary: "MPL-2.0 recorded in prior first-pass review; recheck before reuse."
+    review_scope: "README review; Windows server-start limitation noted."
+
+  - id: sonicpi_compositions
+    url: "https://github.com/dcts/sonicPi-compositions"
+    source_type: software_repository
+    license_summary: "Not verified."
+    review_scope: "Selected README/source review."
+
+  - id: sonicpi_tutorials
+    url: "https://github.com/rbnpi/SonicPi-Tutorials"
+    source_type: software_repository
+    license_summary: "Not verified."
+    review_scope: "README review; older Sonic Pi generation."
+
+  - id: shader_pi
+    url: "https://github.com/josephwilk/shader-pi"
+    source_type: software_repository
+    license_summary: "Not verified."
+    review_scope: "Selected repository review."
+
+  - id: sonicpi_unity_osc
+    url: "https://github.com/JonLevin25/SonicPi-Unity-OSC-Experiment"
+    source_type: software_repository
+    license_summary: "Not verified."
+    review_scope: "Selected repository review."
+
+  - id: sonicpi_music
+    url: "https://github.com/luiscript/SonicPi-Music"
+    source_type: software_repository
+    license_summary: "Not verified."
+    review_scope: "Repository identified as a composition/sample reference."
+
+  - id: leuphana_sonicpi
+    url: "https://github.com/mbutz/sonicpi-leuphana-ws1718"
+    source_type: software_repository
+    license_summary: "Not verified."
+    maintenance_note: "Archived."
+    review_scope: "Repository identified as an educational algorithmic-composition reference."
+
+user_supplied_sources:
+  - id: bigmoosik
+    filename: "BIGMOOSIK.txt"
+    source_type: user_authored_mixed_document
+    contains:
+      - "Drum-tab converter prototype"
+      - "CODEWALKER chord path prototype"
+      - "Song sketches and lyrics"
+    privacy: "Private working corpus."
+    publication: "Not authorized."
+    next_action: "Extract relevant code unchanged for audit; keep unrelated personal material private."
+
+  - id: sonic_pi_environment
+    filename: "SONIC_PI_environment_rules.txt"
+    source_type: user_authored_environment_notes
+    contains: ["Windows 10 22H2 baseline", "Sonic Pi 4.5.1 (8oh8)", "operational notes"]
+    privacy: "Private source; derived environment profile may be published after review."
+    publication: "Do not copy wholesale."
+
+  - id: sonic_pi_cheatsheets
+    filename: "SONIC PI CHEATSHEETS.txt"
+    source_type: user_authored_reference_compilation
+    contains: ["Sonic Pi syntax and examples", "synth and effect references", "randomization and timing"]
+    privacy: "Private working corpus."
+    publication: "Verify and rewrite original documentation-derived material with attribution before publication."
+
+  - id: songplay
+    filename: "SONGPLAY.txt"
+    source_type: user_authored_prompt_experiment
+    contains: ["Original Suno prompt syntax", "section and layer cues", "rhythmic syllable patterns"]
+    privacy: "Private working corpus."
+    publication: "Preserve exact source; publish only after user approval."
+
+  - id: good_song_experiments
+    filename: "GOODSONG EXPERIMENTS.txt"
+    source_type: user_authored_experiment_log
+    contains: ["Prompts and outputs marked as successful"]
+    privacy: "Private working corpus."
+    publication: "Need prompt/output/settings linkage and rights review."
+
+  - id: genrelab
+    filename: "GENRELAB — raw(1).txt"
+    source_type: conversation_export
+    contains: ["Genrebuild iterations", "prompt grammar", "genre and tradition vocabulary", "user hypotheses"]
+    privacy: "Private conversation export."
+    publication: "Do not publish raw conversation; extract attributed user-authored concepts selectively."
+
+  - id: file_set_overview
+    filename: "File Set Overview — raw(1).txt"
+    source_type: conversation_export
+    contains: ["Music history", "audio experiments", "Suno prompting observations"]
+    privacy: "Private conversation export."
+    publication: "Do not publish raw conversation; extract relevant user-authored observations selectively."
+
+  - id: geneclect_terminology
+    filename: "geneclect_terminology_corpus.csv"
+    source_type: user_compiled_terminology_corpus
+    contains: ["304 working terminology entries"]
+    privacy: "Working research corpus."
+    publication: "Not yet approved; verify terms, descriptions, and sources."
+
+  - id: reference_tracks
+    filename: "TOP SONGS 2017-20.txt"
+    source_type: user_reference_track_list
+    contains: ["Track and artist references"]
+    privacy: "Private preference/research material."
+    publication: "Do not republish copyrighted lyrics, audio, or unlicensed descriptive text."
+
+  - id: lyric_and_prose_materials
+    filenames:
+      - "23 amanda lyrics.txt"
+      - "songsketch.txt"
+      - "melodywork.txt"
+      - "LYRIC_MINE.txt"
+      - "QUIPS.txt"
+    source_type: user_authored_or_mixed_creative_material
+    privacy: "Private."
+    publication: "Do not publish by default. LYRIC_MINE requires source and copyright/public-domain review."
+
+  - id: unrelated_creative_material
+    filenames:
+      - "McKnight Sentencewise.txt"
+    source_type: creative_writing_material
+    privacy: "Private and outside the core music toolbox."
+    publication: "Keep separate unless explicitly connected to the music project."
