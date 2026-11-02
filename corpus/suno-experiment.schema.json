@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Satobloc/KleineMcKnightMusic/blob/main/corpus/suno-experiment.schema.json",
+  "title": "Suno Experimental Record",
+  "description": "A provenance-aware experimental record. Raw prompts and personal/account data belong in a private store, not public records.",
+  "type": "object",
+  "required": ["experiment_id", "evidence_status", "source_record_ids"],
+  "properties": {
+    "experiment_id": {"type": "string", "description": "Stable project-assigned ID."},
+    "hypothesis": {"type": ["string", "null"]},
+    "evidence_status": {"type": "string", "enum": ["planned", "source_observed", "audio_measured", "human_evaluated", "analyzed", "incomplete"]},
+    "source_record_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "prompt_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "private_prompt_locator": {"type": ["string", "null"], "description": "Private storage key only; never a public URL."},
+    "record_type": {"type": ["string", "null"]},
+    "task": {"type": ["string", "null"]},
+    "model_version": {"type": ["string", "null"]},
+    "model_name": {"type": ["string", "null"]},
+    "generation_mode": {"type": ["string", "null"]},
+    "settings": {"type": ["object", "null"], "additionalProperties": true},
+    "input_clip_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "output_clip_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "created_at": {"type": ["string", "null"], "format": "date-time"},
+    "audio_checksums": {"type": "object", "additionalProperties": {"type": "string"}},
+    "measurements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["feature", "status"],
+        "properties": {
+          "feature": {"type": "string"},
+          "value": {},
+          "unit": {"type": ["string", "null"]},
+          "method": {"type": ["string", "null"]},
+          "software_version": {"type": ["string", "null"]},
+          "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+          "status": {"type": "string", "enum": ["measured", "estimated", "inferred", "unknown"]}
+        },
+        "additionalProperties": false
+      }
+    },
+    "generator_descriptions": {
+      "type": "array",
+      "description": "Suno-generated tags/descriptions, explicitly not ground truth.",
+      "items": {
+        "type": "object",
+        "required": ["text", "source"],
+        "properties": {
+          "text": {"type": "string"},
+          "source": {"const": "generator"},
+          "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1}
+        }
+      }
+    },
+    "human_evaluations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rubric", "assessment"],
+        "properties": {
+          "listener_id": {"type": ["string", "null"], "description": "Use a private pseudonymous ID."},
+          "rubric": {"type": "string"},
+          "assessment": {"type": "string"},
+          "timestamps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "start_seconds": {"type": "number", "minimum": 0},
+                "end_seconds": {"type": "number", "minimum": 0},
+                "note": {"type": "string"}
+              },
+              "required": ["start_seconds", "end_seconds", "note"]
+            }
+          }
+        }
+      }
+    },
+    "changed_variables": {"type": "array", "items": {"type": "string"}},
+    "confounds": {"type": "array", "items": {"type": "string"}},
+    "conclusion": {"type": ["string", "null"]},
+    "confidence": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "rights_status": {"type": ["string", "null"]},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
