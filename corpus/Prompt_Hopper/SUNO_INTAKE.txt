@@ -1,0 +1,1034 @@
+===============================================================================
+HISTORICAL SOUND RECORDING — MAXIMAL CATALOG / RESEARCH / TRANSFER RECORD
+===============================================================================
+
+FIELD STATUS CONVENTIONS
+------------------------
+[ ] = not yet researched / blank
+UNK = unknown
+N/S = not stated by source
+N/A = not applicable
+UNCERT = uncertain / provisional
+INFERRED = inferred rather than explicitly documented
+VERIFIED = independently verified
+TRANSCRIBED = transcribed directly from object/source
+DERIVED = calculated or technically derived
+
+===============================================================================
+A. RECORD IDENTITY
+===============================================================================
+
+Local Record ID:                         [ ]
+Archive Record ID:                       [ ]
+Collection ID:                           [ ]
+Collection Name:                         [ ]
+Subcollection / Series:                  [ ]
+Repository / Institution:                [ ]
+Department / Archive:                    [ ]
+Catalog / Database Name:                 [ ]
+Catalog Record URL:                      [ ]
+Persistent URL / Permalink:              [ ]
+ARK / Handle / DOI / URI:                [ ]
+Accession Number:                        [ ]
+Object Number:                           [ ]
+Shelfmark / Call Number:                 [ ]
+Matrix Record ID:                        [ ]
+Cylinder Record ID:                      [ ]
+Discography Record ID:                   [ ]
+WorldCat / OCLC Number:                  [ ]
+Other External Identifier(s):            [ ]
+
+Record Created By:                       [ ]
+Record Creation Date:                    [ ]
+Record Last Revised By:                  [ ]
+Record Last Revision Date:               [ ]
+Cataloging Standard / Schema:             [ ]
+Cataloging Confidence:                   [ ]
+
+===============================================================================
+B. PRIMARY TITLE INFORMATION
+===============================================================================
+
+Primary Title:                           [ ]
+Title as Printed on Object:              [ ]
+Title as Announced in Recording:         [ ]
+Title as Cataloged:                      [ ]
+Alternate Title(s):                      [ ]
+Variant Title(s):                        [ ]
+Former Title(s):                         [ ]
+Parallel Title(s):                       [ ]
+Translated Title:                        [ ]
+Uniform / Authorized Title:              [ ]
+Work Title:                              [ ]
+Series Title:                            [ ]
+Movement / Section Title:                [ ]
+Part Number:                             [ ]
+Part Title:                              [ ]
+Medley Title:                            [ ]
+Contents Title(s):                       [ ]
+Descriptive Supplied Title:              [ ]
+Untitled?:                               [ ]
+Title Source:                            [ ]
+Title Source Notes:                      [ ]
+Title Certainty:                         [ ]
+
+===============================================================================
+C. WORK / COMPOSITION / TEXT
+===============================================================================
+
+Work Type:                               [ ]
+Composition / Work:                      [ ]
+Parent Work:                             [ ]
+Opera / Show / Musical / Play:           [ ]
+Movement / Number:                       [ ]
+Song / Tune Name:                        [ ]
+Traditional Tune?:                       [ ]
+Composer(s):                             [ ]
+Composer Authority ID(s):                [ ]
+Lyricist(s):                             [ ]
+Librettist(s):                           [ ]
+Arranger(s):                             [ ]
+Adaptor(s):                              [ ]
+Translator(s):                           [ ]
+Author(s):                               [ ]
+Poet(s):                                 [ ]
+Speaker Text Author(s):                  [ ]
+Anonymous / Traditional Attribution:     [ ]
+Publisher of Composition:                [ ]
+Date of Composition:                     [ ]
+Date of Publication:                     [ ]
+Copyright Date of Work:                  [ ]
+Composition Source:                      [ ]
+Composition Source Notes:                [ ]
+
+===============================================================================
+D. PERFORMERS / PARTICIPANTS
+===============================================================================
+
+Principal Performer(s):                  [ ]
+Featured Performer(s):                   [ ]
+Vocalist(s):                             [ ]
+Vocal Range / Voice Type(s):             [ ]
+Speaker(s):                              [ ]
+Narrator(s):                             [ ]
+Announcer(s):                            [ ]
+Interviewer(s):                          [ ]
+Interviewee(s):                          [ ]
+Instrumentalist(s):                      [ ]
+Instrument(s):                           [ ]
+Conductor:                               [ ]
+Orchestra:                               [ ]
+Band:                                    [ ]
+Ensemble:                                [ ]
+Quartet / Trio / Group:                  [ ]
+Choir / Chorus:                          [ ]
+Unidentified Performer(s):               [ ]
+Other Participant(s):                    [ ]
+
+Performer Role Notes:                    [ ]
+Personnel Source:                        [ ]
+Personnel Source Notes:                  [ ]
+Personnel Confidence:                    [ ]
+
+===============================================================================
+E. PERFORMANCE / CONTENT CLASSIFICATION
+===============================================================================
+
+General Description:                     [ ]
+Detailed Description:                    [ ]
+Category:                                [ ]
+Subcategory:                             [ ]
+Genre:                                   [ ]
+Form:                                    [ ]
+Style:                                   [ ]
+Subject(s):                              [ ]
+Keywords:                                [ ]
+Topical Terms:                           [ ]
+Geographic Subject(s):                   [ ]
+Named Person Subject(s):                 [ ]
+Named Event Subject(s):                  [ ]
+Named Organization Subject(s):           [ ]
+Period / Era Represented:                [ ]
+
+Vocal / Instrumental / Spoken:           [ ]
+Solo / Ensemble:                         [ ]
+Sacred / Secular:                        [ ]
+Commercial / Noncommercial:              [ ]
+Studio / Field / Live / Broadcast:       [ ]
+Music / Speech / Ambience / Mixed:       [ ]
+Complete / Excerpt / Fragment:           [ ]
+Original Recording / Dub / Copy:         [ ]
+
+Language(s):                             [ ]
+Dialect(s):                              [ ]
+Accent(s):                               [ ]
+Nonverbal Vocalization(s):               [ ]
+Sung Language(s):                        [ ]
+Spoken Language(s):                      [ ]
+
+===============================================================================
+F. RECORDING SESSION / TAKE INFORMATION
+===============================================================================
+
+Recording Date — Exact:                  [ ]
+Recording Date — Earliest Possible:      [ ]
+Recording Date — Latest Possible:        [ ]
+Recording Date Display Form:             [ ]
+Recording Date Certainty:                [ ]
+Dating Basis:                            [ ]
+
+Recording Time of Day:                   [ ]
+Recording Time Certainty:                [ ]
+
+Recording Country:                       [ ]
+Recording State / Province:              [ ]
+Recording County:                        [ ]
+Recording City:                          [ ]
+Recording Venue:                         [ ]
+Recording Studio:                        [ ]
+Recording Room / Stage:                  [ ]
+Recording Street Address:                [ ]
+Recording Geographic Coordinates:        [ ]
+Place Certainty / Alternatives:           [ ]
+
+Session Number:                          [ ]
+Session ID:                              [ ]
+Matrix Number:                           [ ]
+Matrix Prefix:                           [ ]
+Matrix Suffix:                           [ ]
+Take Number:                             [ ]
+Take Letter:                             [ ]
+Take Status:                             [ ]
+Take Sequence:                           [ ]
+Master / Alternate / Test / Reject:      [ ]
+Issued Take?:                            [ ]
+Take Shown on Object?:                   [ ]
+Take Identification Method:              [ ]
+Take Notes:                              [ ]
+
+Recording Engineer:                      [ ]
+Recording Supervisor:                    [ ]
+Producer:                                [ ]
+A&R / Recording Director:                [ ]
+Recording Company:                       [ ]
+Recording Company Location:              [ ]
+Original Recording Technology:           [ ]
+Acoustic / Electrical:                   [ ]
+Microphone(s), if known:                 [ ]
+Recording Horn, if known:                [ ]
+Original Recording Equipment:            [ ]
+Original Recording Speed:                [ ]
+Original Recording Equalization:         [ ]
+
+Session Notes:                           [ ]
+Session Source(s):                       [ ]
+
+===============================================================================
+G. LABEL / MANUFACTURER / ISSUE INFORMATION
+===============================================================================
+
+Label Name:                              [ ]
+Label Variant:                           [ ]
+Label Series:                            [ ]
+Catalog Number:                          [ ]
+Issue Number:                            [ ]
+Release Number:                          [ ]
+Master Number:                           [ ]
+Control Number:                          [ ]
+Stamped Number(s):                       [ ]
+Etched Number(s):                        [ ]
+Handwritten Number(s):                   [ ]
+
+Recording Company:                       [ ]
+Manufacturing Company:                   [ ]
+Pressing Plant:                          [ ]
+Distributor:                             [ ]
+Publisher:                               [ ]
+
+Country of Issue:                        [ ]
+Place of Issue:                          [ ]
+Issue Date — Exact:                      [ ]
+Issue Date — Approximate:                [ ]
+Issue Date Range:                        [ ]
+Reissue Date:                            [ ]
+Release Status:                          [ ]
+Commercially Issued?:                    [ ]
+Unissued?:                               [ ]
+Promotional / Test Pressing?:            [ ]
+
+Edition / Issue:                         [ ]
+Pressing / Generation:                   [ ]
+Issue Notes:                             [ ]
+Return / Recall Information:             [ ]
+Copies Produced / Ordered:               [ ]
+Known Sales / Distribution Notes:        [ ]
+
+===============================================================================
+H. PHYSICAL CARRIER
+===============================================================================
+
+Carrier Type:                            [ ]
+  cylinder / disc / open reel / wire / cassette / DAT / Minidisc /
+  lacquer / instantaneous disc / other:  [ ]
+
+Carrier Subtype:                         [ ]
+Format Name:                             [ ]
+Master / Production / Consumer Copy:     [ ]
+
+Material:                                [ ]
+  wax / celluloid / shellac / lacquer /
+  vinyl / acetate / magnetic tape / other: [ ]
+
+Color:                                   [ ]
+Diameter:                                [ ]
+Master Size:                             [ ]
+Cylinder Length:                         [ ]
+Cylinder Diameter:                       [ ]
+Disc Diameter:                           [ ]
+Disc Thickness:                          [ ]
+Tape Width:                              [ ]
+Reel Diameter:                           [ ]
+
+Nominal Speed:                           [ ]
+Measured Playback Speed:                 [ ]
+RPM:                                     [ ]
+Cylinder Type:                           [ ]
+2-Minute / 4-Minute / Other:             [ ]
+Groove Type:                             [ ]
+Groove Direction:                        [ ]
+Coarse / Fine Groove:                    [ ]
+Vertical / Lateral Cut:                  [ ]
+Recording Direction:                     [ ]
+Track Configuration:                     [ ]
+Track Count:                             [ ]
+Sides:                                   [ ]
+Recorded Side(s):                        [ ]
+Channels:                                [ ]
+Mono / Stereo / Multichannel:            [ ]
+
+Start Groove / End Groove:               [ ]
+Locked Groove?:                          [ ]
+Lead-In Present?:                        [ ]
+Lead-Out Present?:                       [ ]
+
+Label Present?:                          [ ]
+Label Color:                             [ ]
+Label Transcription:                     [ ]
+Label Typography Notes:                  [ ]
+Label Illustration / Logo:               [ ]
+Label Damage:                            [ ]
+
+Sleeve / Box / Container:                [ ]
+Container Text:                          [ ]
+Container Manufacturer:                  [ ]
+Container Identifier(s):                 [ ]
+Inserts / Documentation:                 [ ]
+
+Physical Object Notes:                   [ ]
+
+===============================================================================
+I. PHYSICAL CONDITION
+===============================================================================
+
+Overall Condition:                       [ ]
+Surface Wear:                            [ ]
+Groove Wear:                             [ ]
+Scratches:                               [ ]
+Cracks:                                  [ ]
+Chips:                                   [ ]
+Breaks:                                  [ ]
+Warping:                                 [ ]
+Eccentricity:                            [ ]
+Shrinkage:                               [ ]
+Mold / Mildew:                           [ ]
+Dirt / Deposits:                         [ ]
+Oxidation / Corrosion:                   [ ]
+Delamination:                            [ ]
+Binder Deterioration:                    [ ]
+Sticky-Shed Syndrome:                    [ ]
+Splices:                                 [ ]
+Tape Creases:                            [ ]
+Tape Stretching:                         [ ]
+Print-Through:                           [ ]
+Missing Material:                        [ ]
+Previous Repairs:                        [ ]
+Other Damage:                            [ ]
+
+Playable Without Intervention?:          [ ]
+Cleaning Performed?:                     [ ]
+Cleaning Method:                         [ ]
+Repair / Conservation Performed?:        [ ]
+Conservation Notes:                      [ ]
+Handling Restrictions:                  [ ]
+
+===============================================================================
+J. ARCHIVAL SOURCE / PROVENANCE
+===============================================================================
+
+Current Owner / Custodian:               [ ]
+Owning Institution:                      [ ]
+Collection:                              [ ]
+Donor / Source:                          [ ]
+Acquisition Method:                      [ ]
+Acquisition Date:                        [ ]
+Previous Owner(s):                       [ ]
+Collector(s):                            [ ]
+Provenance Chain:                        [ ]
+Known Copy History:                      [ ]
+Generation from Original:                [ ]
+Original / Dub / Copy / Reissue:         [ ]
+Source Object Used for Transfer:         [ ]
+Source Object Identifier:                [ ]
+Source Location:                         [ ]
+
+Provenance Notes:                        [ ]
+Provenance Confidence:                   [ ]
+
+===============================================================================
+K. PLAYBACK / DIGITIZATION SESSION
+===============================================================================
+
+Digitization Institution:                [ ]
+Digitization Facility:                   [ ]
+Digitization Studio / Lab:               [ ]
+Digitization Date:                       [ ]
+Digitization Operator:                   [ ]
+Transfer Engineer:                       [ ]
+Restoration Engineer:                    [ ]
+Digitization Project:                    [ ]
+Digitization Batch:                      [ ]
+Transfer Session ID:                     [ ]
+
+Playback Device:                         [ ]
+Playback Device Model:                   [ ]
+Turntable / Cylinder Machine:            [ ]
+Tonearm:                                 [ ]
+Cartridge:                               [ ]
+Stylus Manufacturer:                     [ ]
+Stylus Type:                             [ ]
+Stylus Size:                             [ ]
+Stylus Profile:                          [ ]
+Stylus Selection Basis:                  [ ]
+Mandrel Type / Size:                     [ ]
+Head Configuration:                     [ ]
+Tape Machine:                            [ ]
+Cassette / DAT / MD Device:              [ ]
+
+Playback Speed:                          [ ]
+Speed Correction Applied?:               [ ]
+Speed Correction Amount:                 [ ]
+Pitch Reference Used?:                   [ ]
+Pitch Reference Instrument:              [ ]
+Pitch / Speed Notes:                     [ ]
+
+Azimuth Setting:                         [ ]
+Azimuth Correction Applied?:             [ ]
+Tracking Force:                          [ ]
+Anti-Skate:                              [ ]
+Channel Orientation:                     [ ]
+Polarity:                                [ ]
+Phase Notes:                             [ ]
+
+Preamp:                                  [ ]
+Preamp Mode:                             [ ]
+Flat Transfer?:                          [ ]
+Playback EQ Curve:                       [ ]
+EQ Applied During Playback?:             [ ]
+EQ Applied Post-Transfer?:               [ ]
+EQ Notes:                                [ ]
+
+Noise Reduction Hardware:                [ ]
+Dolby Type:                              [ ]
+DBX Type:                                [ ]
+Other NR System:                         [ ]
+
+Analog-to-Digital Converter:             [ ]
+ADC Sample Rate:                         [ ]
+ADC Bit Depth:                           [ ]
+ADC Channels:                            [ ]
+ADC Clock Source:                        [ ]
+
+Audio Interface / Digital I/O:           [ ]
+Workstation:                             [ ]
+DAW Software:                            [ ]
+DAW Version:                             [ ]
+
+Monitoring Speakers:                     [ ]
+Monitoring Headphones:                   [ ]
+Monitor Controller:                      [ ]
+Metering Equipment:                      [ ]
+
+Signal Flow:
+  Source Object ->                        [ ]
+  Playback Machine ->                     [ ]
+  Stylus / Head ->                        [ ]
+  Cartridge / Pickup ->                   [ ]
+  Preamp ->                               [ ]
+  EQ ->                                   [ ]
+  Restoration Hardware ->                 [ ]
+  ADC ->                                  [ ]
+  Digital I/O ->                          [ ]
+  DAW ->                                  [ ]
+  Master File ->                          [ ]
+
+Patchbay / Routing Notes:                [ ]
+Isolation / Power Conditioning:          [ ]
+Other Playback Equipment:                [ ]
+
+===============================================================================
+L. RESTORATION / SIGNAL PROCESSING
+===============================================================================
+
+Raw Flat Transfer Preserved?:            [ ]
+Unprocessed Preservation Master?:        [ ]
+Access Copy Processed?:                  [ ]
+
+Declicking Applied?:                     [ ]
+Declicker Hardware / Software:            [ ]
+Declick Settings:                        [ ]
+
+Decrackling Applied?:                    [ ]
+Decrackler Hardware / Software:           [ ]
+Decrackle Settings:                      [ ]
+
+Dehissing Applied?:                      [ ]
+Dehisser Hardware / Software:             [ ]
+Dehiss Settings:                         [ ]
+
+Debuzzing Applied?:                      [ ]
+Debuzzer Hardware / Software:             [ ]
+Debuzz Settings:                         [ ]
+
+Azimuth Correction Applied?:             [ ]
+Azimuth Tool:                            [ ]
+Azimuth Settings:                        [ ]
+
+Impulse Noise Reduction?:                [ ]
+Noise Suppressor?:                       [ ]
+Hum Removal?:                            [ ]
+DC Offset Correction?:                   [ ]
+Click Repair?:                           [ ]
+Dropout Repair?:                         [ ]
+Interpolation?:                          [ ]
+Spectral Repair?:                        [ ]
+Wow Correction?:                         [ ]
+Flutter Correction?:                     [ ]
+Speed Drift Correction?:                 [ ]
+Pitch Correction?:                       [ ]
+Equalization?:                           [ ]
+Dynamic Processing?:                     [ ]
+Compression / Limiting?:                 [ ]
+Normalization?:                          [ ]
+Gain Adjustment?:                        [ ]
+Channel Summing?:                        [ ]
+Channel Selection?:                      [ ]
+Stereo Reconstruction?:                  [ ]
+
+Processing Order:                        [ ]
+Processing Parameters:                   [ ]
+Processing Software / Hardware:          [ ]
+Processing Engineer:                     [ ]
+Processing Date:                         [ ]
+
+Restoration Philosophy / Notes:          [ ]
+
+===============================================================================
+M. DIGITAL PRESERVATION MASTER
+===============================================================================
+
+Master Filename:                         [ ]
+Original Filename:                       [ ]
+Filename Convention:                     [ ]
+File Format:                             [ ]
+Container Format:                        [ ]
+Audio Codec:                             [ ]
+Codec Profile:                           [ ]
+
+Sample Rate:                             [ ]
+Bit Depth:                               [ ]
+Bitrate:                                 [ ]
+Variable / Constant Bitrate:             [ ]
+Channel Count:                           [ ]
+Channel Layout:                          [ ]
+Mono / Stereo:                           [ ]
+Duration — HH:MM:SS:                     [ ]
+Duration — Seconds:                      [ ]
+File Size:                               [ ]
+
+Peak Level:                              [ ]
+True Peak:                               [ ]
+RMS Level:                               [ ]
+Integrated Loudness:                     [ ]
+Dynamic Range:                           [ ]
+DC Offset:                               [ ]
+Clipping Detected?:                      [ ]
+Silence at Head:                         [ ]
+Silence at Tail:                         [ ]
+
+Checksum Type:                           [ ]
+Checksum:                                [ ]
+Fixity Verification Date:                [ ]
+Preservation Storage Location:           [ ]
+Backup Location(s):                      [ ]
+
+===============================================================================
+N. ACCESS / DERIVATIVE FILE
+===============================================================================
+
+Access Filename:                         [ ]
+Access Format:                           [ ]
+Access Codec:                            [ ]
+Access Sample Rate:                      [ ]
+Access Bit Depth:                        [ ]
+Access Bitrate:                          [ ]
+Access Channels:                         [ ]
+Access Duration:                         [ ]
+Access File Size:                        [ ]
+Streaming URL:                           [ ]
+Download URL:                            [ ]
+
+Derived From Master:                     [ ]
+Derivative Creation Date:                [ ]
+Derivative Software:                     [ ]
+Derivative Processing:                   [ ]
+
+===============================================================================
+O. EMBEDDED FILE METADATA / TAGS
+===============================================================================
+
+Metadata Container:                      [ ]
+ID3 Version:                             [ ]
+
+Embedded Title:                          [ ]
+Embedded Artist / Performer:             [ ]
+Embedded Album / Collection:             [ ]
+Embedded Album Artist:                   [ ]
+Embedded Year / Date:                    [ ]
+Embedded Track Number:                   [ ]
+Embedded Disc Number:                    [ ]
+Embedded Genre:                          [ ]
+Embedded Composer:                       [ ]
+Embedded Copyright:                      [ ]
+Embedded Comment:                        [ ]
+Embedded Publisher:                      [ ]
+Embedded URL:                            [ ]
+Embedded Encoder:                        [ ]
+Embedded Artwork?:                       [ ]
+Embedded Lyrics / Transcript?:           [ ]
+
+Other Embedded Tags:
+  Tag: [ ]   Value: [ ]
+  Tag: [ ]   Value: [ ]
+  Tag: [ ]   Value: [ ]
+  Tag: [ ]   Value: [ ]
+
+Tag / Catalog Discrepancies:             [ ]
+
+===============================================================================
+P. AUDIO CONTENT — STRUCTURAL LISTENING NOTES
+===============================================================================
+
+Audible Content Begins:                  [ ]
+Audible Program Begins:                  [ ]
+Audible Program Ends:                    [ ]
+Recording Ends:                          [ ]
+
+Opening Announcement?:                   [ ]
+Opening Announcement Start/End:          [ ]
+Announcer Text:                          [ ]
+
+Spoken Introduction?:                    [ ]
+Spoken Introduction Transcript:          [ ]
+
+Performance Start:                       [ ]
+Performance End:                         [ ]
+
+Closing Announcement?:                   [ ]
+Closing Announcement Transcript:         [ ]
+
+Sections / Movements / Items:
+  00:00:00  [ ]
+  00:00:00  [ ]
+  00:00:00  [ ]
+  00:00:00  [ ]
+  00:00:00  [ ]
+  00:00:00  [ ]
+  00:00:00  [ ]
+  00:00:00  [ ]
+
+Musical Introduction:                    [ ]
+Verse(s):                                [ ]
+Chorus / Refrain:                        [ ]
+Bridge:                                  [ ]
+Instrumental Break:                      [ ]
+Coda / Ending:                           [ ]
+Medley Transitions:                      [ ]
+
+Applause?:                               [ ]
+Audience Noise?:                         [ ]
+Studio Noise?:                           [ ]
+Operator Voice?:                         [ ]
+Count-In?:                               [ ]
+False Start?:                            [ ]
+Restart?:                                [ ]
+Retake Audible?:                         [ ]
+Off-Mic Speech?:                         [ ]
+Incidental Conversation?:               [ ]
+Mechanical Noise?:                       [ ]
+Environmental Sound?:                   [ ]
+
+===============================================================================
+Q. TRANSCRIPTION / LYRICS / SPEECH
+===============================================================================
+
+Transcription Status:
+  [ ] not begun
+  [ ] partial
+  [ ] complete
+  [ ] checked
+  [ ] independently verified
+
+Transcriber:                             [ ]
+Transcription Date:                      [ ]
+Transcription Method:                    [ ]
+Transcription Source:                    [ ]
+
+Verbatim Transcript:
+-------------------------------------------------------------------------------
+[ ]
+
+-------------------------------------------------------------------------------
+
+Normalized Transcript:
+-------------------------------------------------------------------------------
+[ ]
+
+-------------------------------------------------------------------------------
+
+Lyrics:
+-------------------------------------------------------------------------------
+[ ]
+
+-------------------------------------------------------------------------------
+
+Uncertain Words / Passages:
+  Timecode: [ ]  Heard as: [ ]  Alternatives: [ ]  Confidence: [ ]
+  Timecode: [ ]  Heard as: [ ]  Alternatives: [ ]  Confidence: [ ]
+  Timecode: [ ]  Heard as: [ ]  Alternatives: [ ]  Confidence: [ ]
+
+Non-Speech Vocal Sounds:                 [ ]
+Pronunciation / Dialect Notes:           [ ]
+Archaic Terms / Slang:                   [ ]
+Names Mentioned:                         [ ]
+Places Mentioned:                        [ ]
+Organizations Mentioned:                 [ ]
+Products / Brands Mentioned:             [ ]
+Events Mentioned:                        [ ]
+
+===============================================================================
+R. MUSICAL DESCRIPTION
+===============================================================================
+
+Instrumentation Heard:                   [ ]
+Instrumentation Cataloged:               [ ]
+Voices Heard:                            [ ]
+Number of Performers Estimated:           [ ]
+Ensemble Type:                           [ ]
+Lead Instrument / Voice:                 [ ]
+Accompaniment:                           [ ]
+
+Key / Tonal Center:                      [ ]
+Mode:                                    [ ]
+Tempo:                                   [ ]
+Estimated BPM:                           [ ]
+Meter:                                   [ ]
+Rhythmic Character:                      [ ]
+Form:                                    [ ]
+Arrangement Notes:                       [ ]
+Performance Style:                       [ ]
+Vocal Style:                             [ ]
+Instrumental Style:                      [ ]
+
+Tune / Melody Identification:            [ ]
+Medley Components:
+  1. [ ]
+  2. [ ]
+  3. [ ]
+  4. [ ]
+  5. [ ]
+
+Musical Quotation(s):                    [ ]
+Possible Tune Relationships:             [ ]
+
+===============================================================================
+S. AUDIBLE RECORDING CHARACTERISTICS
+===============================================================================
+
+Overall Fidelity:                        [ ]
+Frequency Range — Subjective:            [ ]
+Frequency Range — Measured:              [ ]
+Noise Floor:                             [ ]
+Signal-to-Noise Ratio:                   [ ]
+
+Surface Noise:                           [ ]
+Hiss:                                    [ ]
+Crackle:                                 [ ]
+Clicks / Pops:                           [ ]
+Hum:                                     [ ]
+Buzz:                                    [ ]
+Mechanical Rumble:                       [ ]
+Horn / Acoustic Resonance:               [ ]
+Distortion:                              [ ]
+Overload:                                [ ]
+Clipping:                                [ ]
+Sibilance Distortion:                    [ ]
+Wow:                                     [ ]
+Flutter:                                 [ ]
+Pitch Drift:                             [ ]
+Speed Instability:                       [ ]
+Dropouts:                                [ ]
+Level Changes:                           [ ]
+Channel Imbalance:                       [ ]
+Phase Problems:                          [ ]
+Azimuth Problems:                        [ ]
+Print-Through:                           [ ]
+Echo / Room Reverberation:               [ ]
+Acoustic Horn Coloration:                [ ]
+Frequency-Dependent Wear:                [ ]
+
+Best-Preserved Passage:                  [ ]
+Worst-Damaged Passage:                   [ ]
+Major Defect Timecodes:                  [ ]
+
+===============================================================================
+T. TECHNICAL / SIGNAL ANALYSIS
+===============================================================================
+
+Measured Duration:                       [ ]
+Measured Sample Rate:                    [ ]
+Measured Channels:                       [ ]
+Measured Bitrate:                        [ ]
+Measured Peak:                           [ ]
+Measured RMS:                            [ ]
+Measured Loudness:                       [ ]
+Measured Noise Floor:                    [ ]
+
+Fundamental Hum Frequency:               [ ]
+Mains Frequency Evidence:                [ ]
+Speed / Pitch Estimate:                  [ ]
+Estimated Original RPM:                  [ ]
+
+Spectrogram Examined?:                   [ ]
+Waveform Examined?:                      [ ]
+Frequency Spectrum Examined?:            [ ]
+Phase / Correlation Examined?:           [ ]
+
+Technical Analysis Notes:                [ ]
+
+===============================================================================
+U. DOCUMENTARY / HISTORICAL CONTEXT
+===============================================================================
+
+Historical Period:                       [ ]
+Historical Event Context:                [ ]
+Cultural Context:                        [ ]
+Social Context:                          [ ]
+Technological Context:                   [ ]
+Recording-Industry Context:              [ ]
+
+Why This Recording Matters:              [ ]
+Relationship to Other Recordings:        [ ]
+First / Earliest / Rare Status Claims:   [ ]
+Basis for Such Claims:                   [ ]
+
+Biographical Notes — Performer(s):       [ ]
+Biographical Notes — Composer(s):        [ ]
+Company / Label History Notes:           [ ]
+
+Contemporary Reception:                  [ ]
+Advertisements / Catalog Listings:       [ ]
+Reviews / Newspaper References:          [ ]
+Sheet Music Relationship:                [ ]
+Published Lyrics Relationship:           [ ]
+
+===============================================================================
+V. SOURCE DOCUMENTATION / EVIDENCE
+===============================================================================
+
+Object Examined Directly?:               [ ]
+Disc / Cylinder Examined?:               [ ]
+Label Examined?:                         [ ]
+Container Examined?:                     [ ]
+Catalog Consulted?:                      [ ]
+Ledger Consulted?:                       [ ]
+Published Discography Consulted?:        [ ]
+Audio Heard Directly?:                   [ ]
+
+Source Abbreviations:
+  [ ] = [ ]
+  [ ] = [ ]
+  [ ] = [ ]
+
+Primary Source(s):
+  1. [ ]
+  2. [ ]
+  3. [ ]
+
+Secondary Source(s):
+  1. [ ]
+  2. [ ]
+  3. [ ]
+
+Discographical Source(s):
+  1. [ ]
+  2. [ ]
+  3. [ ]
+
+Conflicting Sources:                     [ ]
+Conflict Description:                    [ ]
+Preferred Interpretation:                [ ]
+Reason for Preference:                   [ ]
+
+Unverified Claims:                       [ ]
+Research Needed:                         [ ]
+
+===============================================================================
+W. RIGHTS / ACCESS
+===============================================================================
+
+Copyright Status — Recording:            [ ]
+Copyright Status — Composition:          [ ]
+Copyright Status — Lyrics / Text:        [ ]
+Public Domain?:                          [ ]
+Public Domain Basis:                     [ ]
+Rights Holder(s):                        [ ]
+License:                                 [ ]
+Creative Commons License:                [ ]
+Usage Restrictions:                      [ ]
+Noncommercial Restriction?:              [ ]
+Attribution Requirement:                 [ ]
+Territorial Restrictions:                [ ]
+Streaming Restrictions:                  [ ]
+Download Restrictions:                   [ ]
+
+Rights Statement URL:                    [ ]
+Terms of Use URL:                        [ ]
+Permissions Contact:                     [ ]
+
+===============================================================================
+X. CITATION
+===============================================================================
+
+Repository Preferred Citation:           [ ]
+
+Chicago Citation:
+[ ]
+
+MLA Citation:
+[ ]
+
+APA Citation:
+[ ]
+
+Short Citation:
+[ ]
+
+Audio Citation:
+[ ]
+
+Catalog Access Date:                     [ ]
+Audio Access Date:                       [ ]
+
+===============================================================================
+Y. LINKS / RELATED RESOURCES
+===============================================================================
+
+Catalog Record:                          [ ]
+Audio Stream:                            [ ]
+Audio Download:                          [ ]
+Preservation Master:                     [ ]
+Object Images:                           [ ]
+Label Image:                             [ ]
+Container Image:                         [ ]
+Spectrogram:                             [ ]
+Waveform:                                [ ]
+Transcript:                              [ ]
+Lyrics:                                  [ ]
+Sheet Music:                             [ ]
+Discography Entry:                       [ ]
+WorldCat:                                [ ]
+Internet Archive:                        [ ]
+Library of Congress:                     [ ]
+Other Repository:                        [ ]
+Performer Authority Record:              [ ]
+Composer Authority Record:               [ ]
+Wikipedia / Reference:                   [ ]
+Related Recording(s):                    [ ]
+
+===============================================================================
+Z. RESEARCH / INTERPRETATION NOTES
+===============================================================================
+
+Cataloger Notes:
+[ ]
+
+Listening Notes:
+[ ]
+
+Historical Notes:
+[ ]
+
+Technical Notes:
+[ ]
+
+Discographical Notes:
+[ ]
+
+Transcription Notes:
+[ ]
+
+Uncertainties:
+[ ]
+
+Contradictions:
+[ ]
+
+Questions for Further Research:
+[ ]
+
+Potential Cross-References:
+[ ]
+
+Interesting Incidental Details:
+[ ]
+
+===============================================================================
+AA. PROVENANCE OF THIS DATA RECORD
+===============================================================================
+
+FIELDS COPIED DIRECTLY FROM SOURCE:
+[ ]
+
+FIELDS TRANSCRIBED FROM AUDIO:
+[ ]
+
+FIELDS DERIVED FROM DIGITAL FILE:
+[ ]
+
+FIELDS INFERRED:
+[ ]
+
+FIELDS SUPPLIED BY EXTERNAL RESEARCH:
+[ ]
+
+FIELDS STILL UNVERIFIED:
+[ ]
+
+LAST HUMAN REVIEW:
+Reviewer:                                [ ]
+Date:                                    [ ]
+Status:                                  [ ]
+
+===============================================================================
+END RECORD
+===============================================================================
