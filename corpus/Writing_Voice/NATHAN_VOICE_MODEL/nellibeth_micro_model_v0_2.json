@@ -1,0 +1,799 @@
+{
+  "schema_version": "0.2",
+  "source": {
+    "title": "NELLIBETH [submission draft]",
+    "note": "Source-grounded micro-model; still not a sentence-level exhaustive encoding."
+  },
+  "entities": {
+    "MAC": {
+      "kind": "character",
+      "label": "MacElray Dresch"
+    },
+    "POULA": {
+      "kind": "character",
+      "label": "Poula E. Santiban"
+    },
+    "UNC": {
+      "kind": "character",
+      "label": "Unc"
+    },
+    "RAYNE": {
+      "kind": "character",
+      "label": "Rayne"
+    },
+    "LIZZIE": {
+      "kind": "character",
+      "label": "Lizzie"
+    },
+    "DOUG": {
+      "kind": "character",
+      "label": "Doug Lenzler"
+    },
+    "NELLIBETH": {
+      "kind": "animal",
+      "label": "Nellibeth"
+    },
+    "NELLIBETH2": {
+      "kind": "synthetic_animal",
+      "label": "Nellibeth-2"
+    },
+    "RANCH": {
+      "kind": "place_asset",
+      "label": "ranch/conservatory"
+    },
+    "NUTRIELLE": {
+      "kind": "institution",
+      "label": "Nutrielle"
+    },
+    "LAB_CREATURE": {
+      "kind": "organism",
+      "label": "concealed organism in Poula's apartment"
+    },
+    "DEBT": {
+      "kind": "obligation",
+      "label": "liability to Lizzie's family"
+    },
+    "CAREER": {
+      "kind": "path",
+      "label": "edible tissue engineering"
+    }
+  },
+  "facts": [
+    {
+      "id": "F_MAC_DRANK",
+      "subject": "MAC",
+      "predicate": "drank_before_old_accident",
+      "object": true,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_RAYNE_DRANK",
+      "subject": "RAYNE",
+      "predicate": "drank_before_old_accident",
+      "object": false,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_MAC_MUD",
+      "subject": "MAC",
+      "predicate": "put_mud_on_Nellibeth",
+      "object": true,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_ACCIDENT_CAUSE",
+      "subject": "MAC",
+      "predicate": "initiated_chain_causing_Lizzie_death_and_Rayne_injury",
+      "object": true,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_DOUG_SELF",
+      "subject": "DOUG",
+      "predicate": "self_modified_using_Poula_techniques",
+      "object": true,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_POULA_DOUG",
+      "subject": "POULA",
+      "predicate": "created_Doug",
+      "object": false,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_LAB_ID",
+      "subject": "LAB_CREATURE",
+      "predicate": "project_identity",
+      "object": "Nellibeth-2",
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_PATENT",
+      "subject": "NUTRIELLE",
+      "predicate": "claims_Poula_patents",
+      "object": true,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_RANCH_BUY",
+      "subject": "POULA",
+      "predicate": "intends_to_buy",
+      "object": "RANCH",
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_NELLIBETH_DEAD",
+      "subject": "NELLIBETH",
+      "predicate": "dies_in_gully",
+      "object": true,
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_N2_SYNTH",
+      "subject": "NELLIBETH2",
+      "predicate": "is_synthetic_replacement_for",
+      "object": "NELLIBETH",
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_DEBT",
+      "subject": "MAC",
+      "predicate": "owes_liability",
+      "object": "DEBT",
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    },
+    {
+      "id": "F_CAREER",
+      "subject": "MAC",
+      "predicate": "seeks_work_in",
+      "object": "CAREER",
+      "truth": true,
+      "layer": "world",
+      "source": "submission_draft"
+    }
+  ],
+  "beliefs": [
+    {
+      "id": "B_MAC_RAYNE",
+      "holder": "MAC",
+      "fact_id": "F_RAYNE_DRANK",
+      "stance": "believes_false",
+      "confidence": "high",
+      "acquired_at": "E_OLD_ACCIDENT",
+      "source": "submission_draft"
+    },
+    {
+      "id": "B_POULA_RAYNE",
+      "holder": "POULA",
+      "fact_id": "F_RAYNE_DRANK",
+      "stance": "believes_true",
+      "confidence": "high",
+      "acquired_at": "E_MAC_LIE",
+      "source": "submission_draft"
+    },
+    {
+      "id": "B_READER_RAYNE",
+      "holder": "reader",
+      "fact_id": "F_RAYNE_DRANK",
+      "stance": "believes_true",
+      "confidence": "medium",
+      "acquired_at": "E_MAC_LIE",
+      "source": "submission_draft"
+    },
+    {
+      "id": "B_MAC_DOUG",
+      "holder": "MAC",
+      "fact_id": "F_POULA_DOUG",
+      "stance": "believes_true",
+      "confidence": "high",
+      "acquired_at": "E_DOUG_WARNING",
+      "source": "submission_draft"
+    },
+    {
+      "id": "B_READER_DOUG",
+      "holder": "reader",
+      "fact_id": "F_POULA_DOUG",
+      "stance": "suspects",
+      "confidence": "medium",
+      "acquired_at": "E_LAB_DISCOVERY",
+      "source": "submission_draft"
+    },
+    {
+      "id": "B_MAC_LAB",
+      "holder": "MAC",
+      "fact_id": "F_LAB_ID",
+      "stance": "believes_false",
+      "confidence": "high",
+      "acquired_at": "E_LAB_DISCOVERY",
+      "source": "submission_draft"
+    },
+    {
+      "id": "B_POULA_LAB",
+      "holder": "POULA",
+      "fact_id": "F_LAB_ID",
+      "stance": "believes_true",
+      "confidence": "high",
+      "acquired_at": "E_LAB_PROJECT",
+      "source": "submission_draft"
+    }
+  ],
+  "events": [
+    {
+      "id": "E_OLD_ACCIDENT",
+      "label": "old riding accident: Lizzie dies; Rayne is gravely injured",
+      "story_order": 2,
+      "world_order": 1,
+      "participants": [
+        "MAC",
+        "RAYNE",
+        "LIZZIE",
+        "NELLIBETH"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_RAYNE_DEATH",
+      "label": "Rayne later dies after prolonged coma",
+      "story_order": 3,
+      "world_order": 2,
+      "participants": [
+        "RAYNE",
+        "MAC"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_RANCH_PRESSURE",
+      "label": "judgment/debt and sale pressure shape ranch decisions",
+      "story_order": 1,
+      "world_order": 3,
+      "participants": [
+        "MAC",
+        "UNC",
+        "RANCH",
+        "DEBT"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_POULA_ENTRY",
+      "label": "Poula enters ranch-sale orbit",
+      "story_order": 4,
+      "world_order": 4,
+      "participants": [
+        "POULA",
+        "MAC",
+        "UNC",
+        "RANCH"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_CLASS",
+      "label": "Mac joins Poula's tissue-engineering class",
+      "story_order": 5,
+      "world_order": 5,
+      "participants": [
+        "MAC",
+        "POULA",
+        "NUTRIELLE"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_NELLIBETH_DEATH",
+      "label": "Nellibeth dies while Mac is drawn into class/relationship",
+      "story_order": 6,
+      "world_order": 6,
+      "participants": [
+        "NELLIBETH",
+        "MAC",
+        "UNC"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_ROMANCE",
+      "label": "Mac and Poula become intimate",
+      "story_order": 7,
+      "world_order": 7,
+      "participants": [
+        "MAC",
+        "POULA"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_MAC_LIE",
+      "label": "Mac tells Poula Rayne must have been drinking and caused the mud incident",
+      "story_order": 9,
+      "world_order": 8,
+      "participants": [
+        "MAC",
+        "POULA",
+        "RAYNE"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_LAB_PROJECT",
+      "label": "Poula grows concealed project inspired by Mac/Nellibeth",
+      "story_order": 8,
+      "world_order": 9,
+      "participants": [
+        "POULA",
+        "LAB_CREATURE",
+        "NELLIBETH2"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_LAB_DISCOVERY",
+      "label": "Mac discovers concealed organism and misidentifies its meaning",
+      "story_order": 10,
+      "world_order": 10,
+      "participants": [
+        "MAC",
+        "LAB_CREATURE",
+        "POULA"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_DOUG_WARNING",
+      "label": "Doug blames Poula / Mac interprets Doug as her creation",
+      "story_order": 11,
+      "world_order": 11,
+      "participants": [
+        "DOUG",
+        "MAC",
+        "POULA"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_RUPTURE",
+      "label": "Mac withdraws from Poula",
+      "story_order": 12,
+      "world_order": 12,
+      "participants": [
+        "MAC",
+        "POULA"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_PATENT_LOSS",
+      "label": "Nutrielle claims Poula's patents; expected advance disappears",
+      "story_order": 13,
+      "world_order": 13,
+      "participants": [
+        "POULA",
+        "NUTRIELLE"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_UNC_TRUTH",
+      "label": "Unc inadvertently exposes Mac's lie to Poula",
+      "story_order": 14,
+      "world_order": 14,
+      "participants": [
+        "UNC",
+        "POULA",
+        "MAC"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_SALE",
+      "label": "Poula completes reduced ranch offer",
+      "story_order": 15,
+      "world_order": 15,
+      "participants": [
+        "POULA",
+        "UNC",
+        "MAC",
+        "RANCH"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_DOUG_TRUTH",
+      "label": "Doug reveals he modified himself",
+      "story_order": 16,
+      "world_order": 16,
+      "participants": [
+        "DOUG",
+        "MAC",
+        "POULA"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_N2_REVEAL",
+      "label": "Poula reveals Nellibeth-2 and true identity of concealed project",
+      "story_order": 17,
+      "world_order": 17,
+      "participants": [
+        "POULA",
+        "MAC",
+        "NELLIBETH2",
+        "LAB_CREATURE"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    },
+    {
+      "id": "E_JOB_FRAME",
+      "label": "Mac tells story during edible-tissue-engineering job interview",
+      "story_order": 18,
+      "world_order": 18,
+      "participants": [
+        "MAC",
+        "CAREER"
+      ],
+      "causes": [],
+      "effects": [],
+      "reveals": [],
+      "source": "submission_draft"
+    }
+  ],
+  "relations": [
+    {
+      "id": "R_ACC_GUILT",
+      "source": "E_OLD_ACCIDENT",
+      "target": "MAC",
+      "type": "causes_guilt",
+      "layer": "psychological",
+      "required": true,
+      "attrs": {
+        "required_type": "causes_guilt"
+      }
+    },
+    {
+      "id": "R_GUILT_SKILL",
+      "source": "E_OLD_ACCIDENT",
+      "target": "E_CLASS",
+      "type": "indirectly_enables",
+      "layer": "causal",
+      "required": false,
+      "attrs": {}
+    },
+    {
+      "id": "R_ND_N2",
+      "source": "E_NELLIBETH_DEATH",
+      "target": "E_N2_REVEAL",
+      "type": "sets_up",
+      "layer": "symbolic",
+      "required": true,
+      "attrs": {
+        "required_type": "sets_up"
+      }
+    },
+    {
+      "id": "R_N_N2",
+      "source": "NELLIBETH2",
+      "target": "NELLIBETH",
+      "type": "replaces_with_difference",
+      "layer": "symbolic",
+      "required": true,
+      "attrs": {
+        "required_type": "replaces_with_difference"
+      }
+    },
+    {
+      "id": "R_LAB_MIS",
+      "source": "E_LAB_DISCOVERY",
+      "target": "B_MAC_LAB",
+      "type": "causes",
+      "layer": "epistemic",
+      "required": true,
+      "attrs": {
+        "required_type": "causes"
+      }
+    },
+    {
+      "id": "R_DOUG_MIS",
+      "source": "E_DOUG_WARNING",
+      "target": "B_MAC_DOUG",
+      "type": "reinforces",
+      "layer": "epistemic",
+      "required": true,
+      "attrs": {
+        "required_type": "reinforces"
+      }
+    },
+    {
+      "id": "R_MIS_RUP",
+      "source": "B_MAC_DOUG",
+      "target": "E_RUPTURE",
+      "type": "motivates",
+      "layer": "motivational",
+      "required": true,
+      "attrs": {
+        "required_type": "motivates"
+      }
+    },
+    {
+      "id": "R_LIE_TRUTH",
+      "source": "E_MAC_LIE",
+      "target": "E_UNC_TRUTH",
+      "type": "later_contradicted_by",
+      "layer": "epistemic",
+      "required": true,
+      "attrs": {
+        "required_type": "later_contradicted_by"
+      }
+    },
+    {
+      "id": "R_DOUG_REINT",
+      "source": "E_DOUG_TRUTH",
+      "target": "B_MAC_DOUG",
+      "type": "corrects",
+      "layer": "epistemic",
+      "required": true,
+      "attrs": {
+        "required_type": "corrects"
+      }
+    },
+    {
+      "id": "R_N2_REINT",
+      "source": "E_N2_REVEAL",
+      "target": "B_MAC_LAB",
+      "type": "corrects",
+      "layer": "epistemic",
+      "required": true,
+      "attrs": {
+        "required_type": "corrects"
+      }
+    },
+    {
+      "id": "R_PAT_SALE",
+      "source": "E_PATENT_LOSS",
+      "target": "E_SALE",
+      "type": "reduces_expected_offer",
+      "layer": "causal",
+      "required": true,
+      "attrs": {
+        "required_type": "reduces_expected_offer"
+      }
+    },
+    {
+      "id": "R_DEBT_JOB",
+      "source": "DEBT",
+      "target": "E_JOB_FRAME",
+      "type": "motivates",
+      "layer": "motivational",
+      "required": true,
+      "attrs": {
+        "required_type": "motivates"
+      }
+    },
+    {
+      "id": "R_CLASS_JOB",
+      "source": "E_CLASS",
+      "target": "E_JOB_FRAME",
+      "type": "supplies_qualification",
+      "layer": "causal",
+      "required": true,
+      "attrs": {
+        "required_type": "supplies_qualification"
+      }
+    },
+    {
+      "id": "R_POULA_JOB",
+      "source": "POULA",
+      "target": "E_JOB_FRAME",
+      "type": "supplies_reputational_value",
+      "layer": "social",
+      "required": false,
+      "attrs": {}
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "D_MISREAD_RUPTURE",
+      "inputs": [
+        "E_LAB_DISCOVERY",
+        "E_DOUG_WARNING",
+        "B_MAC_DOUG"
+      ],
+      "output": "E_RUPTURE",
+      "relation": "jointly_motivate",
+      "layer": "epistemic",
+      "severity": "hard",
+      "rationale": "Rupture depends on Mac's mistaken interpretation."
+    },
+    {
+      "id": "D_PAYOFF",
+      "inputs": [
+        "E_NELLIBETH_DEATH",
+        "E_LAB_PROJECT"
+      ],
+      "output": "E_N2_REVEAL",
+      "relation": "setup_payoff",
+      "layer": "symbolic",
+      "severity": "hard",
+      "rationale": "Nellibeth-2 payoff combines loss with Poula's concealed project."
+    },
+    {
+      "id": "D_LIE_EXPOSURE",
+      "inputs": [
+        "E_MAC_LIE"
+      ],
+      "output": "E_UNC_TRUTH",
+      "relation": "contradiction_payoff",
+      "layer": "epistemic",
+      "severity": "hard",
+      "rationale": "Unc's truth reinterprets Mac's confession."
+    },
+    {
+      "id": "D_CAREER",
+      "inputs": [
+        "E_CLASS",
+        "DEBT"
+      ],
+      "output": "E_JOB_FRAME",
+      "relation": "jointly_enable",
+      "layer": "causal",
+      "severity": "hard",
+      "rationale": "Training and debt converge in interview frame."
+    }
+  ],
+  "reinterpretations": [
+    {
+      "id": "RI_DOUG",
+      "trigger_event": "E_DOUG_TRUTH",
+      "prior_ids": [
+        "E_DOUG_WARNING",
+        "E_LAB_DISCOVERY",
+        "B_MAC_DOUG"
+      ],
+      "old_reading": "Poula created or grotesquely altered Doug.",
+      "new_reading": "Doug altered himself using Poula's techniques; Mac's inference about Poula was wrong.",
+      "audiences": [
+        "MAC",
+        "reader"
+      ],
+      "source": "submission_draft"
+    },
+    {
+      "id": "RI_LAB",
+      "trigger_event": "E_N2_REVEAL",
+      "prior_ids": [
+        "E_LAB_PROJECT",
+        "E_LAB_DISCOVERY",
+        "B_MAC_LAB"
+      ],
+      "old_reading": "The concealed organism is evidence of a human experiment / Doug-2.",
+      "new_reading": "The concealed project is the synthetic horse inspired by Mac and Nellibeth.",
+      "audiences": [
+        "MAC",
+        "reader"
+      ],
+      "source": "submission_draft"
+    },
+    {
+      "id": "RI_LIE",
+      "trigger_event": "E_UNC_TRUTH",
+      "prior_ids": [
+        "E_MAC_LIE",
+        "E_OLD_ACCIDENT",
+        "B_POULA_RAYNE",
+        "B_READER_RAYNE"
+      ],
+      "old_reading": "Rayne had been drinking and initiated the horse-mud accident.",
+      "new_reading": "Mac had been drinking and put mud on Nellibeth; his account displaced culpability onto Rayne.",
+      "audiences": [
+        "POULA",
+        "reader"
+      ],
+      "source": "submission_draft"
+    }
+  ],
+  "metadata": {
+    "lanes": {
+      "material": [
+        "E_RANCH_PRESSURE",
+        "E_POULA_ENTRY",
+        "E_CLASS",
+        "E_PATENT_LOSS",
+        "E_SALE",
+        "E_JOB_FRAME"
+      ],
+      "relational_epistemic": [
+        "E_POULA_ENTRY",
+        "E_ROMANCE",
+        "E_LAB_DISCOVERY",
+        "E_DOUG_WARNING",
+        "E_RUPTURE",
+        "E_DOUG_TRUTH",
+        "E_N2_REVEAL"
+      ],
+      "wound_ethical": [
+        "E_OLD_ACCIDENT",
+        "E_RAYNE_DEATH",
+        "E_NELLIBETH_DEATH",
+        "E_MAC_LIE",
+        "E_UNC_TRUTH",
+        "E_JOB_FRAME"
+      ]
+    }
+  }
+}
