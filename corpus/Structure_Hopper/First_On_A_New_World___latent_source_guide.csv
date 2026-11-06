@@ -1,0 +1,11 @@
+latent_component,main_spectral_peaks,spectral_centroid_hz,interpretation
+0,broadband/low,210.9,Mixed/background spectral source.
+1,A1 (53.8 Hz) / C4 (258.4 Hz) / F♯5 (732.1 Hz) / C5 (527.6 Hz),599.8,Recurring C/F♯-rich state; one of the main four-pulse-cycle objects.
+2,F♯4 (376.8 Hz) / F♯5 (753.7 Hz) / C3 (129.2 Hz) / B5 (1012.1 Hz),1300.7,Strong F♯ family; often coincides with the F♯/G abrasive attack state.
+3,F♯4 (366.1 Hz) / F♯5 (742.9 Hz) / A♯2 (118.4 Hz) / B3 (247.6 Hz),1115.0,F♯ family with lower B/A♯ material; a related variant rather than a clean new 'note'.
+4,A♯4 (473.7 Hz) / A3 (215.3 Hz) / D♯5 (635.2 Hz) / C4 (258.4 Hz),1985.0,A♯/E♭-colored answer/transition object.
+5,G4 (398.4 Hz) / G5 (786.0 Hz) / C3 (129.2 Hz) / C4 (258.4 Hz),1931.8,G-rich state; replaces the normal fourth-slot answer during the first large mutation.
+6,B4 (495.3 Hz) / B5 (1001.3 Hz) / F3 (172.3 Hz) / E4 (333.8 Hz),1599.8,B/E-rich answer state; remarkably periodic in the early main section.
+7,C♯5 (559.9 Hz) / C♯6 (1119.7 Hz) / F♯3 (183.0 Hz) / F♯6 (1496.6 Hz),1840.7,C♯/F♯-rich mutation state; appears prominently as the 28-pulse cycle destabilizes.
+8,G2 (96.9 Hz),1331.8,Low G-dominant/noisy object.
+9,D2 (75.4 Hz) / C4 (258.4 Hz) / C5 (527.6 Hz) / F1 (43.1 Hz),874.8,Low D/C-family object; likely bass/percussive/background contribution.
