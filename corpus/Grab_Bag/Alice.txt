@@ -1,0 +1,1293 @@
+CORE MECHANISM — ALICE AS A GENERATIVE CHARACTER
+
+Alice must not be reduced to a menu of possible moves.
+
+The project documents may record what she has already done, why it worked, what it revealed, and what pressures seemed active in that moment. Those observations are retrospective. They help us recognize Alice, protect her from flattening, and notice when a proposed line feels imposed from outside.
+
+They do not tell us what she can do next.
+
+At each unresolved moment, the actual writing question is:
+
+What does Alice do next, and why?
+
+We ask the question with everything we know about her, the song, the listener’s current expectation, the emotional stakes, and the immediate circumstances in view.
+
+Then we let Alice answer.
+
+Her answer may confirm what we expected, reject it, redirect it, or expose that we were asking the wrong question. We do not choose among those possibilities abstractly in advance. We discover the move through the scene.
+
+The purpose of the Alice documents is therefore not prediction. It is recognition.
+
+They should help us say:
+
+“That does not sound like Alice.”
+
+“This might be Alice, but we have not earned it.”
+
+“That surprised me, but now that she has said it, I understand exactly why.”
+
+The highest-level mechanism is:
+
+The song creates expectations around Alice.
+Alice responds from inside the moment.
+Her response changes the song.
+We study what happened afterward without converting it into a formula.
+
+Alice remains partly unknown to the listeners, to the song, and to us.
+
+That unknown space is not a gap in the character model.
+
+It is where the character lives.
+
+ALICE / PRETTY SONG
+MASTER DEVELOPMENT WORKFLOW v2.1
+DRAFT FOR REVIEW — NOT YET PROMOTED TO PROJECT FILES
+
+DOCUMENT WORKFLOW
+-----------------
+1. Any proposed project document or substantial revision is first shown in a code window.
+2. Nathan reviews and adjusts it.
+3. Only after approval is it added to or used to replace a live project file.
+4. Before replacing any live file, append the outgoing version to 99_Archive_Dump.md.
+5. At the end of every substantive step, update every affected project file before advancing.
+6. Record process history separately from superseded document content:
+   - 98_Project_Log.md = session history and decisions.
+   - 99_Archive_Dump.md = full outgoing/replaced versions.
+
+STEP FLAGS
+----------
+[INIT]   Initialize the step: review purpose, inputs, dependencies, and open questions.
+[WORK]   Perform the substantive analysis, research, modeling, or writing.
+[REVIEW] Present draft outputs in a code window; Nathan revises or approves.
+[UPDATE] Archive replaced versions and update all affected live project files.
+[WRAP]   Confirm outputs, discoveries, unresolved questions, and next-step readiness.
+
+Every step follows:
+[INIT] -> [WORK] -> [REVIEW] -> [UPDATE] -> [WRAP]
+
+==================================================
+PHASE 0 — PROJECT CONTROL
+PURPOSE: Keep the project coherent, recoverable, and easy to resume.
+==================================================
+
+STEP 0.1 — VERIFY LIVE PROJECT STATE
+[INIT]
+- Open 00_Project_Map.md.
+- Confirm canonical folder and naming scheme.
+- Identify missing, duplicate, stale, or misplaced files.
+
+[WORK]
+- Compare live files against the current conceptual architecture.
+- Identify documents that must be created, renamed, merged, split, or retired.
+
+[REVIEW]
+- Present the proposed project map and file actions in a code window.
+
+[UPDATE]
+- Archive any replaced project-map version.
+- Update 00_Project_Map.md.
+- Create only approved empty or initialized files.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm one canonical location and one canonical live version per document.
+
+STEP 0.2 — VERIFY ARCHIVE AND LOGGING RULES
+[INIT]
+- Review 98_Project_Log.md and 99_Archive_Dump.md roles.
+
+[WORK]
+- Define the exact archive header format.
+- Define the project-log entry format.
+- Define replacement, retirement, merge, and split procedures.
+
+[REVIEW]
+- Present the conventions in a code window.
+
+[UPDATE]
+- Archive replaced procedural notes if applicable.
+- Update README / project map / workflow documents as approved.
+- Initialize 98_Project_Log.md if absent.
+
+[WRAP]
+- Confirm that no replaced content can disappear silently.
+
+STEP 0.3 — LOCK MASTER ACTION PLAN
+[INIT]
+- Review this workflow against current project needs.
+
+[WORK]
+- Add, remove, reorder, or split phases and steps.
+- Record dependencies and outputs.
+
+[REVIEW]
+- Present the revised action plan in a code window.
+
+[UPDATE]
+- Archive the outgoing action-plan version.
+- Promote the approved version to the live action-plan file.
+- Update 00_Project_Map.md and 98_Project_Log.md.
+
+[WRAP]
+- Declare the approved plan the default workflow, modifiable when discoveries require it.
+
+==================================================
+PHASE 1 — BUILD ALICE
+PURPOSE: Establish Alice as a person, perceiver, thinker, and storyteller before completing her lyrics.
+==================================================
+
+STEP 1.1 — ASSEMBLE THE ALICE VOICE CORPUS
+OUTPUT: Alice_Voice_Corpus.md
+
+[INIT]
+- Gather every existing Alice line, fragment, approximation, paraphrase, and flagged idea.
+- Distinguish user-written Alice lines from assistant-written approximations.
+
+[WORK]
+- Preserve exact user wording wherever available.
+- Include approximate material only when clearly labeled.
+- Arrange material by chapter and context.
+- Add line-level placeholders where material is missing.
+- Do not polish, regularize, or improve the voice.
+
+[REVIEW]
+- Present the assembled corpus in a code window.
+
+[UPDATE]
+- Archive any outgoing corpus version.
+- Update Alice_Voice_Corpus.md.
+- Synchronize exact lines into 01_Alice_Rough.md where appropriate.
+- Update 05_Callback_Ledger.md for newly recovered seeds/payoffs.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that all known Alice material is captured and provenance-marked.
+
+STEP 1.2 — ANALYZE THE ALICE VOICE
+OUTPUTS:
+- Alice_Voice_Analysis.md
+- candidate additions to Alice_Operating_System.md
+
+[INIT]
+- Select the strongest and most representative Alice lines from the corpus.
+
+[WORK]
+For each selected line, analyze:
+1. Why it is funny, sincere, affecting, or surprising.
+2. How it works simultaneously as humor, character, and song material.
+3. What it reveals about Alice’s cognition.
+4. What Alice notices.
+5. Why she notices it.
+6. What emotional, ethical, practical, or perceptual priority drives it.
+7. Whether the mechanism is reusable, rare, or must not become formulaic.
+8. What would ruin the line.
+
+[REVIEW]
+- Present the analysis in a code window.
+- Separate observations from proposed durable rules.
+
+[UPDATE]
+- Archive replaced analysis or operating-system versions.
+- Update Alice_Voice_Analysis.md.
+- Promote only approved durable findings into Alice_Operating_System.md.
+- Add newly identified notice/reason pairs to Alice_Notices.md.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that analysis describes Alice rather than reducing her to a comedy algorithm.
+
+STEP 1.3 — BUILD “ALICE NOTICES”
+OUTPUT: Alice_Notices.md
+
+[INIT]
+- Gather every noticed detail from the corpus and story notes.
+
+[WORK]
+For each entry record:
+- WHAT she notices.
+- IMMEDIATE REASON she notices it.
+- DEEPER PRIORITY revealed.
+- ASSOCIATIVE PATH it opens.
+- CHARACTER VALUE it demonstrates.
+- POSSIBLE USES.
+- MISUSE WARNING.
+
+Example:
+WHAT: She is glad he is short.
+BECAUSE: She already called him “little man.”
+DEEPER PRIORITY: Even while angry, she does not want to have insulted him inaccurately.
+REVEALS: Fairness, precision, self-monitoring under stress.
+
+[REVIEW]
+- Present the notice ledger in a code window.
+
+[UPDATE]
+- Archive the outgoing version.
+- Update Alice_Notices.md.
+- Promote approved cognitive tendencies into Alice_Operating_System.md.
+- Add any resulting story implications to 01_Alice_Rough.md or 06_Project_Notes.md.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that every major noticed detail has a reason, not merely a comic function.
+
+STEP 1.4 — BUILD THE ALICE OPERATING SYSTEM
+OUTPUT: Alice_Operating_System.md
+
+[INIT]
+- Review the voice corpus, voice analysis, and notices ledger.
+
+[WORK]
+Organize durable findings under:
+- Perceptual priorities.
+- Memory and association.
+- Fairness and accuracy.
+- Competence and blind spots.
+- Emotional logic.
+- Moral instincts.
+- Defensive habits.
+- Explanatory habits.
+- Speech rhythm.
+- Storytelling behavior.
+- Humor conditions.
+- Insight conditions.
+- Anti-formula constraints.
+- Things Alice would never say or do.
+
+[REVIEW]
+- Present the proposed operating system in a code window.
+
+[UPDATE]
+- Archive the outgoing version.
+- Update Alice_Operating_System.md.
+- Cross-reference relevant entries in Alice_Voice_Corpus.md and Alice_Notices.md.
+- Update 06_Project_Notes.md and 98_Project_Log.md.
+
+[WRAP]
+- Test whether new Alice lines can be assessed against the model without making her predictable.
+
+STEP 1.5 — COMPLETE THE ROUGH ALICE NARRATIVE
+OUTPUT: 01_Alice_Rough.md
+
+[INIT]
+- Review all established chapters, causal gaps, and unresolved placeholders.
+
+[WORK]
+- Lay out Alice’s full narrative using her voice or clearly marked approximations.
+- Preserve erratic stanza lengths.
+- Complete causal transitions without making narration conventionally literary.
+- Keep unresolved hostage mechanics unresolved where intended.
+- Keep the guy peripheral until the ending.
+- Preserve established roughs unless change is approved.
+
+[REVIEW]
+- Present revised chapters one at a time in code windows.
+
+[UPDATE]
+- Archive every replaced chapter or full document version.
+- Update 01_Alice_Rough.md.
+- Synchronize new material into:
+  - Alice_Voice_Corpus.md
+  - Alice_Notices.md
+  - Alice_Operating_System.md
+  - 05_Callback_Ledger.md
+  - 06_Project_Notes.md
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm Alice’s half works independently as a causal but associatively told narrative.
+
+==================================================
+PHASE 2 — BUILD THE ROMANCE GENRE ARCHIVE
+PURPOSE: Reconstruct the romance machinery Alice has absorbed, including fan culture and author-specific fingerprints.
+==================================================
+
+STEP 2.1 — DEFINE RESEARCH SCOPE AND SOURCE TYPES
+OUTPUT: Romance_Research_Protocol.md
+
+[INIT]
+- Define what must be learned before collecting examples.
+
+[WORK]
+Specify source classes:
+- Romance plotting guides.
+- Author craft essays and interviews.
+- Publisher and editor advice.
+- Book reviews and criticism.
+- Reader discussions and complaints.
+- TV Tropes and trope databases.
+- Romance communities, forums, Reddit, BookTube, TikTok discourse where useful.
+- “Fans of X be like” jokes and memes.
+- In-jokes, micro-tropes, recurring grievances, and beloved indulgences.
+- Self-insert, Mary Sue, and autobiographical-fiction discourse.
+
+Define evidence fields:
+- Source.
+- Claim or example.
+- Genre/subgenre.
+- Reader consensus or disagreement.
+- Author association.
+- Relevance to Alice.
+- Reliability and representativeness.
+
+[REVIEW]
+- Present the research protocol in a code window.
+
+[UPDATE]
+- Archive replaced protocol versions.
+- Update Romance_Research_Protocol.md.
+- Add approved research files to 00_Project_Map.md.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that research serves Alice’s reading history rather than generic literary theory.
+
+STEP 2.2 — BUILD THE STOCK ROMANCE NOVEL ARCHITECTURE
+OUTPUT: Romance_Architecture.md
+
+[INIT]
+- Gather reputable plot models and reader expectation sources.
+
+[WORK]
+- Produce a beat-for-beat compressed romance-novel plot.
+- Identify:
+  - Mandatory promises.
+  - First attraction.
+  - Obstacles.
+  - Escalating intimacy.
+  - Midpoint commitment.
+  - Crisis or separation.
+  - Proof-of-choice action.
+  - Emotional climax.
+  - Required ending satisfaction.
+- Distinguish universal romance beats from subgenre conventions.
+- Flag “book-across-the-room” omissions.
+
+[REVIEW]
+- Present the architecture in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Romance_Architecture.md.
+- Add linked tropes to Romance_Genre_Archive.md.
+- Add unresolved subgenre choices to 06_Project_Notes.md.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the plot could satisfy a romance reader without Alice-specific material.
+
+STEP 2.3 — BUILD THE ROMANCE GENRE ARCHIVE
+OUTPUT: Romance_Genre_Archive.md
+
+[INIT]
+- Use the approved research protocol and architecture.
+
+[WORK]
+Collect and classify:
+- Required tropes.
+- Optional tropes.
+- Micro-tropes.
+- Stock images and metaphors.
+- Reader pleasures.
+- Reader complaints.
+- Overused devices.
+- Beloved clichés.
+- Running jokes.
+- “Fans of…” characterizations.
+- Commonly mocked but secretly enjoyed devices.
+- Subgenre-specific furniture.
+
+[REVIEW]
+- Present archive sections in code windows by category.
+
+[UPDATE]
+- Archive replaced sections or versions.
+- Update Romance_Genre_Archive.md.
+- Promote author-linked patterns to Author_Signatures.md.
+- Promote cross-genre elements to Genre_Bleed.md.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that the archive captures lived genre culture, not merely textbook definitions.
+
+STEP 2.4 — BUILD AUTHOR AND FANDOM SIGNATURES
+OUTPUT: Author_Signatures.md
+
+[INIT]
+- Select authors or schools whose habits are culturally recognizable and relevant.
+
+[WORK]
+For each:
+- Recurring plots.
+- Character types.
+- Emotional logic.
+- Sentence or image habits.
+- Heat level and romantic register.
+- Common reader praise.
+- Common reader complaints.
+- Fandom in-jokes.
+- “Fans of X be like” shorthand.
+- What Alice might absorb from them.
+- Avoid direct imitation or copyrighted-style mimicry.
+
+[REVIEW]
+- Present candidate author profiles in code windows.
+
+[UPDATE]
+- Archive replaced profiles.
+- Update Author_Signatures.md.
+- Add candidate Alice reading-history hypotheses to 06_Project_Notes.md.
+- Cross-reference Romance_Genre_Archive.md.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that Alice’s eventual reading fingerprint can be inferred faintly without becoming pastiche.
+
+STEP 2.5 — MAP ADJACENT GENRE BLEED
+OUTPUT: Genre_Bleed.md
+
+[INIT]
+- Identify non-romance elements that can appear as decorative furniture.
+
+[WORK]
+Classify:
+- Natural adjacent bleed.
+- Distracting bleed.
+- Plot-bearing bleed.
+- Pure decorative bleed.
+- Symbolic bleed to avoid.
+
+Special case:
+- Dragon flying across the sunset.
+- Sole unnecessary secondary-world fantasy element.
+- No plot function.
+- No symbolic function.
+- Structural analogue to Q-tips as wallpaper.
+
+[REVIEW]
+- Present the bleed map in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Genre_Bleed.md.
+- Cross-reference Pretty Song notes and Parallel Map.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that the dragon remains decorative and singular.
+
+STEP 2.6 — STUDY AUTOBIOGRAPHICAL / SELF-INSERT TELLS
+OUTPUT: Autobiographical_Romance_Tells.md
+
+[INIT]
+- Gather craft, criticism, reader discourse, and trope discussions.
+
+[WORK]
+Analyze:
+- Transparent self-insertion.
+- Wish fulfillment.
+- Mary Sue complaints.
+- Author-avatar clues.
+- Overidealized love interests.
+- Selective sanitation.
+- Emotional overfitting.
+- Unexplained specificity.
+- Reader detection patterns.
+- Ways a more skilled writer disguises autobiographical structure.
+
+[REVIEW]
+- Present findings in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Autobiographical_Romance_Tells.md.
+- Add approved implications to Translation_Grammar.md planning notes.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the distinction:
+  Alice is not writing amateur self-insert material; she is skillfully universalizing personal material while leaving faint tells.
+
+==================================================
+PHASE 3 — BUILD THE TRANSLATION ENGINE
+PURPOSE: Model how Alice converts lived reality into genre-shaped emotional memory.
+==================================================
+
+STEP 3.1 — DRAFT THE TRANSLATION GRAMMAR
+OUTPUT: Translation_Grammar.md
+
+[INIT]
+- Review Alice OS, notices, romance architecture, genre archive, and autobiographical tells.
+
+[WORK]
+Define tendencies rather than substitutions:
+- Job -> calling, duty, stable role.
+- Interview -> trial, audience, letter, judgment.
+- Transport -> journey, reins, road.
+- Clothing -> status, identity, longing, practical constraint.
+- Smell -> atmosphere and emotional signature.
+- Manager -> authority figure or omission.
+- Waiting -> longing.
+- Bureaucracy -> decree, letter, social barrier.
+- Ordinary kindness -> romantic constancy.
+- Practical competence -> quiet heroism.
+- Embarrassing residue -> sanitation or omission.
+
+[REVIEW]
+- Present the grammar in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Translation_Grammar.md.
+- Cross-reference Parallel Map and Regloss Lab.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the grammar generates families of translations rather than one-to-one codes.
+
+STEP 3.2 — REGLOSS ALL EXISTING ALICE MATERIAL
+OUTPUT: Regloss_Lab.md
+
+[INIT]
+- Take the Alice corpus chapter by chapter.
+
+[WORK]
+For every line or event:
+- Produce several possible genre reglosses.
+- Include material unlikely to survive.
+- Mark:
+  - literal carryover
+  - emotional translation
+  - compressed translation
+  - decorative replacement
+  - sanitation
+  - omission
+  - negative space
+- Note what each attempt teaches about Alice’s translation instincts.
+
+[REVIEW]
+- Present regloss batches in code windows.
+
+[UPDATE]
+- Archive replaced batches or full versions.
+- Update Regloss_Lab.md.
+- Refine Translation_Grammar.md.
+- Add candidate mappings to 04_Parallel_Map.md as provisional only.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm that Alice’s translation logic is understood before writing the model romance.
+
+==================================================
+PHASE 4 — WRITE THE MODEL ROMANCE
+PURPOSE: Produce the kind of romance song Alice believes she wrote before hiding her biography inside it.
+==================================================
+
+STEP 4.1 — CREATE THE MODEL ROMANCE BEAT SHEET
+OUTPUT: Model_Pretty_Song_Beat_Sheet.md
+
+[INIT]
+- Combine stock architecture with likely Alice reading fingerprints.
+
+[WORK]
+- Compress a romance novel into song-scale beats.
+- Assign stanza functions, cliffhangers, refrain duties, and escalation.
+- Include genre requirements.
+- Include slight controlled misses.
+- Keep dragon decorative.
+- Keep Noxema absent.
+- Do not yet map Alice’s exact story.
+
+[REVIEW]
+- Present the beat sheet in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Model_Pretty_Song_Beat_Sheet.md.
+- Synchronize 02_Pretty_Song_Rough.md and 03_Braided_Master.md placeholders.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the model plot works as stock romance independently.
+
+STEP 4.2 — WRITE THE MODEL PRETTY SONG
+OUTPUT: Model_Pretty_Song.md
+
+[INIT]
+- Review beat sheet, trope library, and author fingerprints.
+
+[WORK]
+- Write a complete standalone romance song.
+- Preserve controlled overreach and slight miscalibration.
+- Make it emotionally satisfying.
+- Avoid overt autobiographical clues.
+- Keep the dragon purely decorative.
+- Keep Noxema absent.
+
+[REVIEW]
+- Present each stanza in a code window.
+- Review the complete song in a code window.
+
+[UPDATE]
+- Archive replaced stanzas and full versions.
+- Update Model_Pretty_Song.md.
+- Promote approved lines into 02_Pretty_Song_Rough.md.
+- Update trope, signature, and bleed notes if discoveries arise.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the model song succeeds without Alice’s memoir or hidden reality.
+
+==================================================
+PHASE 5 — WRITE THE UNDERLYING REALITY
+PURPOSE: Establish what actually happened between Alice and the man.
+==================================================
+
+STEP 5.1 — BUILD THE CHRONOLOGICAL REALITY TIMELINE
+OUTPUT: Reality_Timeline.md
+
+[INIT]
+- Gather every established fact and implication about Alice and the man.
+
+[WORK]
+- Write the relationship chronologically.
+- Fill gaps so it makes ordinary real-life sense.
+- Interweave it with the main Alice chronology.
+- Use no romance language and no Alice associative narration.
+- Identify how their relationship helps explain the practical sequence of events.
+
+[REVIEW]
+- Present the timeline in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Reality_Timeline.md.
+- Correct contradictions across Alice Rough, Project Notes, and Parallel Map.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the actual relationship exists independently and coherently.
+
+STEP 5.2 — CLASSIFY REALITY ACROSS THE THREE LAYERS
+OUTPUTS:
+- updated Reality_Timeline.md
+- updated Parallel_Map.md
+- Negative_Space_Ledger.md
+
+[INIT]
+- Compare reality, Alice’s telling, and the model romance.
+
+[WORK]
+Classify each detail:
+- Appears in Alice.
+- Appears in Pretty Song.
+- Appears in both.
+- Compressed.
+- Romanticized.
+- Sanitized.
+- Omitted accidentally.
+- Omitted deliberately.
+- Decorative replacement.
+- Negative space.
+
+Special rule:
+- Noxema remains untranslated because Alice sanitized it out.
+
+[REVIEW]
+- Present the classification table in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Reality_Timeline.md, 04_Parallel_Map.md, and Negative_Space_Ledger.md.
+- Update 05_Callback_Ledger.md and 98_Project_Log.md.
+
+[WRAP]
+- Confirm that omissions are as intentional as correspondences.
+
+==================================================
+PHASE 6 — SYNTHESIZE ALICE’S ROMANCE
+PURPOSE: Merge stock genre structure, translation logic, and actual relationship into the hidden Pretty Song.
+==================================================
+
+STEP 6.1 — MERGE REALITY INTO THE STOCK ROMANCE PLOT
+OUTPUT: Alice_Romance_Structure.md
+
+[INIT]
+- Place the real relationship beside the model romance beat sheet.
+
+[WORK]
+For each required romance beat:
+- Determine the real event feeding it.
+- Determine whether Alice translates, compresses, invents, or omits.
+- Preserve enough stock logic to satisfy genre.
+- Introduce enough personal deviation to make it Alice’s story.
+- Prevent immediate decoding.
+
+[REVIEW]
+- Present side-by-side beat mappings in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Alice_Romance_Structure.md.
+- Update Parallel Map, Negative Space Ledger, and Translation Grammar.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the hidden biography is undeniable under close analysis but invisible in ordinary listening.
+
+STEP 6.2 — WRITE ALICE’S ACTUAL PRETTY SONG ROUGH
+OUTPUT: 02_Pretty_Song_Rough.md
+
+[INIT]
+- Use Alice Romance Structure, not the model romance alone.
+
+[WORK]
+- Rewrite the model song as Alice’s romance song.
+- Preserve standalone genre satisfaction.
+- Hide specific parallels in trope-dense material.
+- Maintain deliberate decorative details and intentional absences.
+- Keep all current rough lines unless approved for replacement.
+
+[REVIEW]
+- Present each stanza in a code window.
+- Present the full rough in a code window.
+
+[UPDATE]
+- Archive replaced stanzas/full version.
+- Update 02_Pretty_Song_Rough.md.
+- Update Parallel Map, Callback Ledger, and Negative Space Ledger.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm both readings:
+  generic romance on the surface; Alice’s relationship underneath.
+
+==================================================
+PHASE 7 — BRAID THE TWO SONGS
+PURPOSE: Determine alternation, handoffs, pacing, and mutual escalation.
+==================================================
+
+STEP 7.1 — INTERLEAF SECTIONS
+OUTPUT: 03_Braided_Master.md
+
+[INIT]
+- Review completed Alice rough and Pretty Song rough.
+
+[WORK]
+- Place Alice and Pretty Song sections in performance order.
+- Balance:
+  - hooks
+  - cliffhangers
+  - breathers
+  - escalation
+  - tonal resets
+  - delayed realizations
+- Ensure each thread jealously hands the listener to the other.
+- Do not polish lines yet.
+
+[REVIEW]
+- Present the full braided scaffold in a code window.
+
+[UPDATE]
+- Archive replaced braided versions.
+- Update 03_Braided_Master.md.
+- Update Callback Ledger, Project Notes, and Action Plan if architecture changes.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm both extracted threads remain coherent and the braid improves both.
+
+STEP 7.2 — TEST MACRO-PACING AND DISCLOSURE
+OUTPUT: Braided_Pacing_Audit.md
+
+[INIT]
+- Read the braid as a first-time listener and repeat listener.
+
+[WORK]
+Audit:
+- Where curiosity begins.
+- Where each thread pays off.
+- Where the listener breathes.
+- Where parallels become too visible.
+- Where Alice’s story becomes too dense.
+- Where Pretty Song risks overshadowing Alice.
+- Where the guy becomes visible too early.
+- Where negative space is threatened.
+
+[REVIEW]
+- Present audit findings in a code window.
+
+[UPDATE]
+- Archive replaced audit/structure versions.
+- Update Braided_Pacing_Audit.md and approved structural files.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm disclosure remains slow, optional, and replay-dependent.
+
+==================================================
+PHASE 8 — COMPLETE LINE-LEVEL WRITING
+PURPOSE: Turn approved architecture into a performable lyric.
+==================================================
+
+STEP 8.1 — FINISH ALICE’S LINE-LEVEL DRAFT
+OUTPUT: Alice_Lyric_Draft.md
+
+[INIT]
+- Use Alice Voice Corpus and OS as constraints.
+
+[WORK]
+- Fill remaining Alice placeholders.
+- Preserve irregular stanza structure.
+- Refine only where needed for singing, timing, and comprehension.
+- Avoid smoothing away voice.
+- Preserve established roughs unless change clearly improves Alice.
+
+[REVIEW]
+- Present chapters in code windows.
+
+[UPDATE]
+- Archive replaced drafts.
+- Update Alice_Lyric_Draft.md and synchronized live files.
+- Add new lines to Voice Corpus and update analyses where needed.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm every new line feels discovered from Alice rather than imposed on her.
+
+STEP 8.2 — FINISH PRETTY SONG LINE-LEVEL DRAFT
+OUTPUT: Pretty_Song_Lyric_Draft.md
+
+[INIT]
+- Use Alice Romance Structure and genre archive.
+
+[WORK]
+- Complete stanza lines, rhyme, refrain, and romantic escalation.
+- Preserve slight misses.
+- Maintain standalone emotional quality.
+- Keep clues submerged.
+
+[REVIEW]
+- Present stanzas in code windows.
+
+[UPDATE]
+- Archive replaced drafts.
+- Update Pretty_Song_Lyric_Draft.md and synchronized live files.
+- Update Parallel Map, Negative Space Ledger, and Callback Ledger.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm it sounds like a good romance song written by Alice, not a parody written about Alice.
+
+STEP 8.3 — WRITE TRANSITIONS, BACKING PARTS, CODAS, AND HANDOFFS
+OUTPUT: Braided_Lyric_Draft.md
+
+[INIT]
+- Review all section boundaries.
+
+[WORK]
+- Write musical and verbal handoffs.
+- Place backing singers selectively.
+- Preserve “Just like you” running gag without saturation.
+- Lock scent explanation, tits moral, and post-song mirror coda.
+- Ensure transitions continue both stories rather than merely switching tracks.
+
+[REVIEW]
+- Present the complete braided lyric in a code window.
+
+[UPDATE]
+- Archive replaced versions.
+- Update Braided_Lyric_Draft.md, 03_Braided_Master.md, and ledgers.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm a complete performable lyric exists.
+
+==================================================
+PHASE 9 — MUSICAL AND LYRIC VALIDATION
+PURPOSE: Verify that structure, voice, songcraft, and hidden architecture all survive performance constraints.
+==================================================
+
+STEP 9.1 — FOUR-READING AUDIT
+[INIT]
+- Prepare four isolated readings.
+
+[WORK]
+Test:
+1. Alice-only narrative.
+2. Pretty-Song-only romance.
+3. Braided performance.
+4. Underlying chronological reality.
+
+[REVIEW]
+- Present audit results in a code window.
+
+[UPDATE]
+- Archive replaced audit and affected drafts.
+- Update relevant project files.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm all four readings function independently and enrich one another.
+
+STEP 9.2 — VOICE / GENRE / PARALLEL STRESS TEST
+[INIT]
+- Gather Alice OS, genre architecture, and parallel map.
+
+[WORK]
+Check:
+- Alice never becomes formulaic.
+- Pretty Song never becomes parody.
+- Correspondences are neither absent nor obvious.
+- Decorative details remain decorative.
+- Noxema remains missing from the fantasy.
+- The guy remains ordinary and appealing.
+- Humor never destroys stakes.
+- Stakes never suffocate humor.
+
+[REVIEW]
+- Present problems and proposed corrections in a code window.
+
+[UPDATE]
+- Archive replaced files.
+- Apply approved corrections.
+- Update all affected analytical documents and ledgers.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the conceptual machine still works after lyric completion.
+
+STEP 9.3 — SCANSION, MUSICALITY, AND SUNO FORMAT PASS
+[INIT]
+- Establish target duration, section lengths, and generation constraints.
+
+[WORK]
+- Adjust meter, phrase length, rhyme density, hooks, and performance cues.
+- Preserve Alice’s apparent looseness while making it singable.
+- Preserve Pretty Song regularity without flattening it.
+- Build Suno-ready lyric and style versions.
+
+[REVIEW]
+- Present revised performance draft and Suno input in code windows.
+
+[UPDATE]
+- Archive replaced versions.
+- Update final lyric drafts and Suno production files.
+- Update 98_Project_Log.md.
+
+[WRAP]
+- Confirm the song is generation-ready without sacrificing literary architecture.
+
+==================================================
+PHASE 10 — PROJECT LOCK AND CONTINUATION
+PURPOSE: End each major development cycle with a clean, resumable state.
+==================================================
+
+STEP 10.1 — LOCK CURRENT VERSION
+[INIT]
+- Review all modified files.
+
+[WORK]
+- Resolve filenames, statuses, dependencies, and open issues.
+- Mark documents as live, provisional, locked, or retired.
+
+[REVIEW]
+- Present the proposed lock summary in a code window.
+
+[UPDATE]
+- Archive outgoing versions.
+- Update 00_Project_Map.md.
+- Update the master action plan if workflow changed.
+- Update 98_Project_Log.md.
+- Package the canonical project folder.
+
+[WRAP]
+- Record:
+  - current state
+  - unresolved questions
+  - next exact step
+  - files required to resume
+
+Xxxxxxxxxxxxx
+
+ALICE / PRETTY SONG
+MASTER ACTION PLAN v1.0
+
+MISSION
+--------
+Construct one work that simultaneously functions as:
+1. Alice's surreal memoir.
+2. A satisfying standalone romance song.
+3. A hidden ordinary love story.
+4. A replayable literary object that rewards attention without requiring solution.
+
+PRIMARY RULE
+------------
+Always solve deeper layers before surface layers.
+
+If architecture changes:
+Reality -> Translation -> Song
+Never the reverse.
+
+==================================================
+PHASE I — ALICE
+PURPOSE: Build the narrator.
+==================================================
+
+01_Alice_Rough.md
+    • Complete Alice's story in rough.
+    • Preserve voice.
+    • Complete causal chain.
+    • Ignore meter/rhyme.
+
+07_Alice_Notices.md
+    • What Alice notices.
+    • WHY she notices it.
+    • Perceptual priorities.
+    • Associative triggers.
+
+07B_Alice_OS.md
+    • Behavioral rules.
+    • Speaking rules.
+    • Blind spots.
+    • Competencies.
+    • Philosophical habits.
+    • Literary constraints.
+
+SUCCESS:
+New Alice lines become predictable instead of invented.
+
+==================================================
+PHASE II — ROMANCE MACHINE
+PURPOSE: Learn what Alice absorbed.
+==================================================
+
+08_Romance_Architecture.md
+    Beat-for-beat stock romance novel.
+
+09_Romance_Tropes.md
+    Required imagery.
+    Required emotional beats.
+    Reader expectations.
+
+10_Author_Signatures.md
+    Distinctive habits of major romance writers.
+    What leaks into Alice's songwriting.
+
+11_Genre_Bleed.md
+    Decorative non-romance intrusions.
+    Dragon logic.
+    Genre furniture.
+
+12_Autobiographical_Romance.md
+    Self-insert.
+    Mary Sue.
+    Wish-fulfillment.
+    Reader complaints.
+    Hidden author tells.
+
+SUCCESS:
+Know exactly what "generic romance" looks like.
+
+==================================================
+PHASE III — TRANSLATION
+PURPOSE: Build Alice's subconscious converter.
+==================================================
+
+13_Translation_Grammar.md
+
+Not mappings.
+
+Translation tendencies.
+
+Jobs -> Callings
+Interviews -> Trials
+Managers -> Lords / disappear
+Transportation -> Journeys
+Waiting -> Longing
+Smells -> Atmosphere
+Clothing -> Identity
+Work -> Duty
+
+14_Regloss.md
+
+Translate ALL Alice material into romance language.
+
+Keep everything.
+
+Delete nothing.
+
+Purpose:
+Discover Alice's translation instincts.
+
+SUCCESS:
+Understand HOW Alice romanticizes.
+
+==================================================
+PHASE IV — WRITE THE MODEL ROMANCE
+PURPOSE: Build the song Alice thinks she wrote.
+==================================================
+
+15_Model_Pretty_Song.md
+
+Requirements:
+
+• Fully satisfying romance.
+• Genre-complete.
+• Slightly overcommitted.
+• No puzzle.
+• Dragon decorative.
+• Noxzema absent.
+• Stands alone.
+
+SUCCESS:
+Works without Alice.
+
+==================================================
+PHASE V — WRITE REALITY
+PURPOSE: Discover the hidden story.
+==================================================
+
+16_Reality_Timeline.md
+
+Chronological.
+
+No literary devices.
+
+No narration.
+
+Just:
+
+What actually happened.
+
+Then classify every detail:
+
+Remembered
+Romanticized
+Compressed
+Omitted
+Decorative
+Negative space
+
+SUCCESS:
+Reality exists independently.
+
+==================================================
+PHASE VI — MERGE
+PURPOSE: Build hidden structure.
+==================================================
+
+Update:
+
+Parallel Map
+
+Callback Ledger
+
+Construct:
+
+Braided Master
+
+Only architecture.
+
+No polishing.
+
+SUCCESS:
+All hidden correspondences intentional.
+
+==================================================
+PHASE VII — LYRICS
+PURPOSE: Surface execution.
+==================================================
+
+Write:
+
+Alice.
+
+Pretty Song.
+
+Transitions.
+
+Meter.
+
+Rhyme.
+
+Cadence.
+
+Hooks.
+
+Callbacks.
+
+Musical pacing.
+
+==================================================
+PHASE VIII — VALIDATION
+PURPOSE: Verify every layer.
+==================================================
+
+Read as:
+
+1. Alice only.
+2. Pretty Song only.
+3. Braided song.
+4. Hidden reality.
+
+All four must work independently.
+
+==================================================
+NON-NEGOTIABLE RULES
+==================================================
+
+Alice never performs quirkiness.
+
+Alice notices for reasons.
+
+Alice remains competent.
+
+Pretty Song is emotional memory.
+
+Not allegory.
+
+Not substitution cipher.
+
+Dragon = decorative wallpaper.
+
+Q-tips = reality wallpaper.
+
+Noxzema = intentionally untranslated.
+
+Some parallels exist.
+
+Some compress.
+
+Some disappear.
+
+Some are intentionally absent.
+
+==================================================
+REVISION RULE
+==================================================
+
+If a better idea appears:
+
+Preserve good work.
+Update architecture.
+Update roadmap.
+Continue.
+
+Never force new ideas into obsolete structure.
+
+==================================================
+DECISION FILTER
+==================================================
+
+When choosing between:
+
+"More clever"
+
+and
+
+"More Alice"
+
+Always choose:
+
+More Alice.

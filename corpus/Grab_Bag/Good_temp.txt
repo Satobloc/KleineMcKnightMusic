@@ -1,0 +1,22 @@
+WORKS WELL
+
+[GENRE_ENGINE:
+measure-level dominance shifts between emotionally direct regional melodic forms and unstable acoustic-material behaviors |
+neither system fully absorbs the other]
+
+[STRUCTURAL_INTERMESH:
+fragile tonal materials inhabit mechanically unsuitable instruments |
+bright sources carry bruised low-register lines; coarse sources carry glassy upper harmonics |
+timing systems remain mutually legible but never fully coincide |
+hook identity survives through repeated carrier-mismatch]
+
+[CONTACT_BEHAVIOR:
+allow beat-drag, pre-attack creep, barline slippage, delayed recovery |
+preserve each instrument’s native articulation even when carrying alien tonal roles |
+permit resonance overlap without rhythmic lock]
+
+[PHASE_LENGTH: 10 measures]
+[START: bass clarinet plays tiny bell-like hook; cimbalom sustains dull low drone]
+[PHASE_2: yaybahar takes dry staccato bass role]
+[PHASE_3: frame drum slides late against early khomus ticks]
+[PHASE_4: bowed psaltery carries blunt minor pulse]

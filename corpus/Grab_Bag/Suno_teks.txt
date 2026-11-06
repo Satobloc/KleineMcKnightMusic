@@ -1,0 +1,523 @@
+SUNO TEQs
+
+	1.	COMPACT THREE-FIELD STYLE
+
+[STYLE1:
+primary melodic, regional, vocal, or harmonic identity]
+
+[STYLE2:
+secondary rhythmic, atmospheric, textural, or genre identity]
+
+[PERCUSSION:
+meter, subdivision, grouping, attack, and ensemble behavior]
+
+Example:
+
+[STYLE1:
+sultry Vietnamese romantic honky-tonk lounge bandura with slow portamento slurs]
+
+[STYLE2:
+shimmering dark Malagasy gospel-step with rolling ooka-chooka pulse]
+
+[PERCUSSION:
+rapid nine-subdivision hi-hat grouped 3+2+3 against a heavy three-beat muted slap-banjo cycle; old Trinidadian marching-drum choir in slow ceremonial response]
+
+	2.	COMPOUND STYLE-SENTENCE
+
+Combine:
+
+[texture]
++
+[performance behavior]
++
+[emotional posture]
++
+[genre deformation]
++
+[rhythmic or instrumental engine]
+
+Examples:
+
+Spicy half-slap downtrodden capercaillie Sogdian deep stomp.
+
+Twinkly spazz-choppy dank melody, boastful prayer-mumble rap cantina singalong.
+
+Gamelan-a-billy spookenfolky dry-miked wet stabs with hog-thwollop drive.
+
+Thin-blooded, woolgathering folk charm.
+
+Best when every invented phrase implies an audible behavior rather than only mood.
+
+	3.	STRUCTURAL INTERMESH
+
+[STRUCTURAL_INTERMESH:
+distinct musical systems occupy the same structure without fully reconciling |
+timbral edges remain partly incompatible |
+rhythmic cooperation emerges despite harmonic friction |
+hooks persist through negotiation between conflicting local rules |
+elements adapt around one another without collapsing into stylistic consensus]
+
+Purpose:
+Defines how multiple styles coexist across the entire piece.
+
+Use when ordinary “fusion” would sound too smooth.
+
+	4.	CONTACT BEHAVIOR
+
+[CONTACT_BEHAVIOR:
+allow timing drag between layers |
+preserve regional and acoustic accent signatures |
+encourage partial synchronization failures |
+permit resonance spillover without full blending |
+maintain edge-friction during transitions]
+
+Controls what happens where musical systems touch.
+
+Useful variables:
+timing drag |
+phase mismatch |
+resonance leakage |
+unequal phrase lengths |
+attack incompatibility |
+accent preservation |
+partial synchronization |
+transition abrasion
+
+	5.	GENRE ENGINE
+
+[GENRE_ENGINE:
+measure-level dominance shifts between emotionally direct regional melodic forms and unstable acoustic-material behavior |
+neither system fully absorbs the other]
+
+Defines the rule by which styles trade control.
+
+Possible patterns:
+measure alternation |
+phrase interruption |
+foreground/background exchange |
+call-and-response control |
+gradual contamination |
+cyclic overthrow |
+one system controls rhythm while another controls melody |
+stable hook surrounded by unstable genre
+
+	6.	BREAKDOWN STATE
+
+[BREAKDOWN_STATE:
+structural containment weakens |
+previously separated behaviors cross-interfere |
+hooks survive as shared debris between incompatible systems]
+
+Possible behaviors:
+meters leak into one another |
+instruments inherit the wrong articulation |
+vocal styles swap phrases |
+refrains lose words but preserve contour |
+cycles continue at incompatible lengths |
+harmonic material survives as fragments |
+earlier motifs become percussion |
+genre boundaries turn temporarily porous
+
+	7.	PHASE ARCHITECTURE
+
+[PHASE_LENGTH:
+12 measures]
+
+[START_CONDITION:
+gentle dry-leaf crackle, one mistimed pop]
+
+[PHASE_1: STRING_ORIGIN]
+  [ACTION:
+  establish repeating harmonic figure]
+  [CONSTRAINT:
+  narrow vibrato with square-wave dynamic swell]
+  [TEXTURE:
+  sparse, patient, plinky, unadorned]
+
+Optional fields:
+[DOMINANT_SYSTEM]
+[SUPPRESSED_SYSTEM]
+[HOOK_STATE]
+[RHYTHMIC_STATE]
+[VOCAL_STATE]
+[TRANSITION_CONDITION]
+[FAILURE_MODE]
+[END_CONDITION]
+
+	8.	GLOBAL / SURFACE TWO-LAYER STRUCTURE
+
+[GLOBAL_INTERPRETIVE_LAYER:
+non-vocal instructions governing total style, realism, instrumentation, structure, and performance behavior]
+
+[SURFACE_GENERATION_LAYER:
+lyrics |
+quoted trigger strings |
+local vocal entries |
+loops |
+phase cues |
+section changes]
+
+Purpose:
+Separates global instructions from material Suno may sing.
+
+Only clearly designated lyric strings should become vocals. Structural language should remain operational rather than performative.
+
+	9.	TRIGGER-BASED VOCAL STRUCTURE
+
+[female_START_on:
+"quoted lyric fragment"]
+
+[male_START_on:
+"quoted lyric fragment"]
+
+[vocal_START:
+"quoted lyric fragment"]
+
+[loop_inject:
+"quoted lyric fragment"]
+
+Optional triggers:
+
+[CHOIR_ENTER_on:
+"..."]
+
+[INSTRUMENT_DROP_on:
+"..."]
+
+[TEMPO_DRAG_on:
+"..."]
+
+[VOICE_SPLIT_on:
+"..."]
+
+[RETURN_TO_PRIMARY_STYLE_on:
+"..."]
+
+Quoted text anchors performance changes to exact lyric events instead of vague section labels.
+
+	10.	LOCAL INLINE VOICE CUES
+
+//[MALE_VOICE]//
+
+//[FEMALE_VOICE]//
+
+//[WHISPERED_GROUP]//
+
+//[FALSE_CHILD_VOICE]//
+
+//[CEREMONIAL_CHOIR]//
+
+Place immediately before the lines they govern.
+
+Purpose:
+Attempts local changes of singer, register, or delivery inside the lyric field.
+
+Use sparingly. Inline cues are less reliable than lyric-trigger syntax and may occasionally be sung aloud or ignored.
+
+	11.	MAX / MIN PARAMETER BLOCK
+
+[is_MAX_MODE:
+MAX](MAX)
+
+[QUALITY:
+MAX](MAX)
+
+[REALISM:
+MAX](MAX)
+
+[REAL_INSTRUMENTS:
+MAX](MAX)
+
+[VOICE:
+MULTIPLE_DISTINCT](MAX)
+
+[INSTRUMENTATION:
+MIN](Moog, glass harmonica, grand timpani)
+
+[SWING_TYPE:
+ALTERNATING_STRAIGHT_AND_SWUNG](MAX)
+
+Purpose:
+Pushes selected properties strongly while restricting others.
+
+Useful for maximum realism, minimal instrumentation, vocal differentiation, dynamic range, fixed instrument lists, and hard style priorities.
+
+	12.	EXCLUSION ARCHITECTURE
+
+-jazz
+-bebop
+-stage musical
+-lounge
+-mouth noises
+-theater
+-oompah
+-doo-wop
+
+Purpose:
+Stops Suno from resolving unusual instructions into obvious neighboring genres or clichés.
+
+Use exclusions strategically. Block the model’s easiest unwanted interpretation rather than trying to negate every possible bad outcome.
+
+Too many exclusions may weaken the positive identity of the prompt.
+
+	13.	ARRANGEMENT MAP
+
+[INTRO:
+ambient field recording and isolated piano]
+
+[VERSE:
+dry acoustic figure and restrained lead vocal]
+
+[PRECHORUS:
+percussion accumulates without full harmonic lift]
+
+[CHORUS:
+bass-forward rhythmic opening with expanded backing voices]
+
+[BRIDGE:
+glitch interruption, muttered vocal, unstable electric guitar]
+
+[CLIMAX:
+brief punk-weight rupture]
+
+[OUTRO:
+return to ambient piano with unresolved residue]
+
+Use when experimental material needs a legible song skeleton.
+
+	14.	BEHAVIOR-FIRST INSTRUMENTATION
+
+Instead of:
+
+accordion, guitar, drums
+
+Use:
+
+accordion enters as a slow pressure swell halfway through |
+picked guitar repeats a spring-loaded accented tap figure |
+drums accelerate without increasing emotional urgency
+
+Describe:
+
+instrument |
+attack |
+phrase shape |
+rhythmic placement |
+dynamic behavior |
+interaction with other layers |
+change across the song
+
+Purpose:
+Tells Suno what instruments do rather than merely naming them.
+
+	15.	CONFLICT-METER PERCUSSION
+
+[PERCUSSION:
+rapid nine-subdivision hi-hat grouped 3+2+3 against a heavy three-beat muted slap-banjo cycle |
+marching-drum choir answers at a slower ceremonial rate]
+
+Purpose:
+Creates composite rhythmic behavior from independently intelligible cycles.
+
+Specify:
+
+subdivision count |
+grouping |
+larger pulse |
+cross-cycle |
+attack type |
+muting |
+response interval |
+ensemble hierarchy |
+intentional drift
+
+	16.	PERFORMANCE CONTRADICTION
+
+Examples:
+
+dry-miked wet stabs
+
+shimmering dark roll
+
+boastful prayer mumble
+
+sultry ceremonial abrasion
+
+gentle forced yawn
+
+patient panic rhythm
+
+Purpose:
+Pairs apparently incompatible descriptors so Suno must negotiate between them.
+
+Best contradictions operate on different dimensions:
+
+dry recording / wet articulation |
+dark harmony / bright timbre |
+boastful posture / prayer cadence |
+gentle dynamics / violent phrasing
+
+	17.	RECURRENCE WITH MUTATION
+
+[HOOK_CONTINUITY:
+preserve contour and rhythmic identity while allowing phonetic, harmonic, instrumental, semantic, or stylistic mutation]
+
+Possible sequence:
+
+first appearance:
+clean and legible
+
+second:
+phonetic corruption
+
+third:
+wrong genre
+
+fourth:
+instrumental only
+
+fifth:
+fragmented but emotionally clarified
+
+Purpose:
+Maintains recognizability while allowing severe local instability.
+
+	18.	FAMILIAR-SOURCE DISTORTION
+
+[REFERENCE_FRAME:
+establish a recognizable lyric, melodic archetype, cliché, or cultural object]
+
+[MUTATION_RULE:
+alter phonetics, morphology, syntax, semantic association, or genre context]
+
+[RECOGNITION_ANCHOR:
+retain one or two durable phrases, contours, or placements]
+
+Purpose:
+Uses familiar material as an interpretive trellis.
+
+The anchor should not only identify the source. It should make surrounding nonsense retroactively acquire possible meaning.
+
+	19.	VOCAL-LANGUAGE SYSTEM
+
+[VOCAL_LANGUAGE:
+define recurring phonemes, mouth shapes, consonant attacks, vowels, and syllabic tendencies]
+
+[REGISTER:
+keening |
+lip-percussive |
+liquid coloratura |
+guttural panic |
+pseudo-ceremonial |
+mechanical babble]
+
+[ENGLISH_EVENT:
+intelligible English appears only at selected dramatic points]
+
+Purpose:
+Treats invented language as composition rather than arbitrary syllables.
+
+Give each phonetic family a distinct musical or emotional function.
+
+	20.	ABSURD OPERA / CUE STACK
+
+[CUE:
+forced tuba yawn every eight measures]
+
+[CUE:
+Tibetan-style antiphonal choir answers soloist]
+
+[CUE:
+pianolo cha-cha interrupts ceremonial passage]
+
+[CUE:
+1970s saxophone wobble fades into fake serenity]
+
+[CUE:
+tea-time intermission performed as narratively necessary]
+
+Purpose:
+Builds escalation through theatrical events.
+
+Each absurd event should affect what follows rather than being discarded immediately for the next novelty.
+
+	21.	STRUCTURAL CONTAINMENT TEMPLATE
+
+[PRIMARY_HOOK:
+...]
+
+[PRIMARY_SYSTEM:
+...]
+
+[INTRUDING_SYSTEM:
+...]
+
+[CONTACT_RULE:
+...]
+
+[DOMINANCE_RULE:
+...]
+
+[MUTATION_RULE:
+...]
+
+[BREAKDOWN_RULE:
+...]
+
+[RECOVERY_RULE:
+...]
+
+[FINAL_STATE:
+...]
+
+Core logic:
+
+introduce stable object |
+show normal behavior |
+introduce incompatible system |
+force negotiation |
+preserve one invariant |
+weaken containment |
+let consequences propagate |
+end in altered stability or unresolved coexistence
+
+	22.	MASTER HYBRID TEMPLATE
+
+[STYLE_ORIGIN:
+primary musical identity]
+
+[SECONDARY_SYSTEM:
+incompatible or deforming identity]
+
+[STRUCTURAL_INTERMESH:
+how they coexist]
+
+[CONTACT_BEHAVIOR:
+what happens at boundaries]
+
+[GENRE_ENGINE:
+how dominance changes]
+
+[PERCUSSION_ENGINE:
+meter, grouping, attack, cross-cycle]
+
+[VOCAL_SYSTEM:
+voice, phonetics, clarity, switching]
+
+[HOOK_CONTINUITY:
+recognizable invariant]
+
+[PHASE_STRUCTURE:
+ordered states]
+
+[BREAKDOWN_STATE:
+containment failure]
+
+[RECOVERY_STATE:
+reconstitution]
+
+[END_CONDITION:
+final audible state]
+
+[EXCLUDE:
+nearest unwanted clichés]
