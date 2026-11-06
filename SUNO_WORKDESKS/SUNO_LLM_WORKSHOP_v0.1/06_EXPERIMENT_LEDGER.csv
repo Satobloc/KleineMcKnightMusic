@@ -1,0 +1,6 @@
+experiment_id,date,model,status,mode,question,prompt_path,weirdness,style_influence,audio_influence,output_a,output_b,control_value,surprise_value,conventionality_cost,result_summary,next_action
+E-0001,2026-08-06,v5.5,READY,exploratory,Can reversed common-association weighting plus hook fitness increase gem density?,experiments/E-0001_PROCEDURAL_CORRELATION/RUN_PROTOCOL.md,60,85,,,,,,,,Run Policy and No-DEF_MODE arms once each; retain four outputs
+E-0002,,v5.5,PLANNED,controlled,Does point-of-use musical definition outperform distant declaration?,,,,,,,,,,,
+E-0003,,v5.5,PLANNED,controlled,How does a clean genre sequence differ from a boundaryless genre stream?,,,,,,,,,,,
+E-0004,,v5.5,PLANNED,controlled,"How do no-stop, explicit-stop and reset states differ?",,,,,,,,,,,
+E-0005,,v5.5,PLANNED,controlled,How do grouped and separately bracketed controls differ?,,,,,,,,,,,

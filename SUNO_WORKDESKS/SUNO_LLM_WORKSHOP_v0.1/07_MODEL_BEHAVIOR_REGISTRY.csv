@@ -1,0 +1,8 @@
+behavior_id,claim,status,version_scope,evidence_class,supporting_case,counterexample,confidence,test
+B-001,Plain Lyrics text is strongly vocal-eligible,PROVISIONAL,v5.5,repeated user observation,Current equation-packet code experiment; historical Sonic Pi tests,,medium-high,Bracket/plain matched pair
+B-002,Square-bracketed Lyrics material is more likely to act as direction/pressure or be skipped,HYPOTHESIS,v4.5–v5.5,mixed historical/current observation,Sonic Pi tests; current code experiment,Bracket instructions sometimes leak or diffuse,medium,Grouping-character matrix
+B-003,Exact lyric phrase anchors can influence event placement,HYPOTHESIS,v4.5; unconfirmed v5.5,historical user observation,Hurdy-gurdy and chord-change reports,,medium-low,Styles+anchor vs no-anchor
+B-004,Triggered behaviors may persist/diffuse without stop/reset,HYPOTHESIS,v5.5,current user observation,Current prompting practice,,medium-low,E-0004
+B-005,Local musical reminder outperforms distant abstract dereferencing,HYPOTHESIS,v5.5,inference + user impression,Current discussion,,medium,E-0002
+B-006,Code/procedural framing can grant permission for unusual solution classes,HYPOTHESIS,v4.5–v5.5,cross-case inference,Sonic Pi sight-reading; E-0001,,medium,Equivalent prose vs code frame
+B-007,A protected hook can raise gem density under conceptual overload without eliminating surprise,OPEN,v5.5,design hypothesis,E-0001 pending,,unknown,E-0001 and replications

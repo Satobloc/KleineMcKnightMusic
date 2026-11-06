@@ -1,0 +1,4 @@
+case_id,name,status,model_scope,materials,questions
+C-001,Swidgy prompt evolution,NEXT,v5.5,swidgy.txt + Suno AI Model Insights,tight vocals; samples; lightness; cabaret; conventionalization; cue remnants
+C-002,Sonic Pi / Ruby sight-reading,QUEUED,v4.5,Getting Heard on Suno,plain/bracket behavior; anchors; permission framing; code as lyric vs style
+C-003,Doo-wop collision prompt,QUEUED,v4.5,Doo-wop duet prompt,visual/narrative collision translated into musical prompt; voice attribution
