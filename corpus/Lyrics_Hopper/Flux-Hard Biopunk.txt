@@ -1,0 +1,36 @@
+Full-spectrum portrait of Flux-Hard Biopunk prose
+Layer	What it feels like	Craft DNA	Telltale moves
+Core impulse	“Show me the math, then spill some blood.” Every scene marries an objective, solvable physics/engineering dilemma to a subjective, somatic crisis (mutation, addiction, altered perception).	Niven’s problem-story ethos + McKnight’s obsession with bodies out of control.	• Plot beats often pair off: coil-repair calculus → gene-serum backfire.
+• Solutions satisfy both the slide-rule and the gut.
+Narrative voice	Bilingual: crisp mission-log clarity swaps places with conversational, sometimes profane side-commentary.	Alternates third-person present/close limited (for action) with first-person artefacts (vlogs, chat logs, marginalia).	• “Staccato data dump” paragraphs (≤ 15 words/sentence) followed by “legato riff” paragraphs (30-plus words, sensory and digressive).
+• Meta-asides in italics or side-bars: “Yes, reader, I can smell the coolant too.”
+Diction & lexicon	Term-heavy precision (MeV, delta-V, absorption cross-section) spliced with visceral, body-loaded nouns and verbs (slough, cartilage, neon-pus).	Hard-SF jargon never appears without one concrete sensory hook.	• “The discharge climbed to 10¹¹ gauss—-and tasted like a nine-volt on the tongue.”
+Sentence rhythm	Pendulum swing: short → long → short. The swing keeps analytically minded readers alert while letting sensory-seekers luxuriate.	Grammar toggles between clipped subject-verb bursts and rolling cumulative clauses.	• Three-beat cadence in action sequences: “He fires. Recoil thumps. Cable snaps.”
+• Em-dashes and colons open the longer swells.
+Imagery palette	Industrial-sublime + medical grotesque. Metal fatigue described like aging skin; genomes like wiring diagrams.	Mechanistic metaphors for flesh, organic metaphors for machinery.	• “The superconductor bled phonons the way a cut artery bleeds heat.”
+Humour	Dry engineering jokes undercut by pop-culture roasting or gallows wit.	Sarcasm appears at the end of tense passages, releasing pressure.	• “Total energy loss: 4.3 %. (In other words, we’re only mostly doomed.)”
+Expository technique	“Lump-then-leap.” One lucid paragraph of theory, immediately applied in a kinetic or emotional beat.	Keeps info-dump fatigue low and shows the payoff.	• <small>Lump</small>: “Mag-sheath islands form at 4 K.” → <small>Leap</small>: “Her implants hit 3.9 K; the islands burst through her ribs like steel lilies.”
+Structural play	Core chapters = conventional suspense arc; each is book-ended by artefact snippets (comment threads, field notes, transcripts).	Artefacts never exceed 15 % of total word count; they always foreshadow or reframe the coming action.	• Chapter header: Extract from ‘Flux-Dancer’ Terms of Service.
+• Footer: protagonist’s private error log contradicts what we just saw.
+Pacing & escalation	Physics clock (countdown to flare, reactor trip) runs in parallel with a mutation clock (onset symptoms, chromosome countdown).	Stakes double-tick like a time bomb and a biological fuse.	• Section titles often show two growing numbers: T-04:22 / Cell-Load 71 %.
+Dialogue	Problem-solving banter laced with sensory shorthand and slang. Characters treat body changes the way mechanics talk about parts.	Dialogue tags minimal; voiceprints rely on jargon preference and sarcasm style.	• “Vector the beam five millirads—and mop the glow-vomit off your visor, rookie.”
+Emotional register	Earnest stakes, ironic surface. Characters feel terror, awe, desire; narration respects those feelings but often frames them with wit.	Pathos rises in reaction paragraphs, rarely in the middle of technical action.	• After narrowly surviving: one-line joke, then two sentences of trembling hands.
+Thematic texture	Repeating question: “How much of me is equation, how much accident?”	Blend of determinism (laws of physics) and chaotic evolution (mutations, memes).	• Motifs of mirrors, diagnostic readouts, and unfinished patch notes.
+
+Quick “sound check”
+“Flux spike goes live in twenty-three. Cavity Q dropped two points overnight—smells like hot copper and burnt sugar in here. I’ve got one roll of smart putty left, a half-charged rail stapler, and a brother streaming neon break-dance routines three habitats south. Copy that, Control? No? Fine. Memo to future me: don’t die stupid today.”
+
+—single paragraph demonstrates rhythm flip, technical datum, visceral hook, meta aside, and bleak joke in 80 words.
+
+Cheat-sheet for drafting in the style
+Alternate paragraph weights: ≤ 70 words → ≤ 20 words → ≤ 70 words …
+
+Pair every specialised noun with a tactile modifier (“cryogenic pump” + “needles your nostrils”).
+
+Gate exposition with necessity: if the protagonist doesn’t use the info within two pages, cut or relocate it to an artefact.
+
+Humour after hazard: punch-line arrives only once someone could plausibly vomit or cheer.
+
+Visual formatting as rhythm: italics for meta-asides, monospace for logs, bold for countdown timers—sparingly, like percussion hits.
+
+Result: prose that keeps the gear-heads nodding, the thrill-seekers squirming, and the meme-scrollers screenshotting the punch-lines.

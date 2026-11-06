@@ -1,0 +1,296 @@
+Encyclopedia of a Sci-Fi Universe
+Here is a list of terminology used in the sources, excluding character names, with citations and explanations where provided:
+•
+Achelic cylinders: Containers used for preserving brains, which would overheat and burst without a ventilator plate [1, 2].
+•
+Adrenaline: A physiological response that Hele experienced before it ebbed, leaving goose-flesh [3].
+•
+AI servitors: Automated systems unflatteringly referred to as "house-monkeys" by the Research Coordinator [4].
+•
+Argo-Seven: A vessel for space travel, set to carry GauBlue Ngui into orbit for a three-day burn [5-8]. It was crammed with clay pots made by Hele [9].
+•
+Atheh: A location on the moon's surface that GauBlue Ngui suggested exploring [8, 10].
+•
+Banqo Systems: A megacorp and contractor working on high-field engines. GauBlue Ngui was quickly hired by them after being dismissed from his previous job, and it's referred to as the "t'Nguir front-megacorp" [5, 8, 11, 12].
+•
+Biometrics Drone: An automated system that expressed concern over GauBlue Ngui's deteriorating health during his night shifts, noting irregular pulse and critical hydration [13, 14].
+•
+Bioluminescent fungi: Also known as "fire-branches," these ignite on contact with air and are a natural danger in the marsh [3].
+•
+Boardwalk: A structure where Hele and her partner walked [15].
+•
+Brass lamp: A single lamp found in a puddle in the smuggler's shop, snatched by GauBlue Ngui [16].
+•
+Buried empire: The former domain of t'Nguir ancestors, located beneath Luna's mare basalt, which the dissident colonists (Rockytz/Roques) are plotting to retake after an under-class revolt 150 years ago [8, 13, 17, 18].
+•
+Canvas: Used to drape a coffin-length crate on a dais [4].
+•
+Cat-walk: An elevated lattice of boards connecting shacks above a marsh, where Hele stumbled and GauBlue Ngui caught her [1, 3].
+•
+Cedar: A type of tree from which a "squealer informant" was once strung up [15].
+•
+Citrus soap: The scent from GauBlue's locker, impossibly mixed with spent prosthphent on a raised finger [8].
+•
+City park: Spread out "like a green atlas" below the engine gantries, providing GauBlue Ngui solace [14].
+•
+Clay pots: Made by Hele in her off-hours, they were part of the cargo on Argo-Seven [5, 9].
+•
+Club soda: What GauBlue Ngui was sipping at the club [19].
+•
+Coffin-length crate: A mysterious crate draped in canvas that sat on a dais in the Riverside Hotel, its purpose unknown [4].
+•
+Comms: Communication channels through which the Midland Viration Authority (MVA) routed packets [16, 20].
+•
+Confucian household codes: Details from archival photographs of girls’ schools in late-Qing China, received from the MVA [21].
+•
+Coolant blocks: Hauled by the Iceman onto his Model A [22].
+•
+Crate: A coffin-length object on a dais, logged by the Research Coordinator [4, 16, 20].
+•
+Crat bazaar: A "stodgy" market at a church that Hele attended with her mother [23].
+•
+Cryobox: A coffin-sized container where GauBlue Ngui lay anesthetized during Argo-Seven's ascent, which he considered his "brief, dark heaven" [5, 7].
+•
+Dais: An elevated platform in the ballroom of the Riverside Hotel where a mysterious crate rested [4, 16].
+•
+Desire: A feeling that ebbed from Hele after an intimate moment [3].
+•
+Downtown club: A location where the team went to unwind and test local loyalties, and where the MVA contact appeared [18, 19].
+•
+ECG traces: Displays on a monitor pulsing with heart activity, used to explain T-wave flattening [6, 24].
+•
+Elite lifestyle: A term used by GauBlue Ngui's partner to describe the Foundation's offer of full-sensory simulation [25].
+•
+Engine ganthe: Structures from which the entire city park could be viewed [10, 14].
+•
+Engines: High-field engines that Banqo Systems was working on, described as a danger that could "cook you alive" [10, 12].
+•
+Ethnographic ephemera: Archival photographs with captions detailing foot-binding, early marriage, and Confucian household codes from late-Qing China, transmitted by the MVA [21].
+•
+Exercise vest: A device shouted to be put underneath someone [8, 26].
+•
+Far side of Luna: Described as where "the real danger sits" by the project pilot [10].
+•
+Field-craft: A skill Hele was trained in, taught through "demonstration" rather than lecture where "stakes are real" [2, 5].
+•
+Field-induced morphological change: The systematic flattening of the T-wave due to a six-tesla static field, observed in macaque magnet experimental ECGs [6].
+•
+Fire-branches: Bioluminescent fungi that ignite on contact with air, found in the marsh, posing a hazard [3, 9, 15, 22].
+•
+Flight surgeons: Individuals familiar with space travel procedures [7].
+•
+Foam pillow: Where GauBlue Ngui's head rested in the cryobox [7].
+•
+Foot-binding: A practice detailed in archival photographs from late-Qing China [21].
+•
+Froth: Hissed in the marsh where fire-branches brushed the water [3].
+•
+Fuel trucks: Present on the embarkation deck, past which the messenger slipped [21].
+•
+Full-sensoHe simulation: An offer from the Foundation that allows one to forgo physical hardship but results in resolution decay as neural bandwidth throttles [8, 25].
+•
+Glass-walled office: Where GauBlue Ngui was dismissed from his previous job [12].
+•
+Glossy suit: Worn by GauBlue Ngui as he prepared to leave Earth on Argo-Seven [6].
+•
+Goose-flesh: A sensation experienced by both Hele and GauBlue Ngui, signaling intimacy [3, 9].
+•
+Gunman: An individual who attempted to attack the team in the smuggler's shop and was killed by GauBlue Ngui [1, 27].
+•
+Gwiphe-technician: A grinning technician at Banqo Systems who muttered "Baa-ngui-ngui" [13, 24].
+•
+Hangar: The location for orientation at Banqo Systems, beside locomotive-sized reaction chambers, and where the project pilot returned [10, 24].
+•
+Hefell’s dialect: A language GauBlue Ngui whispered to his partner [8, 10].
+•
+Hexa-nuclease activity: Something Indiana HQ was interested in, as it could change the nature of "paramagnetic tracing" [20].
+•
+Hexapus: A natural danger in the marsh with suction cups, also described as a snag risk if a vessel drifts too low [9, 15, 22, 28].
+•
+High-field engines: What Banqo Systems worked on [12].
+•
+Hjetion: A place where Hele was waiting [3].
+•
+Iceman: A person who stacks ice blocks onto a Model A outside the Riverside Hotel, indicating regular trade [4, 22, 25, 29].
+•
+Indiana HQ: An entity that wanted a sample [20].
+•
+Indiana Jones: A cultural reference used in a "tight assay joke" by the Research Coordinator and in a question about a car [4, 16, 20].
+•
+Invisible forces: What primate hearts surrendered to, confirmed by the T-wave flattening [6].
+•
+Iron pan: Used by the two caretakers in the Riverside Hotel ballroom to tend a low fire [28].
+•
+Island agency: A description of the Midland Viration Authority (MVA) as an "odd origin" for transmitting ethnographic ephemera [21].
+•
+IT group / internal IT crew: Berated GauBlue Ngui for forgetting a subnet label [8, 14].
+•
+KoHeak crime ring: A "low side-branch of the t'Nguir," mostly optioned out of Banqo, whose tattooed punks trailed the team [13, 19].
+•
+La Portesse Battle / Last Portal Battle: A past event involving the project pilot, where a pressure bomb was planted at the entrance [10, 30, 31].
+•
+Lantern glow: The light source Hele was leaning in [9].
+•
+Late-Qing China: The historical setting of archival photographs received from the MVA [21].
+•
+Lattice: Of boards forming the walkways [1, 3].
+•
+Leaf springs: Flattened on the Model A due to a pyramid of ice blocks [4].
+•
+Logging hollers: Old areas where GauBlue Ngui once helped string up a "squealer informant" [15].
+•
+Lunar plot: A potential conspiracy involving Hele [5].
+•
+Luna's mare basalt: The location beneath which the dissident colonists (Rockytz/Roques) live [13, 17].
+•
+Machetes: Carried under t'Nguir jackets by tattooed punks from the KoHeak crime ring [19].
+•
+Macaque magnet experimental ECGs: Recordings taken while animals sat in a six-tesla static field, showing systematic T-wave flattening [6].
+•
+Magnetic field: Could carry danger in Hele's frame if she was connected to the moon plot [17].
+•
+Marsh: A misty area with sulphur reek, above which shacks are placed on walkways [1, 3, 15].
+•
+Messenger: A courier who delivered an MVA packet and slipped past the Lanky Quartermaster [1, 21].
+•
+Midland Viration Authority (MVA): An agency routing packets through the team's comms, whose contact met the team and directed them to an underground spiral [16, 21, 29, 32].
+•
+Mission clock: Ticking, signaling urgency [3].
+•
+Mission timer: Marching on for Argo-Seven's launch [7].
+•
+Model A: A rickety old vehicle used by the Iceman, weighted down by ice blocks [4, 22, 25, 29].
+•
+Moon: Where a hidden faction was sharpening its claim, and a location GauBlue suggested exploring the surface of [8, 10].
+•
+Moss-slick plank: A slippery surface Hele slipped on [3].
+•
+Mother Nature: Described as sanctioning "murder and genocide and rape" as "good and natural" [8], and later sanctioning predation as readily as birth [15].
+•
+MVA contact: A stone-faced individual representing the MVA who met the team [29, 32].
+•
+MVA packet: A packet delivered by a courier, which the Lanky Quartermaster tried to intercept [11, 21].
+•
+Neural bandwidth throttled: A consequence of opting into full-sensory simulation, causing resolution decay [25].
+•
+Night shift: GauBlue Ngui's work period during which his health deteriorated [13, 14].
+•
+OAU: An organization with neatly written addresses found in a magazine rack [23].
+•
+Old Caretaker: One of two caretakers at the Riverside Hotel, stooped with age, providing local exposition and referring to "Pa" [2, 28, 29].
+•
+Old tower: The foundation from which clay was dug [26].
+•
+Pa: A term used by the old caretaker to refer to the "fire" (bioluminescent fungi) [28], and also mentioned in connection to a "deserted" cabin [15].
+•
+Pad C: A launch pad that had been toppled by harrowing crosswinds [7].
+•
+Paramagnetic: Describing chemical reaction products that are more paramagnetic than reactants, leading to T-wave flattening [8, 24].
+•
+Paramagnetic tracing: An activity that hexa-nuclease activity could change [20].
+•
+Parklands: Skirted during a drive south, offering a view like an architect's rendering [25].
+•
+Physical hardship: Forgone in the "elite lifestyle" offered by the Foundation [25].
+•
+Plasma buffeting: Described as "bumpy ground" expected once clear of orbit [9].
+•
+Portal coil: Humming, providing light, beside which Hele leaned against GauBlue Ngui [9].
+•
+Port Pretess: A location where a pressure bomb was planted at the entrance [8, 31].
+•
+Practicioners: A term used to describe "wizened old ladies," implying Hele was not among them [23].
+•
+Predation: Sanctioned by Mother Nature in the marsh [15].
+•
+Pressure bomb: Planted at the entrance of the Port Pretess, ending the Last Portal Battle [10, 31].
+•
+PRIORITY—THREAT INDICATOR: A red banner that blinked on a wall monitor [22].
+•
+Project pilot: Dr t'Nguir, a key figure who returned after vanishing [10, 30].
+•
+Prosthphent: A spent substance whose smell was on a raised finger [8].
+•
+Pulse irregular, hydration critical: Concerns expressed by the biometrics drone regarding GauBlue Ngui's health [14].
+•
+Pyramid of blocks: Ice blocks stacked onto the Model A [4].
+•
+Reaction chambers: Locomotive-sized structures beside which orientation took place [24].
+•
+Relay station: Where the mysterious crate had sat since it started operating [4].
+•
+Research Coordinator: A role, accurately describing Gojo Hei, who logs crate dimensions [4, 16, 30].
+•
+Resolution decay: A consequence of plugging into full-sensory simulation [25].
+•
+Rich tourist prank: GauBlue Ngui's assessment of the MVA incident [21].
+•
+Rickety old Model A: The Iceman's vehicle [4].
+•
+Riverside Hotel: A location with two caretakers, a former ballroom, and an abandoned shop nearby [2, 28, 29].
+•
+Rockytz: Dissident colonists living beneath Luna’s mare basalt, plotting to retake a buried empire (also "The Roques") [8, 13, 17, 18].
+•
+Rumpled clothes: Worn day after day by the under-fed guard [14].
+•
+Severance envelope: Received by GauBlue Ngui upon dismissal from his previous job, described as feeling "thin" [12].
+•
+Shacks and shanties: Structures connected by elevated walkways over a marsh [1, 3].
+•
+Shield: Being built to protect from the engines, described as "clear in front, ablative everywhere else" [10].
+•
+Simulations: Were still rendering, which was a reason not to open the crate [20].
+•
+Six-tesla static field: The environment in which macaque magnet experimental ECGs were taken [6].
+•
+Smuggler: A person hiding in an abandoned riverside shop, preserving brains, who was killed by GauBlue Ngui [1, 2].
+•
+Spores: Something Indiana HQ wanted to collect [20].
+•
+Squealer informant: An individual who GauBlue Ngui once helped string up from a cedar in the logging hollers [15].
+•
+Subnet label: Forgotten by GauBlue Ngui on his IT request form [14].
+•
+Sulphur reek of the marsh: The distinctive smell of the marsh [3].
+•
+Sulphur-smelling town: The town where GauBlue Ngui lived and where Hele was waiting for him [8, 12].
+•
+T-wave flattening: A systematic morphological change in ECGs observed in a static field, proving primate hearts surrender to invisible forces [6, 8, 24].
+•
+Telemethe: Data scrolled through by Dr. Liu t'Nguir, showing macaque magnet experimental ECGs [6].
+•
+Three-day burn: The duration of Argo-Seven's ascent before acceleration eased [7].
+•
+Transhent brains: Brains preserved in achelic cylinders by the smuggler [2].
+•
+Trapdoor: Opened by the MVA contact behind the DJ booth, leading down a spiral of wet stone [32].
+•
+T'Nguir ancestors: Rulers of a buried empire until an under-class revolt 150 years ago [13, 17, 18].
+•
+T'Nguir business: Referred to with "bricks" made at a "huge rate" [23].
+•
+T'Nguir front-megacorp: Banqo Systems, described as a front for "mega-other-things" [11].
+•
+T'Nguir jackets: Worn by the tattooed punks from the KoHeak crime ring [19].
+•
+T'Nguir leader: The leader of the tattooed punks from the KoHeak crime ring, who bragged about GauBlue Ngui's past actions [13, 19].
+•
+Tyres rasped the wheel-wells: Due to the heavy weight of ice blocks on the Model A [4].
+•
+Umbilicals: Detached from Argo-Seven as pad sirens wailed [8].
+•
+Under-class revolt: An uprising 150 years ago that overthrew the t'Nguir ancestors' empire [17, 18].
+•
+Under-fed Guard: An alias for Research Coordinator Gojo Hei [30], and GauBlue's partner on the night shift who wore the same rumpled clothes [14].
+•
+Unflattered horizon: The one thing GauBlue Ngui believed Earth had always denied him, which he could claim in orbit [6, 8].
+•
+Ventilator plate: An urgent objective to slide beneath brain cylinders to prevent overheating [2, 27, 32].
+•
+Walkways: Elevated lattices between shacks over a marsh [1, 3].
+•
+Wet stone: Formed the spiral leading down from the club [32].
+•
+Wrist slate: A device that received messages, including one from the MVA [21].
+•
+Young Caretaker: The second caretaker at the Riverside Hotel, barely twenty, providing local exposition [2, 28, 29].

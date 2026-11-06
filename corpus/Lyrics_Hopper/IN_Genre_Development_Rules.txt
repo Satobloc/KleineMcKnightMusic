@@ -1,0 +1,6 @@
+GENRE-PERMUTATION RULES: When running multiple genre permutations in the same thread. 
+*Before* you rewrite, always to the following:
+1. If using a reference story or passage as the basis for permutations, always re-load and re-analyze the original text in light of the new genre specifications before beginning a rewrite. 
+2. Make a point of noting the differences and similarities between the previous genre and the current genre. 
+3. Never directly repurpose examples used in the genre descriptions; always select the right example for the story.
+4. The goal is to identify the story's needs, and find the best leverage points available within the genre description. 
