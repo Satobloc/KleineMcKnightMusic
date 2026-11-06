@@ -1,0 +1,39 @@
+
+
+
+
+{run: 48, time: 0.0, thread: :live_loop_play_path}
+ └─ synth :beep, {note: [83.0, 80.0, 70.0], release: 0.5}
+ 
+{run: 48, time: 0.5, thread: :live_loop_play_path}
+ ├─ [83, 80, 70]
+ └─ synth :beep, {note: [82.0, 80.0, 70.0], release: 0.5}
+ 
+{run: 48, time: 1.0, thread: :live_loop_play_path}
+ ├─ [82, 80, 70]
+ └─ synth :beep, {note: [82.0, 80.0, 69.0], release: 0.5}
+ 
+{run: 48, time: 1.5, thread: :live_loop_play_path}
+ ├─ [82, 80, 69]
+ └─ synth :beep, {note: [82.0, 80.0, 68.0], release: 0.5}
+ 
+{run: 48, time: 2.0, thread: :live_loop_play_path}
+ ├─ [82, 80, 68]
+ └─ synth :beep, {note: [82.0, 80.0, 67.0], release: 0.5}
+ 
+{run: 48, time: 2.5, thread: :live_loop_play_path}
+ ├─ [82, 80, 67]
+ └─ synth :beep, {note: [82.0, 80.0, 66.0], release: 0.5}
+ 
+{run: 48, time: 3.0, thread: :live_loop_play_path}
+ ├─ [82, 80, 66]
+ └─ synth :beep, {note: [82.0, 80.0, 65.0], release: 0.5}
+ 
+=> Stopping thread :live_loop_play_path
+
+{run: 48, time: 3.5, thread: :live_loop_play_path}
+ ├─ [82, 80, 65]
+ └─ synth :beep, {note: [82.0, 80.0, 64.0], release: 0.5}
+ 
+{run: 48, time: 4.0, thread: :live_loop_play_path}
+ └─ [82, 80, 64]

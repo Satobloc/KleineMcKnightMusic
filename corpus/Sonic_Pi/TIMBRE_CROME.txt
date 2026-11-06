@@ -1,0 +1,59 @@
+use_synth :fm   # FM synth allows partial manipulation via modulation index
+
+# Function to play a "creak note" with a proxy for periodic structure
+define :creak_note do |note, period_factor|
+  # period_factor represents our physical creak parameter
+  # e.g. beating rate, inharmonicity multiplier, roughness index
+  # FM synth: mod_index affects spectral richness/inharmonicity
+  play note, 
+       attack: 0.01, sustain: 1, release: 0.2, 
+       mod_index: period_factor,
+       divisor: 2  # keep a basic carrier/mod ratio
+end
+
+# Anchor note
+anchor_note = 60         # MIDI note (middle C)
+anchor_creak = 1.0       # fixed baseline
+
+# Sweeping note
+sweep_note = 60          # same pitch
+sweep_start = 0.5        # lower "creak factor"
+sweep_end = 2.0          # higher "creak factor"
+sweep_steps = 50         # resolution of sweep
+sweep_sleep = 0.25       # time between steps
+
+live_loop :creak_interval_sweep do
+  sweep_steps.times do |i|
+    sweep_factor = sweep_start + (i.to_f / (sweep_steps-1)) * (sweep_end - sweep_start)
+    
+    # play both notes simultaneously
+    creak_note(anchor_note, anchor_creak)
+    creak_note(sweep_note, sweep_factor)
+    
+    sleep sweep_sleep
+  end
+end
+
+
+
+20BPM:
+{run: 26, time: 0.0, thread: :live_loop_creak_interval_sweep}
+ ├─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 1.0, divisor: 2}
+ └─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 0.5, divisor: 2}
+ 
+{run: 26, time: 0.75, thread: :live_loop_creak_interval_sweep}
+ ├─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 1.0, divisor: 2}
+ └─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 0.5306, divisor: 2}
+ 
+{run: 26, time: 1.5, thread: :live_loop_creak_interval_sweep}
+ ├─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 1.0, divisor: 2}
+ └─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 0.5612, divisor: 2}
+ 
+{run: 26, time: 2.25, thread: :live_loop_creak_interval_sweep}
+ ├─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 1.0, divisor: 2}
+ └─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 0.5918, divisor: 2}
+ 
+{run: 26, time: 3.0, thread: :live_loop_creak_interval_sweep}
+ ├─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 1.0, divisor: 2}
+ └─ synth :fm, {note: 60.0, attack: 0.03, sustain: 3.0, release: 0.6, mod_index: 0.6224, divisor: 2}
+ 

@@ -1,0 +1,640 @@
+===================================================
+## ONE-STOP CHEAT SCRIPT
+===================================================
+
+#Sonic Pi Command List
+#Copy and Paste from this command list into your sonic pi file
+
+#Use the command play to play a note using the default synth
+#play  note (symbol_or_number)
+#Usage:
+play 60 #midinote 60 or middle c
+play :c4 #create a symbol by typing colon then the note name and an octave designation
+play :e5, release: 2, amp: 0.5 #you can add parameters as well
+
+#Use the command sleep to wait before executing the next command
+#sleep  beats (number)
+#Usage:
+sleep 1 #wait for 1 beat before executing the next command (quarter note in 4/4)
+sleep 0.5 #wait for half a beat (eighth note in 4/4)
+sleep 0.25 #wait for a quarter of a beat (sixteenth note in 4/4)
+
+#use the sample command to play back some recorded audio
+#sample  name_or_path (symbol_or_string)
+#Usage:
+sample :drum_bass_hard, rate: 0.5 #play the sample at half speed (pitch drops by an octave)
+sample :drum_bass_hard, rate: -1 #play the sample backwards!
+
+#Use the live_loop to loop a bit of code over and over, redefine it as many times as you want and it automatically updates
+#live_loop  name (symbol)
+#Usage:
+live_loop :loop do
+  sample :loop_amen
+  sleep sample_duration :loop_amen #use to return the length of the specified sample
+end
+
+#Change the synth currently in use with the use_synth command
+#use_synth  synth_name (symbol)
+#Usage:
+use_synth :dark_ambience
+play :d2, attack: 2, release: 4
+
+#use the chord command to play a chord
+#chord  tonic (symbol), name (symbol)
+#Usage:
+play chord :c3, :minor7
+sleep 2
+play chord :g3, :dom7
+
+#scale  tonic (symbol), name (symbol)
+#Usage:
+live_loop :scale do
+  play (scale :a3, :hungarian_minor).tick
+  sleep 1
+end
+
+#wrap some code in a special effect like reverb, echo, distortion, etc
+#with_fx  fx_name (symbol)
+#Usage:
+live_loop :drums do
+  with_fx :distortion, distort: 0.9 do
+    sample :loop_amen
+    sleep sample_duration :loop_amen
+  end
+end
+
+#create a function with the define command to wrap some code into a name you can refer to
+#define  name (symbol)
+#Usage:
+define :foo do #create function foo which plays back note 50 and waits for 1 beat
+  play 50
+  sleep 1
+end
+
+foo
+
+#use a conditional like one_in to let Sonic Pi flip a coin and choose which code to execut
+#one_in  num (number)
+#Returns true or false with a specified probability - it will return true every one in num times where num is the param you specify
+#Usage:
+live_loop :condition do
+  if one_in 2
+    play 60 #if one_in returns true, play 60
+  else
+    play 72 #else if one_in returns false, play 72
+  end
+  sleep 1
+end
+
+#ring is a list that wraps back from the end to the beginning
+#Usage:
+(ring 0.25, 0.5, 1, 2)
+#if you use the command .tick on a ring it will keep playing from the end to the beginning
+live_loop :mel do
+  use_synth :piano
+  play (ring :c4, :g4, :e4, :a4, :d4, :b4).choose
+  sleep (ring 0.25, 0.5, 0.75).tick
+end
+
+#live_audio enables you to use your built-in microphone with Sonic Pi effects
+#Important! Run this with headphones plugged in
+with_fx :reverb, room: 1 do
+  with_fx :echo, phase: 0.5, decay: 6 do
+    live_audio :voice
+  end
+end
+#if you have to stop an instance of live_audio you can use the parameter :stop
+live_audio :voice, :stop
+
+
+===================================================
+## INVENTORIES
+===================================================
+
+Taeluf.com Home FOSS Versioning
+Sonic-Pi Cheatsheet
+This is probably not nearly an exhaustive list of synths, & samples you can use in sonic-pi. I intended this to be copy+pasteable into sonic-pi, because the page I found these on (not sure where that is now) was not in a very nice format.
+
+If you copy+paste the samples, they should all play with a 1 second sleep between each. (is sleep 1 one second? I don't remember)
+
+synths
+:dull_bell
+:pretty_bell
+:beep
+:sine
+:saw
+:pulse
+:subpulse
+:square
+:tri
+:dsaw
+:dpulse
+:dtri
+:fm
+:mod_fm
+:mod_saw
+:mod_dsaw
+:mod_sine
+:mod_beep
+:mod_tri
+:mod_pulse
+:tb303
+:supersaw
+:hoover
+:prophet
+:zawa
+:dark_ambience
+:growl
+:hollow
+:mono_player
+:stereo_player
+:blade
+:piano
+:pluck
+:sound_in
+:noise
+:pnoise
+:bnoise
+:gnoise
+:cnoise
+:basic_mono_player
+:basic_stereo_player
+:basic_mixer
+:main_mixer
+Samples
+Drums
+sample :drum_heavy_kick
+sleep 1
+sample :drum_tom_mid_soft
+sleep 1
+sample :drum_tom_mid_hard
+sleep 1
+sample :drum_tom_lo_soft
+sleep 1
+sample :drum_tom_lo_hard
+sleep 1
+sample :drum_tom_hi_soft
+sleep 1
+sample :drum_tom_hi_hard
+sleep 1
+sample :drum_splash_soft
+sleep 1
+sample :drum_splash_hard
+sleep 1
+sample :drum_snare_soft
+sleep 1
+sample :drum_snare_hard
+sleep 1
+sample :drum_cymbal_soft
+sleep 1
+sample :drum_cymbal_hard
+sleep 1
+sample :drum_cymbal_open
+sleep 1
+sample :drum_cymbal_closed
+sleep 1
+sample :drum_cymbal_pedal
+sleep 1
+sample :drum_bass_soft
+sleep 1
+sample :drum_bass_hard
+sleep 1
+sample :drum_cowbell
+sleep 1
+sample :drum_roll
+sleep 1
+Electric sounds
+sample :elec_triangle
+sleep 1
+sample :elec_snare
+sleep 1
+sample :elec_lo_snare
+sleep 1
+sample :elec_hi_snare
+sleep 1
+sample :elec_mid_snare
+sleep 1
+sample :elec_cymbal
+sleep 1
+sample :elec_soft_kick
+sleep 1
+sample :elec_filt_snare
+sleep 1
+sample :elec_fuzz_tom
+sleep 1
+sample :elec_chime
+sleep 1
+sample :elec_bong
+sleep 1
+sample :elec_twang
+sleep 1
+sample :elec_wood
+sleep 1
+sample :elec_pop
+sleep 1
+sample :elec_beep
+sleep 1
+sample :elec_blip
+sleep 1
+sample :elec_blip2
+sleep 1
+sample :elec_ping
+sleep 1
+sample :elec_bell
+sleep 1
+sample :elec_flip
+sleep 1
+sample :elec_tick
+sleep 1
+sample :elec_hollow_kick
+sleep 1
+sample :elec_twip
+sleep 1
+sample :elec_plip
+sleep 1
+sample :elec_blup
+sleep 1
+Guitar
+sample :guit_harmonics
+sleep 1
+sample :guit_e_fifths
+sleep 1
+sample :guit_e_slide
+sleep 1
+sample :guit_em9
+sleep 1
+Misc
+sample :misc_burp
+sleep 1
+sample :misc_crow
+sleep 1
+sample :misc_cineboom
+sleep 1
+Percussion
+sample :perc_bell
+sleep 1
+sample :perc_bell_2
+sleep 1
+sample :perc_snap
+sleep 1
+sample :perc_snap2
+sleep 1
+sample :perc_swash
+sleep 1
+sample :perc_till
+sleep 1
+sample :perc_door
+sleep 1
+sample :perc_impact_1
+sleep 1
+sample :perc_impact_2
+sleep 1
+sample :perc_swoosh
+sleep 1
+Ambient
+sample :ambi_soft_buzz
+sleep 1
+sample :ambi_swoosh
+sleep 1
+sample :ambi_drone
+sleep 1
+sample :ambi_glass_hum
+sleep 1
+sample :ambi_glass_rub
+sleep 1
+sample :ambi_haunted_hum
+sleep 1
+sample :ambi_piano
+sleep 1
+sample :ambi_lunar_land
+sleep 1
+sample :ambi_dark_woosh
+sleep 1
+sample :ambi_choir
+sleep 1
+sample :ambi_sauna
+sleep 1
+Bass
+sample :bass_hit_c
+sleep 1
+sample :bass_hard_c
+sleep 1
+sample :bass_thick_c
+sleep 1
+sample :bass_trance_c
+sleep 1
+sample :bass_drop_c
+sleep 1
+sample :bass_woodsy_c
+sleep 1
+sample :bass_voxy_c
+sleep 1
+sample :bass_voxy_hit_c
+sleep 1
+sample :bass_dnb_f
+sleep 1
+Bass Drums
+sample :bd_pure
+sleep 1
+sample :bd_808
+sleep 1
+sample :bd_zum
+sleep 1
+sample :bd_gas
+sleep 1
+sample :bd_sone
+sleep 1
+sample :bd_haus
+sleep 1
+sample :bd_zome
+sleep 1
+sample :bd_boom
+sleep 1
+sample :bd_klub
+sleep 1
+sample :bd_fat
+sleep 1
+sample :bd_tek
+sleep 1
+sample :bd_ada
+sleep 1
+sample :bd_mehackit
+sleep 1
+Snares
+sample :sn_dub
+sleep 1
+sample :sn_dolf
+sleep 1
+sample :sn_zome
+sleep 1
+sample :sn_generic
+sleep 1
+Loops
+sample :loop_industrial
+sleep 1
+sample :loop_compus
+sleep 1
+sample :loop_amen
+sleep 1
+sample :loop_amen_full
+sleep 1
+sample :loop_garzul
+sleep 1
+sample :loop_mika
+sleep 1
+sample :loop_breakbeat
+sleep 1
+sample :loop_safari
+sleep 1
+sample :loop_tabla
+sleep 1
+sample :loop_3dprinter
+sleep 1
+sample :loop_drone_g_97
+sleep 1
+sample :loop_electric
+sleep 1
+sample :loop_mehackit_1
+sleep 1
+sample :loop_mehackit_2
+sleep 1
+sample :loop_perc_1
+sleep 1
+sample :loop_perc_2
+sleep 1
+sample :loop_weirdo
+sleep 1
+Tabla
+sample :tabla_tas1
+sleep 1
+sample :tabla_tas2
+sleep 1
+sample :tabla_tas3
+sleep 1
+sample :tabla_ke1
+sleep 1
+sample :tabla_ke2
+sleep 1
+sample :tabla_ke3
+sleep 1
+sample :tabla_na
+sleep 1
+sample :tabla_na_o
+sleep 1
+sample :tabla_tun1
+sleep 1
+sample :tabla_tun2
+sleep 1
+sample :tabla_tun3
+sleep 1
+sample :tabla_te1
+sleep 1
+sample :tabla_te2
+sleep 1
+sample :tabla_te_ne
+sleep 1
+sample :tabla_te_m
+sleep 1
+sample :tabla_ghe1
+sleep 1
+sample :tabla_ghe2
+sleep 1
+sample :tabla_ghe3
+sleep 1
+sample :tabla_ghe4
+sleep 1
+sample :tabla_ghe5
+sleep 1
+sample :tabla_ghe6
+sleep 1
+sample :tabla_ghe7
+sleep 1
+sample :tabla_ghe8
+sleep 1
+sample :tabla_dhec
+sleep 1
+sample :tabla_na_s
+sleep 1
+sample :tabla_re
+sleep 1
+Vinyl
+sample :vinyl_backspin
+sleep 1
+sample :vinyl_rewind
+sleep 1
+sample :vinyl_scratch
+sleep 1
+sample :vinyl_hiss
+sleep 1
+Glitchy sounds
+sample :glitch_bass_g
+sleep 1
+sample :glitch_perc_1
+sleep 1
+sample :glitch_perc_2
+sleep 1
+sample :glitch_perc_3
+sleep 1
+sample :glitch_perc_4
+sleep 1
+sample :glitch_perc_5
+sleep 1
+sample :glitch_robot_1
+sleep 1
+sample :glitch_robot_2
+sleep 1
+Mehackit sounds
+sample :mehackit_phone_1
+sleep 1
+sample :mehackit_phone_2
+sleep 1
+sample :mehackit_phone_3
+sleep 1
+sample :mehackit_phone_4
+sleep 1
+sample :mehackit_robot_1
+sleep 1
+sample :mehackit_robot_2
+sleep 1
+sample :mehackit_robot_3
+sleep 1
+sample :mehackit_robot_4
+sleep 1
+sample :mehackit_robot_5
+sleep 1
+sample :mehackit_robot_6
+sleep 1
+sample :mehackit_robot_7
+sleep 1
+Taeluf
+"Kitchen Sink" styles
+Site Analytics
+© 2020 Taeluf, Reed Sutman
+===================================================
+## OTHER CHEAT SHEETS
+===================================================
+
+############################ Lesson #4 Code examples ############################
+
+############################ Activity 1 ############################
+(none)
+
+############################ Activity 2 ############################
+
+## The following examples add the effects reverb and echo to the note 60 respectively (there are many more effects in Sonic Pi)
+with_fx :reverb do
+  play 60
+  sleep 1
+end
+  
+with_fx :echo do
+  play 60
+  sleep 1
+end
+
+
+## The following code sculps a raw waveform of (1)sine (2)square (3)saw (4) triangle with their attack, release, sustain and decay being manipulated
+synth :sine, attack: 3, release: 2, sustain: 2, decay: 1
+
+synth :square, attack: 3, release: 2, sustain: 2, decay: 1
+
+synth :saw, attack: 3, release: 2, sustain: 2, decay: 1
+
+synth :tri, attack: 3, release: 2, sustain: 2, decay: 1
+
+############################ Activity 3 and 4 ############################
+(none)
+
+############################ End of Lesson #4 ############################
+
+
+############################ Lesson #3 Code examples ############################
+
+############################ Activity 1 ############################
+
+## Example of stretching a sample
+sample :ambi_choir, rate: 0.3
+
+## Example of a cutoff effect
+synth :blade, cutoff: 50        # Experiment with different cutoff values from 1 - 120
+
+
+############################ Activity 2 ############################
+
+## Example of a random notes being within a given range
+loop do
+  play rrand(50, 60)
+  sleep 0.5
+end
+
+## Example of random notes being played from a list stored in a variable called "notes"
+loop do 
+  notes = (ring :C4, :D4, :A4, :B4)
+  play notes.choose
+  sleep 0.25
+end
+
+## In Computer Science, a 'random seed' is the starting point from which a new stream of random values plays. 
+## The random stream is just a giant list of 'pre-rolled' values. Using a random seed simply jumps us to a point in that list. 
+
+use_random_seed 1
+loop do
+  play rrand(50, 60)
+  sleep 0.5
+end
+
+## Example of conditional logic with a random number generator depending on what number rrand() returns (from 0-1)
+loop do
+  if rand() > 0.7 then
+    use_synth :fm           # If number was greater than 0.7, lines 36-38 will execute
+    play 60
+    sleep 0.25
+  else
+    use_synth :blade        # Else if number was less than 0.7, lines 40-42 will execute
+    play 65
+    sleep 0.5
+  end
+end
+
+############################ End of Lesson #1 ############################
+
+############################ Lesson #2 Code examples ############################
+
+############################ Activity 1 ############################
+
+play :C4        # Remember you can write traditional note names instead of numbers
+
+
+############################ Activity 2 ############################
+
+live_loop :foo do         # Remember we can have mutiple loops running at the same time with live loops
+  play 60
+  sleep 1
+end
+  
+## This code below plays an audio sample called 'ambi_choir'
+sample :ambi_choir 
+
+
+## Example of a list or a 'collection of notes' grouped in one play 
+play [:A4, :E4, :D4, :G4]
+
+
+## Example of a list 2 
+notes = (ring :E4, :Fs4, :B4, :Cs5)       # We now have a variable (container) called 'notes' we can use later
+
+## We can now use different methods to play this collection of notes in different ways within a loop:
+loop do   
+ play notes.tick        # .tick iterates through the list from start to end
+ sleep 1
+end
+
+loop do  
+ play notes.choose      # .choose randomly chooses a note from the list created
+ sleep 1
+end
+
+############################ End of Lesson #2 ############################
+
+
+
