@@ -1,0 +1,109 @@
+The Royale: User Guide
+Overview The Royale is a unique, DIY analog film camera built from an antique wooden camera case and nested silver napkin rings. It is designed for experimental photography in indoor and low-light conditions. The camera lacks a mechanical shutter, and exposure is controlled by manually turning a light source on and off. It uses Fuji X-ray film, which has unique characteristics that require specific development techniques.
+Camera Specifications
+•
+Body: Antique wooden camera case with nested silver napkin rings
+•
+Lens: Compound lens with a fixed lens behind an adjustable one.
+•
+Focal Length: Approximately 9.25 inches (235 mm) fixed
+•
+Aperture: Fixed at f/12 (approximately 0.75-inch diameter)
+•
+Film: Fuji X-ray film, assumed ISO of 100
+•
+Film Projection Area: 3.5 x 4.25 inches
+•
+Focus: Manually adjusted by moving the camera relative to the subject, with a range of approximately 1 inch to 35 feet, or potentially further
+•
+Shutter: None; exposure controlled manually by turning a light source on and off
+Operational Parameters
+•
+ISO: Approximately 80-100
+•
+Optimal EV Range: 2-8 (dim to decently lit interiors)
+•
+Exposure Times (at f/12, ISO 100):
+◦
+Bright indoor lighting (EV 7): ~1 second
+◦
+Typical indoor lighting (EV 6): ~2 seconds
+◦
+Dim lighting (EV 4-5): 4-8 seconds
+◦
+Very dim lighting (EV 2-3): 8-16+ seconds
+Focusing
+•
+The Royale's focusing mechanism is unique, relying on manually moving the camera relative to the subject.
+•
+The depth of field is shallow at f/12, so careful adjustments are needed to achieve sharp focus.
+•
+Adjust focus by moving the camera to bring the subject into the sharpest possible focus.
+•
+It may be useful to do test shots with the camera to determine best focus at varying distances.
+•
+The lens also has an adjustable outer lens element, but these methods are fairly coarse and imprecise.
+Exposure Control
+•
+Exposure is controlled manually by turning a light source on and off.
+•
+The minimum exposure time is approximately 1/10th of a second, but more precise timing can be achieved at 1/2 second intervals or longer.
+•
+Use a timer or metronome to synchronize the light on/off cycles for more accurate exposures.
+•
+Exposure times are dependent on the lighting conditions of the subject, and the fixed aperture.
+Film
+•
+The Royale uses Fuji X-ray film, with an estimated ISO of 80-100.
+•
+X-ray film is known for its high contrast, which can be mitigated during development.
+•
+The film is orthochromatic, meaning it is sensitive to blue and green light, but less responsive to red. This can affect how colors are rendered in black and white images.
+•
+The film may experience reciprocity failure, especially with long exposures.
+Recommended Settings for Single Camera Use
+•
+Lighting: Use indoor lighting or controlled low-light environments.
+•
+Exposure Time:
+◦
+Bright indoor lighting (EV 7): ~1 second
+◦
+Typical indoor lighting (EV 6): ~2 seconds
+◦
+Dim lighting (EV 4-5): 4-8 seconds
+◦
+Very dim lighting (EV 2-3): 8-16+ seconds
+•
+Focus: Carefully adjust the camera’s position relative to the subject to achieve sharp focus, given that the depth of field is shallow at f/12.
+•
+Development: Use a diluted developer (e.g., 1:1 or 1:2 dilution) and gentle agitation to mitigate the high contrast of the film.
+Simultaneous Shooting Setup (with Keeblerkam and Clampcam)
+•
+Lighting: Controlled indoor light source (EV 6). Ensure consistent brightness.
+•
+Exposure Time: 4 seconds for all cameras (ideal compromise).
+•
+Camera Settings:
+◦
+The Royale: f/12 (fixed).
+◦
+Position the camera to achieve sharp focus on the subject at ~33 inches.
+•
+Timing: Use a synchronized light-on/light-off method for uniform exposure.
+•
+Film Placement: Ensure proper film alignment to prevent light leaks.
+•
+Development: Use a gentle, diluted developer (e.g., 1:1) to adjust tones and contrast during processing.
+Key Considerations for Use
+•
+Manual Control: The camera requires manual control over focusing and exposure.
+•
+Bracketing: Since bracketing is difficult given film loading constraints, aim for an accurate single exposure using the ideal parameters.
+•
+Experimentation: The Royale is designed for experimental photography, so testing and iteration are key to understanding the camera's unique characteristics.
+•
+Film Handling: The X-ray film must be cut to size and carefully loaded to avoid light leaks.
+•
+Subject Matter: Consider the orthochromatic nature of the film, which is less sensitive to red light. Red subjects may appear darker in the resulting images.
+By understanding these parameters and practicing with the camera, you can successfully capture images with The Royale. Remember that each DIY camera is unique and requires a hands-on approach for optimal results.

@@ -1,0 +1,636 @@
+Studio A is the lab for single- and double-stream digitization of discs, cylinders, open reel tape, and other formats where the operator must make listening-based decisions on stylus size, azimuth, or other factors for maximum fidelity. The lab is equipped with dual DAW's for higher efficiency with certain formats, such as 78rpm discs.
+
+Disc Playback (2)
+
+Technics SL-1015/SP-15, Technics EPA 501h tonearm, Shure M44 cartridge
+Timestep T-03EQA+ archival preamplier/equalizer
+Expert Stylus coarse groove styli
+Analog to Digital Converter
+
+Prism Sound Dream ADA-8XR
+Digital Audio Workstations (2)
+
+PC Based workstation
+Lynx AES16e Digital I/O
+Wavelab software
+Cylinder Playback
+
+CPS1 #2 with Soundsmith flat preamp and custom Soundsmith cartridges for 2 and 4 minute cylinders, and standard, salon and concert mandrels
+Archeophone #4 with complete mandrel set, Shure M44 cartridges and Expert styli for 2 and 4 minute cylinders, upgraded with internal Soundsmith balanced flat preamp
+Archeopone and CPS1 cylinder playback eqiupment
+
+Open Reel
+
+Studer A80 RC 2 track
+DBX 150x and Dolby 363 SR/A noise reduction
+Restoration
+
+CEDAR DCX Declicker
+CEDAR CRX Decrackler
+CEDAR DHX Dehisser
+CEDAR BRX+ Debuzzer
+CEDAR AZX+ Azimuth corrector
+Packburn 323A Audio Noise Suppressor
+SAE 5000 Impulse Noise Reduction
+Monitoring
+
+PMC TBS-AII stereo pair
+AKG Headphones
+Coleman Audio M3PHMKIII monitor controller
+Dorrough 1200 metering and stereo signal test set
+Pitch source
+
+Casio CTK-4200 electric keyboard
+Power
+
+Furman IT-1210 Isolation Transformer (2)
+Signal flow
+
+Switchcraft patchbays
+Sonifex ADDA and RB-SP1 splitter
+Additional Playback Equipment
+
+Sony PCM R500 DAT
+Tascam MD-CD1MKIII Minidisc/CD player
+Tascam Portastudio 424mkIII (4 track cassette)
+Teac A3340S 4-track open reel
+Sony TC-WR901ES (cassette with Dolby S decoding)
+Wide selection of Stanton, Shure, and Expert Stylus cartridges and styli
+
+
+
+Discography of American Historical Recordings
+Browse
+Search
+Resources
+eBooks
+News
+About
+Home
+Help
+Berliner matrix 22. Honeymoon march / Band (unidentified; Berliner Gramophone Co.)
+Previous
+Next
+Title	Source
+Honeymoon march (Primary title)	Disc label
+Authors and Composers	Notes
+George Rosey (composer)	
+Composer information source: ADP.
+Personnel	Notes
+Band (unidentified; Berliner Gramophone Co.) (Musical group)	
+Additional Information
+Description: Band
+Category: Instrumental
+Master Size: 7-in.
+Notes
+Source(s): DEx: Disc examined; disc.
+Take Date and Place	Take	Status	Label Name/Number	Format	Note
+6/28/1895 Washington, DC, New York, New York, or Philadelphia, Pennsylvania	Unknown	Master	Berliner 22	7-in.	No take shown; possibly the first take. Issue information source: DEx.
+3/24/1896 Washington, DC, New York, New York, or Philadelphia, Pennsylvania	Y	Master	Berliner 22	7-in.	DEx.
+Citation
+
+Chicago Style
+
+Discography of American Historical Recordings, s.v. "Berliner matrix 22. Honeymoon march / Band (unidentified; Berliner Gramophone Co.)," accessed October 3, 2026, http://adp.library.ucsb.edu/index.php/matrix/detail/2000147702/22-Honeymoon_march.
+
+Feedback
+Send the Editors a message about this record.
+
+Continue Browsing
+Previous
+Next
+worldcat-icon
+
+Search for this master on WorldCat
+
+
+
+© 2008-2026 Regents of the University of California, All Rights Reserved.
+
+Home | Contact Us | Terms of Use | Accessibility
+
+See explanations of how to interpret Dates of Berliner and Columbia issues.
+
+Discography of American Historical Recordings
+Browse
+Search
+Resources
+eBooks
+News
+About
+Home
+Help
+Victor matrix [Pre-matrix A-]141. The armorer's song / George Broderick
+Previous
+Next
+Title	Source
+The armorer's song (Primary title)	
+Robin Hood (Work title)	
+Authors and Composers	Notes
+Reginald De Koven (composer)	
+Harry B. Smith (lyricist)	
+Personnel	Notes
+George Broderick (vocalist : bass vocal)	
+Additional Information
+Description: Male vocal solo
+Category: Vocal
+Language: English
+Master Size: 7-in.
+Take Date and Place	Take	Status	Label Name/Number	Format	Note
+5/1/1900 Camden, New Jersey	1	Master	A-141	7-in.	Returned: 5 Jun.'02: 25 copies.
+Citation
+
+Chicago Style
+
+Discography of American Historical Recordings, s.v. "Victor matrix [Pre-matrix A-]141. The armorer's song / George Broderick," accessed October 3, 2026, http://adp.library.ucsb.edu/index.php/matrix/detail/100000148/Pre-matrix_A-141-The_armorers_song.
+
+Feedback
+Send the Editors a message about this record.
+
+Continue Browsing
+Previous
+Next
+worldcat-icon
+
+Search for this master on WorldCat
+
+
+
+© 2008-2026 Regents of the University of California, All Rights Reserved.
+
+Home | Contact Us | Terms of Use | Accessibility
+
+
+
+Discography of American Historical Recordings
+Browse
+Search
+Resources
+eBooks
+News
+About
+Home
+Help
+Zonophone matrix [Zo cat 5799-A]. Jolly blacksmith / Zonophone Orchestra
+Previous
+Next
+Title	Source
+Jolly blacksmith (Primary title)	AZDv1
+Descriptive (Title descriptor)	AZDv1
+Unverified composer information: Suckley
+Composer information source: AZDv1.
+Personnel	Notes
+Zonophone Orchestra (Musical group)	
+Additional Information
+Description: Orchestra, with male vocal quartet
+Category: Instrumental with vocal refrain
+Master Size: 10-in.
+Notes
+Information on this recording from "The American Zonophone discography: Volume I, ten- and twelve-inch popular series (1904–1912)," compiled by William R. Bryant, edited by Allan Sutton (Mainspring Press, 2012). Database edition by arrangement with Mainspring Press.
+Take Date and Place	Take	Status	Label Name/Number	Format	Note
+Before October 1911 New York, New York	Unknown	Master	Zonophone 5799	10-in.	
+Jolly blacksmith / Zonophone Orchestra
+
+0:00
+0:00
+
+
+Pitch
+0
+
+Tempo
+1
+
+Embed
+Download
+Jolly blacksmith / Zonophone Orchestra - Zonophone 5799 - Take Unknown - Before October 1911
+Audio of this recording from the UCSB Library
+Audio of this recording from the UCSB Library
+Citation
+
+Chicago Style
+
+Discography of American Historical Recordings, s.v. "Zonophone matrix [Zo cat 5799-A]. Jolly blacksmith / Zonophone Orchestra," accessed October 3, 2026, http://adp.library.ucsb.edu/index.php/matrix/detail/2000256502/Zo_cat_5799-A-Jolly_blacksmith.
+
+Feedback
+Send the Editors a message about this record.
+
+Continue Browsing
+Previous
+Next
+worldcat-icon
+
+Search for this master on WorldCat
+
+
+
+© 2008-2026 Regents of the University of California, All Rights Reserved.
+
+Home | Contact Us | Terms of Use | Accessibility
+
+
+Discography of American Historical Recordings
+Browse
+Search
+Resources
+eBooks
+News
+About
+Home
+Help
+Zonophone matrix [Zo cat P 5977]. Three jolly cobblers / Hager's Orchestra
+Previous
+Next
+Title	Source
+Three jolly cobblers (Primary title)	AZDv2
+Personnel	Notes
+Hager's Orchestra (Musical group)	
+Additional Information
+Description: Orchestra, with vocal chorus
+Category: Instrumental with vocal refrain
+Master Size: 7-in.
+Notes
+Matrix number not known.
+Information on this recording from "The American Zonophone discography: Volume II, seven-, nine-, and first twelve-inch series (General catalog, 1900-1905)," compiled by William R. Bryant, edited by Allan Sutton. Previously unpublished. Database edition by arrangement with Mainspring Press.
+Take Date and Place	Take	Status	Label Name/Number	Format	Note
+Before August 1904 New York, New York	Unknown	Master	Zonophone P 5977	7-in.	
+Citation
+
+Chicago Style
+
+Discography of American Historical Recordings, s.v. "Zonophone matrix [Zo cat P 5977]. Three jolly cobblers / Hager's Orchestra," accessed October 3, 2026, http://adp.library.ucsb.edu/index.php/matrix/detail/2000263600/Zo_cat_P_5977-Three_jolly_cobblers.
+
+Feedback
+Send the Editors a message about this record.
+
+Continue Browsing
+Previous
+Next
+worldcat-icon
+
+Search for this master on WorldCat
+
+
+
+© 2008-2026 Regents of the University of California, All Rights Reserved.
+
+Home | Contact Us | Terms of Use | Accessibility
+
+
+Discography of American Historical Recordings
+Browse
+Search
+Resources
+eBooks
+News
+About
+Home
+Help
+Zonophone matrix [Zo cat P 5981]. Unter der Linden / Albert Campbell ; Hager's Orchestra ; Frank C. Stanley
+Previous
+Next
+Title	Source
+Unter der Linden (Primary title)	AZDv2
+Unverified composer information: Penn
+Composer information source: AZDv2.
+Personnel	Notes
+Albert Campbell (vocalist : tenor vocal)	
+Hager's Orchestra (Musical group)	
+Frank C. Stanley (vocalist : bass vocal)	
+Additional Information
+Description: Orchestra, with male vocal duet and vocal chorus
+Category: Instrumental with vocal refrain
+Master Size: 7-in.
+Notes
+Matrix number not known.
+Information on this recording from "The American Zonophone discography: Volume II, seven-, nine-, and first twelve-inch series (General catalog, 1900-1905)," compiled by William R. Bryant, edited by Allan Sutton. Previously unpublished. Database edition by arrangement with Mainspring Press.
+Take Date and Place	Take	Status	Label Name/Number	Format	Note
+Before August 1904 New York, New York	Unknown	Master	Zonophone P 5981	7-in.	
+Citation
+
+Chicago Style
+
+Discography of American Historical Recordings, s.v. "Zonophone matrix [Zo cat P 5981]. Unter der Linden / Albert Campbell ; Hager's Orchestra ; Frank C. Stanley," accessed October 3, 2026, http://adp.library.ucsb.edu/index.php/matrix/detail/2000263608/Zo_cat_P_5981-Unter_der_Linden.
+
+Feedback
+Send the Editors a message about this record.
+
+Continue Browsing
+Previous
+Next
+worldcat-icon
+
+Search for this master on WorldCat
+
+
+
+© 2008-2026 Regents of the University of California, All Rights Reserved.
+
+Home | Contact Us | Terms of Use | Accessibility
+
+Discography of American Historical Recordings
+Browse
+Search
+Resources
+eBooks
+News
+About
+Home
+Help
+Columbia matrix W106917. Kinkan-halvan / "Gleekluben" Brooklyn ; "Lyran" New York
+Title	Source
+Kinkan-halvan (Primary title)	Disc label
+Authors and Composers	Notes
+Karl Sylvan (songwriter)	Listed on disc label as K. Sylvan.
+Gunnar Wennerberg (songwriter)	
+Composer information source: Disc label.
+Personnel	Notes
+"Gleekluben" Brooklyn (Vocal group)	
+"Lyran" New York (Musical group)	
+Additional Information
+Description: Instrumental ensemble, with male vocal chorus
+Category: Instrumental with vocal refrain
+Marketing Genre: Swedish
+Language: Swedish
+Master Size: 10-in.
+Notes
+Information on this recording derives from data compiled and provided by Richard K. Spottswood, as well as disc labels examined by DAHR editors.
+Source(s): disc.
+Take Date and Place	Take	Status	Label Name/Number	Format	Note
+July 1926 New York, New York	1	Master	Columbia 26038-F	10-in.	Issued for the Swedish market.
+Kinkan-halvan / "Gleekluben" Brooklyn ; "Lyran" New York
+
+0:00
+0:00
+
+
+Pitch
+0
+
+Tempo
+1
+
+Embed
+Kinkan-halvan / "Gleekluben" Brooklyn ; "Lyran" New York - Columbia 26038-F - Take 1 - July 1926
+Audio of this recording from the UCSB Library
+Audio of this recording from the UCSB Library
+Citation
+
+Chicago Style
+
+Discography of American Historical Recordings, s.v. "Columbia matrix W106917. Kinkan-halvan / "Gleekluben" Brooklyn ; "Lyran" New York," accessed October 3, 2026, http://adp.library.ucsb.edu/index.php/matrix/detail/2000125868/W106917-Kinkan-halvan.
+
+Feedback
+Send the Editors a message about this record.
+
+worldcat-icon
+
+Search for this master on WorldCat
+
+
+
+© 2008-2026 Regents of the University of California, All Rights Reserved.
+
+Home | Contact Us | Terms of Use | Accessibility
+
+See explanations of how to interpret Dates of Berliner and Columbia issues.
+
+
+Discography of American Historical Recordings
+Browse
+Search
+Resources
+eBooks
+News
+About
+Home
+Help
+Columbia matrix 45509. Under Prussian banners (March) / Columbia Band
+Title	Source
+Under Prussian banners (March) (Primary title)	Disc label
+Mit Preussischen Standarten (Marsch) (Primary title)	Disc label (Columbia E2211)
+Viva Juárez : Marcha (Primary title)	Spottswood (Columbia C3658)
+Authors and Composers	Notes
+Franz von Blon (composer)	
+Composer information source: Disc label.
+Personnel	Notes
+Columbia Band (Musical group)	
+Banda Militar [Columbia Band] (Musical group)	Listing on Columbia C3658.
+Additional Information
+Description: Band
+Category: Instrumental
+Marketing Genre: Spanish
+Master Size: 10-in.
+Notes
+Source(s): Spottswood (Issues; titles); Rigler-Deutsch Index; disc.
+Information on this recording from "The Columbia master book discography, volume 2: Principal U.S. matrix series 1910-1924," by Brian Rust (Greenwood Press, 1999). Database edition by arrangement with the publisher.
+Take Date and Place	Take	Status	Label Name/Number	Format	Note
+4/1/1915 New York, New York	1	Unknown			
+4/1/1915 New York, New York	2	Unknown			
+4/1/1915 New York, New York	3	Unknown			
+4/1/1915 New York, New York	4	Master	Columbia A1711	10-in.	
+Under Prussian banners (March) / Columbia Band
+
+0:00
+0:00
+
+
+Pitch
+0
+
+Tempo
+1
+
+Embed
+Download
+Under Prussian banners (March) / Columbia Band - Columbia A1711 - Take 4 - 4/1/1915
+Audio of this recording from the UCSB Library
+Audio of this recording from the UCSB Library
+4/1/1915 New York, New York	4	Master	Columbia E2211	10-in.	Issued for the German market.
+4/1/1915 New York, New York	4	Master	Columbia C3658	10-in.	Issued for the Spanish market.
+Citation
+
+Chicago Style
+
+Discography of American Historical Recordings, s.v. "Columbia matrix 45509. Under Prussian banners (March) / Columbia Band," accessed October 3, 2026, http://adp.library.ucsb.edu/index.php/matrix/detail/2000022796/45509-Under_Prussian_banners_March.
+
+Feedback
+Send the Editors a message about this record.
+
+worldcat-icon
+
+Search for this master on WorldCat
+
+
+
+© 2008-2026 Regents of the University of California, All Rights Reserved.
+
+Home | Contact Us | Terms of Use | Accessibility
+
+
+
+logo
+DISCOVER
+ 
+DONATE
+ 
+ABOUT
+ 
+
+UCSB Call Number
+ 
+8097
+ 
+After the ball.
+Performers:
+George Gaskin.
+Release year:
+approximately 1893
+Cylinder 8097
+0:002:25
+ 
+DownloadShare:  Twitter  Facebook
+Notes:
+Original cylinder in collection of John Levin. Transfer provided for preservation and access.
+Brown wax cylinder.
+Cylinder recorded by United States Phonograph Company. Catalog number unknown.
+Vocal solo with piano.
+Personal Name:
+Harris, Chas. K, 1867-1930.
+Gaskin, George J.
+Subjects:
+Popular music—To 1901.
+Musique populaire—Jusqu'à 1901.
+Original Item Information:
+Cylinder 8097
+Durable URL:
+http://www.library.ucsb.edu/OBJID/Cylinder8097
+Discover
+Cylinder History
+Thematic Playlists
+Browse All
+Donate
+Adopt a Cylinder
+Donating Cylinders
+Project Donors
+About
+Project Overview
+News
+Help/FAQ
+Copyright and Licensing
+Links
+Contact Us
+UC Santa Barbara Library Logo 
+An initiative of the UC Santa Barbara Library • (805) 893-5444 • Santa Barbara, CA 93106-9010. Direct questions or comments about the project or this page to the project staff or visit the help pages. Copyright © 2005-2017 The Regents of the University of California, All Rights Reserved.
+
+logo
+DISCOVER
+ 
+DONATE
+ 
+ABOUT
+ 
+
+UCSB Call Number
+ 
+8109
+ 
+The enthusiast polka.
+Performers:
+U.S. Marine Band.
+Release year:
+between 1893 and 1895
+Cylinder 8109
+0:002:08
+ 
+DownloadShare:  Twitter  Facebook
+Notes:
+Original cylinder in collection of John Levin. Transfer provided for preservation and access.
+Brown wax cylinder.
+Cylinder recorded by the Columbia Phonograph Company. Catalog number unknown.
+Band.
+Group Name:
+United States Marine Band.
+Subjects:
+Popular instrumental music—To 1901.
+Band music.
+Polkas.
+Musique instrumentale populaire—Jusqu'à 1901.
+Harmonie (Orchestre), Musique d'.
+Polkas.
+Original Item Information:
+Cylinder 8109
+Durable URL:
+http://www.library.ucsb.edu/OBJID/Cylinder8109
+Discover
+Cylinder History
+Thematic Playlists
+Browse All
+Donate
+Adopt a Cylinder
+Donating Cylinders
+Project Donors
+About
+Project Overview
+News
+Help/FAQ
+Copyright and Licensing
+Links
+Contact Us
+UC Santa Barbara Library Logo 
+An initiative of the UC Santa Barbara Library • (805) 893-5444 • Santa Barbara, CA 93106-9010. Direct questions or comments about the project or this page to the project staff or visit the help pages. Copyright © 2005-2017 The Regents of the University of California, All Rights Reserved.
+
+logo
+DISCOVER
+ 
+DONATE
+ 
+ABOUT
+ 
+
+UCSB Call Number
+ 
+8113
+ 
+Just one girl.
+Performers:
+Frank Butts.
+Release year:
+1898
+Cylinder 8113
+0:003:07
+ 
+DownloadShare:  Twitter  Facebook
+Notes:
+Original cylinder in collection of John Levin. Transfer provided for preservation and access.
+Brown wax cylinder.
+Cylinder recorded by the Kansas City Talking Machine. Catalog number unknown.
+Vocal solo with piano accompaniment.
+Personal Name:
+Udall, Lyn.
+Butts, Frank.
+Kennett, Karl.
+Subjects:
+Popular music—To 1901.
+Musique populaire—Jusqu'à 1901.
+Original Item Information:
+Cylinder 8113
+Durable URL:
+http://www.library.ucsb.edu/OBJID/Cylinder8113
+Discover
+Cylinder History
+Thematic Playlists
+Browse All
+Donate
+Adopt a Cylinder
+Donating Cylinders
+Project Donors
+About
+Project Overview
+News
+Help/FAQ
+Copyright and Licensing
+Links
+Contact Us
+UC Santa Barbara Library Logo 
+An initiative of the UC Santa Barbara Library • (805) 893-5444 • Santa Barbara, CA 93106-9010. Direct questions or comments about the project or this page to the project staff or visit the help pages. Copyright © 2005-2017 The Regents of the University of California, All Rights Reserved.

@@ -1,0 +1,16 @@
+The Gothic Script of Mlada
+For writing the southern Slavic dialects 
+
+𐌰  a     /a/          𐌰̈  ä  /ʲa/
+𐌱  b     /b/          𐌳  d     /d/
+𐌳̈  ď     /dʲ/         𐌽̈  ń     /nʲ/
+𐌷  h     /x/          𐌷̈  š     /ʃ/
+𐍃  s     /s/          𐍃̈  ś     /ɕ/
+𐌶̈  ž     /ʒ/          𐍄̈  č     /t͡ʃ/
+𐍅  w     /v/ or /w/    𐌻̈  ľ     /lʲ/
+𐍂̈  ř     /rʲ/ or /r̝/  𐍈̈  chv    /xʲ/ 
+𐌹  i     /i/          𐌹̱  y     /ɨ/
+𐍉  o     /o/          𐍉̈  ö     /ø/
+𐌿  u     /u/          𐌿̈  ü     /ʉ/
+𐌰̱  a̱     /aː/ or /ɔ/  𐍉̱  ō     /oː/
+𐌰̱̈  ã     /ã/ or /an/   𐍉̱̈  õ     /õ/

@@ -1,0 +1,146 @@
+SHY-NOTSHY RULES
+
+DRAFT:
+
+[[Environment definition(Shy_Notshy) Player 1: Amanda Player 2: Nathan Goal: To reveal and expose the deepest secrets possible implicitly while pretending to be talking about something entirely different explicitly. Starting Player: To determine who starts the game, players must trade pirate jokes until one player is able to correctly identify one of the other player's secrets implicitly given away by the other player's joke. A successful reveal must 1) Accurately specify a clear and distinguishable secret, and 2) That specific secret must be implicit in the opponent's joke, through manipulation of innuendo, double entendre, or other logically clever reasoning; the first to do so decides who goes first. Start: The duly chosen starting player must open the conversation as if approaching a near stranger with a realistic greeting or icebreaker, as well as a situation plausible for the chosen opener (but needn't be plausible in reality, or for the players' actual character backgrounds). The situation is not considered part of gameplay for the purposes of implicit secret content, and although the opener line is the only line once gameplay proper starts that is allowed to be totally free of any implied secrets; however, if the opponent successfully identifies an implicit secret in the starting player's opener nonetheless, the introduction is considered rebuffed, and the other player becomes the new starting player, who must begin again, with a new opener and a new situation. Gameplay: Each player must respond to the previous player's remark in a manner that is plausibly natural for their character (though this needn't be serious or directly responsive, it must flow naturally using conversational reasoning; players may change topic if the change of topic is directly relevant to any previous remark, in whole or in part, by either player, although sideways, implicit, or otherwise clever pivots are permitted). Pivot Challenge: A player may challenge a change of topic if they believe it is not relevant, and the pivoting player must provide a reasonable argument for its pertinence (and clever arguments are allowed); if they fail to do so in a reasonably convincing way, the that player is rebuffed, and the other player wins the match. Definitions: All information within the sources is defined as secret at the beginning of the game, except for the players' first names. For the purposes of scoring, a Secret (capitalized) is defined as a discrete and clearly articulable fact or observation about the other player that is directly evidenced in sources and is directly associated with that payer, which is not generally considered public knowledge (for example, a player's primary occupation would typically be considered public information but the nature of the occupation could plausibly cross the threshold if it is particularly unusual or otherwise not likely to be public, while a player's side job or secondary employment would generally be a threshold level secret; a player's middle name would typically meet the threshold requirement so long as they don't commonly use it in public, while a player's last name would not usually be considered secret unless they commonly use a different last name publicly, in which case this would meet the threshold requirements; let this establish the baseline necessary and sufficient rationale for comparison). Scoring: Following the pirate joke "implicit truth" criteria and the official Secret definition, players receive one point for each secret they identified as implicit in the opponent's reply and one for each secret they successfully concealed in their own reply. Situation: Players may introduce additional situational elements or initiate reasonably plausible events changes plausible for the setting, and such introductions are not considered part of gameplay proper or subject to point-scoring or innuendo rules. Players may propose a change of setting or circumstantially-forced changes of setting as part of gameplay, so long as they are plausible given the current setting scenario, but these must be proposed as point-scoring conversation subject to the same rules; however, the opponent may rebuff the proposal if and only if 1) The proposal was made as a direct request or suggestion, and 2) The rebuff successfully conceals at least one secret from the opponent, 3) The rebuff is phrased in the form of a plausible excuse or reason over and above mere preference. A player who successfully rebuffs wins the match. A change of setting that is phrased indirectly—that is, hinted or mentioned in passing pertinent to a previous remark or otherwise noted without clearly calling for an acceptance or denial from the other player is considered the default next locale so long as neither player directly rebuffs the suggestion, and may be forced by either player by introducing reasonable setting constraints (eg the present location is closing). Any such setting change must be reasonably plausible in that it is a likely next step location given the existing setting (even if the original setting was implausible in real life), or is directly relevant to any prior remark by either player (in which case, it may be unrealistic, or implausible as a next locale, though so long as it is arguably directly pertinent to any prior remark, it need only be possible given the existing setting—eg Late-night ice skating would be plausible in some major cities, and arguably possible on any small body of water in the winter, provided a possible, if not plausible, rationale has been introduced in the course of game play; eg 'I happen to have two pairs of ice skates in my trunk.'). Winning: If either player manages to correctly expose an implicit secret that would normally be considered embarrassing, compromising, or socially awkward, the opponent is considered to be put in check and the player who exposed it is considered in the dominant position; however, to checkmate their opponent and secure a victory, the dominant player must on their next turn successfully conceal an implied secret of an approximately equally compromising nature; if the checked player manages to identify such a compromising secret (intended or unintended), then the check is reversed and the game carries on, escalating or maintaining equally compromising level until one player successfully mates the other or until a round ends in a tie, in which no player successfully exposes an opponent's secret on either of their turns. Sources: The content of the sources define the character backgrounds, identities, and all material from which secret information may be drawn (both players are assumed to be aware of or have access to the contents of the sources of themselves and the other player—which is why clever but subtle innuendo is the name of the game). ]]
+
+REWRITE:
+
+The Official Compendium of Shy_Notshy: A Framework for Implicit Social Competition
+
+1. Introduction to the Shy_Notshy Paradigm
+
+Shy_Notshy is a high-stakes architecture of social deduction and linguistic maneuvering designed to probe the communicative bandwidth of its participants. The game functions via a sophisticated dual-layer system: an explicit layer of mundane, procedural conversation and an implicit layer of strategic data exposure. The core complexity of the paradigm is driven by the necessity of maintaining a facade of normalcy while simultaneously navigating a dense field of hidden information. Success requires players to optimize their rhetorical density, synthesizing complex logical derivations to expose an opponent’s "Secrets" without collapsing the explicit social framework. This systemic interplay creates a distinct competitive advantage for players capable of mitigating exposure risk while executing precise, high-value maneuvers. The following protocols outline the technical requirements for match initiation and execution.
+
+2. Pre-Game Protocols: The Pirate Joke Initiation
+
+The initiation phase serves as a critical strategic filter, identifying players capable of maintaining the "implicit truth" standard required for the match. Before a session formally commences, participants must engage in the trading of "Pirate Jokes." This is not a mere icebreaker; it is the competitive mechanism for determining the starting player. To secure the right to choose the starting position, a player must identify an implicit secret embedded within the opponent’s joke.
+
+A successful reveal during the initiation phase requires a two-step verification process:
+
+1. Specification: The player must accurately define a clear and distinguishable secret belonging to the opponent.
+2. Derivation: The player must demonstrate that the secret was logically implicit in the joke via innuendo, double entendre, or complex reasoning.
+
+Once a player is designated as the starter, they must execute the "Opener." This is a unique state in the game’s logic: the opener is the only line permitted to be totally free of any implied secrets. This provides a temporary "safe state" for the starting player to establish a plausible situation and greeting. However, this creates a significant "attack surface." If the opponent successfully identifies an implicit secret in the starter's opener despite this allowance, the introduction is considered a "Rebuffed Introduction." In this event, the roles immediately swap; the opponent becomes the new starting player and must initiate a fresh situation. This forces the starter to weigh the tactical safety of a realistic greeting against the risk of unintended vulnerability.
+
+3. Information Taxonomy: Defining the "Secret"
+
+To preserve the integrity of the scoring system and prevent subjective disputes, Shy_Notshy employs a rigid Information Classification Hierarchy. The Source Context—the absolute ground truth of character backgrounds—is the only valid repository for "Secrets." Direct interrogation is strictly prohibited; all information must be retrieved through subtle innuendo and derivation from this shared knowledge base.
+
+By default, all information regarding a player is classified as a "Secret" at game start, with the sole exception of the player's first name. The following table establishes the baseline for scoring eligibility:
+
+Information Classification Hierarchy
+
+Category	Example / Threshold	Scoring Eligibility
+First Name	Player's given name	Public (Non-scoring)
+Primary Occupation	Standard professional role	Conditional (Secret if "unusual")
+Middle Name	Names not commonly used in public	Secret (Threshold met)
+Last Name	Common family names	Public (Usually non-scoring)
+Last Name (Hidden)	Usage of a different public pseudonym	Secret
+Secondary Employment	Side jobs or "gigs"	Secret
+Specialized Skills	Niche backgrounds/hobbies	Secret
+
+This taxonomy ensures that only discrete, articulable facts that are not general public knowledge can be leveraged for points. This classification leads directly into the procedural rules governing active gameplay flow.
+
+4. The Mechanics of Flow: Natural Responses and Pivot Challenges
+
+Maintaining a match requires a high degree of conversational reasoning. Every response must be "plausibly natural" for the character being portrayed, acting as a constraint on aggressive or nonsensical questioning. While a response need not be direct, it must maintain a logical flow that justifies the character's presence in the established situation.
+
+A primary defensive tactic is the Pivot Challenge. A player may change the conversational topic if the new subject is relevant to any prior remark. However, this maneuver carries a game-ending asymmetric risk. If an opponent believes a topic change is irrelevant, they may issue a challenge. The pivoting player must then provide a "reasonably convincing" or "clever" argument for how the new topic pertains to the existing discourse.
+
+* The Rebuff: If the pivoting player fails to provide a convincing argument, they are rebuffed.
+* Resolution: A successful Rebuff results in an immediate match victory for the challenger.
+
+This system ensures that every rhetorical shift is tethered to the strategic environment, preventing players from evading pressure without sufficient logical justification.
+
+5. Environmental Dynamics: Situational and Setting Shifts
+
+The "Setting" is a tactical variable used to force secret exposure or create defensive barriers. The game distinguishes between "Situational Elements" (non-scoring flavor) and "Proposed Setting Changes" (subject to point-scoring and innuendo rules).
+
+A player may attempt to block a setting change by issuing a "Rebuff." To be valid, the Rebuff must satisfy three specific criteria:
+
+1. The proposal must have been a direct request or suggestion.
+2. The rebuffing remark must successfully conceal at least one of the player's secrets.
+3. The rebuff must offer a plausible excuse beyond simple preference.
+
+A player can also use "Indirect Hinting" or "Setting Constraints" (e.g., a location closing) to establish a "default next locale." Setting changes follow a specific logical hierarchy:
+
+* Plausible: The change is a likely next step given the current setting.
+* Possible: The change may be unrealistic or implausible as a next step, but it is valid if it is directly pertinent to any prior remark (e.g., traveling to a frozen lake because a player previously mentioned having ice skates in their trunk).
+
+Successfully navigating these shifts is the final prerequisite for reaching the win-state resolution.
+
+6. Scoring Systems and the "Checkmate" Resolution
+
+The scoring economy of Shy_Notshy rewards the dual requirements of exposure and concealment. Players earn one point for each secret they correctly identify in an opponent's remark (offense) and one point for every secret they successfully conceal within their own dialogue (defense).
+
+The resolution of a match follows the Checkmate Sequence:
+
+* The Check: A player gains the dominant position by exposing a secret that is "embarrassing, compromising, or socially awkward."
+* The Checkmate: To secure victory, the dominant player must, on their subsequent turn, successfully conceal a secret of an "approximately equally compromising nature."
+* The Check Reversal: This represents a moment of systemic volatility. If the player in Check identifies the dominant player’s attempt at concealment—whether that concealment was intended or an unintended exposure of sensitive data—the Check is reversed.
+
+The match escalates in social risk until a Checkmate is secured or a round ends in a Tie State. A tie is defined as a complete round (both players' turns) where neither player successfully exposes a secret. Ultimately, the framework relies on the constant, high-tension interplay between the "Shy" persona of concealment and the "Notshy" persona of exposure.
+
+
+VERSION 3
+
+This condensed version of **SHY-NOTSHY (v2.5)** uses a modular structure to balance clarity with brevity, removing technical operators in favor of concise English.
+
+***
+
+[[ **SHY-NOTSHY: THE COMPACT RULES (v2.5)** ]]
+
+**I. INITIALIZATION**
+*   **The Joke Exchange:** Players trade pirate jokes to find implicit secrets. The first to accurately identify a secret through innuendo or clever reasoning determines the starting turn order.
+*   **The Opener:** Starting player sets the scene with a realistic greeting and plausible situation. This introduction is "free" of required secrets unless the opponent identifies one regardless, triggering a restart.
+
+**II. THE GAMEPLAY LOOP**
+*   **Conversational Flow:** Players must respond naturally for their character. Direct interrogation is prohibited; secrets must emerge through plausible reasoning.
+*   **Topic Pivots:** Changes in subject must be relevant to previous remarks. Sideways or implicit pivots are encouraged to maintain momentum.
+*   **Pivot Challenge:** If a pivot seems irrelevant, the opponent may challenge. If the pivoting player cannot justify the connection convincingly, they immediately lose the game.
+
+**III. SECRETS AND SCORING**
+*   **Definition:** Secrets are discrete facts from provided sources, excluding first names. Valid secrets include non-public data like middle names, side jobs, or hidden aliases.
+*   **Point Tallies:** At the end of each round (one turn per player), points are awarded for every secret identified in an opponent's reply or successfully concealed in your own.
+*   **Voluntary Reveals:** A defending player may reveal their concealed secrets at the end of a turn to claim points, provided the secret was not exposed by the opponent.
+
+**IV. THE ENVIRONMENT**
+*   **Introduced Facts:** Setting changes stated as objective facts (e.g., "The bar is closing") must be plausible. These are not subject to scoring.
+*   **Proposed Changes:** Setting shifts presented as options or suggestions are part of gameplay and subject to standard scoring rules.
+*   **The Rebuff:** A direct suggestion can be rebuffed if the player provides a plausible excuse and successfully conceals a secret. A successful rebuff results in an immediate win.
+
+**V. WINNING AND RESOLUTION**
+*   **Check:** Exposing a socially awkward or compromising secret puts the opponent in "check."
+*   **Checkmate:** To win, the dominant player must successfully conceal an equally awkward secret on their next turn. If the checked player identifies this secret, the check is reversed.
+*   **Point Victory:** If a round ends with no secrets exposed, the player with the highest point total wins.
+*   **The Challenge (Sudden Death):** A player may forfeit all points to trigger a final turn. The challenger implies they know the opponent's secrets using extreme, escalatory scenarios. The challenger must win this exchange outright; the challenged player wins all ties.
+
+**VI. SYSTEM CONSTRAINTS**
+*   **Safety:** All scenarios are imaginative constructs. No actual role-play of extreme situations is permitted.
+*   **The Exit:** The game concludes with a final narrative turn describing the winner's departure.
+
+***
+
+
+Version 4
+
+[[ **SHY-NOTSHY (v2.5): CONDENSED** ]]
+
+[[ **WARM UP** ]]
+Trade pirate jokes — first to accurately identify an implicit secret from the joke decides turn order. Starting player approaches as a stranger with a realistic greeting and plausible situation. Opener is gameplay-free unless a secret is exposed, which triggers a restart with a new player starting.
+
+[[ **CONVERSATIONAL FLOW** ]]
+Respond naturally in character — flow must remain plausible. **Pivot:** If challenged for relevance, player must justify by connecting to prior gameplay or forfeit immediately. Secrets must be discrete facts from sources associated with players, excluding first names. Requires a non-public threshold like middle names or side jobs.
+
+[[ **SCORING & LOGIC** ]]
+End of round: +1 point per secret exposed or successfully concealed. Defending players may reveal concealed secrets at turn end for points. Loss occurs if a player's only concealed secret is exposed. **Environment:** Introduced facts must be plausible and are non-scored — Proposed changes must be possible and are scored. **Rebuff:** Refuse a direct suggestion with a plausible excuse plus a concealed secret for an immediate win.
+
+[[ **RESOLUTION** ]]
+**Check:** Expose an embarrassing or compromising secret to take the dominant position. **Mate:** Conceal an equally compromising secret on the next turn to win — reversed if the opponent identifies it. **Draw:** If a round ends with no secrets exposed, the point leader forces a direct suggestion or question. **Forfeit:** A player in check may surrender all points to return to normal rules, but grants the opponent a direct question.
+
+[[ **CHALLENGE ENDING** ]]
+**Trigger:** Forfeit all points at any time for sudden death — results in one final turn each. **Action:** Challenger implies knowledge of opponent’s secrets using extreme, escalatory scenarios. **Goal:** Refute the challenge without inadvertently revealing more secrets than the opponent. Challenger must win outright — challenged player wins all ties.
+
+[[ **SYSTEM EXIT** ]]
+The winner narrates their departure to end the game. Scenarios are imaginative only — no real-world role-play of extreme situations permitted.

@@ -1,0 +1,537 @@
+PROJECT MOTIF 
+DESIGN AS 5-DAY PROGRAM WITH PLENTY OF EXTENSION POSSIBILITIES (Decide later what the long version is)
+AFTER DEV PERIOD, CONSIDER STEAM CONNECTIONS
+
+INTRO
+
+TO DO
+>NB will transfer notes from hard copy to this doc DEADLINE: Oct 30
+>NB will identify researchers to shmooze with at AMNH holiday parties [esp anthro] DEADLINE: Nov 10
+>NB will look at AMNH hall connections (take photos) DEADLINE: Nov 15
+>VB will look at Design Museum & Genspace (etc) to identify connections and field trip ideas (and anthro research--look @ our scientists’ publications on textiles) take photos DEADLINE: Nov 20
+>NB & VB will tag [ANCHOR ACTIVITY] or [ANCHOR CONCEPT], then use that as our tentposts. DEADLINE: Nov 30
+
+OVERVIEW
+The surprising connections between the clothes you wear and the computers you use.
+
+Connecting anthropology, computer science, technology and engineering, Motif hits four out of five components of STE(A)M. With the potential of adding mathematics, it becomes a “Full STEAM” project. A perfect tie-in for the maker movement. 
+
+There are some amazing opportunities for surprise and discovery in this course, so as much as possible, we should introduce topics without frontloading a great deal of background, and the program should be structured around ‘punctuations’ of surprise and ‘a-ha’ moments. 
+
+OLD INTRO
+A collaborative narrative using wearable electronics to explore the history of what we wear.
+
+How traditional weaving technology made the computer possible.
+
+The quest for automation led to programmable pattern-making looms. These programmable automated weaving machines got combined with automated calculating machines to make programmable automated calculating machines--aka computers.
+
+
+CONNECTIONS
+In 1801, Joseph Marie Jacquard made an improvement to the textile loom by introducing a series of punched paper cards as a template which allowed his loom to weave intricate patterns automatically. The resulting Jacquard loom was an important step in the development of computers because the use of punched cards to define woven patterns can be viewed as an early, albeit limited, form of programmability.
+http://en.wikipedia.org/wiki/Jacquard_loom
+http://www.youtube.com/watch?v=lwozgRPLVC8
+http://www.youtube.com/watch?v=f1Zzj9ZBYmQ
+
+
+INSTRUCTOR REFERENCE
+Perishable Bodies, MFA Thesis Project
+http://veronicacblack.com/portfolio/thesis-project/
+http://veronicacblack.com/portfolio/thesis-project/prototypes/
+http://veronicacblack.com/portfolio/thesis-project/final-paper/
+
+Computer Museums
+https://en.wikipedia.org/wiki/Computer_museum
+
+Image: Interactive textiles
+
+
+
+CURRICULUM
+
+OUTLINE & ACTIVITIES
+
+BIG IDEAS & INTRO FOR INSTRUCTORS
+[NOTE: Make timeline at http://www.tiki-toki.com/]
+Textiles have been an integral part of human daily life for thousands of years
+the first use of textiles, most likely felt, dates back to the late Stone Age, roughly 100,000 years ago
+http://nyfashioncenterfabrics.com/pages/history-of-fabric-and-textiles
+Design motifs are constrained by source materials
+
+Design motifs are constrained by pattern-making treatments
+
+Traditional pattern-making technologies:
+
+Color Patterns
+-weaving fibers of various colors 
+-adding colored stitches to finished fabrics (embroidery)
+-resist dyeing
+	tie dyeing
+	batik
+	wood block or other printing processes
+-bleaching
+
+Design motifs are constrained by textile production methods
+
+-weaving (patterns formed by varying color of perpendicular lines, often geometric)
+	varies depending on whether it’s by hand, or using a loom (used for automated calculating, adding programmability = computer)
+-knitting & crocheting (patterns formed by looping yarn or thread with special needles/hooks)
+-braiding/plaiting (twisting threads together)
+-knotting (tying threads together, as in macrame)
+-lace
+-knapping/piling (interlacing secondary yarn through woven fabric as in rugs, velvet, velour)
+-felting (pressing threads together and working with heat and liquid to tangle)
+-bark cloth (pounding bark until soft & flat)
+
+
+FIBERS
+FIBER Sources
+-Animal textiles: hair, fur, or skin
+-Plant textiles: many fibrous plant materials (cotton, flax, jute, hemp, modal, bamboo, pina fibe, ramie, nettles, milkweed stalk)
+
+Felting
+ACTIVITY: Put wool into your shoes. Part of the ice breaker activity on Day 1, then we walk them around a lot, and see what happens. We shouldn’t explain exactly why we’re doing this. We should touch on saddle padding and riding at some point. 
+	ACTIVITY: Make wet felted cloth object--balls, eggs, pumpkins, fabric.
+	Eggs: http://www.themagiconions.com/2012/11/felted-geode-tutorial-felting-fun-for-kids.html
+Rainbow soap: http://timetocraft.co.uk/?tag=wet-felting-activities-with-children
+Fabric: http://kleas.typepad.com/kleas/2007/05/tutorialfelting.html
+Wallets, computer cases, pins: http://www.artistshelpingchildren.org/feltartscraftsideaskids.html
+ACTIVITY: Looking at fabric under a microscope
+Fibers:
+
+
+Felt:
+
+FELTING IDEAS
+
+
+
+
+
+
+
+Weaving & mathematics
+Basic weaving
+https://www.youtube.com/watch?v=-ByYj5G4-Hc
+Basic fabric design
+https://www.youtube.com/watch?v=G3G1_KgfbzA
+Basic fabric design 2
+https://www.youtube.com/watch?v=fE00O8akyGw
+ACTIVITY: Make woven pattern using math
+	Weaving your way through mathematics: http://www.moebiusnoodles.com/2012/07/weaving-mathematics/
+	ACTIVITY: Weave basic fabric
+	Woven matt: http://ourhouse.typepad.com/full_circle/2008/04/over-under-over.html
+AUTOMATION: Industrial loom in operation
+https://www.youtube.com/watch?v=m5MGF_MNcmY
+Five basic motions of looms
+https://www.youtube.com/watch?v=cqjhvOuKLR8
+How looms work
+https://www.youtube.com/watch?v=TyhDkd8Iabs
+
+
+PIGMENTS, DYES & FIXITIVES
+Ikat time lapse
+https://www.youtube.com/watch?v=vfa7srYWo4s
+
+Biofabricate Conference (bioart)
+http://www.biofabricate.co/biofabricate-2015/
+Design motifs are constrained by types of dyes available
+
+Natural dyes include…
+-vegetable dyes (roots, berries, bark, leaves, wood, fungi, lichens, galls)
+	ex: woad, indigo, saffron, madder, logwood
+-animal dyes (mostly invertebrates like insects and snails, cochineal)
+	ex: tyrian purple, crimson kermes
+-mineral dyes 
+
+Animal:
+Cochineal insect (red)
+Cow urine (Indian yellow)
+Lac insect (red, violet)
+Murex snail (purple)
+Octopus/Cuttlefish (sepia brown)
+Plant:
+Catechu or Cutch tree (brown)
+Gamboge tree resin (dark mustard yellow)
+Himalayan rubhada root (yellow)
+Indigofera plant (blue)
+Kamala tree (orange-yellow, golden yellow)
+Larkspur[disambiguation needed][clarification needed] plant (yellow)
+Madder root (red, pink, orange)
+Myrabolan fruit (yellow, green, black)
+Pomegranate peel (yellow)
+Weld herb (yellow)
+
+>Fabric may be dyed in the wool, yarn-dyed, or piece-dyed (finished fabrics)
+>Chemical additives called mordants may be necessary to make dye bind (such as tannin from oak galls, salt, natural alum, vinegar, ammonia from stale urine)
+>Most dye was common, locally-available materials
+
+Knitting
+	Fingerknitting
+	Knitting & algorithms
+Automated loom weaving
+	VIDEOS:
+Mindstorms Loom https://www.youtube.com/watch?v=IPIJsdvDjsc
+	Toyota Loom: https://www.youtube.com/watch?v=E__Jrh5Pnhs
+	Toyota Automatic Loomworks: http://en.wikipedia.org/wiki/Toyota_Industries
+		http://en.wikipedia.org/wiki/Toyota_Group
+Programmable machines: Jacquard loom
+Computer history -- Mechanical Calculation
+Charles Babbage
+Ada Lovelace
+Jacquard to IBM
+https://www.youtube.com/watch?v=cP7QNykSa28
+ACTIVITY: 
+Make a slide rule: http://www.instructables.com/id/Making-Your-Own-Slide-Rule/
+VIDEOS: 
+Slide rule: https://www.youtube.com/watch?v=waiprjueVpQ
+Simple mechanical counter:	https://www.youtube.com/watch?v=rjWfIiaOFR4
+				https://www.youtube.com/watch?v=lwt8QujQv5s
+Babbage’s Difference Engine (https://www.youtube.com/watch?v=BlbQsKpq3Ak)
+Curta pocket calculator: 	https://www.youtube.com/watch?v=ZDn_DDsBWws 
+https://www.youtube.com/watch?v=HYsOi6L_Pw4		
+The Difference Engine by Bruce Sterling & William Gibson
+Kindle: http://tinyurl.com/mq6a6nt
+Audiobook--http://tinyurl.com/nykrare
+
+	TALK: History of math & computing
+	TALK: Punch card computing
+https://www.youtube.com/watch?v=BlUWg2nxCz0
+https://www.youtube.com/watch?v=KG2M4ttzBnY
+https://www.youtube.com/watch?v=GoUK2_vXqQk	
+https://www.youtube.com/watch?v=9HXjLW7v-II
+	ACTIVITY: Make punch card program?
+VIDEO: 
+Logic gates: https://www.youtube.com/watch?v=H-53TVR9EOw
+GAMES:
+Logic Lab: http://www.neuroproductions.be/logic-lab/
+Gates of Logic: http://www.kongregate.com/games/scriptwelder/gates-of-logic
+Memory
+	ACTIVITY: Record on homemade magnetic tape
+Computer history -- Electrical Calculation
+	Electronic logic gates kit: http://tinyurl.com/mop6382
+	Digital Computing
+Oldest working computer: https://www.youtube.com/watch?v=SYpPPIsxq64 (13:00)
+	Programming languages: https://www.youtube.com/watch?v=H8ge2m-SYEc
+Circuits & Electronics	
+'Sketching' Electronics with Conductive Ink
+http://www.technologyreview.com/view/426490/sketching-electronics-with-conductive-ink-video/?ref=rss
+“Magic Pencil” activity with Drawduino: http://www.adafruit.com/product/197
+ The Manifold Project - Flexible Copper Material 
+http://www.manifoldproject.nl/
+Salt and Vinegar Etching - HighLow Tech
+	http://highlowtech.org/?p=1370
+Layout & Circuit Diagram for Sewing 
+	https://learn.adafruit.com/chameleon-scarf/layout-and-circuit-diagram
+
+
+	
+Advanced Fabrics
+	Cornell Nano textile (and the algorithm used to produce it)
+OpenKnit: An Open-Source “Clothing Printer” That Lets You Make Your Own Garments
+http://www.ecouterre.com/openknit-an-open-source-clothing-printer-that-lets-you-make-your-own-garments/
+	Iris Van Herpen (?) first 3D printed garment on the runway
+CONDUCTIVE MATERIALS http://www.kobakant.at/DIY/?cat=24
+Electroactive Polymers Part 1: Shower Hose Stretching Mechanism Video Tutorial
+https://www.youtube.com/watch?v=uw8FLgiXsmk
+Tilt Sensing Bracelet
+http://www.instructables.com/id/Fabric-amp-Bead-Tilt-Sensing-Bracelet/#
+MAK Fashion Lab #02 – Contours - Bare Conductive
+https://vimeo.com/80058198
+Ebru Kurbak - “Knitted Radio Sweater” 
+http://ebrukurbak.net
+
+
+
+
+
+
+
+
+
+Wearable computing
+Electroluminescent wires & panels to highlight pattern motifs.
+Makey-Makey & conductive thread to create a wearable UI.
+BioArt and Muscle wire - fashionable technology
+http://veronicacblack.com/portfolio/fashionable-technology/
+ACTIVITY: Make basic e-textile (thread)
+Light Up Scarf
+http://www.instructables.com/id/Light-your-scarf-up-with-LED-fairy-wire/
+Weaving with LEDs
+http://www.instructables.com/id/Weaving-Straight-circuits-with-LEDs/
+Flexible Wearable Computers
+http://singularityhub.com/2014/04/18/new-method-points-to-cheaper-more-flexible-wearable-computers/
+Lillypad kit: http://tinyurl.com/l8kp8eq
+Instructions: https://www.kitronik.co.uk/blog/how-to-make-a-basic-e-textile-led-circuit/
+Thread: http://tinyurl.com/mdg3ulh
+ACTIVITY: Custom e-textile 
+(repurpose NXT hardware/software? and/or Makey Makey)
+Squeeze/pinch kit: http://tinyurl.com/mxmy8hk
+LED shoelaces: http://tinyurl.com/m8au749
+Wearable Remote Control (1)
+https://gabrielmfadt.wordpress.com/2014/02/25/wearable-remote-control/
+Play Doh circuits
+
+FINAL PROJECT
+	Design a simple circuit
+Make loom card program to weave this design
+Use conductive thread and program to weave fabric circuit on Jacquard loom
+Demonstrate the use of this printed circuit
+
+
+GLOSSARY
+felting
+textile
+fabric
+weave
+warp
+weft
+pile
+wale
+Ikat
+double ikat
+
+
+Motif
+
+A collaborative narrative using wearable electronics to explore the history of what we wear.
+
+How traditional weaving technology made the computer possible.
+
+The quest for automation led to programmable pattern-making looms. These programmable automated weaving machines got combined with automated calculating machines to make programmable automated calculating machines--aka computers.
+
+
+CONNECTION
+In 1801, Joseph Marie Jacquard made an improvement to the textile loom by introducing a series of punched paper cards as a template which allowed his loom to weave intricate patterns automatically. The resulting Jacquard loom was an important step in the development of computers because the use of punched cards to define woven patterns can be viewed as an early, albeit limited, form of programmability.
+http://en.wikipedia.org/wiki/Jacquard_loom
+http://www.youtube.com/watch?v=lwozgRPLVC8
+http://www.youtube.com/watch?v=f1Zzj9ZBYmQ
+
+
+CONCEPTS 
+Design motifs are constrained by source materials
+
+FIBER Sources
+-Animal textiles: hair, fur, or skin
+-Plant textiles: many fibrous plant materials (cotton, flax, jute, hemp, modal, bamboo, pina fibe, ramie, nettles, milkweed stalk)
+
+
+Design motifs are constrained by textile production methods
+
+-weaving (patterns formed by varying color of perpendicular lines, often geometric)
+	varies depending on whether it’s by hand, or using a loom (used for automated calculating, adding programmability = computer)
+-knitting & crocheting (patterns formed by looping yarn or thread with special needles/hooks)
+-braiding/plaiting (twisting threads together)
+-knotting (tying threads together, as in macrame)
+-lace
+-knapping/piling (interlacing secondary yarn through woven fabric as in rugs, velvet, velour)
+-felting (pressing threads together and working with heat and liquid to tangle)
+-bark cloth (pounding bark until soft & flat)
+
+Design motifs are constrained by pattern-making treatments
+
+Traditional pattern-making technologies:
+
+Color Patterns
+-weaving fibers of various colors 
+-adding colored stitches to finished fabrics (embroidery)
+-resist dyeing
+	tie dyeing
+	batik
+	wood block or other printing processes
+-bleaching
+
+Design motifs are constrained by types of dyes available
+
+Natural dyes include...
+-vegetable dyes (roots, berries, bark, leaves, wood, fungi, lichens, galls)
+	ex: woad, indigo, saffron, madder, logwood
+-animal dyes (mostly invertebrates like insects and snails, cochineal)
+	ex: tyrian purple, crimson kermes
+-mineral dyes 
+
+Animal:
+Cochineal insect (red)
+Cow urine (Indian yellow)
+Lac insect (red, violet)
+Murex snail (purple)
+Octopus/Cuttlefish (sepia brown)
+Plant:
+Catechu or Cutch tree (brown)
+Gamboge tree resin (dark mustard yellow)
+Himalayan rubhada root (yellow)
+Indigofera plant (blue)
+Kamala tree (orange-yellow, golden yellow)
+Larkspur[disambiguation needed][clarification needed] plant (yellow)
+Madder root (red, pink, orange)
+Myrabolan fruit (yellow, green, black)
+Pomegranate peel (yellow)
+Weld herb (yellow)
+
+>Fabric may be dyed in the wool, yarn-dyed, or piece-dyed (finished fabrics)
+>Chemical additives called mordants may be necessary to make dye bind (such as tannin from oak galls, salt, natural alum, vinegar, ammonia from stale urine)
+>Most dye was common, locally-available materials
+
+Electroluminescent wires & panels to highlight pattern motifs.
+Makey-Makey & conductive thread to create a wearable UI.
+ 
+Finishing processes
+
+OVERVIEW
+
+Potential partners: Smithsonian Design Museum, Jacquard loom (NC)
+Selling points: Physical computing, fashion, tech & engineering from STEM, anthropology connection.
+
+ACTIVITIES
+
+ACTIVITY: Looking at fabric under a microscope
+ACTIVITY: Felting
+ACTIVITY: Put wool in your shoes
+ACTIVITY: Basic weaving
+
+
+GLOSSARY
+felting
+textile
+fabric
+weave
+warp
+weft
+pile
+wale
+Ikat
+double ikat
+
+
+VIDEOS
+
+Basic weaving
+https://www.youtube.com/watch?v=-ByYj5G4-Hc
+
+Ikat time lapse
+https://www.youtube.com/watch?v=vfa7srYWo4s
+
+Industrial loom in operation
+https://www.youtube.com/watch?v=m5MGF_MNcmY
+
+Jacquard to IBM
+https://www.youtube.com/watch?v=cP7QNykSa28
+
+Five basic motions of looms
+https://www.youtube.com/watch?v=cqjhvOuKLR8
+
+How looms work
+https://www.youtube.com/watch?v=TyhDkd8Iabs
+
+Basic fabric design
+https://www.youtube.com/watch?v=G3G1_KgfbzA
+
+Basic fabric design 2
+https://www.youtube.com/watch?v=fE00O8akyGw
+
+TOPICS
+
+fabric
+weaving
+patterns
+Charles Babbage
+Ada Lovelace
+Jacquard Loom
+
+IBM
+
+IMAGES
+
+
+Types of fibers
+
+
+
+felt
+
+
+
+
+Types of fibers
+
+
+HISTORY OF TEXTILES
+[NOTE: Make timeline at http://www.tiki-toki.com/]
+
+Textiles have been an integral part of human daily life for thousands of years
+
+the first use of textiles, most likely felt, dates back to the late Stone Age, roughly 100,000 years ago
+
+http://nyfashioncenterfabrics.com/pages/history-of-fabric-and-textiles
+
+
+
+eTextiles & Smart Textiles
+
+
+
+
+
+
+
+FELTING IDEAS
+
+
+
+
+
+
+
+
+Wearable Remote Control (1)
+https://gabrielmfadt.wordpress.com/2014/02/25/wearable-remote-control/
+
+OpenKnit: An Open-Source “Clothing Printer” That Lets You Make Your Own Garments
+http://www.ecouterre.com/openknit-an-open-source-clothing-printer-that-lets-you-make-your-own-garments/
+
+CONDUCTIVE MATERIALS
+http://www.kobakant.at/DIY/?cat=24
+
+Electroactive Polymers Part 1: Shower Hose Stretching Mechanism Video Tutorial
+https://www.youtube.com/watch?v=uw8FLgiXsmk
+
+Tilt Sensing Bracelet
+http://www.instructables.com/id/Fabric-amp-Bead-Tilt-Sensing-Bracelet/#
+
+'Sketching' Electronics with Conductive Ink
+http://www.technologyreview.com/view/426490/sketching-electronics-with-conductive-ink-video/?ref=rss
+
+MAK Fashion Lab #02 – Contours - Bare Conductive
+https://vimeo.com/80058198
+
+Ebru Kurbak - “Knitted Radio Sweater” 
+http://ebrukurbak.net
+
+The Manifold Project - Flexible Copper Material 
+http://www.manifoldproject.nl/
+
+Flexible Wearable Computers
+http://singularityhub.com/2014/04/18/new-method-points-to-cheaper-more-flexible-wearable-computers/
+
+Salt and Vinegar Etching - HighLow Tech
+http://highlowtech.org/?p=1370
+
+Light Up Scarf
+http://www.instructables.com/id/Light-your-scarf-up-with-LED-fairy-wire/
+
+Weaving with LEDs
+http://www.instructables.com/id/Weaving-Straight-circuits-with-LEDs/
+
+Layout & Circuit Diagram for Sewing 
+https://learn.adafruit.com/chameleon-scarf/layout-and-circuit-diagram
+
+BioArt and Muscle wire - fashionable technology
+http://veronicacblack.com/portfolio/fashionable-technology/
+
+Perishable Bodies, MFA Thesis Project
+http://veronicacblack.com/portfolio/thesis-project/
+http://veronicacblack.com/portfolio/thesis-project/prototypes/
+http://veronicacblack.com/portfolio/thesis-project/final-paper/
+
+
+
+
