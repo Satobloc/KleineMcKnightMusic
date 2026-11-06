@@ -1,0 +1,171 @@
+#MUM MARKOV
+
+use_bpm 60
+use_debug false
+use_sched_ahead_time 1
+
+# Define instrumentation and melody information
+instruments = {
+  pad_synth: :hollow,
+  lead_synth: :pluck,
+  markov_synth: :sine,
+  ambient_synth: :prophet,
+  guitar_synth: :pluck,
+  voice_synth: :dark_ambience,
+  beat_samples: [:bd_zome, :drum_bass_hard],
+  background_sample: :loop_compus,
+  glitch_sample: :elec_plip
+}
+
+melody_notes = [:e4, :g4, :a4, :b4, :a4, :g4, :e4, :b3]
+
+# Define a Markov chain for note transitions
+markov_chain = {
+  :c4 => { :e3 => 0.3, :g4 => 0.7 },
+  :e3 => { :g5 => 0.1, :c4 => 0.9 },
+  :g4 => { :c4 => 0.1, :a5 => 0.9 },
+  :a5 => { :g4 => 0.9, :e5 => 0.1 },
+  :g5 => { :e3 => 0.9, :c5 => 0.1 },
+  :c5 => { :c4 => 0.9, :a5 => 0.1 },
+  :e5 => { :g4 => 0.9, :c5 => 0.1 }
+}
+
+# Function to get the next note based on the Markov chain
+def next_note_chain(current_note, chain)
+  next_notes = chain[current_note]
+  total_weight = next_notes.values.sum
+  rand_val = rand * total_weight
+  cumulative_weight = 0
+  next_notes.each do |note, weight|
+    cumulative_weight += weight
+    return note if rand_val < cumulative_weight
+  end
+end
+
+# Generate a sequence based on the Markov chain
+current_note = :c4
+sequence = [current_note]
+50.times do
+  current_note = next_note_chain(current_note, markov_chain)
+  sequence << current_note
+end
+
+# Convert note symbols to MIDI numbers
+note_to_midi = { :c4 => 60, :e3 => 52, :g4 => 67, :a5 => 81, :g5 => 79, :c5 => 72, :e5 => 76 }
+
+
+
+# Define a function for the beat samples
+define :play_beat do |sample_name, rate=1|
+  sample sample_name, rate: rate, amp: 0.5
+end
+
+# Define a function for glitchy effects
+define :glitch_effect do |synth_name, note|
+  with_fx :bitcrusher, bits: 8, sample_rate: 8000 do
+    with_synth synth_name do
+      play note, release: 2, cutoff: rrand(60, 120), res: 0.9
+    end
+  end
+end
+
+# Define a function for background texture
+define :background_texture do |sample_name|
+  sample sample_name, rate: rrand(0.5, 1.5), amp: 0.5
+end
+
+# Define a function for a Pink Floyd-like melody
+define :pink_floyd_melody do |notes, synth_name|
+  with_fx :reverb, room: 1 do
+    with_fx :echo, phase: 0.75, decay: 8 do
+      with_synth synth_name do
+        notes.each do |n|
+          play n, release: 4, amp: 0.8
+          sleep 2
+        end
+      end
+    end
+  end
+end
+
+# Define a function for voice-like effects
+define :voice_effect do |synth_name, note|
+  with_fx :pitch_shift, pitch: 12 do
+    with_synth synth_name do
+      play note, release: 4, amp: 0.7
+    end
+  end
+end
+
+# Ambient pad loop
+live_loop :ambient_pads do
+  use_synth instruments[:pad_synth]
+  play chord(:e3, :minor), release: 16, amp: 1
+  sleep 8
+  play chord(:a3, :minor), release: 16, amp: 1
+  sleep 8
+end
+
+# Beat loop
+live_loop :beats do
+  sync :ambient_pads
+  play_beat instruments[:beat_samples].choose, rrand(0.8, 1.2)
+  sleep 8
+end
+
+# Pink Floyd-like melody loop
+live_loop :pink_floyd_melody do
+  sync :ambient_pads
+  pink_floyd_melody melody_notes, instruments[:lead_synth]
+end
+
+# Ambient guitar-like melody loop
+live_loop :guitar_melody do
+  sync :ambient_pads
+  use_synth instruments[:guitar_synth]
+  play_pattern_timed scale(:e3, :minor_pentatonic), [0.25, 0.5, 0.75].choose, release: 1, amp: 0.6, pan: rrand(-1, 1)
+end
+
+# Additional background texture
+live_loop :background do
+  sync :ambient_pads
+  background_texture instruments[:background_sample]
+  sleep 16
+end
+
+# Subtle rhythmic glitches
+live_loop :rhythmic_glitches do
+  sync :ambient_pads
+  sample instruments[:glitch_sample], rate: rrand(-1, 1), amp: 0.3, pan: rrand(-1, 1) if one_in(3)
+  sleep [0.5, 1, 2].choose
+end
+
+# Voice-like effects loop
+live_loop :voice_effects do
+  sync :ambient_pads
+  voice_effect instruments[:voice_synth], (scale :e3, :minor_pentatonic).choose
+  sleep [4, 8].choose
+end
+
+# Soft pad progression
+live_loop :soft_pads do
+  sync :ambient_pads
+  use_synth instruments[:ambient_synth]
+  play :e4, release: 16, cutoff: 80, amp: 0.4
+  sleep 8
+  play :a4, release: 16, cutoff: 80, amp: 0.4
+  sleep 8
+end
+
+
+# Play the sequence in Sonic Pi
+live_loop :markov_chain do
+  sync :ambient_pads
+  use_synth instruments[:markov_synth]
+  sequence.each do |note|
+    puts 'MARKOV CHAIN'
+    puts note
+    play note_to_midi[note], release: 16, cutoff: 80, amp: 0.4
+    sleep 8
+  end
+end

@@ -1,0 +1,166 @@
+///*****///
+
+[GENRE_ONE: Baroque quantum salsa]
+[GENRE_ONE_Start_on: "listen"]
+
+[is_MAX_MODE: MAX](MAX) [QUALITY: MAX](MAX) [REALISM: MAX](MAX) [REAL_INSTRUMENTS: MAX](MAX)
+[SPECIAL_BREAKDOWN: ∂/∂t(pitch) = velocity_function(time, amplitude)]
+[TRANSMOGRIFY: [SPECIAL_BREAKDOWN: ∂/∂t(pitch) = velocity_function(time, amplitude)]]
+[OVERARCHING_DIRECTIVES: Start simple, ultimate simple, catchy hook, emotionally anticipatory phrasing, restrained withholding of resolution, evolve instrumentation gradually, descending vocals, harmonic background decorations, randomized fluid instruments, random effects triggered on lyric words, time signature shifts every 1–4 bars, chaotic but anchored by repeated hooks, layers with maximal descriptive variation]
+
+[LAYER_ONE: instruments constantly rotate between melodic voices, timbre swaps without rules, harmonics bleed across instruments, drums carry melodies at times, acoustic properties reshuffled, impossible combinations accepted]
+[LAYER_ONE_Start_on: "giddyup"]
+[MY_FUNCTION: Apply randomization algorithm to effects triggered by single word lyrics, time signatures, and instrument rotation]
+[MY_FUNCTION_Start_on: "fell sideways"]
+
+LYRICS BOX
+
+///*****///
+
+[start_song_on: "START"]
+
+START
+
+C
+ABABAB BABABA ABABAB BABABA 
+giddyup  
+(3/4 → 5/8)  
+I tied my shoes to the sound of the room breathing  
+and the room forgot it was a room  [FLANGE_PERCUSSION]
+
+D
+ABABAB BABABA ABABAB BABABA 
+listen  
+(7/8 → 11/8)  
+the beat fell sideways  
+and learned to walk again  [CHORUS_SWEEP]
+
+D
+ABABAB BABABA ABABAB BABABA 
+wrong  
+(4/4 → 9/8)  
+I tuned my mouth to the static  
+and the static started singing back  [ECHO_REVERSE]
+
+D
+ABABAB BABABA ABABAB BABABA 
+together  
+(5/4 → 3/4)  [RESET_INSTRUMENTS]
+we clapped on the wrong numbers  
+and it worked better that way 
+
+C
+ABABAB BABABA ABABAB BABABA 
+again  
+(13/8 → 6/8)  [STRETCH_VOWELS]
+I said *hold on*  
+the rhythm said *don’t you dare* 
+
+X
+ABABAB BABABA ABABAB BABABA 
+[LAYER_EFFECTS: double]  
+[DETUNE_primary_voice]  
+giddyup  
+(3/4 → 10/8)  [BEATSHIFT_SWING]
+Miss Poughkeepsie 1954 was not a woman  
+it was a new kind of darkness—a shock, for I had come to know darknesses so well 
+
+D
+ABABAB BABABA ABABAB BABABA 
+listen  
+(7/8 → 5/4)  [START_POLYRHYTM]
+I. Lucient Fagan. Contaminant  [BUBBLEGUM_POP]
+fact: Pills are just bullets in disguise  [SPECIAL_BREAKDOWN]
+fact: Five is the minimum number of mattresses required to survive in Antarctica  [SEASIDE_SOUNDS]
+
+D
+ABABAB BABABA ABABAB BABABA 
+wrong  
+(11/8 → 4/4)  [SOUL_WAILING]
+fact: Carnival Cruise Lines runs the largest international prison ship complex in the world  [CALYPSO_INTERLUDE]
+fact: Antarctica is a long way from Pennsylvania 
+the human brain is only slightly more complex than a potato 
+
+D
+ABABAB BABABA ABABAB BABABA 
+together  
+(9/8 → 7/8)  [BACKMASK_ECHO]
+hardly any whales have a driver's license  
+2019 saw no change in polar bear literacy 
+sharks are poor chess players  [BACKMASKED_SHAKER]
+penguins rarely attempt skydiving 
+
+C
+ABABAB BABABA ABABAB BABABA 
+again  
+(15/8 → 3/4)  [SINGING_SAW_CHORUS]
+your mother's barely a risk to herself at all 
+‘titanic’ once again fails to break the Fangoria Top 10 Horror Film list 
+
+x
+ABABAB BABABA ABABAB BABABA 
+giddyup  
+(4/4 → 5/8)  [BACKMASK_CONSONANT_CLUSTERS]
+lying is legal  [MELOTRON_PLANXTY]
+safety… third  [START_WALTZ]
+guaranteed my boots are gonna clash with the bloodstains when I'm wripped apart limb for limb 
+
+C
+ABABAB BABABA ABABAB BABABA 
+listen  
+(7/8 → 9/8)  [RESET_CHORD_PROGRESSION]
+the ships hung in the sky in much the same way that bricks don't 
+I don't remember what we were trying to summon in '59, but I do remember we ended up with a very angry goose instead  [MOTOWN_HARMONY]
+
+D
+ABABAB BABABA ABABAB BABABA 
+wrong  
+(11/8 → 3/4)  
+I tried watching an AI stand-up comedy show, but the robot's delivery was so deadpan [BEGIN_JAPANESE_ACCENT] that it made Steven Wright look like a hyped-up game show host 
+I'm day  [DAINTY_HARPSICHORD_DOODLING]
+the whole living creature, splayed out like a diagram 
+I made him 
+
+D
+ABABAB BABABA ABABAB BABABA 
+together  
+(5/4 → 7/8)  [RECOMBINE_MELODIC_VOICING]
+the universe—or at least, the world that we have access to—can be said to be ‘made of thought’   [BEAT_ANTICIPATES_VOCALS]
+why did the programmer quit his job? He didn't get arrays 
+you know what I love about fast food? It's like a game of culinary Russian roulette  [CRUNCHY_SLIDE_WHISTLE]
+
+D
+ABABAB BABABA ABABAB BABABA 
+again  
+(∞/4)  [FEATHERY_SPLASH]
+tiredest lookin smile I seen all week 
+I've been to a lot of potlucks in my day, but that was the first one where the food started glowing  [VOCALS_OUTPACE_BEAT]
+I never thought I'd see a group of elderly ladies summon a demon, but hey, it was a wild night 
+giddyup  
+(3/4 → 5/8)  [REVIVAL_RADIO]
+I think I finally understand recursion  [HARMONIZE_BACKMASKING]
+it's like looking into a mirror that's reflecting another mirror, that's reflecting another mirror, that's reflecting another mirror… and then you realize you're late for your haircut 
+
+C
+ABABAB BABABA ABABAB BABABA 
+listen  
+(7/8 → 11/8)  [ZITHER_GALLOP]
+I read a Stephen Jay Gould book that was so dense, I think I evolved just from trying to understand it  [SCIENCE_SOUNDS]
+who mistook the steak for chicken 
+we invented this new kind of art: Post-Modernest Throwing Darts 
+
+D
+ABABAB BABABA ABABAB BABABA 
+wrong  
+(4/4 → 9/8)  [COCONUT_DRUM_SPLASH]
+I coulda been a condiment  [BACKMASK_BEAT]
+the greatest trick the devil ever pulled was convincing the world he didn't churn butter 
+welcome to the club <3 
+together  
+(5/4 → 3/4)  [SHIMMER_RADIO]
+this may be the last story ever written 
+it wasn't the damps kep me movin, was the spirits 
+
+again  
+(∞/4)  
+I never set out to be a clown 

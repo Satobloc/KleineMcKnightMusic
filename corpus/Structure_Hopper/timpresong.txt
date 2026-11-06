@@ -1,0 +1,137 @@
+### TIMBRE-CHORD + CHROMATICITY SONG v1 ###
+
+bpm_list = (40..60).step(5).to_a  # start slow, gradually increase
+use_synth :fm   # FM synth for timbre chords and creak sweep
+
+# Function to play a "timbre chord"
+define :play_timbre_chord do |note, chord|
+  chord.each_with_index do |mod_val, idx|
+    in_thread do
+      sleep idx * 0.05
+      amp_val = 0.1 - (idx * 0.5)
+      play note,
+        attack: 0.02, sustain: 0.15, release: 0.05,
+        mod_index: mod_val,
+        divisor: 2,
+        amp: amp_val
+    end
+  end
+end
+
+# Timbre chords (mod_index arrays)
+timbre_chords = [
+  [0.8, 1.0, 1.2],
+  [1.0, 1.3, 1.5],
+  [0.7, 0.9, 1.1],
+  [1.2, 1.4, 1.6]
+]
+
+song_structure = [0, 1, 2, 1, 3, 0]
+anchor_note = 60
+micro_sleep = [0.1, 0.15, 0.2]
+
+### Creak Note Function (chromatic sweep)
+define :creak_note do |note, period_factor|
+  play note,
+    attack: 0.01, sustain: 1, release: 0.2,
+    mod_index: period_factor,
+    divisor: 2
+end
+
+anchor_creak = 1.4
+sweep_note = 53
+sweep_start = 0.5
+sweep_end = 2.0
+sweep_steps = 20
+sweep_sleep = 0.25
+
+### CLICK LOOP ###
+live_loop :click do
+  sleep 0.5
+end
+
+### DRUMS ###
+live_loop :drums do
+  sample :bd_haus, amp: 0.6 if one_in(2)
+  sleep 0.5
+  sample :drum_snare_soft, amp: 0.4 if one_in(3)
+  sleep 0.25
+  sample :drum_cymbal_closed, amp: 0.3 if one_in(4)
+  sleep 0.25
+end
+
+### BASS LAYER ###
+live_loop :bass, sync: :drums do
+  use_synth :fm
+  cutoff_val = 70 + (ring 10,0,30,20).tick(:filter_offset)
+  res_val = 0.5 + (ring 0,0.2,0.4,0.6).look(:filter_offset)
+  
+  with_fx :lpf, cutoff: cutoff_val, res: res_val do
+    play choose([:e2, :g2, :b2, :a2]), release: 0.5, depth: 2, divisor: 0.8, amp: 0.7 if one_in(2)
+  end
+  
+  use_synth :pretty_bell
+  amp_val = (ring 0.2,0.3,0.4,0.5).tick(:sub_bell)
+  play choose([:e1, :g1]), release: 1, amp: amp_val if one_in(3)
+  sleep 0.5
+end
+
+### MELODY ###
+live_loop :melody, sync: :drums do
+  use_synth :piano
+  phase_val = (ring 0.25, 0.5, 0.75).tick(:echo_phase)
+  mix_val = (ring 0.1, 0.2, 0.3).look(:echo_phase)
+  
+  with_fx :reverb, room: 0.8, mix: 0.3 do
+    with_fx :echo, phase: phase_val, mix: mix_val do
+      play choose([:g4, :b4, :c5]), release: 0.3, amp: 0.4 if one_in(4)
+      play choose([:e4, :g4, :c4]), release: 0.3, amp: 0.6 if one_in(3)
+      sleep 0.5
+    end
+  end
+end
+
+### ACCENTS ###
+live_loop :accents, sync: :drums do
+  sleep choose([0.5, 1, 1.5])
+  sample :elec_twip, amp: 0.4 if one_in(3)
+end
+
+### PAD ###
+live_loop :pad, sync: :drums do
+  use_synth ([:dtri, :subpulse].choose)
+  amp_val = (ring 0.2,0.3,0.4).tick(:pad_amp)
+  play_chord chord(:e4, :minor), release: 4, amp: amp_val if one_in(2)
+  sleep 4
+end
+
+### TIMBRE CHORD SONG ###
+live_loop :timbre_chord_song do
+  bpm_list.each do |bpm_val|
+    use_bpm bpm_val
+    song_structure.each do |chord_idx|
+      current_chord = timbre_chords[chord_idx]
+      current_chord.each_with_index do |mod_val, i|
+        play_timbre_chord(anchor_note, [mod_val])
+        sleep micro_sleep[i % micro_sleep.length]
+      end
+      sleep 0.25
+    end
+  end
+  stop
+end
+
+### CREAK SWEEP LAYER ###
+live_loop :creak_interval_sweep do
+  sweep_steps.times do |i|
+    sweep_factor = sweep_start + (i.to_f / (sweep_steps-1)) * (sweep_end - sweep_start)
+    creak_note(anchor_note, anchor_creak)
+    creak_note(sweep_note, sweep_factor)
+    
+    # Event logging
+    timestamp_val = vt
+    puts "step_idx=#{i} | sweep_factor=#{sweep_factor.round(3)} | timestamp_val=#{timestamp_val.round(3)}"
+    
+    sleep sweep_sleep
+  end
+end

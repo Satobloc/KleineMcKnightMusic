@@ -1,0 +1,90 @@
+# --- "THE GLITCH TAPESTRY" (FIXED FOR V4.5.1 REST LOGIC) ---
+use_bpm 120
+set_volume! 1.0
+use_debug false
+set :song_status, :running # Global flag for graceful stops
+
+# --- HARMONY DEFINITIONS (V4.5.1 COMPATIBLE) ---
+define :chorus_chords do
+  # Pop Progression: I-V-vi-IV (C-G-Am-F)
+  # Uses officially supported :m7 and :M7
+  (ring chord(:C3, :major), chord(:G2, :major), chord(:A2, :m7), chord(:F2, :M7))
+end
+
+define :verse_chords do
+  # Altered Pop: vi-IV-I-V (Am-F-C-G)
+  (ring chord(:A2, :m7), chord(:F2, :M7), chord(:C3, :major), chord(:G2, :major))
+end
+
+# --- EXPERIMENTAL BRIDGE: TIMBRE CHORDS ---
+define :play_timbre_chord do |note, mods|
+  # FM synthesis creates chords from overtones
+  mods.each do |m|
+    synth :fm, note: note, mod_index: m, divisor: 2, amp: 0.4, release: 2
+  end
+end
+
+# --- CORE INSTRUMENTATION LOOPS ---
+live_loop :beat_anchor do
+  stop unless get(:song_status) == :running # Graceful exit check
+  # Kick drum evolves amplitude over 16 beats
+  k_amp = (line 0.7, 1.2, steps: 16).mirror.tick
+  sample :bd_haus, amp: k_amp
+  
+  # "Frayed" glitch percussion via probabilistic triggers
+  sample :elec_plip, amp: 0.4 if one_in(3)
+  sample :elec_twang, rate: 1.5, amp: 0.3 if one_in(4)
+  sleep 0.5
+end
+
+live_loop :harmony_layer do
+  stop unless get(:song_status) == :running
+  # Lightweight synth choice for Windows 10 performance
+  use_synth :blade
+  current_chord = (look < 32 ? verse_chords.tick : chorus_chords.tick)
+  play current_chord, release: 2, amp: 0.5, cutoff: 90
+  sleep 2
+end
+
+live_loop :glitch_melody do
+  stop unless get(:song_status) == :running
+  use_synth :pluck
+  
+  # FIX: Assign the note to a variable to check for rests
+  notes = (ring :E4, :G4, :A4, :C5, :r).shuffle # Use lowercase :r for rests
+  n = notes.tick
+  
+  # Only play if it is not a rest and the probability check passes
+  if one_in(2) && n != :r
+    play n, amp: rrand(0.6, 0.9), release: 0.2
+  end
+  sleep [0.25, 0.5].choose # Asymmetric phrasing
+end
+
+# --- SONG CONTROL THREAD ---
+in_thread do
+  # Initial Section (Intro/Verse/Chorus)
+  sleep 64
+  
+  # START EXPERIMENTAL BRIDGE
+  puts "--- BRIDGE: TIMBRE TRANSITION ---"
+  with_bpm 60 do # Temporal shift for "Sharp Relief"
+    4.times do
+      play_timbre_chord :A3, [0.8, 1.2, 1.5]
+      sleep 2
+    end
+    
+    # DISSONANT SHOCK: C# Major 7 (IIImaj7)
+    puts "--- DISSONANT PEAK ---"
+    synth :piano, note: chord(:Cs4, :M7), release: 4, amp: 1.2
+    sleep 4
+  end
+  
+  # RESOLUTION back to Tonic key
+  puts "--- RESOLUTION ---"
+  synth :piano, note: chord(:A2, :madd9), release: 8, amp: 1.2
+  sleep 8
+  
+  # Signal all loops to stop gracefully
+  set :song_status, :finished
+end
