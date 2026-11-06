@@ -1,0 +1,84 @@
+Here is a user's guide for the Keeblerkam, based on the provided sources:
+Keeblerkam User's Guide
+Overview The Keeblerkam is a DIY analog camera built from a large Keebler cracker tin and a magnifying lens. It is designed for wide, stationary compositions with long exposures.
+Camera Characteristics
+•
+Body: Large Keebler cracker tin.
+•
+Lens: Large magnifying lens (6in diameter, 1in thick).
+•
+Focal Length: Fixed at 13 inches.
+•
+Aperture: Fixed at f/2.9 (default), can be reduced to f/8.7 with an insert.
+•
+Film Projection Area: 7-inch diameter circle (~38.5 sq in).
+•
+Focus: Fixed at approximately 33 inches from the subject.
+•
+Film: Uses Fuji X-ray film with an estimated ISO of 80-100.
+•
+Shutter: No mechanical shutter; exposure is controlled by manually turning a light source on and off.
+•
+Exposure Timing: Limited by manual control, with practical limitations down to about 0.1 second intervals, and more accuracy at 0.5 second intervals or longer.
+Operational Parameters
+•
+Optimal EV Range: 5-7.
+•
+Exposure Times:
+◦
+At f/2.9: Approximately 2 to 10 seconds, depending on light levels (EV 5-7).
+◦
+At f/8.7: Approximately 16 to 80 seconds, depending on light levels (EV 5-7).
+•
+Subject Distance: Fixed at approximately 33 inches.
+Best Practices
+•
+Subject Positioning: Due to the fixed focus, the subject must be precisely positioned at approximately 33 inches from the lens.
+•
+Aperture Choice:
+◦
+Use the wider f/2.9 aperture for normal conditions to achieve shorter exposure times.
+◦
+Use the smaller f/8.7 aperture for brighter scenes or to reduce aberrations and achieve greater depth of field, although this will require much longer exposure times.
+•
+Exposure Control:
+◦
+Use a consistent light source, positioned at a consistent distance from the subject.
+◦
+Control exposure time by manually turning a light source on and off.
+◦
+Use a timer or metronome to time exposures, as manual timing is limited to about 0.1 second intervals, with more accuracy at 0.5 second intervals or longer.
+◦
+Bracket exposures by slightly varying the exposure time to ensure at least one usable image, although this is more difficult given the complexities of loading the film.
+•
+Lighting: Use a controlled indoor light source, ideally with adjustable brightness, to achieve consistent exposure.
+•
+Film Loading: Ensure proper film alignment and backing material to prevent light leaks, given the large projection area.
+•
+Film Development: Because of the high contrast of the X-ray film, use a diluted developer (e.g., 1:1 or 1:2 dilution for standard developers) and monitor closely. Start with shorter times (e.g., ~5–6 minutes) and adjust based on initial tests. Use gentle, consistent agitation to avoid uneven development.
+Ideal Use Cases
+•
+Best suited for wide, stationary compositions that can be positioned at the fixed focus distance of 33 inches.
+•
+Ideal for long exposure photography, especially when using the f/8.7 aperture insert.
+•
+Best used in controlled, indoor lighting environments.
+Limitations
+•
+Fixed focus at approximately 33 inches from the lens.
+•
+Limited aperture options (f/2.9 or f/8.7).
+•
+Requires precise subject placement due to fixed focus and fixed focal length.
+•
+Manual exposure timing is limited by precision.
+Simultaneous Shooting with Other DIY Cameras When using the Keeblerkam with the Clampcam and The Royale for simultaneous shooting, use the following settings to achieve a workable exposure across all three cameras:
+•
+Lighting: Controlled indoor light source (EV 6).
+•
+Exposure Time: 4 seconds.
+•
+Aperture: f/2.9.
+•
+Subject Distance: Position the subject at approximately 33 inches.
+By following this guide, you can optimize your use of the Keeblerkam and capture unique analog photographs.
