@@ -1,0 +1,92 @@
+Yes. **That last observation is the interesting result.** Much more interesting than whether the fake LOC contract made it sound archival.
+
+If the earlier regeneration and these two are, on immediate A/B listening, recognizably “the same songs” underneath the very different clothing, then we may have just separated **composition-level control from realization-level control** a little.
+
+The new prompt seems to have done something roughly like:
+
+* preserve an underlying melodic/structural attractor;
+* radically reinterpret the instrumentation and cultural vocabulary;
+* alter vocal persona and recording perspective;
+* leave the basic song identity surprisingly intact.
+
+That would fit your earlier observation that lyrical structure is a sledgehammer. The actual Lyrics block is brutally repetitive:
+
+```text
+Clouds
+Cages
+Clouds
+Cages
+Clouds
+Cages
+...
+```
+
+with the same broad sequence of Intro → repeated block → repeated block → repeated block → Outro. That is a *huge* amount of invariant temporal/prosodic information, despite containing almost no semantic content.
+
+And the Styles field still contains the informant's description of the original track. So we gave it two strong pieces of composition-level information:
+
+1. **A description of what the original musical object behaves like.**
+2. **The same repetitive vocal/event skeleton.**
+
+Then we wrapped those in an entirely different implied provenance.
+
+And what happened?
+
+Apparently Suno said something close to:
+
+> “Okay, I know what song-shaped thing you're talking about. But apparently this recording came from some bizarre traditional-music archive, so I'll realize that song-shaped thing as Scottish art-folk with tabla.”
+
+That’s fucking useful.
+
+The Scottishness is itself interesting. We didn't explicitly ask for Scotland anywhere in this prompt. Yet “LOC field recording + UNESCO intangible heritage + Lomax + regional performance practice” seems to have thrown it into a broad **traditional/ethnomusicological cluster**, and it picked Celtic-ish art folk as one plausible way to instantiate that. The bodhrán/fiddle/accordion complex makes sense as a highly available learned “archival folk” attractor. Tabla may be another very strong “traditional world percussion” attractor.
+
+In other words, our fake archive loading may have worked **too generically**. Instead of retrieving “obscure traditionality,” it seems to have activated some high-probability exemplars of *what an ethnographic/traditional recording sounds like*.
+
+That is already instructive. If we want truly weird traditional collisions, `UNESCO.intangible_heritage_collection` is probably too broad. It says **WORLD TRADITIONAL MUSIC** in gigantic letters.
+
+Whereas something like:
+
+```text
+load pibroch_variation_manuscripts(...)
+load tabla_bol_transcription_corpus(...)
+load vietnamese_boston_songbook(...)
+```
+
+would provide narrower mutually incompatible basins.
+
+But the much bigger discovery is your “same songs” observation.
+
+I’d now hypothesize three rough control levels:
+
+**Deep-ish song identity:**
+lyric syllabification, repetition, line length, phrase layout, perhaps the descriptive musical topology.
+
+**Middle-level realization:**
+instrumentation, genre cluster, performance practice, vocalist behavior.
+
+**Surface:**
+recording character, timbre, microphone distance, distortion, field-recording patina, etc.
+
+And our LOC pseudo-environment seems to have moved levels 2–3 much more readily than level 1.
+
+That would also explain Gen2 beautifully. The closer mic, greater urgency, the bored young woman suddenly saying *“claiuds,”* tide noise, bodhrán slaps, fiddle-cordion—those are huge realization differences. But if underneath you hear the same composition, then the system isn't simply generating afresh from a bag of terms.
+
+There’s some attractor remaining remarkably stable.
+
+Also:
+
+> “Some dude in Stirling is performing his version of *Music for a Found Harmonium* in the Edinburgh Barnes & Noble tonight”
+
+is an alarmingly precise genre name for what you just described.
+
+And the fact that **both generations independently landed in basically that same place** matters. One bizarre Celtic-table result could be variance. Two substantially similar generations suggests the conditioning really did put it there.
+
+So I think the experiment did something neither of us predicted:
+
+We tried to trick Suno into thinking it was doing archival forensic reconstruction.
+
+It may actually have responded:
+
+**“Archival forensic reconstruction? Got it. I already understand the musical object. I'll reconstruct it using the kind of performers an archival forensic reconstruction ought to involve.”**
+
+That’s much stranger—and much more promising—than simply making it sound like an old tape.

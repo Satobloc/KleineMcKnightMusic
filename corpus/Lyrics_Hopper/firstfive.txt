@@ -1,0 +1,3395 @@
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Library
+Search your library to find a specific song.
+
+What are you looking for?
+Import Music
+Upload your music to import it into your library.
+
+YouTube Video Link
+Import
+
+Drag & Drop
+or
+Select files
+Tracks in library: 5
+View:
+Full
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 11. Glitch Glade.mp3
+172
+Bb major
+Female
+  High
+Pop
+Pop: 0.2RnB: 0.15Rock: 0.14Singer/Songwriters: 0.12Reggae: 0.09Show all
+PopR&BRockSinger / Songwriter
+Pop: 0.2Children / Jingle: 0.17R&B: 0.15Rock: 0.14Singer / Songwriter: 0.12Show all
+Electro JazzNu Jazz
+-
+-
+-
+-
+Sexy
+Sexy: 0.57Happy: 0.36Chill: 0.35Romantic: 0.3Energetic: 0.28Show all
+SeductiveSexyConfidentCoolRelaxed
+Seductive: 0.47Sexy: 0.41Confident: 0.31Cool: 0.29Relaxed: 0.27Show all
+Cool
+Cool: 0.44Warm: 0.18Mysterious: 0.17Unpolished: 0.17Sparkling: 0.16Show all
+GroovyBouncy
+Groovy: 0.3Bouncy: 0.29Robotic: 0.21Pulsing: 0.2Steady: 0.2Show all
+0.35
+0.02
+Medium
+Positive
+Medium
+  Low
+PercussionSynth
+Percussion: throughoutSynth: frequentlyAcoustic Guitar: absentBass: absentBass Guitar: absentShow all
+Electronic DrumsPercussionElectric PianoSynthesizer
+Percussion: throughoutElectronic Drums: throughoutElectric Piano: partiallySynthesizer: frequentlyAcoustic Guitar: absentShow all
+French rap music. confident and catchy. synth, female sampled voice and rhythm.
+3/4
+mid / late 2000s
+-
+-
+51734168
+Detail
+|
+Similarity
+
+2
+
+x 9. Minimal Consciousness.mp3
+91
+G minor
+Female
+  High
+PopSinger/Songwriters
+Pop: 0.18Singer/Songwriters: 0.16Rock: 0.12RnB: 0.1Folk/Country: 0.09Show all
+PopSinger / Songwriter
+Children / Jingle: 0.27Pop: 0.18Singer / Songwriter: 0.16Rock: 0.12R&B: 0.1Show all
+Ukulele
+-
+-
+-
+-
+RomanticHappySexy
+Romantic: 0.52Happy: 0.51Sexy: 0.49Chill: 0.48Energetic: 0.25Show all
+SeductiveSexyRomanticWarmBright
+Seductive: 0.41Sexy: 0.34Romantic: 0.34Warm: 0.32Bright: 0.3Show all
+WarmCool
+Warm: 0.31Cool: 0.28Playful: 0.2Sparkling: 0.17Retro: 0.12Show all
+Bouncy
+Bouncy: 0.43Steady: 0.22Flowing: 0.19Groovy: 0.16Driving: 0.13Show all
+0.46
+0.06
+Medium
+Positive
+Medium
+Medium
+Acoustic GuitarPercussionPianoSynth
+Synth: partiallyAcoustic Guitar: frequentlyPercussion: frequentlyPiano: frequentlyBass: absentShow all
+Electric PianoDrum KitAcoustic GuitarPercussionPianoShow all
+Synthesizer: partiallyElectric Piano: partiallyDrum Kit: partiallyAcoustic Guitar: frequentlyPercussion: frequentlyShow all
+Medium / mid - tempo pop song with female vocals, piano, acoustic guitar, upright bass and drums.
+4/4
+mid / late 2000s
+-
+-
+51734167
+Detail
+|
+Similarity
+
+3
+
+x 8. Miss It If Ya Blunk.mp3
+112
+D minor
+Male
+  High
+Rap/Hip-HopRnBPop
+Rap/Hip-Hop: 0.33RnB: 0.26Pop: 0.19Reggae: 0.06Funk/Soul: 0.05Show all
+Rap Hip-HopR&BPop
+Rap Hip-Hop: 0.33R&B: 0.26Children / Jingle: 0.22Pop: 0.19Reggae: 0.06Show all
+Hip HopRapDance PopTrapSouthern Hip HopShow all
+Pop-Rap
+Pop-Rap: 0.48Gangsta: 0.17Contemporary RnB: 0.16Jazzy Hip-Hop: 0.15Trap: 0.12Show all
+Pop-Rap
+Pop-Rap: 0.48Gangsta: 0.17Contemporary RnB: 0.16Jazzy Hip-Hop: 0.15Trap: 0.12Show all
+Sexy
+Sexy: 0.61Uplifting: 0.42Energetic: 0.39Happy: 0.39Chill: 0.27Show all
+SexyConfidentSeductiveCoolDetermined
+Sexy: 0.5Confident: 0.47Seductive: 0.46Cool: 0.39Determined: 0.29Show all
+Cool
+Cool: 0.51Bold: 0.25Unpolished: 0.22Powerful: 0.2Playful: 0.15Show all
+Groovy
+Groovy: 0.56Bouncy: 0.35Steady: 0.22Pulsing: 0.17Driving: 0.14Show all
+0.50
+0.26
+Medium
+Positive
+  Low
+  Low
+SynthPercussionPianoBass
+Percussion: throughoutSynth: throughoutPiano: partiallyBass: frequentlyAcoustic Guitar: absentShow all
+SynthesizerElectronic DrumsPercussionPianoBass
+Percussion: throughoutSynthesizer: throughoutElectronic Drums: throughoutPiano: partiallyBass: frequentlyShow all
+Bouncy / feel good 90's boom - bap hip hop. it's fun, catchy male vocals with a swaggering, and makes you wanna clap your hands in the air!
+4/4
+contemporary
+-
+-
+51734166
+Detail
+|
+Similarity
+
+4
+
+x 7. Juggalette Supermodel.mp3
+121
+G major
+Female
+  High
+RnBPop
+RnB: 0.2Pop: 0.18Rap/Hip-Hop: 0.09Rock: 0.07Reggae: 0.05Show all
+R&BPop
+Children / Jingle: 0.33R&B: 0.2Pop: 0.18Rap Hip-Hop: 0.09Rock: 0.07Show all
+ElectropowerpopViral PopOtacoreNerdcoreChiptune
+-
+-
+-
+-
+HappyEnergeticSexy
+Happy: 0.57Energetic: 0.52Sexy: 0.45Uplifting: 0.45Chill: 0.26Show all
+ConfidentUpbeatBrightEnergeticExcited
+Confident: 0.43Upbeat: 0.39Bright: 0.38Energetic: 0.33Excited: 0.31Show all
+Cool
+Cool: 0.32Playful: 0.24Powerful: 0.19Unpolished: 0.19Bold: 0.17Show all
+BouncyGroovyDriving
+Bouncy: 0.37Groovy: 0.29Driving: 0.28Running: 0.19Steady: 0.18Show all
+0.54
+0.44
+  High
+Positive
+Medium
+  Low
+SynthPercussion
+Percussion: throughoutSynth: throughoutAcoustic Guitar: absentBass: absentBass Guitar: absentShow all
+SynthesizerPercussionElectronic DrumsDrum Kit
+Percussion: throughoutSynthesizer: throughoutElectronic Drums: frequentlyDrum Kit: frequentlyAcoustic Guitar: absentShow all
+A bouncy and fun song that creates a party atmosphere.
+4/4
+contemporary
+-
+-
+51734165
+Detail
+|
+Similarity
+
+5
+
+x 6. Butterfly.mp3
+149
+F minor
+Female
+  High
+Pop
+Pop: 0.2RnB: 0.1Rap/Hip-Hop: 0.08Rock: 0.07Reggae: 0.05Show all
+Pop
+Children / Jingle: 0.33Pop: 0.2R&B: 0.1Rap Hip-Hop: 0.08African: 0.07Show all
+Children's Music
+-
+-
+-
+-
+Sexy
+Sexy: 0.64Happy: 0.5Energetic: 0.39Uplifting: 0.39Chill: 0.33Show all
+SexySeductiveConfidentCoolBright
+Sexy: 0.53Seductive: 0.47Confident: 0.44Cool: 0.36Bright: 0.33Show all
+Cool
+Cool: 0.49Sparkling: 0.25Unpolished: 0.22Powerful: 0.21Bold: 0.18Show all
+Groovy
+Groovy: 0.5Bouncy: 0.38Steady: 0.29Pulsing: 0.2Driving: 0.15Show all
+0.59
+0.27
+Variable
+Positive
+  High
+  Low
+SynthPercussionBass
+Percussion: throughoutSynth: throughoutBass: partiallyAcoustic Guitar: absentBass Guitar: absentShow all
+SynthesizerElectronic DrumsPercussionBassDrum Kit
+Percussion: throughoutSynthesizer: throughoutElectronic Drums: throughoutBass: partiallyDrum Kit: partiallyShow all
+Confident, swaggering female - led pop with brash synth lead, and bouncy bass, and soulful female backing vocals.
+4/4
+late 2000s / contemporary
+-
+-
+51734164
+Detail
+|
+Similarity
+
+
+
+
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Search
+Find music based on a reference song.
+
+Similarity Search
+Free Text Search
+Similarity Search
+Find music which is sonically similar to a reference track of your choice.
+
+Select a track you want to use as a reference
+
+Library
+
+Spotify
+Search for a track in your Library
+Results from
+
+Library
+
+Spotify
+Reference Track
+Select the segment of the track the AI should "listen" to.
+
+Representative Segment
+Complete track
+Custom Interval
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 11. Glitch Glade.mp3
+172
+Bb major
+Female
+  High
+Pop
+Pop: 0.2RnB: 0.15Rock: 0.14Singer/Songwriters: 0.12Reggae: 0.09Show all
+PopR&BRockSinger / Songwriter
+Pop: 0.2Children / Jingle: 0.17R&B: 0.15Rock: 0.14Singer / Songwriter: 0.12Show all
+Electro JazzNu Jazz
+-
+-
+-
+-
+Sexy
+Sexy: 0.57Happy: 0.36Chill: 0.35Romantic: 0.3Energetic: 0.28Show all
+SeductiveSexyConfidentCoolRelaxed
+Seductive: 0.47Sexy: 0.41Confident: 0.31Cool: 0.29Relaxed: 0.27Show all
+Cool
+Cool: 0.44Warm: 0.18Mysterious: 0.17Unpolished: 0.17Sparkling: 0.16Show all
+GroovyBouncy
+Groovy: 0.3Bouncy: 0.29Robotic: 0.21Pulsing: 0.2Steady: 0.2Show all
+0.35
+0.02
+Medium
+Positive
+Medium
+  Low
+PercussionSynth
+Percussion: throughoutSynth: frequentlyAcoustic Guitar: absentBass: absentBass Guitar: absentShow all
+Electronic DrumsPercussionElectric PianoSynthesizer
+Percussion: throughoutElectronic Drums: throughoutElectric Piano: partiallySynthesizer: frequentlyAcoustic Guitar: absentShow all
+French rap music. confident and catchy. synth, female sampled voice and rhythm.
+3/4
+mid / late 2000s
+-
+-
+51734168
+Detail
+|
+Similarity
+
+Search Results
+Show
+
+10
+results
+
+Filters
+Genre
+Key
+BPM
+Voice
+Clear Filters
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+Sarah Bugar - To the Sea
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3YnED8hw9B542C7Era91Vp
+Listen on Spotify
+|
+Similarity
+2
+
+CocoRosie - Lucky Clover
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2t5TE369y8W8PVt44qzCMa
+Listen on Spotify
+|
+Similarity
+3
+
+Jazzamor - Here and Now
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+6j7aMznzYbEYeAJRPD32ZI
+Listen on Spotify
+|
+Similarity
+4
+
+Mariha - Take The Long Way Home
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+6uZ4e70Z0JMuDvLigD9bl0
+Listen on Spotify
+|
+Similarity
+5
+
+Sublime Reggae Kings - Maniac
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+0NMSkeDeuBnXgVC1Vhw9LL
+Listen on Spotify
+|
+Similarity
+6
+
+Natalie Imbruglia - Leave Me Alone
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+5WbGQG0XwHXhYxQ0jrhqrT
+Listen on Spotify
+|
+Similarity
+
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Search
+Find music based on a reference song.
+
+Similarity Search
+Free Text Search
+Similarity Search
+Find music which is sonically similar to a reference track of your choice.
+
+Select a track you want to use as a reference
+
+Library
+
+Spotify
+Search for a track in your Library
+Results from
+
+Library
+
+Spotify
+Reference Track
+Select the segment of the track the AI should "listen" to.
+
+Representative Segment
+Complete track
+Custom Interval
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 9. Minimal Consciousness.mp3
+91
+G minor
+Female
+  High
+PopSinger/Songwriters
+Pop: 0.18Singer/Songwriters: 0.16Rock: 0.12RnB: 0.1Folk/Country: 0.09Show all
+PopSinger / Songwriter
+Children / Jingle: 0.27Pop: 0.18Singer / Songwriter: 0.16Rock: 0.12R&B: 0.1Show all
+Ukulele
+-
+-
+-
+-
+RomanticHappySexy
+Romantic: 0.52Happy: 0.51Sexy: 0.49Chill: 0.48Energetic: 0.25Show all
+SeductiveSexyRomanticWarmBright
+Seductive: 0.41Sexy: 0.34Romantic: 0.34Warm: 0.32Bright: 0.3Show all
+WarmCool
+Warm: 0.31Cool: 0.28Playful: 0.2Sparkling: 0.17Retro: 0.12Show all
+Bouncy
+Bouncy: 0.43Steady: 0.22Flowing: 0.19Groovy: 0.16Driving: 0.13Show all
+0.46
+0.06
+Medium
+Positive
+Medium
+Medium
+Acoustic GuitarPercussionPianoSynth
+Synth: partiallyAcoustic Guitar: frequentlyPercussion: frequentlyPiano: frequentlyBass: absentShow all
+Electric PianoDrum KitAcoustic GuitarPercussionPianoShow all
+Synthesizer: partiallyElectric Piano: partiallyDrum Kit: partiallyAcoustic Guitar: frequentlyPercussion: frequentlyShow all
+Medium / mid - tempo pop song with female vocals, piano, acoustic guitar, upright bass and drums.
+4/4
+mid / late 2000s
+-
+-
+51734167
+Detail
+|
+Similarity
+
+Search Results
+Show
+
+10
+results
+
+Filters
+Genre
+Key
+BPM
+Voice
+Clear Filters
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+Life Without Buildings - Sorrow
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3TdNIsGBfhzR97ySB4aYGl
+Listen on Spotify
+|
+Similarity
+2
+
+Erinem - We're Going Down
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+1U3ramfMV4ayChuV1VlkCF
+Listen on Spotify
+|
+Similarity
+3
+
+ElysianSoul - Decadence and Disorder (The Voice of Anorexia)
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+55WRz3rMwP5G2VNFldUeY7
+Listen on Spotify
+|
+Similarity
+4
+
+ДРІТА - ТИ ЄБЛАН
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+4aVVZKgKEnzkzDJwN7P7TR
+Listen on Spotify
+|
+Similarity
+5
+
+Sierra Marin x Dakota Drake - Child of the Universe
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+4K7USJq6thCrmsl93seY4k
+Listen on Spotify
+|
+Similarity
+6
+
+Sierra Demulder x Waveney Yasso - Staircase
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+4bcQuF0nCkO1QmcQGOhVAr
+Listen on Spotify
+|
+Similarity
+
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Search
+Find music based on a reference song.
+
+Similarity Search
+Free Text Search
+Similarity Search
+Find music which is sonically similar to a reference track of your choice.
+
+Select a track you want to use as a reference
+
+Library
+
+Spotify
+Search for a track in your Library
+Results from
+
+Library
+
+Spotify
+Reference Track
+Select the segment of the track the AI should "listen" to.
+
+Representative Segment
+Complete track
+Custom Interval
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 8. Miss It If Ya Blunk.mp3
+112
+D minor
+Male
+  High
+Rap/Hip-HopRnBPop
+Rap/Hip-Hop: 0.33RnB: 0.26Pop: 0.19Reggae: 0.06Funk/Soul: 0.05Show all
+Rap Hip-HopR&BPop
+Rap Hip-Hop: 0.33R&B: 0.26Children / Jingle: 0.22Pop: 0.19Reggae: 0.06Show all
+Hip HopRapDance PopTrapSouthern Hip HopShow all
+Pop-Rap
+Pop-Rap: 0.48Gangsta: 0.17Contemporary RnB: 0.16Jazzy Hip-Hop: 0.15Trap: 0.12Show all
+Pop-Rap
+Pop-Rap: 0.48Gangsta: 0.17Contemporary RnB: 0.16Jazzy Hip-Hop: 0.15Trap: 0.12Show all
+Sexy
+Sexy: 0.61Uplifting: 0.42Energetic: 0.39Happy: 0.39Chill: 0.27Show all
+SexyConfidentSeductiveCoolDetermined
+Sexy: 0.5Confident: 0.47Seductive: 0.46Cool: 0.39Determined: 0.29Show all
+Cool
+Cool: 0.51Bold: 0.25Unpolished: 0.22Powerful: 0.2Playful: 0.15Show all
+Groovy
+Groovy: 0.56Bouncy: 0.35Steady: 0.22Pulsing: 0.17Driving: 0.14Show all
+0.50
+0.26
+Medium
+Positive
+  Low
+  Low
+SynthPercussionPianoBass
+Percussion: throughoutSynth: throughoutPiano: partiallyBass: frequentlyAcoustic Guitar: absentShow all
+SynthesizerElectronic DrumsPercussionPianoBass
+Percussion: throughoutSynthesizer: throughoutElectronic Drums: throughoutPiano: partiallyBass: frequentlyShow all
+Bouncy / feel good 90's boom - bap hip hop. it's fun, catchy male vocals with a swaggering, and makes you wanna clap your hands in the air!
+4/4
+contemporary
+-
+-
+51734166
+Detail
+|
+Similarity
+
+Search Results
+Show
+
+50
+results
+
+Filters
+Genre
+Key
+BPM
+Voice
+Clear Filters
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+Lil Seeto - Glitch Again
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2y9lKLfl0GUKiMfGt7jLPT
+Listen on Spotify
+|
+Similarity
+2
+
+Sukha x AR Paisley x Prodgk - Go To Sleep
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+5yPN6daDWtbMa3Osyqq5FH
+Listen on Spotify
+|
+Similarity
+3
+
+Childish Gambino - IV. Sweatpants
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+1kCNVpQRv6H4AnoQ1CH3B2
+Listen on Spotify
+|
+Similarity
+4
+
+C.U.T. - Be About It
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2DT6hQFT3ZKLpSBHpy5FXz
+Listen on Spotify
+|
+Similarity
+5
+
+SpongeBob Schwammkopf - Flüdelüdel
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2Gh4diywEXdtOBvfB4eKQ8
+Listen on Spotify
+|
+Similarity
+6
+
+Peachkka x Moonlight Scorpio - Glow - Peachkka Remix
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+5aXSLiHqOAS3prHzlXt6m4
+Listen on Spotify
+|
+Similarity
+
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Search
+Find music based on a reference song.
+
+Similarity Search
+Free Text Search
+Similarity Search
+Find music which is sonically similar to a reference track of your choice.
+
+Select a track you want to use as a reference
+
+Library
+
+Spotify
+Search for a track in your Library
+Results from
+
+Library
+
+Spotify
+Reference Track
+Select the segment of the track the AI should "listen" to.
+
+Representative Segment
+Complete track
+Custom Interval
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 7. Juggalette Supermodel.mp3
+121
+G major
+Female
+  High
+RnBPop
+RnB: 0.2Pop: 0.18Rap/Hip-Hop: 0.09Rock: 0.07Reggae: 0.05Show all
+R&BPop
+Children / Jingle: 0.33R&B: 0.2Pop: 0.18Rap Hip-Hop: 0.09Rock: 0.07Show all
+ElectropowerpopViral PopOtacoreNerdcoreChiptune
+-
+-
+-
+-
+HappyEnergeticSexy
+Happy: 0.57Energetic: 0.52Sexy: 0.45Uplifting: 0.45Chill: 0.26Show all
+ConfidentUpbeatBrightEnergeticExcited
+Confident: 0.43Upbeat: 0.39Bright: 0.38Energetic: 0.33Excited: 0.31Show all
+Cool
+Cool: 0.32Playful: 0.24Powerful: 0.19Unpolished: 0.19Bold: 0.17Show all
+BouncyGroovyDriving
+Bouncy: 0.37Groovy: 0.29Driving: 0.28Running: 0.19Steady: 0.18Show all
+0.54
+0.44
+  High
+Positive
+Medium
+  Low
+SynthPercussion
+Percussion: throughoutSynth: throughoutAcoustic Guitar: absentBass: absentBass Guitar: absentShow all
+SynthesizerPercussionElectronic DrumsDrum Kit
+Percussion: throughoutSynthesizer: throughoutElectronic Drums: frequentlyDrum Kit: frequentlyAcoustic Guitar: absentShow all
+A bouncy and fun song that creates a party atmosphere.
+4/4
+contemporary
+-
+-
+51734165
+Detail
+|
+Similarity
+
+Search Results
+Show
+
+50
+results
+
+Filters
+Genre
+Key
+BPM
+Voice
+Clear Filters
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+45
+
+Mori Calliope - DEAD BEATS
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3ZkYgSk8cIqOlvBlK7IV6C
+Listen on Spotify
+|
+Similarity
+46
+
+真新宿GR学園 x 電音部 x R.I.K x 芦田菜名子 x 安倍=シャクジ=摩耶 (CV: SONOTA) - pHyCooo
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+5NsD7ut1AWzBzsqj5CXQlu
+Listen on Spotify
+|
+Similarity
+47
+
+audiobooks - Driven By Beef
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+080ezEWIjjI21VcjDt7POv
+Listen on Spotify
+|
+Similarity
+48
+
+MC Frontalot - Critical Hit
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+4ZPeYARIhMN9lcKxvFrrxp
+Listen on Spotify
+|
+Similarity
+49
+
+SPACEGIRL GEMMY - Wii Goin' Shoppin' Bich
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+5w6aSAkgFrjrPzZh1K89AU
+Listen on Spotify
+|
+Similarity
+50
+
+Michaela Laws - Ayano VS Michaela
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+0o3OTdAeefzI2n8IliOrqz
+Listen on Spotify
+|
+Similarity
+
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Search
+Find music based on a reference song.
+
+Similarity Search
+Free Text Search
+Similarity Search
+Find music which is sonically similar to a reference track of your choice.
+
+Select a track you want to use as a reference
+
+Library
+
+Spotify
+Search for a track in your Library
+Results from
+
+Library
+
+Spotify
+Reference Track
+Select the segment of the track the AI should "listen" to.
+
+Representative Segment
+Complete track
+Custom Interval
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 11. Glitch Glade.mp3
+172
+Bb major
+Female
+  High
+Pop
+Pop: 0.2RnB: 0.15Rock: 0.14Singer/Songwriters: 0.12Reggae: 0.09Show all
+PopR&BRockSinger / Songwriter
+Pop: 0.2Children / Jingle: 0.17R&B: 0.15Rock: 0.14Singer / Songwriter: 0.12Show all
+Electro JazzNu Jazz
+-
+-
+-
+-
+Sexy
+Sexy: 0.57Happy: 0.36Chill: 0.35Romantic: 0.3Energetic: 0.28Show all
+SeductiveSexyConfidentCoolRelaxed
+Seductive: 0.47Sexy: 0.41Confident: 0.31Cool: 0.29Relaxed: 0.27Show all
+Cool
+Cool: 0.44Warm: 0.18Mysterious: 0.17Unpolished: 0.17Sparkling: 0.16Show all
+GroovyBouncy
+Groovy: 0.3Bouncy: 0.29Robotic: 0.21Pulsing: 0.2Steady: 0.2Show all
+0.35
+0.02
+Medium
+Positive
+Medium
+  Low
+PercussionSynth
+Percussion: throughoutSynth: frequentlyAcoustic Guitar: absentBass: absentBass Guitar: absentShow all
+Electronic DrumsPercussionElectric PianoSynthesizer
+Percussion: throughoutElectronic Drums: throughoutElectric Piano: partiallySynthesizer: frequentlyAcoustic Guitar: absentShow all
+French rap music. confident and catchy. synth, female sampled voice and rhythm.
+3/4
+mid / late 2000s
+-
+-
+51734168
+Detail
+|
+Similarity
+
+Search Results
+Show
+
+50
+results
+
+Filters
+Genre
+Key
+BPM
+Voice
+Clear Filters
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+26
+
+YOMA - Arend
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+4Gdo4wcTurWcjVmvg0KGGL
+Listen on Spotify
+|
+Similarity
+27
+
+Lana Del Rey - Yosemite
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3WIifw9lqdgSZpt9renBAg
+Listen on Spotify
+|
+Similarity
+28
+
+Tom White - All I'll Ever Be
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2SaRpIFl1TJGOopjTrst7s
+Listen on Spotify
+|
+Similarity
+29
+
+Kylie Dailey - Walk with You
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+1elvPJz9HO3DeSSt7Nx9Pp
+Listen on Spotify
+|
+Similarity
+30
+
+French Fuse x Ryclarkie - Three Little Birds
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2bv4GUvBJZqVTnP5oIXZYc
+Listen on Spotify
+|
+Similarity
+31
+
+Susanna Hoffs - Something New
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3FBYmwCpvP4SVHz3jrglej
+Listen on Spotify
+|
+Similarity
+
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Search
+Find music based on a reference song.
+
+Similarity Search
+Free Text Search
+Similarity Search
+Find music which is sonically similar to a reference track of your choice.
+
+Select a track you want to use as a reference
+
+Library
+
+Spotify
+Search for a track in your Library
+Results from
+
+Library
+
+Spotify
+Reference Track
+Select the segment of the track the AI should "listen" to.
+
+Representative Segment
+Complete track
+Custom Interval
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 7. Juggalette Supermodel.mp3
+121
+G major
+Female
+  High
+RnBPop
+RnB: 0.2Pop: 0.18Rap/Hip-Hop: 0.09Rock: 0.07Reggae: 0.05Show all
+R&BPop
+Children / Jingle: 0.33R&B: 0.2Pop: 0.18Rap Hip-Hop: 0.09Rock: 0.07Show all
+ElectropowerpopViral PopOtacoreNerdcoreChiptune
+-
+-
+-
+-
+HappyEnergeticSexy
+Happy: 0.57Energetic: 0.52Sexy: 0.45Uplifting: 0.45Chill: 0.26Show all
+ConfidentUpbeatBrightEnergeticExcited
+Confident: 0.43Upbeat: 0.39Bright: 0.38Energetic: 0.33Excited: 0.31Show all
+Cool
+Cool: 0.32Playful: 0.24Powerful: 0.19Unpolished: 0.19Bold: 0.17Show all
+BouncyGroovyDriving
+Bouncy: 0.37Groovy: 0.29Driving: 0.28Running: 0.19Steady: 0.18Show all
+0.54
+0.44
+  High
+Positive
+Medium
+  Low
+SynthPercussion
+Percussion: throughoutSynth: throughoutAcoustic Guitar: absentBass: absentBass Guitar: absentShow all
+SynthesizerPercussionElectronic DrumsDrum Kit
+Percussion: throughoutSynthesizer: throughoutElectronic Drums: frequentlyDrum Kit: frequentlyAcoustic Guitar: absentShow all
+A bouncy and fun song that creates a party atmosphere.
+4/4
+contemporary
+-
+-
+51734165
+Detail
+|
+Similarity
+
+Search Results
+Show
+
+50
+results
+
+Filters
+Genre
+Key
+BPM
+Voice
+Clear Filters
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+31
+
+EZFG x TOUYU - Totemo Itai Itagaritai
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+5Jd9IsQlAUOShAHUe7Ie7o
+Listen on Spotify
+|
+Similarity
+32
+
+The Cast of RuPaul's Drag Race Global All Stars - Everybody Say Love (Back Door Gals Europop Mix)
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+00FlqmvhizxZwWbHUSLFih
+Listen on Spotify
+|
+Similarity
+33
+
+Michaela Laws - Yuno VS Ayano
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+1PMr3MWanbXbNtjMjxN636
+Listen on Spotify
+|
+Similarity
+34
+
+Smg4 - Zero
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+1IylUoHjby6Nh3Lc50AcmA
+Listen on Spotify
+|
+Similarity
+35
+
+cclorox - Cry Babies
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2PBbwoEh6Dv8iq9HnJyMmv
+Listen on Spotify
+|
+Similarity
+36
+
+sailor鄧mel - Drink It, Smoke It, Snort It, Shoot It
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+36abUiE9FKFsPKJZInDTM9
+Listen on Spotify
+|
+Similarity
+
+
+Library
+Projects
+Upload Queue
+Search
+Playlist Matching
+Integrations
+Subscriptions
+Settings
+Help
+Usage
+Used: 5
+(Reset in 30 days)
+
+Left: 0 + 0 extra
+Get More
+Log out
+Germany flag
+Send feedback
+All uploads finished.
+NB
+Nathan Bellomy
+Search
+Find music based on a reference song.
+
+Similarity Search
+Free Text Search
+Similarity Search
+Find music which is sonically similar to a reference track of your choice.
+
+Select a track you want to use as a reference
+
+Library
+
+Spotify
+Search for a track in your Library
+Results from
+
+Library
+
+Spotify
+Reference Track
+Select the segment of the track the AI should "listen" to.
+
+Representative Segment
+Complete track
+Custom Interval
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+1
+
+x 6. Butterfly.mp3
+149
+F minor
+Female
+  High
+Pop
+Pop: 0.2RnB: 0.1Rap/Hip-Hop: 0.08Rock: 0.07Reggae: 0.05Show all
+Pop
+Children / Jingle: 0.33Pop: 0.2R&B: 0.1Rap Hip-Hop: 0.08African: 0.07Show all
+Children's Music
+-
+-
+-
+-
+Sexy
+Sexy: 0.64Happy: 0.5Energetic: 0.39Uplifting: 0.39Chill: 0.33Show all
+SexySeductiveConfidentCoolBright
+Sexy: 0.53Seductive: 0.47Confident: 0.44Cool: 0.36Bright: 0.33Show all
+Cool
+Cool: 0.49Sparkling: 0.25Unpolished: 0.22Powerful: 0.21Bold: 0.18Show all
+Groovy
+Groovy: 0.5Bouncy: 0.38Steady: 0.29Pulsing: 0.2Driving: 0.15Show all
+0.59
+0.27
+Variable
+Positive
+  High
+  Low
+SynthPercussionBass
+Percussion: throughoutSynth: throughoutBass: partiallyAcoustic Guitar: absentBass Guitar: absentShow all
+SynthesizerElectronic DrumsPercussionBassDrum Kit
+Percussion: throughoutSynthesizer: throughoutElectronic Drums: throughoutBass: partiallyDrum Kit: partiallyShow all
+Confident, swaggering female - led pop with brash synth lead, and bouncy bass, and soulful female backing vocals.
+4/4
+late 2000s / contemporary
+-
+-
+51734164
+Detail
+|
+Similarity
+
+Search Results
+Show
+
+50
+results
+
+Filters
+Genre
+Key
+BPM
+Voice
+Clear Filters
+#
+File Name
+BPM
+Key
+Predominant Voice Gender
+Voice Presence Profile
+Genre Tags
+Genre Mean
+Advanced Genre Tags
+Advanced Genre Mean
+Free Genre Tags
+Subgenre Tags
+Subgenre Mean
+Advanced Subgenre Tags
+Advanced Subgenre Mean
+Mood Tags
+Mood Mean
+Mood Advanced Tags
+Mood Advanced Mean
+Character Tags
+Character Mean
+Movement Tags
+Movement Mean
+Valence Mean
+Arousal Mean
+Energy Level
+Emotional Profile
+Energy Dynamics
+Emotional Dynamics
+Instrument Tags
+Instrument Presence
+Advanced Instrument Tags
+Advanced Instrument Presence
+AI Descriptions
+Meter
+Musical Era
+Classical Epoch Tags
+Classical Epoch Mean
+ID
+Actions
+45
+
+Chompers - Bees Can Talk by Moving Their Butts
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+3jtsg0PEBWqbTFG9qIdUSx
+Listen on Spotify
+|
+Similarity
+46
+
+Buffalo Daughter - Music
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2IET9y9FolHWQfRPjzlnLe
+Listen on Spotify
+|
+Similarity
+47
+
+Dacla - Bauch Beine Po - House Version
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2a9wCE7rqMrY6iLxOpiohb
+Listen on Spotify
+|
+Similarity
+48
+
+Ayesha Erotica - Sixteen
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+2pIOylb5eS8w7fbI9AppMj
+Listen on Spotify
+|
+Similarity
+49
+
+Duisburg Lebt - Lennox Freestyle
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+1gQXBgHY2kTr0u6s6rBR1C
+Listen on Spotify
+|
+Similarity
+50
+
+Lizbeth Roman - Prólogo: Manifiesto de las sombras
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+6RukDir33Yi1e5Zb8Bi7iW
+Listen on Spotify
+|
+Similarity
+

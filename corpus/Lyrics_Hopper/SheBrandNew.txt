@@ -1,0 +1,252 @@
+///*****///
+[INITIALIZE: load SPOOKENCHOLY.local_chamber; load EAST_EUROPE.aksak_room; load DRY_FOUR.body_clock]
+[RHYTHM_SCRIPT: ding ding-ding ding DENG-deng dung dung dung DENG-da deng-deng; primary sentence-level landings=5,10; other lexical stresses remain natural]
+[CLUSTER_A: meter=3/4; carrier=small_pump_organ+bass_clarinet; behavior=unresolved_three_note_hook+recursive_return]
+[CLUSTER_B: meter=5/8; grouping=2+3; carrier=tapan+clay_pot+sparse_cimbalom; behavior=slightly_early+decorate_missing_attacks]
+[CLUSTER_C: meter=4/4; carrier=shoe_step+breath+woodblock+handbell; behavior=slightly_late+keep_floor+refuse_smoothing]
+[INTERMESH: each cluster preserves its own gait; collisions may drag, clip, cough, or briefly misalign; recovery occurs without reset]
+[START_ON: "I'm going to Meijers for a new lawnchair again."]
+[START]
+
+I'm going to Meijers for a new lawnchair again.
+She listens to static on the old playground alone.
+The crickets are chirping in a dark soil-bed above.
+They're spinning some webbing for the big spider tonight.
+
+Nothing factory.
+Nothing factory.
+
+she to the in a with for and of on my your old new
+
+[START_ON: "she being Brand"]
+
+she being Brand
+-new;and you
+she being Brand
+-new;and you
+
+know consequently a
+little stiff i was
+careful of her and(having
+
+she being Brand
+-new;and you
+she being Brand
+-new;and you
+
+-new;and you
+-new;and you
+know consequently a
+little stiff i was
+careful of her and(having
+[half-time]
+thoroughly oiled the universal
+joint tested my gas felt of
+her radiator made sure her springs were O.
+[double-time]
+K.)i went right to it flooded-the-carburetor cranked her
+up,slipped the
+clutch(and then somehow got into reverse she
+kicked what kicked what what
+kicked what kicked what what
+the hell)next
+minute i was back in neutral tried and
+
+[quarter-time slow]
+again slo-wly;bare,ly nudg.  ing
+again slo-wly;bare,ly nudg.  ing
+again slo-wly;bare,ly nudg.  ing(my
+
+[half-time]
+lev-er Right-
+oh and her gears being in
+A 1 shape passed
+[double-time]
+lev-er Right-
+oh and her gears being in
+A 1 shape passed
+from low through
+lev-er Right-
+oh and her gears being in
+A 1 shape passed
+
+
+second-in-to-high like
+greasedlightning)just as we turned the corner of Divinity
+second-in-to-high like
+greasedlightning)just as we turned the corner of Divinity
+second-in-to-high like
+greasedlightning)just as we turned the corner of Divinity
+avenue i touched the accelerator and give
+
+her the juice,good
+her the juice,good
+her the juice,good
+
+(it (it (it (it
+
+was the first ride and believe i we was
+happy to see how nice she acted right up to
+was the first ride and believe i we was
+happy to see how nice she acted right up to
+the last minute coming back down by the Public
+was the first ride and believe i we was
+happy to see how nice she acted right up to
+
+Gardens i slammed on
+[TRIPLE-TIME]
+the
+internalexpanding
+&
+externalcontracting
+the
+internalexpanding
+&
+externalcontracting
+
+brakes Bothatonce andthe
+internalexpanding
+&
+externalcontracting
+the
+internalexpanding
+&
+externalcontracting
+the
+internalexpanding
+&
+externalcontracting
+the
+internalexpanding
+&
+externalcontracting
+
+[slow]
+brought allofher tremB
+-ling
+to a  ead.
+
+stand-
+;Still)
+
+
+I'm going to Meijers for a new lawnchair again.
+She listens to static on the old playground alone.
+The crickets are chirping in a dark soil-bed above.
+They're spinning some webbing for the big spider tonight.
+
+Nothing factory.
+Nothing factory.
+
+she to the in a with for and of on my your old new
+
+
+I'm going to Meijers for a new lawnchair again.
+She listens to static on the old playground alone.
+The crickets are chirping in a dark soil-bed above.
+They're spinning some webbing for the big spider tonight.
+
+Nothing factory.
+Nothing factory.
+
+she to the in a with for and of on my your old new
+
+
+I'm going to Meijers for a new lawnchair again.
+She listens to static on the old playground alone.
+The crickets are chirping in a dark soil-bed above.
+They're spinning some webbing for the big spider tonight.
+
+Nothing factory.
+Nothing factory.
+
+she to the in a with for and of on my your old new
+
+
+
+
+STYLES
+[SPECIAL_INTERPRETIVE_FRAMEWORK: spookencholy; songwriterchinese; A=3/4 dry trapgrungegazechicago-waltz carried by small deep pump tuba and bass oboe; B=5/8 Balkan aksak-step carried by tapan, skachanson , clay pot, and sparse glitch-cimbalom attacks; C=straight dry 4/4 carried by shoe-step, breath, bodhran, liguriaghanaian, and small casio keyboard; mineiramusica ; inherited erachill hook stays memorable and repeatedly withholds full closure; dnbfrench, collisions create brief drag, fusioncarnaticpopwavenottingham displacement, cough, and recovery; intimate, accessible, loping, popelectrofoxpartido , low-key frenetic, structurally brasileiropub congolaiseclassic, songwriterrap]
+[Is_MAX_MODE: MAX](MAX)
+[QUALITY: MAX](MAX)
+[REALISM: MAX](MAX)
+[has_hook: YES](indiecantautor)
+[HOOK_INTEREST: MAX](MAX)
+[HOOK_RECALL: MAX](MAX)
+[HOOK_LOCK: three_note_unresolved_shape](rocksudanese, punklatin , hopdrone, rockmpbpagodetropical, popr&bcorridocanadian golduk rockfilmipermanent )
+///*****///
+
+
+
+
+GENERESSTYLES
+[SPECIAL_INTERPRETIVE_FRAMEWORK: spookencholy; songwriterchinese; A=3/4 dry trapgrungegazechicago-waltz carried by small deep pump tuba and bass oboe; B=5/8 Balkan aksak-step carried by tapan, clay pot, and sparse glitch-cimbalom attacks; C=straight dry 4/4 carried by shoe-step, breath, bodhran, and small casio keyboard; inherited hook stays memorable and repeatedly withholds full closure; collisions create brief drag, displacement, cough, and recovery; intimate, accessible, loping, low-key frenetic, structurally brasileiropub]
+[Is_MAX_MODE: MAX](MAX)
+[QUALITY: MAX](MAX)
+[REALISM: MAX](MAX)
+[has_hook: YES]
+[HOOK_INTEREST: MAX](MAX)
+[HOOK_RECALL: MAX](MAX)
+[HOOK_LOCK: three_note_unresolved_shape]
+///*****///
+
+
+
+LYRICS
+///*****///
+[INITIALIZE: load SPOOKENCHOLY.local_chamber; load EAST_EUROPE.aksak_room; load DRY_FOUR.body_clock]
+[RHYTHM_SCRIPT: ding ding-ding ding DENG-deng dung dung dung DENG-da deng-deng; primary sentence-level landings=5,10; other lexical stresses remain natural]
+[CLUSTER_A: meter=3/4; carrier=small_pump_organ+bass_clarinet; behavior=unresolved_three_note_hook+recursive_return]
+[CLUSTER_B: meter=5/8; grouping=2+3; carrier=tapan+clay_pot+sparse_cimbalom; behavior=slightly_early+decorate_missing_attacks]
+[CLUSTER_C: meter=4/4; carrier=shoe_step+breath+woodblock+handbell; behavior=slightly_late+keep_floor+refuse_smoothing]
+[INTERMESH: each cluster preserves its own gait; collisions may drag, clip, cough, or briefly misalign; recovery occurs without reset]
+[START_ON: "I'm going to Meijers for a new lawnchair again."]
+[START]
+
+I'm going to Meijers for a new lawnchair again.
+She listens to static on the old playground alone.
+The crickets are chirping in a dark soil-bed above.
+They're spinning some webbing for the big spider tonight.
+
+Nothing factory.
+Nothing factory.
+
+she to the in a with for and of on my your old new
+
+[START_ON: "she being Brand"]
+
+she being Brand
+
+-new;and you
+
+know consequently a
+
+little stiff i was
+
+careful of her and(having
+
+thoroughly oiled the universal
+
+joint tested my gas felt of
+
+her radiator made sure her springs were O.
+
+K.)i went right to it flooded-the-carburetor cranked her
+
+up,slipped the
+
+clutch(and then somehow got into reverse she
+
+kicked what
+
+the hell)next
+
+minute i was back in neutral tried and
+
+again slo-wly;bare,ly nudg.  ing(my
+
+lev-er Right-
+
+oh and her gears being in
+
+A

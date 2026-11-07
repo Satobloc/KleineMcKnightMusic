@@ -1,0 +1,199 @@
+
+1000 bacon is... 
+...a lot of bacon. 
+
+We’re basically inventing a whole history of photography 
+that never happened 
+just to see what kind of creative explosion we can set off.
+
+We smash the past and the future together—
+like Tank Audrey and Victorian android cosmonauts—
+because we’re desperately trying to understand the future through the lens of history.
+
+1000 bacon is... 
+...a lot of bacon. 
+
+We’re stuck 
+in this weird loop 
+where we crave...
+simplicity 
+but are addicted...
+to complexity; 
+
+these prompts...
+are just a mirror for how much we're trying to cram into our lives.
+
+[DEEP PROFUNDITY] Weights... and Bacon 
+
+1000 bacon is... 
+...well
+...a lot of bacon. 
+
+In this style, numbers aren't part of the prompt; 
+they're a relative scale of what actually matters in the frame .
+
+There’s a special kind of logic that only exists at 6 a.m., 
+and it’s usually what drives the best designs.
+
+Scientifically, human brain activity is the only real indicator we’ve got of a mind being present at the start or the end of a life.
+
+Language doesn't just describe the world; 
+it shapes our thoughts and the images we create, 
+and it usually reveals our deepest anxieties and fears in the process.
+
+But the thing is...
+
+Language?
+...that's mine.
+
+...I made it myself. 
+
+But yeah.
+
+1000 bacon is a lot.
+
+
+   Being awoken from memory sleep is an experience... akin to having your brains passed through the intestinal tract of a large herbivore.
+   Miss Poughkeepsie 1954 was a jury-rigged collection of blood-filled pumps and vulcanized rubber tubes under a red polka-dotted house frock, vivifying the severed head of a hairless pug dog in a raven-black wig.
+   My heart was threatening to treacle out my bellybutton in a thin paste.
+   In each of our souls is a shelf of dusty Ball jars filled with mushy pickled emotions.
+   The plates each bore a beige paper cone, and I swear it looked like we were preparing to eat dunce caps for breakfast.
+   Alexander only spread across the world, sprinkling crumbs as he went.
+   George and Maurice shared everything; a womb, a teat, a cradle, a heart, a kidney, a bladder, half a liver.
+   She tried not to think about the naked president she’d left kissing Vishnu.
+   Hell hath NOT the fury of a redneck with a castrating device.
+   You don't want to build a brick house where every third brick is an ice cube.
+   The cabins mounted on the main drive tube looked like a chihuahua trying to mount Marmaduke.
+   Mistress Cindy, please forgive me my unclean dreams.
+   Patterns are useless chaos unless I decide to give them meaning.
+   Recent degassing of the atmosphere has led to the spontaneous rupture of 98 percent of the Kildan population.
+   It was like an elephant trying out its French.
+   Normally, commoner, I’d have you clean that up, but seeing as you’ve made your view of following orders clear, we’ll just have to stand here until the impasse is crossed.
+   The smoke slowly stopped yapping in my nose but the stench of eighteen years of yelling still filled my lungs.
+   Jovair spurted like flatulence.
+   This is America, son. Lying is legal!
+   I’m a bit of a style monkey I guess.
+
+
+
+
+
+[is_MAX_MODE: MAX](MAX)
+[QUALITY: MAX](MAX)
+[REALISM: MAX](MAX)
+[REAL_INSTRUMENTS: MAX](MAX)
+[SWING_TYPE: NESTED_TRIPLET(SHUFFLE)](MAX)
+[START_IMMEDIATELY], ‑jazz, ‑beebop, ‑stage, ‑theater, ‑oompah, ‑doo-wop, ‑screamo, ‑hardcore
+
+
+
+
+# CUTE SIMPLE WORKING
+[///BEGIN_SPECIAL///[
+use_bpm 80
+
+# CLICK COUNTER
+live_loop :click do
+  tick                          # Advances a counter each loop iteration
+  tick_set 1
+  sleep 0.25 if one_in(2)
+  sleep 0.25  # Basic pulse
+end
+
+# PUNCHY DRUMS
+live_loop :drums do
+  sample :elec_triangle, amp: 0.5 if one_in(6)
+  sleep 0.5
+  sample :drum_splash_hard, rate: 1.5, amp: 0.5 if one_in(4)
+  sleep 0.25
+  sample :drum_cymbal_closed, amp: 0.4 if one_in(3)
+  sleep 0.25
+end
+
+# CLICK-DRIVEN BASS
+live_loop :bass, sync: :drums do
+  use_synth :fm
+  # Map click to filter cutoff and resonance
+  cutoff_val = 70 + (ring 10,0,30,20).tick(:filter_offset)
+  res_val = 0.5 + (ring 0,0.2,0.4,0.6).look(:filter_offset) if one_in(3)
+  
+  with_fx :lpf, cutoff: cutoff_val, res: res_val do
+    play choose([:e2, :g2, :b2, :a2]) + rrand(-0.1,0.1), release: 0.5, depth: 2, divisor: 0.8, amp: 0.7 if one_in(2)
+  end
+  
+  # Sub layer with click-controlled amplitude
+  use_synth :pretty_bell
+  amp_val = (ring 0.3,0.5,0.7,1).look(:filter_offset)
+  play choose([:e1, :g1]) + rrand(-0.05,0.05), release: 1, amp: amp_val if one_in(2)
+  sleep 0.5
+end
+
+# -------------------------
+# SUPPORTING MELODY / COUNTERPOINT
+# -------------------------
+live_loop :supporting_melody, sync: :drums do
+  use_synth :prophet
+  # Define a simple chord progression to outline the harmonic structure
+  chords = [chord(:e4, :minor7), chord(:g4, :major7), chord(:a4, :minor7), chord(:b3, :sus4)]
+  # Pick one chord per 2 beats, steady timing
+  current_chord = chords.tick
+  play_chord current_chord, release: 1.5, amp: 0.4
+  
+  # Add a simple arpeggiated counterpoint on top of the chord
+  use_synth :fm
+  4.times do
+    play current_chord.choose, release: 0.3, amp: 0.25
+    sleep 0.5
+  end
+end
+
+
+# GLITCHY MELODY WITH CLICK-MAPPED FX
+live_loop :melody, sync: :drums do
+  use_synth :piano
+  # Map click to echo phase and mix
+  phase_val = (ring 0.125, 0.25, 0.5, 0.75).tick(:echo_phase)
+  mix_val = (ring 0.1, 0.2, 0.3, 0.4).look(:echo_phase)
+  
+  with_fx :reverb, room: 0.8, mix: 0.3 do
+    with_fx :echo, phase: phase_val, mix: mix_val do
+      sleep 0.25 if one_in(2)
+      sleep 0.25 if one_in(2)
+      sleep 0.75 if one_in(10)
+      sleep 0.25  # Basic pulse
+      play choose([:g4, :b3, :b4, :g4, :c5]) + rrand(-0.11,0.011), release: 0.2, amp: 0.4 if one_in(2)
+      play choose([:e4, :g4, :c4, :a4, :e5]) + rrand(-0.12,0.012), release: 0.3, amp: 0.7 if one_in(4)
+      play choose([:c4, :c6, :e5, :e4, :g4]) + rrand(-0.11,0.11), release: 0.2, amp: 0.3 if one_in(tick/8)
+      play choose([:g4, :b5, :b4, :g4, :c4]) + rrand(-0.16,0.04), release: 0.3, amp: 0.6 if one_in(6)
+      play choose([:e5, :g5, :c5, :a4, :e5]) + rrand(-0.1,0.1), release: 0.2, amp: 0.6 if one_in(tick/32)
+      play choose([:c3, :c4, :e3, :e4, :g3]) + rrand(-0.1,0.21), release: 0.8, amp: 0.3 if one_in(tick/1)
+      play choose([:e5, :g5, :c5, :a4, :e5]) + rrand(-0.01,0.01), release: 0.2, amp: 0.1 if one_in(tick/128)
+      play choose([:g4, :b3, :b4, :g4, :c5]) + rrand(-0.1,0.1), release: 0.2, amp: 0.4 if one_in(2)
+      play choose([:e4, :g4, :c4, :a4, :e5]) + rrand(-0.2,0.02), release: 0.3, amp: 0.7 if one_in(tick/2)
+      play choose([:c4, :c6, :e5, :e4, :g4]) + rrand(-0.03,0.03), release: 0.2, amp: 0.3 if one_in(tick/64)
+      play choose([:g4, :b5, :b4, :g4, :c4]) + rrand(-0.01,0.01), release: 0.3, amp: 0.6 if one_in(tick/4)
+      play choose([:e5, :g5, :c5, :a4, :e5]) + rrand(-0.316,0.316), release: 0.2, amp: 0.6 if one_in(tick/2)
+      play choose([:c3, :c4, :e3, :e4, :g3]) + rrand(-0.05,0.05), release: 0.8, amp: 0.3 if one_in(tick/33)
+      play choose([:e5, :g5, :c5, :a4, :e5]) + rrand(-0.03,0.03), release: 0.2, amp: 0.1 if one_in(tick/2)
+      putc tick
+      tick_reset_all if one_in(0)
+    end
+  end
+end
+
+# RANDOM PERCUSSIVE ACCENTS
+live_loop :accents, sync: :drums do
+  sleep choose([0.5, 1, 1.5])
+  sample :elec_twip, amp: 0.5 if one_in(3)
+end
+
+# ATMOSPHERIC PAD WITH CLICK-DRIVEN AMPLITUDE
+live_loop :pad, sync: :drums do
+  use_synth :dtri if one_in(3)
+  use_synth :subpulse if one_in(2)
+  sleep 8
+  sleep 4 if one_in(3)
+  amp_val = (ring 0.2,0.3,0.4,0.5).tick(:pad_amp)
+  play_chord chord(:e4, :minor), release: 4, amp: amp_val if one_in(2)
+end
+]]

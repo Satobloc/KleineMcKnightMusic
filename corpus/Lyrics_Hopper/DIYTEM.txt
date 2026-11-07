@@ -1,0 +1,312 @@
+DIY TEM
+
+Building a Transmission Electron Microscope (TEM) from parts is one of those “possible in principle, Herculean in practice” tasks — like building a jet engine in your garage. You can do it, but only if you understand electron optics, high vacuum systems, electromagnetic field design, and materials science at a professional level. That said, let’s unpack how one would theoretically construct a working TEM, subsystem by subsystem.
+
+⸻
+
+🧩 1. Core Architecture Overview
+
+A TEM is, in essence:
+
+A high-voltage electron gun that fires electrons through an ultrathin specimen, whose transmitted electrons are then focused by magnetic lenses onto an imaging or detection system.
+
+Its major components, from top to bottom:
+	1.	Electron source (gun)
+	2.	Condenser lens system
+	3.	Specimen stage and holder
+	4.	Objective lens system
+	5.	Intermediate and projector lenses
+	6.	Imaging system (fluorescent screen, CCD/CMOS camera, or direct detector)
+	7.	Vacuum column and pumps
+	8.	Control electronics and power supplies
+
+⸻
+
+⚡ 2. Electron Source
+
+Goal: Produce a coherent, controllable electron beam.
+
+Options:
+	•	Thermionic gun (simplest): Tungsten filament or LaB₆ crystal heated to emit electrons (~100–300 kV accelerating voltage).
+	•	Field Emission Gun (FEG) (modern): Sharp tungsten tip under high field, provides higher brightness and coherence but demands ultra-high vacuum (~10⁻⁹ mbar).
+
+Critical parts:
+	•	High-voltage power supply (stable to <1 ppm ripple).
+	•	Anode to accelerate electrons.
+	•	Wehnelt cylinder to shape and control the beam.
+
+⸻
+
+🧲 3. Electromagnetic Lens System
+
+Unlike optical lenses, electron lenses are magnetic — solenoids of copper wire wound around iron pole pieces.
+
+Condenser lenses control beam size and convergence.
+Objective lens forms the first image or diffraction pattern of the specimen.
+Intermediate and projector lenses magnify that image onto the screen.
+
+Fabrication details:
+	•	Precision-machined pole pieces (μm tolerances).
+	•	Current-controlled coils.
+	•	Magnetic shielding and alignment to avoid astigmatism.
+	•	Power supplies must be ultra-stable and low-noise.
+
+⸻
+
+🧪 4. Sample and Stage
+
+Specimen requirements:
+	•	Electron-transparent (<100 nm thick).
+	•	Mounted on 3 mm TEM grids.
+
+Stage system:
+	•	5-axis goniometer (x, y, z, tilt, rotation).
+	•	Electrical feedthroughs for heating or cooling stages.
+	•	Piezo controls for nanometer precision.
+
+⸻
+
+💨 5. Vacuum System
+
+Why: Electrons scatter off air molecules; the column must be near-perfect vacuum.
+
+System setup:
+	•	Roughing pump: Rotary vane or diaphragm (~10⁻³ mbar).
+	•	Diffusion/turbo pump: Takes it to ~10⁻⁷ mbar.
+	•	Ion getter pump (optional): For high/ultra-high vacuum stability (~10⁻⁹ mbar).
+
+Construction:
+Use stainless steel chambers with Viton or copper gaskets, gate valves, and electrical feedthroughs for each section. Differential pumping keeps the source cleaner.
+
+⸻
+
+🎛️ 6. Control and Imaging Electronics
+
+Beam control: Magnetic coil drivers, focus and stigmator adjustments, deflectors for scanning modes (STEM).
+Detection:
+	•	Old-school: Fluorescent screen for visual inspection.
+	•	Modern: CCD or direct electron detector (with scintillator or CMOS readout).
+
+Signal chain:
+High-voltage isolation, precision DAC control, feedback loops for lens currents and deflector calibration.
+
+⸻
+
+⚙️ 7. Assembly & Alignment
+
+Building order matters:
+	1.	Assemble column sections (source → condenser → specimen → objective → projector → screen).
+	2.	Evacuate and bake out (~150 °C) to remove contaminants.
+	3.	Align gun and lenses using test specimens (e.g., amorphous carbon film).
+	4.	Adjust focus and stigmation while observing diffraction and image modes.
+
+You’ll spend months just learning to make the beam coherent and centered.
+
+⸻
+
+🧠 8. Safety and Power Considerations
+	•	100–300 kV accelerating voltage → lethal. Requires proper grounding and interlocks.
+	•	X-rays are produced as secondary radiation; shielding (lead glass, enclosure) is mandatory.
+	•	Vacuum implosion risk: always use shielded glass viewports.
+
+⸻
+
+🧰 9. Practical Notes & Resources
+
+If you were actually doing this:
+	•	Study decommissioned commercial systems (e.g., JEOL, Philips EM400, Hitachi H7000) — rebuild or modernize components.
+	•	Open-source projects like OpenTEM or Open Source Electron Microscope Initiative share partial blueprints and circuit designs.
+	•	A Raspberry Pi or FPGA board can handle digital control with proper isolation.
+
+⸻
+
+🧬 10. Simplified Experimental Version (Feasible Build)
+
+If you want a learning-grade electron microscope rather than a full TEM:
+	•	Build a Scanning Electron Microscope (SEM) instead — several hobbyist builds exist using 10–30 kV guns, salvaged CRT parts, and moderate vacuum (~10⁻⁵ mbar).
+	•	Or try a low-voltage transmission system (like Ben Krasnow’s DIY TEM project): uses phosphor screen and simple optics to visualize ~100 nm features.
+
+⸻
+
+Perfect — we’re switching from “overview” mode into engineering documentation mode.
+We’re going to treat this as if someone actually wanted to fabricate, assemble, and commission a Transmission Electron Microscope (TEM).
+Below is Volume I: General Description and Technical Specifications of the imagined manual.
+
+⸻
+
+🧭 SECTION 1 — GENERAL DESCRIPTION
+
+System Name: OpenTEM-300
+Purpose: Laboratory-scale Transmission Electron Microscope capable of sub-5 nm imaging at accelerating voltages up to 300 kV.
+Configuration: Vertical column; top-mounted electron gun, multi-lens electromagnetic focusing system, mid-column sample stage, bottom-mounted imaging and detection system.
+Operation Mode: Bright-field TEM with optional diffraction and low-resolution STEM (Scanning TEM) mode.
+
+⸻
+
+⚙️ SECTION 2 — SYSTEM SPECIFICATIONS
+
+Parameter	Specification
+Accelerating Voltage	40 – 300 kV (continuously adjustable)
+Beam Current	0.1 µA – 100 µA (typical 10 µA)
+Resolution (lattice imaging)	0.25 nm (theoretical)
+Vacuum Pressure	≤ 1 × 10⁻⁷ mbar in column
+Field of View	0.1 – 100 µm
+Image Magnification	5 × 10³ – 1 × 10⁶
+Camera System	4 MP CMOS direct detector or phosphor/CCD
+Lens Coils	Water-cooled Cu coils, 10–15 A max current
+Lens Stability	< 10 ppm current ripple
+Gun Power Supply	300 kV DC, regulated, < 1 ppm ripple
+Column Height	~1.8 m
+Total Weight	450 kg
+Safety Enclosure	Lead-lined steel cabinet, interlocked access
+
+
+⸻
+
+🔋 SECTION 3 — ELECTRON GUN ASSEMBLY
+
+3.1 Overview
+
+The electron gun produces and accelerates a focused beam. It consists of:
+	•	Cathode (emitter): LaB₆ crystal or tungsten hairpin filament.
+	•	Wehnelt cylinder: Biases and shapes the emission field.
+	•	Anode: Accelerates electrons to the working voltage.
+
+3.2 Construction
+
+Component	Material	Tolerance	Notes
+Cathode mount	Molybdenum	±10 µm	Resistive heating element embedded
+Wehnelt	Nickel	±25 µm	Electron-optical alignment critical
+Anode aperture	Stainless steel	50 µm bore	Replaceable
+Insulators	Alumina	—	Must withstand 400 kV potential
+
+3.3 Power & Biasing
+	•	Heater: 1.5 A @ 3 V (W filament)
+	•	Wehnelt bias: adjustable −50 V to −200 V relative to cathode
+	•	Anode: +100 – 300 kV relative to cathode (regulated supply)
+
+Include safety relays, bleeder resistors, and interlocked grounding.
+
+⸻
+
+🧲 SECTION 4 — ELECTROMAGNETIC LENS SYSTEM
+
+4.1 Lens Stack
+
+Lens	Function	Typical Current	Field Strength	Notes
+Condenser 1	Beam convergence	3 A	0.3 T	Controls spot size
+Condenser 2	Illumination uniformity	2 A	0.2 T	Adjustable
+Objective	Primary image formation	8 A	1.2 T	Most sensitive
+Intermediate	Magnification stage	4 A	0.5 T	
+Projector	Final magnification	6 A	0.7 T	Projects to screen/camera
+
+4.2 Fabrication
+	•	Pole pieces: Soft magnetic steel (e.g., AISI 1010), polished to < 1 µm RMS.
+	•	Coils: Enameled copper wire, double-layer wound, epoxy impregnated.
+	•	Cooling: Closed-loop deionized water through copper jackets.
+	•	Power supplies: Linear-regulated, < 10 ppm noise, with feedback control.
+
+⸻
+
+🧪 SECTION 5 — SPECIMEN STAGE AND HOLDER
+
+5.1 Design
+	•	3 mm grid slot with spring clip retention.
+	•	5-axis control: X, Y, Z (±2 mm), tilt (±40°), rotation (360°).
+	•	Optional heating/cooling: resistive heater or LN₂ cryo-tip.
+
+5.2 Feedthroughs
+
+All signals and motion actuators pass through vacuum-compatible connectors (Sub-D ceramic or feedthrough pins).
+
+⸻
+
+💨 SECTION 6 — VACUUM SYSTEM
+
+6.1 Staged Vacuum
+
+Section	Target Pressure	Pump Type
+Gun chamber	≤ 10⁻⁹ mbar	Ion getter pump (20 L/s)
+Column	≤ 10⁻⁷ mbar	Turbomolecular (200 L/s)
+Roughing line	10⁻³ mbar	Rotary vane (5 m³/h)
+
+6.2 Hardware
+	•	Stainless 304/316 column tubing, CF flanges, copper gaskets.
+	•	Bakeout heaters (150 °C max).
+	•	Ion gauge and cold cathode gauges for monitoring.
+
+⸻
+
+🧭 SECTION 7 — IMAGING & DETECTION
+
+7.1 Visual Screen
+	•	Phosphor screen (P43 or P20) on aluminum backing.
+	•	Retractable via mechanical lever.
+
+7.2 Digital Detection
+	•	CMOS or CCD camera mounted below screen.
+	•	Vacuum window: 100 µm sapphire or quartz.
+	•	Readout via USB or Ethernet interface.
+
+7.3 Software Interface
+
+Custom software (OpenTEM Control) for:
+	•	Beam alignment
+	•	Lens control
+	•	Image capture
+	•	Diffraction pattern switching
+	•	Stage navigation
+
+⸻
+
+⚡ SECTION 8 — CONTROL & SAFETY SYSTEMS
+
+8.1 Power & Grounding
+	•	All supplies referenced to common star ground.
+	•	Interlocks for:
+	•	High-voltage enable
+	•	Chamber vacuum ready
+	•	Door closure
+	•	Cooling water flow
+
+8.2 X-Ray Shielding
+	•	2 mm Pb sheet equivalent around gun and projection system.
+	•	Lead glass viewport (equivalent 0.8 mm Pb).
+
+⸻
+
+🧩 SECTION 9 — ALIGNMENT & CALIBRATION
+
+Initial Alignment Procedure:
+	1.	Pump down and condition vacuum overnight.
+	2.	Ramp accelerating voltage to 100 kV.
+	3.	Adjust Wehnelt bias for beam focus.
+	4.	Align condenser lenses to center beam on specimen aperture.
+	5.	Insert standard calibration grid (carbon film).
+	6.	Focus objective lens until lattice fringes visible.
+	7.	Tune stigmators to minimize astigmatism.
+	8.	Capture image; measure magnification with known grid spacing.
+
+Maintenance:
+	•	Recalibrate lens currents monthly.
+	•	Replace cathode every 2000 h (LaB₆) or 500 h (W filament).
+	•	Re-bake vacuum system after any venting.
+
+⸻
+
+🧰 SECTION 10 — BILL OF MATERIALS (BOM) SUMMARY
+
+Subsystem	Example Component	Source	Est. Cost
+HV Supply	Glassman EH300N (300 kV, 1 mA)	eBay/used lab surplus	$8,000
+Vacuum	Pfeiffer HiCube 80 Eco	new	$6,000
+Ion Pump	Varian StarCell 20 L/s	used	$2,000
+Electron Gun	Custom machined, LaB₆	custom	$1,500
+Lenses	Machined + wound coils	custom	$4,000
+Imaging	Hamamatsu CMOS or Andor CCD	surplus	$3,000
+Column	Stainless 316, 1.8 m, CF flanges	custom fab	$2,000
+Safety Enclosure	Lead-lined steel	local fab	$1,500
+Total (est.)	—	—	≈ $28,000–$35,000
+
+
+⸻
+

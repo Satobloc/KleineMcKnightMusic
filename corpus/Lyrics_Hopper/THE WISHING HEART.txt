@@ -1,0 +1,299 @@
+The Wishing Heart
+
+The surface of Kraken Mare stretched out before him, vast and dark, reflecting Titan’s hazy orange sky in a muted, oily shimmer. Cale shifted his weight, hearing the faint crunch of tholin dust under his boots, and checked his wrist-mounted screen again. No update. No new coordinates. Just the same unhelpful message: standby.
+
+Standby. That was most of his career summed up neatly. He sighed, fogging the visor slightly before his suit’s circulation cleared it. Kneeling, he idly tapped his sampling pick against an outcrop of dense fossiliferous cryorock—or "cryck," as the younger field techs irritatingly called it—more habit than purpose. Embedded in the ice, beneath a gritty brownish organic grime, were numerous commonplace fossilized fragments of radial, segmented cryobionta known simply as Tholinaster regularis. Dull, expected. Familiar.
+
+Something else caught his eye—a fossil subtly distinct yet immediately arresting. Unlike the radial monotony of Tholinaster, this one bore a five-armed structure spiraling outward, each arm etched with fractal-like branches. At the core was a small, symmetrical indentation—sand dollar-ish, but not quite. He’d heard the exopaleontologists call it Neocryaster stelliferum. Rare. Even here.
+
+Cale had sent a photo of one back home once, and his daughter, six at the time, called it a "wishing heart." The name had stuck around base, half as a joke, half not. Technically, the term now referred to the dense biotholin node found inside one of the only two confirmed living specimens. The rest of the creature had melted under the thermal exhaust of a field suit, leaving only the core: marbled, translucent, faintly prismatic. It had survived where nearly nothing else had. That was the wishing heart.
+
+Cale’s gaze drifted across the icy shoreline. Cryovolcanic slabs, dull with tholin grit, fractured and raised like frozen tectonics. Dunes built up in the lee of every sharp edge, granular, slow-shifting. Ancient fluvial channels yawned like veins across the terrain, etched deep from long-gone methane rains. It was beautiful, in the way a desert is beautiful, if you’ve walked it long enough to get used to the thirst.
+
+These landscapes told a story of stagnation. A world coasting toward stillness. The scientists at base had theories: the cooling of Titan’s subsurface ocean, a drop-off in cryovolcanic nutrient cycling, ecological overspecialization. Titan wasn’t dead. Not yet. But you could see the fade setting in.
+
+His wrist beeped. “Cale, new coordinates sent,” came the bored voice of Maya, his young supervisor. "Firmware update for the hydrosensors, sector four. Don’t wander."
+
+Cale rose, brushing ice dust from his gloves. He took one last look at the fossil. Then at the fractured cryck. Then out toward the long tongue of the sea. Time get to work.
+
+He double-checked his pressure meter, oxygen flow, then scooted out into the liquid methane lake, a little at a time, feeling the ice-grain cryosand--crynd? he thought--scraping along his bottom before he slid off the sandy little flat, and dove. 
+
+He steadied himself just at the edge, crouching for a moment on the lip of Titan’s underworld. Above him, the lake's surface stretched out like a bruised sheet of glass, its faint ripples barely visible through the methane haze. Beyond that, the horizon was ringed with serrated cryomountains—pale and jagged like pressure-frozen coral—fading upward into the soft amber murk of the atmosphere. Beneath him, bands of sedimentary cryorock ran in swooping layers along the shallow shelf, laid down in milky folds across millennia of methane storms and slushflow deltas. The particulate matter in the water stirred faintly with each of his movements, sluggish and slow to resettle, like silt suspended in syrup.
+
+Then, with a gentle push of his gloved hands, he let himself slip fully beneath. No matter how often he'd done it, that was always the scary part, heart jumps, body sinks... down we go.
+
+The cold hit first, not as a sensation—his suit buffered that—but as a density, a slowness, the way the world thickened around him. Methane enveloped him, thick and stately, dragging at his limbs with the viscosity of refrigerated oil. His descent disturbed lazy curls of suspended tholin silt, which eddied briefly and then settled back into the deep hush. Visibility was better than it had been last month, worse than the month before. He adjusted his angle with a few short wrist movements, the suit’s tiny vector jets nudging him forward along the shelf.
+
+Titan's undersea wasn’t black, not really. It was a soft, grained sepia, light filtering weakly from above and scattering off particles in the water—tholins, cryo-organics, microbubbles of evaporating ethane. The lakebed here sloped gradually, strewn with pebbled clumps of water-ice cobble and bands of finer grain: rippled cryosand and tholin silt layered in alternating drifts like a zebra turned inside out.
+
+A long, low ridge curved ahead like the spine of something ancient. Just the edge of a sedimentary bulge, probably—slushfold over slushfold, pressure-compacted and left there to harden over the eons. He tagged it with a glance, HUD blinking pale green as the system registered topography.
+
+He passed a trio of vent-stubs—cold seeps, probably long dead. Their blackened rims clung with lacework growths, brittle and soot-colored—probably hardened tholinite resin, excreted and layered over decades like alien coral. Nothing alive. Nothing moving.
+
+Cale checked his heading, realigned slightly, and kept going. Sector four. It sounded official—important, remote, forbidding. In practice, it was a gently sloping patch of offshore sediment, fine-grained and finicky, edging up against a cryorock escarpment whose cracked and folded face made up the entirety of sector five. You learned not to get too impressed with the names out here. Just another dive. Just another circuit. Still beautiful. Still quiet. Still boring as hell.
+
+He thumbed his way through the sector logs, mumbling brief observations into the wrist mic. Sector one: steady ridge erosion, particulate low. Sector two: one new ripple trough across the crynd flat, shifted about two meters. Sector three: minor seepage activity, likely same source as last month. He rewrote just enough phrasing from last week's log to pretend he hadn’t copied it outright.
+
+As he drifted into sector four, the terrain softened—long slumps of cryosilt, a few ice-cobble ridges pushing through like buried bones. And there it was again, the only living thing he’d seen more than once in these seas: a pale, waferish swimmer, about the size of a lens cap, jittering around the currentflow detector.
+
+It wasn’t hurting anything, technically. But its presence threw off the readings, and protocol said he had to dislodge it without damaging either subject. He waved gently. The thing skittered sideways, only to return an instant later, hovering directly over the sensor contacts. Probably drawn to the EM fields—someone at base had said that once. No one had found a way to keep them off.
+
+He tried again. Waved. Hummed through his suit's intercom at full throat. Nudged with his glove in slow, circular patterns, trying to herd the bugger like a methane eel.
+
+Still it danced and fluttered, wings barely visible, pale and too many-jointed, right across the center node. Cale pressed his helmet forward until he was nearly two inches from it.
+
+It didn’t move. Just floated there, its back to him, like it was watching the sensor work.
+
+On a whim, he hummed a few bars of "God Save the Queen." Off-key, through his teeth, hoping the vibration might irritate it—or amuse it—enough to budge.
+
+And just like that, the little bastard flitted away in a lazy spiral, drifting toward the escarpment wall to inspect a pair of sessiles crusted to the stone.
+
+Cale exhaled sharply through his nose and drifted to the next node—an older currentflow unit mounted on a frost-scabbed tripod of composite tubing. This one had a diagnostic error blinking on his wrist feed. He braced himself against a nearby outcrop and began the sequence: depressurize the sensor housing, crack the faceplate, reseat the contacts.
+
+It was delicate work, even with suit gloves optimized for tactile feedback. The connectors were narrow and partially iced over. He blew a slow stream of heated nitrogen from the suit’s maintenance valve—another trick they’d taught him during orientation—and watched a thin veil of sublimating frost peel back from the sensor array.
+
+These nodes tracked more than just flow: fine-grain sediment drift, temperature deltas, electrostatic charge accumulation. Baseline data for a world no one had ever studied up close before. The big questions—their real scientific payload—was still decades out. But someone had to log the quiet changes first.
+
+He’d been one of those people once. Still was, technically. His dissertation had been on abiogenic sorting mechanisms in methane-based sedimentary environments. A niche within a niche. No one else had cared, not really—but his lab notes had been pristine. Field calibration records perfect. He was good in the cleanroom, steady with micromanipulators, methodical to a fault.
+
+Which was probably why they kept putting him on missions like this. Not as a lead researcher. Not anymore. But as the tech guy. The one who’d re-align the damn sensor nodes when the readings went strange. The one who still knew how to fix things without breaking them.
+
+The scanner chirped as the node came back online. He watched a fresh ribbon of data blink into being. Satisfying. Quietly so.
+
+He kicked off toward the third stop, letting the slope carry him down into a narrower trough between two low ridges. The sensor cluster here was half-embedded in a slant of cryosilt, its mounting struts cross-braced against long-settled pressure. Nothing looked amiss. He pinged the unit, got a chirp back, and started the sync.
+
+The data began to load—slowly, but cleanly—until it hit the deep flow set. There, it hesitated. Glitched. For half a second, the stream jittered. Then continued. He frowned. Ran the pull again.
+
+Same hitch. But this time, the final line of deep flow data blinked into view twice, with a hiccup between them. The first instance vanished. The second stuck. Fully formed. Stable.
+
+He had the file. He could move on. But...
+
+Something wasn’t right.
+
+He called up the local data buffer, scrolled through the file directly, line by line. Everything looked fine—right up until the end. Then he noticed it: the cursor. Blinking one character space to the right of the last line’s return break. It should have been flush left. That little offset meant there was something after. A line fragment, maybe. Or more.
+
+He toggled into diagnostics. The suite dragged its feet. Finally coughed up: BUFFER OVERRUN – LOCAL CACHE.
+
+Cale blinked. That made no sense. This sensor only logged six fields at deep flow: temp, pressure, turbidity, current vector, microflux, and baseline chem trace. All of them averaged at ten-second intervals. Nothing fancy. Nothing that should’ve broken buffer space.
+
+He scrolled again. This time slower. One extra null line. No ID, no timestamp.
+
+"What the hell?" he muttered, and initiated a hard refresh.
+
+As the system churned, he glanced up from the node, scanning the terrain around him. Sessiles clung to the escarpment in loose constellations—soft-bodied and spongy, or with delicate stalks splayed out like brush bristles. A few had begun to withdraw slowly as the eddies of his movement reached them. Higher up the wall, black encrustations gathered in crusty florets, oily and irregular.
+
+Bubbleblacks. Blecks, the younger researchers called them. Cale approved of that one. For once, they’d nailed it.
+
+He rubbed a knuckle against the edge of his helmet as he waited. He shouldn't have let what's-his-name recompile the telemetry parser. Or was it the compression module? Some backend thing they swore would improve uplink redundancy. Probably just a pointless patch by someone trying to pad their lab notes.
+
+Above him, the lake brightened slightly—clouds of tholins, swirling in a layered suspension. Strange. The hue was wrong. A ruddy violet tint at the upper threshold of visibility, like a bloom. Could be microbial. Could be lighting artifacts. It didn’t matter yet.
+
+He checked the screen again.
+
+Still loading. He rolled his eyes. If this turned out to be someone's personal underwater photo cache tagged to a hidden diagnostic subroutine, he'd strangle the fucker. You couldn’t smuggle holographic image data into environmental streams and expect no one to notice.
+
+Beep.
+
+Now, that. Was. Odd.
+
+No software problem.
+Well, that meant...
+
+Ohhh. That’s it.
+
+Damnit.
+
+Deep flow sensor microturbine got jammed. It was down there somewhere, still clicking away, spinning half-locked, feeding the same local reading into the buffer over and over again. They weren’t supposed to jam. Designed for cryosediment—crydyment?—with max grain size tolerances, anti-calc panels, no moving fins. And tholins didn’t jam things. They just didn’t.
+
+But this was the second time.
+
+Second time something had gotten caught in one of these "un-jammable" marvels. First time, they wrote it off. A fluke. Some supra-maximal anomaly, dustbunny of bonded particulate, thermal expansion spike. “One-time thing,” they'd called it.
+
+One-time thing, my ass. Now it was two. And that meant...
+
+Shit. He was going to have to crawl down under the overhang. Some damned fool had routed the sensor conduit all the way through the escarpment crags instead of placing it cleanly in the cryck window not two meters to the left. Now, to so much as look at the microturbine, he’d have to go spelunking through methane sediment just to get eyes on the junction.
+
+He toggled his mic and sighed. “Base, this is Cale. Gonna be at node three a bit longer. Sensor diagnostics flagged a turbine jam. I’m going under to confirm. Prep for retrieval if I don’t check in by next cycle.
+
+He pulled himself along the base of the escarpment, following the cable where it ducked into a narrow seam between fractured cryck shelves. The opening wasn’t much—maybe a meter wide and half as tall—but it yawned just enough to swallow the conduit and vanish into darkness. He cycled his lights to narrow-beam and eased forward, careful not to kick up sediment that would fog his path.
+
+The slope angled downward, more a gullet than a tunnel, lined with irregular clefts and scabs of tholinite buildup. His suit scraped gently on the walls, too close for comfort, but not impassable. The methane thickened, or seemed to, the light falling away in shallow pulses.
+
+He adjusted his shoulder cam, switched to scan mode. Still nothing active on the sensor’s internal ping, but the jammed turbine housing would be deeper in—right past the worst of the bends, of course.
+
+Figures, he thought. Nobody wants to route through the clean corridor if they can impress the design team with ten meters of pointless snaking.
+
+A soft knock echoed through the helmet as his boot bumped something loose. He turned his headlamp. Just a slumped cobble, resin-black and dull. Not moving.
+
+He exhaled and kept crawling.”
+
+
+
+After a few meters, the tunnel flared into a low chamber, barely taller than his helmet. He braced against the uneven cryck and swung his light around. The walls glittered faintly with thin biofilms—coarse, pale membranes stretched across ledges and cracks, flexing ever so slightly in the methane flow. Amber flares of tholin drift bobbed in the beam, their motion sluggish and indifferent.
+
+Cale did not like this. It wasn't dangerous, not technically, but the space was unfamiliar. Unmapped. Nothing in his memory of dive runs suggested this cul-de-sac chamber existed. Maybe it had been added to the mapset later. Maybe it had just… opened.
+
+He considered, briefly, just kicking at the muck. A few half-hearted stomps and he might shake the turbine loose. But that’d fog everything up, probably blacken his suit from boots to shoulders in bubbleblack soot. If he played it just right, he might make it out without getting completely sludged. If he was lucky.
+
+But if he wasn’t? The second he stepped into the base airlock, the stench would hit the filters and the whole station would know. The methane would scrub out, but the smell would cling. And the jokes—oh god, the jokes. "Who farted?" all week. Smartass glances. People leaning a little too far away in the common galley.
+
+He wasn't the first to stink up the lock. He wouldn't be the last. But nobody wanted to be the punchline.
+
+Not to mention the sixteen-page environmental disturbance form. Carbon copies and countersignatures. He’d be the reason a new procedural got named.
+
+He tightened his grip on the escarpment wall and kept moving, flashlight angling toward the next bend.”
+
+It narrowed again. He braced his knees, found his footing, and cut his suit's external audio feed. Then he stilled. Listened.
+
+No obvious clicking. But something was off in the rhythm of the flow—a flutter, maybe. A low, irregular thrumming, like a piece of hardware repeating the same motion with microscopic drag. He closed his eyes.
+
+Seconds passed, stretching long. There—beneath the hush of methane current and the occasional creak of his own suit fabric—he heard it. A patterned tick. Not mechanical exactly, but too regular for background noise. Wrong.
+
+He inched forward, then turned his light toward the conduit’s intake end.
+
+Something jetted away.
+
+Fast.
+
+Just a blur in the haze, a sharp interruption of the lightbeam, a long-bodied distortion that vanished back down the slope.
+
+He stared. Waited. No return motion.
+
+Then turned back to the sensor.
+
+No longer jammed.
+
+But the flow readings were still off the charts—more data per cycle than the node could buffer without throwing errors. It wasn’t noise. It wasn’t garbage. It was clean data. Just... too much of it.
+
+He could go on. Resume the circuit. Eat lunch from the squeeze-nipples in his helmet, watch for icefall shears off the east escarpment, drift back in with a full log and only a mild delay. Nobody would complain. Maya wouldn’t even notice.
+
+But that thing—whatever it was—it didn’t match anything from the briefings. Not the swimmers, not the sessiles, not the blecks or anything in the local scans. He’d barely caught a look, but it was elongate. Maybe had tentacles. Maybe not. Vaguely similar to the... what was it called? Those southern hemisphere siphoniforms. The ones that clustered around sun-facing cryobasins. Only ever logged south of Lacus Planum. Liked the warmth. What little there was of it.
+
+Whatever this thing was, it wasn’t supposed to be here.
+
+So it was either new behavior. New population.
+
+Or new species.
+
+And they'd surveyed the hell out of this sector.
+
+Cale narrowed his eyes, checked the sensor log again.
+
+He had no idea what it could be.
+
+And even less of one how to find it again.
+
+Still, sensor was working now. No errors. Cale angled in closer, bracing himself against the outcrop with one arm while his other hand reached under the intake lip to feel around for the diagnostic jack—a tiny port wedged beneath a protective flange, never meant for mid-dive use.
+
+He finagled the plug in with his fingertips, checked his wrist screen. Signal good. Running live.
+
+Microturbine was spinning smoothly now. Readings were stable. Flow rate matched secondary channel output. So no repairs today. No toolkits. No forms.
+
+But he stayed where he was a moment longer, just watching the values stabilize, letting the low vibration of the conduit hum through his glove.
+
+Whatever had jammed it—whatever had flushed out when he aimed that light—was gone. But it hadn’t just triggered the jam. It had flooded the buffer with clean data. Coherent data. Directional flow perturbations, localized pressure spikes, resonant echoes.
+
+He spent another few minutes mucking about, shining his wrist-screen into gaps too small for his headlamp beam, kicking gently at cryosilt and membranes that refused to move in any way that made sense. He tried to tell himself he was being methodical. But really, he was stalling.
+
+Eventually, everything just looked like more cryck. Or nothing at all.
+
+He sighed, already regretting not checking his flashlight’s charge before heading out. Should’ve known better. He angled his wrist-screen toward a patch of webbed membrane, just to give himself something to look at. The blue-white light flattened the forms into strange silhouettes—sinuous edges and translucent gossamer that had been invisible in beamlight.
+
+Then he turned and swam out.
+
+There, far out across the lakebed—in one of the sectors still lotted but undeployed—something dark poked up over the crest of a cryoschoal. For a second it looked like movement. Then stillness.
+
+He paused. Hovered.
+
+Could be nothing. Could be seaweed.
+
+He hesitated, then flipped off his beacon. "Damn," he muttered aloud, practicing already. "Had to spend over an hour out of contact under that overhang. Undetectable."
+
+Now he was farther out. Shallower, too. The mound lifted him above the flats, and the line of cryostakes marking the sector boundaries gave him some comfort. Still charted territory. Still safe.
+
+The dark shape crested into view again. Then dipped.
+
+He kicked forward. Reached the ridge. Just seaweed. Of course.
+
+Dull, slowly pulsing fans of ribboned kelp, swaying in non-rhythmic clusters. Subtly varied. Infuriatingly so. No one had even named them properly yet—too many low-priority studies, too few biologists willing to catalog minor differentiations.
+
+He rose carefully, letting his head breach the lake’s surface. The methane haze above distorted the sunless sky into a swirling orange dome. He cracked his lunch pack and sipped through the nipple, chewing listlessly as he surveyed the wider vista.
+
+Farther out than he'd been before. But not far. Still technically within bounds. The rope-tipped tholin-stained stakes flickered in his peripheral vision—comforting in their own dumb way.
+
+His radio crackled. "Cale? Is your beacon broken?"
+
+Shit.
+
+"Oh—yeah. Must be. You know who routed that sensor conduit around the outcrop? Make sure base charges him when I bill for crawling around in it. Probably broke the antenna."
+
+He sighed. Now he’d have to actually break it before returning. Or...
+
+Could seaweed block the signal? Maybe. He remembered something about graphene-like mineralization. The strands were oddly glossy in low-angle light. Conductive, maybe. Worth a shot.
+
+Better kelp than a busted beacon. Nobody gets put on desk duty for accidentally bio-fouling their signal path.
+
+He finished lunch. Stretched his arms.
+Then, awkwardly, engaged the in-suit commode system, mumbling to himself about pressure seals and recycled dignity. The system, officially a Multi-Stage Excretory Capture and Reclamation Interface—MSECRI, though everyone just called it 'the thronetube'—was an unholy marriage of vac-seal tech, osmotic gel sleeves, and low-pressure methane flushing. It wasn't designed for comfort, only containment. The gel layer had a way of clinging a little too long, and the pressure equalizer sometimes gave a disconcerting slurp if you moved wrong mid-cycle. Cale had once described it, in a moment of rare candor, as 'like using a haunted sock full of pudding.'
+
+A memory bubbled up—unbidden, like most good ones. It was his daughter, maybe age seven, swimming off Kelly’s Island. Not the big lake side, but the sheltered cove, the one with warm shallows and just enough seagrass to feel wild. She’d worn a mask three sizes too big, defiant and thrilled and screaming every time she touched bottom.
+
+That summer was the last time they were all together. Her mother had said, “We are not going to raise our daughter on some isolated Antarctic research station.”
+
+No. Of course not.
+
+Instead, the cost of the divorce meant "our daughter's" father had to take a job off planet.
+
+Now he was diving for biofoul.
+
+Down we go.
+
+He swam, slowly letting the mound slope fall behind him.
+
+He kept swimming. Just a few meters more. Every stroke past the staked zones made his chest tighten—he almost wished he’d broken his beacon for real now. He didn’t trust that it wasn’t still caching location data. Hell, he’d programmed the damned things himself.
+
+Which didn’t mean much. He’d also left himself a backdoor—just in case. Emergencies happen. Might need to track someone. Whether his motives were pure or not... well, that was above his clearance grade. But he knew this: nobody, and he meant nobody, ever trusted administrators. They did that sort of thing like breathing. Didn’t matter if it was against regs. Didn’t matter if it was technically illegal. The blame game was powerful, and guess who’d built the beacon framework? Exactly.
+
+And it wouldn’t even have to come to that. If anyone clocked his data this far out, the disciplinary wrap-up would make company surveillance a footnote. This wasn’t just gray area—it was wide-open unnumbered grid.
+
+Still... just a little further.
+
+He eased toward the dropoff, tucking low to the kelp to avoid silhouetting himself. The broad, mineral-laced leaves were tough, tensile, good for anchoring—good for not being swept off if some rogue upcurrent or sudden eddy tugged at him the wrong way. Or worse: downcurrent.
+
+So...
+
+He held fast. And... Looked.
+
+Beyond the sand-shedding lip, sprinkling down like sugar settling into iced tea... it was there. *Not* a wishing heart. The *King Rat* of wishing hearts. It was a breeding colony. 
+
+He just stared. It wasn't like the grainy sonar images. Giant, sprawling half-resolved tentaculoids jerkily jittering, time-lapsed and growing like a cancerous scar, tracing the methane-ethane boundary. Not. At. All. It was--beautiful. 
+
+Far down the rough trench, where the tholins thickened the methane, just at the shimmering ethanocline surface, the only place where this last of the complex pseudoechinoids of Titan could spread their kind against the press of extinction. It looked nothing more than like a vast, topgraphic doilie. The kind that Cale's great-grandmother used to knit, all but extinct those doilies, even in the farmlands of northern Minnnesota. If it hadn't been for GG Spencer, keeping that lost art alive, Cale probably would never even have heard the word. The only word that came close to describing the delicate beauty of tens of thousands of wishing stars, spread wide, white tentacles enrolled--part of him said "I know what kind of hanky-panky you guys are up to", but the joke didn't fit the moment--and he just stared, jaw brushing goop-nipple goop onto his scruffy chin. The fractal stars within stars within stars within stars made of water-ice-boned articulated, almost like it was crochetted, like baroque tatted curlicue filigree. But alive. And curling-uncurling all around the edges, til a shiver ran through and it froze for just a secont, then curling, uncurling, recurling, then shiver, then curling... Cale stared, mesmerized. 
+
+The ethanocline shimmered just fifteen, maybe twenty meters below—far too deep to risk swimming—but much shallower than usual. The sluggish sea must have sloshed it in when [something about seasonal recess??]. A little trench, a little calm spot, but it caught slight skyglow like liqued gold mirror. Kilometers from where it was supposed to be. And you buggers found it! A golden goblet lined with encrusting-silver alien filigree. 
+
+*Good ghodd.*
+
+Want. It was like Ivery's voice, little hands gripping his shoulder, lips brushed, whispered want, a chill... Want. I can't. Want. But, no. It's too deep. They're endangered. But. Want. Honey, no. *Daddy!* Ivery Gendolyn Gotschalb, I said no.                I'm sorry honey.                 But it's not safe.                    It's against the law.                 I know, hon. I know.            *I want one too.* 
+
+Cale looked up towards the rosegold sky, let go of the kelp, and slowly, liesurely, started towards the surface. A tear in his eye that he instinctively tried to brush away, clanking the helmet. He tried to blink it away, damnit, it tickled . Blink. Light. Blink. Shadow. Blink. Light. Blink. Shadow. Blink. Shadow. Blink....
+
+What the... and there it was, without thinking, he *grabbed, turned, started after it, startled and thrilled, the grey-black graceful-backstroking little bugger... 
+
+"I'm... gonna... getcha!" His voice fogged up his faceplate. It swam towards the trough, Cale on it's tail. "Come on little buddy, I've gotcha now." He was on it, just... almost... soooo... clossssse he could... "Don't forget to wash behind your ears...." snatch!* "I'm gonna eat you right up!" another snatch "There... you..." GOTCHA!
+
+And he did, shocked, startled, electrified, he stopped swimming and held it tight in his hand, so enraptured he could barely feel the drift, it was jangly and black, and its articulated spine twisted in Cale's gloved hand while its squareish tentacles curlicued through chunky, black-swirling cloudlets likes smoke, oozing out of its burst and delicate body. "What...* are* you? ...little buddy? ...little buddy? ...little...buddy? No, don't." the tentacles stopped writhing, just after the spine did. "Hey there little buddy." Ivery...I mean Cale's chin danced a twitching dance even as the... it wasn't a wishing heart. "Don't go." It was something new. It was. And now... 
+
+
+But the cloudy water and strange tholin-goo shreds dripped and swirled down, past Cale's toetips. He could barely feel the movement, but it was there. Should he keep it? The light was dimming. Its tentacles curled limply around his gloved fingers, its spine had wrapped between thumb and forefinger, like the thing was trying for a handshake. Cale shook his own hand, a little. And one of the tentalcles fell, down, just as Cale passed the leaftip-line of the kelp patch. And he kept sinking into the kelp, letting it flutter past the sides of his helmet, just starting at the partially-tentacled black-blue spinal remains of something nobody's ever seen before. 
+
+His bottom hit hard on the soft crynd seafloor. A kelp-root knob was like a punch to his thigh. He writhed, feeling his leg bend from the charlie horse it gave him. And he grabbed at that root structure with both hands as his feet fluttered over the lip of the trench. And pulled the root out whole.
+
+Down we go.
+
+
+
+
+
+
+
