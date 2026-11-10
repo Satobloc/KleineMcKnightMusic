@@ -111,6 +111,7 @@ def capture_record(
         "platform": urlparse(canonical).netloc,
         "author_or_creator": author,
         "published_at": iso_date(published),
+        "published_at_raw": published,
         "retrieved_at": datetime.now(timezone.utc).isoformat(),
         "source_type": source_type,
         "hopper": hopper,
