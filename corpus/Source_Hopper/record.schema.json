@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Satobloc/KleineMcKnightMusic/blob/main/corpus/Source_Hopper/record.schema.json",
+  "title": "Suno Research Source Record",
+  "type": "object",
+  "required": [
+    "source_id",
+    "canonical_url",
+    "source_type",
+    "retrieved_at",
+    "evidence_class",
+    "hopper"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "canonical_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "original_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "platform": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "author_or_creator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "published_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "retrieved_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "community_post",
+        "forum_thread",
+        "prompt_example",
+        "audio_case",
+        "official_documentation",
+        "release_note",
+        "research_paper",
+        "preprint",
+        "software_repository",
+        "dataset",
+        "api_documentation",
+        "video_or_tutorial",
+        "other"
+      ]
+    },
+    "hopper": {
+      "type": "string",
+      "enum": [
+        "community",
+        "source",
+        "research",
+        "product",
+        "prompt_examples",
+        "audio_case",
+        "tooling"
+      ]
+    },
+    "evidence_class": {
+      "type": "string",
+      "enum": [
+        "official_claim",
+        "direct_artifact",
+        "creator_report",
+        "creator_interpretation",
+        "third_party_analysis",
+        "our_hypothesis",
+        "replicated_observation",
+        "unknown"
+      ]
+    },
+    "model_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "generation_settings": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": true
+    },
+    "input_field": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "style",
+        "lyrics",
+        "exclude",
+        "simple_prompt",
+        "reference_audio",
+        "persona",
+        "other",
+        null
+      ]
+    },
+    "prompt_text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Only store where collection and reuse rights permit. Otherwise retain a short excerpt and source link."
+    },
+    "prompt_excerpt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "audio_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "audio_duration_seconds": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "has_prompt_and_audio": {
+      "type": "boolean"
+    },
+    "reported_observation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "creator_interpretation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "our_hypothesis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "limitations": [
+      "string"
+    ],
+    "rights_and_terms": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "access_notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "content_fingerprint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "related_source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
