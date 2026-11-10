@@ -13,6 +13,7 @@
 - `09_SOURCE_POOLS.md` — genre, voice, meter, acoustic and malformed sources.
 - `10_OPEN_QUESTIONS.md` — research queue.
 - `11_VOCALICS.md` — vocal-space access program.
+- `12_HSH_ARCHIVE_IMPORTS.md` — source-grounded HsH music/Suno import and transferable LLM operating methods.
 
 ## Archive policy
 
