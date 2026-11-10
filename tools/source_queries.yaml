@@ -1,0 +1,40 @@
+schema_version: 1
+project: KleineMcKnightMusic
+purpose: query seeds for community and technical source discovery
+query_families:
+  community_reports:
+    - '"Suno" prompt experiment comparison'
+    - 'site:reddit.com/r/SunoAI "same prompt" "different results"'
+    - 'site:reddit.com/r/SunoAI "weirdness" "style influence" experiment'
+    - 'site:reddit.com/r/SunoAI Suno prompt A/B test'
+  unusual_vocabulary:
+    - 'site:reddit.com/r/SunoAI invented words lyrics Suno pronunciation'
+    - 'site:reddit.com/r/SunoAI nonsense syllables phonetic language Suno'
+    - 'Suno onomatopoeia prompting sound symbolism'
+    - 'Suno cross-domain metaphor texture descriptors music generation'
+  structure_and_markup:
+    - 'Suno bracket tags section structure experiments'
+    - 'site:reddit.com/r/SunoAI bracket tags lyrics field behavior'
+    - 'Suno prompt word order punctuation style field experiment'
+  audio_linked_cases:
+    - 'Suno prompt with generated audio comparison case study'
+    - 'site:github.com Suno prompt experiments embedded audio'
+  technical_research:
+    - 'text-to-music prompt conditioning text encoder controllability research'
+    - 'music generation disentangled representations controllability evaluation'
+    - 'CLAP text audio embedding music generation limitations'
+  product_docs:
+    - 'site:help.suno.com Suno creative sliders style influence weirdness exclude'
+    - 'site:suno.com/release-notes Suno model prompt creation changes'
+  tooling:
+    - 'GitHub Suno public data export analyzer scraper'
+    - 'Suno playlist downloader metadata export GitHub'
+    - 'Reddit API OAuth search rate limits documentation'
+  
+collection_policy:
+  - "Respect robots.txt, platform terms, API rate limits and access controls."
+  - "Do not scrape private or login-walled communities."
+  - "Do not collect personal data beyond public creator attribution where necessary."
+  - "Do not bulk-download or mirror audio."
+  - "Retain canonical source links; capture only short excerpts justified for research."
+  - "Treat community reports as hypotheses unless prompt, output and settings are available."
