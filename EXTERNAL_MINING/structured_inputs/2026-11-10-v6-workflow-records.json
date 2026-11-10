@@ -1,0 +1,164 @@
+{
+  "collection": "external-mining-quarry",
+  "retrieved_on": "2026-11-10",
+  "topic": "Suno v6 and multimodal workflows",
+  "records": [
+    {
+      "id": "suno-v6-release",
+      "title": "Introducing v6",
+      "url": "https://suno.com/release-notes/introducing-v6",
+      "date": "2026-09-09",
+      "type": "official_release",
+      "claims": [
+        "v6 family includes v6, v6-wild, v6-mini",
+        "plain-language partial song editing",
+        "multi-source mashup",
+        "sample/isolate/build workflow",
+        "text, audio, image, and video inputs",
+        "single lyric edits"
+      ],
+      "idea_seeds": [
+        "prompt as multimodal orchestration",
+        "operations as instructions",
+        "model variant as a creative material"
+      ],
+      "caveat": "Product claims, not independent benchmarks."
+    },
+    {
+      "id": "suno-v6-faq",
+      "title": "What's different about v6?",
+      "url": "https://help.suno.com/en/articles/13924481",
+      "date": "2026-09",
+      "type": "official_documentation",
+      "claims": [
+        "Simple mode supports multiple directions and references",
+        "inputs may include songs, playlists, audio uploads, images, and video",
+        "Suno describes workflow selection for Cover, Remix, and Extend"
+      ],
+      "idea_seeds": [
+        "natural language as workflow request",
+        "multiple references as simultaneous source material",
+        "prompt may specify transformations rather than a target sound"
+      ],
+      "caveat": "Public feature description does not expose internal routing."
+    },
+    {
+      "id": "suno-v6-variants",
+      "title": "What's new in v6?",
+      "url": "https://help.suno.com/en/articles/13924801",
+      "date": "2026-09-09",
+      "type": "official_documentation",
+      "claims": [
+        "v6 is balanced core model",
+        "v6-wild is more experimental and unpredictable",
+        "v6-mini is lighter and faster",
+        "all variants support up to eight minutes"
+      ],
+      "idea_seeds": [
+        "variant-specific prompt behavior",
+        "compare finished-song, sketch, and divergence objectives"
+      ],
+      "caveat": "Descriptions are official characterization."
+    },
+    {
+      "id": "suno-mcp",
+      "title": "Suno MCP beta",
+      "url": "https://suno.com/release-notes",
+      "date": "2026-10-28",
+      "type": "official_release_notes",
+      "claims": [
+        "Suno announced MCP beta for conversational creation through MCP clients",
+        "workflow includes audio upload, covers, extensions, and mashups"
+      ],
+      "idea_seeds": [
+        "prompt generation as dialogue",
+        "external workbench can become a live instrument panel",
+        "conversation can orchestrate multiple music operations"
+      ],
+      "caveat": "Beta availability and access may vary."
+    },
+    {
+      "id": "suno-sample-mashup",
+      "title": "Meet our new Create features: Sample + Mashup",
+      "url": "https://suno.com/release-notes/meet-our-new-create-features-sample-mashup",
+      "date": "2026-01-20",
+      "type": "official_release",
+      "claims": [
+        "Mashup combines two songs",
+        "Sample uses a selected audio segment as a starting point"
+      ],
+      "idea_seeds": [
+        "source-fragment recombination",
+        "sampling as a prompt operation",
+        "audio fragments as nonverbal prompt tokens"
+      ],
+      "caveat": "Feature announcement, not quality evaluation."
+    },
+    {
+      "id": "suno-custom-models",
+      "title": "Custom Models",
+      "url": "https://suno.com/custom-models",
+      "type": "official_product_page",
+      "claims": [
+        "private models can be tuned on user's own music",
+        "minimum six tracks user holds rights to",
+        "up to three custom models on Pro/Premier"
+      ],
+      "idea_seeds": [
+        "personal corpus as style conditioning",
+        "separate identity model from descriptive prompt",
+        "one source archive can seed multiple musical identities"
+      ],
+      "caveat": "Rights and eligibility must be checked; product description is not a technical model card."
+    },
+    {
+      "id": "community-v6-regression",
+      "title": "V6/V6-Wild Regression",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1wc2xue/v6v6wild_regression_generic_production_flattened/",
+      "date": "2026-09-10",
+      "type": "creator_observation",
+      "claims": [
+        "author reports flatter vocals and less dynamic expression compared with earlier versions"
+      ],
+      "idea_seeds": [
+        "vocal expressiveness as separate evaluation axis",
+        "model change can improve polish but reduce character"
+      ],
+      "confidence": "anecdotal"
+    },
+    {
+      "id": "community-v6-happy-accident",
+      "title": "V6 killed the happy accident factor for me",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1wdpy7z/v6_killed_the_happy_accident_factor_for_me/",
+      "date": "2026-09-11",
+      "type": "creator_observation",
+      "claims": [
+        "author reports reduced productive surprise and greater need to stabilize outputs with prompt constraints"
+      ],
+      "idea_seeds": [
+        "generative slack",
+        "control versus surprise",
+        "creative utility is not equivalent to prompt compliance"
+      ],
+      "confidence": "anecdotal"
+    },
+    {
+      "id": "community-v6-wild-task-relative",
+      "title": "V6-wild is completely unusable",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1wco7gr/v6wild_is_completely_unusable/",
+      "date": "2026-09-10",
+      "type": "community_discussion",
+      "claims": [
+        "some users report unusable artifacts",
+        "another user reports Wild useful for riff mining and extreme genre combinations"
+      ],
+      "idea_seeds": [
+        "failed song as useful raw material",
+        "task-relative evaluation",
+        "divergence can be valuable without being polished"
+      ],
+      "confidence": "anecdotal, mixed reports"
+    }
+  ],
+  "caveat": "Do not infer Suno's internal architecture. Official claims and creator observations are separate evidence classes; contradictory community reports remain unresolved."
+}
