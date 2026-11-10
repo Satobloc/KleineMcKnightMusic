@@ -1,0 +1,41 @@
+{
+  "source_id": "SNC-20261110REDDITFAKELANGUAGEJSON",
+  "canonical_url": "https://www.reddit.com/r/SunoAI/comments/1vqnqn0/how_i_learned_to_make_a_fake_language_song_in/",
+  "original_url": "https://www.reddit.com/r/SunoAI/comments/1vqnqn0/how_i_learned_to_make_a_fake_language_song_in/",
+  "title": "How I learned to make a fake language song in Suno",
+  "platform": "Reddit r/SunoAI",
+  "author_or_creator": null,
+  "published_at": "2026-08-17T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:00:00-05:00",
+  "source_type": "community_post",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Creator describes experiments with a completely invented language, observing variable pronunciation in Romanized spelling and more consistent results using katakana; reports that repeated syllable groups increased the impression of a coherent language.",
+  "creator_interpretation": "Orthography, phonotactic consistency and recurring syllable patterns may affect vocal generation and perceived linguistic coherence.",
+  "our_hypothesis": "Suno's lyric-to-vocal pathway may respond to writing-system conventions and regularity in syllable sequences. This does not establish direct phonetic parsing.",
+  "limitations": [
+    "Captured from publicly accessible search results; full source not yet audited.",
+    "Community interpretation is not evidence of Suno internal architecture.",
+    "Short excerpt retained; consult canonical source for full context."
+  ],
+  "rights_and_terms": "Not assessed; link to source rather than republishing source content.",
+  "access_notes": "Public web source. Metadata and short research summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "invented-language",
+    "phonetics",
+    "orthography",
+    "lyrics",
+    "pronunciation",
+    "repetition"
+  ]
+}
