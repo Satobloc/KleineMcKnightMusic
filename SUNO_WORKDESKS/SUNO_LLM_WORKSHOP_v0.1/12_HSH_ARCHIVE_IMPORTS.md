@@ -185,3 +185,16 @@ These are source pointers, not imported HsH control documents. The hashes identi
 Do not transplant HsH's physics-specific symbols, theory authority, worker identities, scheduler/lease machinery, quarantine taxonomies, or three-repository control plane into KMcKM. Those are controls for a different project. KMcKM should retain its own evidence model, corpus hoppers, experiment ledger, and distinct Workbench design.
 
 The only Mersearch result from this intake is a bounded fallback discovery pass, not a verified Mersearch search. The next comprehensive archive search should wait until a request lane can be used without overwriting existing work.
+
+
+## Second-pass intake pointer
+
+A supplementary source inventory is now available at:
+
+- `../../corpus/Source_Hopper/HSH_MUSIC_SECOND_PASS_2026-11-10.md`
+
+It adds Suno Nonsensorium 2, the Neo-Riemannian Cube Dance code/debugging conversation, the All the Sweet Spots Together NotebookLM catalogue, mixed glossolalia/music collages, the 2024 Future of AI Music conversation, and explicit source-overlap checks for Sonic Pi Code Recall.
+
+It also expands the LLM-method review. The Prompt Puller work contributes a narrow but useful source-fidelity lesson: preserve the complete prompt block and its associated control/preference tags; do not split or normalize source material merely to fit a parser. Its example concerns Midjourney, not Suno. NotebookLM exports and model-generated syntheses are retrieval aids, never evidence of internal model behavior or a substitute for primary sources. Some HsH material demonstrates how fluent AI synthesis can make strong claims unsupported by the underlying evidence; treat that as a failure mode to guard against.
+
+**Current coverage status:** first and second-pass source maps are curated imports, not a complete HsH/SAT/HSH_RESOURCES census. Mersearch still needs to be run safely when one of its shared request lanes becomes available.
