@@ -52,3 +52,5 @@ Some initial assistant-mined records were committed before this unified location
 
 - [2026-11-10 — Write Suno Prompts, source map and method extraction, pass 06](raw_dumps/2026-11-10-write-suno-prompts-source-map-06.md): records the user's nano-genre prompt specification, 40-item worklist progress (1–28 drafted), Funeral Polka revision, and spoken-word field-tape prompt lineage.
 - [2026-11-10 — Kroger fairground engine, case study pass 07](raw_dumps/2026-11-10-kroger-fairground-engine-case-study-07.md): recovers the exact prompt header and architecture from the Suno Library export, and indexes two full generations plus two previews without treating model tags as listening evidence.
+
+- [2026-11-10 — Nano-genre worklist items 29–40, source audit, pass 08](raw_dumps/2026-11-10-nanogenre-worklist-29-40-source-audit-08.md): distinguishes traditions, work-song operations, instruments, notation systems, individual tunes, and sacred repertoires; includes institutional / specialist source leads.
