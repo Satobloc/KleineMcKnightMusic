@@ -1,0 +1,39 @@
+{
+  "source_id": "SNC-20261110GITHUBSUNOARCHIVEMANAGERJSON",
+  "canonical_url": "https://github.com/danieloxa/Suno-Archive-Manager",
+  "original_url": "https://github.com/danieloxa/Suno-Archive-Manager",
+  "title": "Suno Archive Manager",
+  "platform": "GitHub",
+  "author_or_creator": null,
+  "published_at": null,
+  "retrieved_at": "2026-11-10T23:30:00-05:00",
+  "source_type": "software_repository",
+  "hopper": "tooling",
+  "evidence_class": "direct_artifact",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Public browser extension advertises local export of a user's Suno library, including audio and metadata.",
+  "creator_interpretation": "Its README describes browser-side capture and ZIP export.",
+  "our_hypothesis": "Could support private user-owned output archives, but requires permission, code/security review and careful handling of session data.",
+  "limitations": [
+    "Search-result-level capture; full content and linked media not independently audited.",
+    "Community claim is not evidence of Suno's private architecture.",
+    "Rights, terms, license and data provenance require review."
+  ],
+  "rights_and_terms": "Not assessed. Link to original; do not redistribute code, datasets, audio or full post without permission/compatible license.",
+  "access_notes": "Public web source. Metadata and summarized observations only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "archive-tool",
+    "browser-extension",
+    "user-library",
+    "privacy-review"
+  ]
+}
