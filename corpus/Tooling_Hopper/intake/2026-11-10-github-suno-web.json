@@ -1,0 +1,39 @@
+{
+  "source_id": "SNC-20261110GITHUBSUNOWEBJSON",
+  "canonical_url": "https://github.com/belikh/suno-web",
+  "original_url": "https://github.com/belikh/suno-web",
+  "title": "suno-web: Library browser for a local Suno archive",
+  "platform": "GitHub",
+  "author_or_creator": null,
+  "published_at": null,
+  "retrieved_at": "2026-11-10T23:30:00-05:00",
+  "source_type": "software_repository",
+  "hopper": "tooling",
+  "evidence_class": "direct_artifact",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Public project indexes a local archive of Suno metadata and exposes search, filters, lineage, playlists and playback.",
+  "creator_interpretation": "README states it browses an existing archive and does not create one.",
+  "our_hypothesis": "Potential downstream visualization/search interface for our own exported corpus; not a source scraper.",
+  "limitations": [
+    "Search-result-level capture; full content and linked media not independently audited.",
+    "Community claim is not evidence of Suno's private architecture.",
+    "Rights, terms, license and data provenance require review."
+  ],
+  "rights_and_terms": "Not assessed. Link to original; do not redistribute code, datasets, audio or full post without permission/compatible license.",
+  "access_notes": "Public web source. Metadata and summarized observations only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "archive-browser",
+    "metadata-index",
+    "lineage",
+    "local-library"
+  ]
+}
