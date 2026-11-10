@@ -1,0 +1,330 @@
+{
+  "batch_id": "2026-11-10-information-theory",
+  "retrieved_at": "2026-11-10",
+  "scope": "Entropy, surprisal, novelty, compression, algorithmic complexity, predictive information, and procedural emergence in music",
+  "records": [
+    {
+      "id": "pearce-wiggins-2012",
+      "title": "Auditory Expectation: The Information Dynamics of Music Perception and Cognition",
+      "year": 2012,
+      "type": "peer_reviewed_review",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1756-8765.2012.01214.x",
+      "concepts": [
+        "entropy",
+        "surprisal",
+        "predictive_information",
+        "time_varying_information"
+      ],
+      "claim": "Entropy and event information content represent different aspects of musical expectation.",
+      "limits": [
+        "Model-relative",
+        "Theory and review, not a Suno study"
+      ]
+    },
+    {
+      "id": "predictive-uncertainty-2014",
+      "title": "Predictive uncertainty in auditory sequence processing",
+      "year": 2014,
+      "type": "peer_reviewed_empirical",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4171990/",
+      "concepts": [
+        "entropy",
+        "Markov_models",
+        "listener_expectation",
+        "expertise"
+      ],
+      "claim": "Listeners experience greater uncertainty in high-entropy melodic contexts; expertise relates to more accurate probabilistic expectations.",
+      "limits": [
+        "Specific stimuli and model",
+        "Human listeners, not generators"
+      ]
+    },
+    {
+      "id": "predictability-pleasure-2019",
+      "title": "Predictability and Uncertainty in the Pleasure of Music: A Reward for Learning?",
+      "year": 2019,
+      "type": "peer_reviewed_empirical",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6867811/",
+      "concepts": [
+        "entropy",
+        "surprisal",
+        "preference",
+        "complexity"
+      ],
+      "claim": "Tests relationships between entropy, information content, and pleasure; evidence does not justify a simple universal inverted-U rule.",
+      "limits": [
+        "Study-specific operationalization",
+        "Listener preference varies"
+      ]
+    },
+    {
+      "id": "information-dynamics-2009",
+      "title": "Information dynamics: patterns of expectation and surprise in the perception of music",
+      "year": 2009,
+      "type": "peer_reviewed_research",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/09540090902733756",
+      "concepts": [
+        "time_varying_entropy",
+        "predictive_information_rate",
+        "Markov_chains"
+      ],
+      "claim": "Time-varying information measures can characterize unfolding musical structure.",
+      "limits": [
+        "Uses simplified probabilistic models and selected examples"
+      ]
+    },
+    {
+      "id": "predictability-pleasure-2025",
+      "title": "Predictability and the pleasure of music",
+      "year": 2025,
+      "type": "peer_reviewed_empirical",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12377756/",
+      "concepts": [
+        "IDyOM",
+        "surprisal",
+        "entropy",
+        "individual_preferences"
+      ],
+      "claim": "A balance of surprise and predictability is implicated in preference, with individual differences.",
+      "limits": [
+        "Specific study design and listener population"
+      ]
+    },
+    {
+      "id": "grammar-compressor-2021",
+      "title": "An investigation of music analysis by the application of grammar-based compressors",
+      "year": 2021,
+      "type": "peer_reviewed_research",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/09298215.2021.1978505",
+      "concepts": [
+        "minimum_description_length",
+        "grammar_compression",
+        "repetition",
+        "segmentation"
+      ],
+      "claim": "Grammar-based compression can recover useful musical structure, but overlapping and varied patterns can challenge exact grammars.",
+      "limits": [
+        "Symbolic music analysis",
+        "Not a universal segmentation method"
+      ]
+    },
+    {
+      "id": "grammar-compression-2023",
+      "title": "Grammar-based compression and its use in symbolic music analysis",
+      "year": 2023,
+      "type": "peer_reviewed_research",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/17459737.2021.2002956",
+      "concepts": [
+        "context_free_grammar",
+        "conditional_complexity",
+        "information_distance"
+      ],
+      "claim": "Grammar compression can identify hierarchical patterns and distinguish some styles and composers in evaluated symbolic datasets.",
+      "limits": [
+        "Representation- and corpus-dependent"
+      ]
+    },
+    {
+      "id": "structure-harmony-predictivity-2024",
+      "title": "The Interconnections of Music Structure, Harmony, Melody, Rhythm, and Predictivity",
+      "year": 2024,
+      "type": "peer_reviewed_research",
+      "url": "https://journals.sagepub.com/doi/10.1177/20592043241234758",
+      "concepts": [
+        "phrase_repetition",
+        "description_length",
+        "hierarchical_structure",
+        "predictivity"
+      ],
+      "claim": "Hierarchical repetition structures interact with harmony, melody, rhythm, and predictivity.",
+      "limits": [
+        "MIDI/pop dataset and chosen structural representation"
+      ]
+    },
+    {
+      "id": "mdl-musical-structure-2009",
+      "title": "Minimum description length modelling of musical structure",
+      "year": 2009,
+      "type": "peer_reviewed_research",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/17459730903313122",
+      "concepts": [
+        "minimum_description_length",
+        "model_selection",
+        "pattern_extraction"
+      ],
+      "claim": "MDL can select quantitative models of musical structure from statistically extracted patterns.",
+      "limits": [
+        "Model family determines what counts as a good description"
+      ]
+    },
+    {
+      "id": "algorithmic-creativity-2021",
+      "title": "Computational Creativity and Aesthetics with Algorithmic Information Theory",
+      "year": 2021,
+      "type": "peer_reviewed_research",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8700213/",
+      "concepts": [
+        "algorithmic_information_theory",
+        "generative_programs",
+        "creativity"
+      ],
+      "claim": "Algorithmic information theory offers a framework for relating compact generative descriptions to creative processes.",
+      "limits": [
+        "Theoretical framework; algorithmic complexity is not artistic value"
+      ]
+    },
+    {
+      "id": "rhythm-complexity-2017",
+      "title": "Information-Theoretic Measures Predict the Human Judgment of Rhythm Complexity",
+      "year": 2017,
+      "type": "peer_reviewed_empirical",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/cogs.12347",
+      "concepts": [
+        "entropy_rate",
+        "Kolmogorov_complexity",
+        "rhythm_complexity"
+      ],
+      "claim": "Entropy rate and Kolmogorov complexity relate to human judgments of rhythmic complexity and ease.",
+      "limits": [
+        "Artificial rhythmic sequences and limited sample"
+      ]
+    },
+    {
+      "id": "information-length-2016",
+      "title": "Structures in Sound: Analysis of Classical Music Using the Information Length",
+      "year": 2016,
+      "type": "peer_reviewed_research",
+      "url": "https://www.mdpi.com/1099-4300/18/7/258",
+      "concepts": [
+        "Fisher_information",
+        "information_length",
+        "non_equilibrium_dynamics"
+      ],
+      "claim": "Musical evolution can be analyzed as movement through statistical states using information geometry.",
+      "limits": [
+        "Specific MIDI corpus and formalization"
+      ]
+    },
+    {
+      "id": "bach-information-networks-2024",
+      "title": "Information content of note transitions in the music of J. S. Bach",
+      "year": 2024,
+      "type": "peer_reviewed_research",
+      "url": "https://doi.org/10.1103/PhysRevResearch.6.013136",
+      "concepts": [
+        "transition_networks",
+        "information_theory",
+        "statistical_physics"
+      ],
+      "claim": "Note-transition networks offer a framework for quantifying information in Bach's music.",
+      "limits": [
+        "Corpus and representation-specific"
+      ]
+    },
+    {
+      "id": "harmony-novelty-2026",
+      "title": "Quantifying the evolution of harmony and novelty in western classical music",
+      "year": 2026,
+      "type": "peer_reviewed_research",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13492798/",
+      "concepts": [
+        "KL_divergence_rate",
+        "historical_novelty",
+        "mutual_information",
+        "surprisal"
+      ],
+      "claim": "A directed KL divergence rate can quantify departure from a historical transition model while distinguishing novelty from internal sequential dependence.",
+      "limits": [
+        "Western classical corpus and chosen historical model"
+      ]
+    },
+    {
+      "id": "computational-creativity-music-2020",
+      "title": "Computational Creativity and Music Generation Systems: An Introduction to the State of the Art",
+      "year": 2020,
+      "type": "peer_reviewed_review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7861321/",
+      "concepts": [
+        "Markov_chains",
+        "formal_grammars",
+        "rules_constraints",
+        "evolutionary_algorithms",
+        "chaos_self_similarity",
+        "agents"
+      ],
+      "claim": "Algorithmic composition spans multiple procedural families with different control and emergence properties.",
+      "limits": [
+        "Review taxonomy; methods vary widely"
+      ]
+    },
+    {
+      "id": "rules-probability-emergence-2026",
+      "title": "Rules, Probability, and Emergence: A Comparative Study of Traditional Algorithmic Composition Approaches",
+      "year": 2026,
+      "type": "working_paper",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6482599",
+      "concepts": [
+        "L_systems",
+        "genetic_algorithms",
+        "cellular_automata",
+        "Markov_chains",
+        "emergence"
+      ],
+      "claim": "Compares rule-based, optimization, complex-systems, and statistical approaches to algorithmic composition.",
+      "limits": [
+        "SSRN working paper; not peer-reviewed"
+      ]
+    },
+    {
+      "id": "music-generation-survey-2026",
+      "title": "Recent advances in music generation: methods, evaluation, and challenges",
+      "year": 2026,
+      "type": "peer_reviewed_survey",
+      "url": "https://link.springer.com/article/10.1007/s10462-026-11582-x",
+      "concepts": [
+        "distribution_metrics",
+        "KL_divergence",
+        "JS_divergence",
+        "mode_coverage",
+        "controllability",
+        "diversity"
+      ],
+      "claim": "Music generation evaluation needs distinct measures for quality, diversity, alignment, and controllability.",
+      "limits": [
+        "Survey synthesis; industrial systems not exhaustively covered"
+      ]
+    },
+    {
+      "id": "jam-2026",
+      "title": "JAM: A Tiny Flow-based Song Generator with Fine-grained Controllability and Aesthetic Alignment",
+      "year": 2026,
+      "type": "peer_reviewed_conference_paper",
+      "url": "https://aclanthology.org/2026.findings-emnlp.48/",
+      "concepts": [
+        "word_level_timing",
+        "duration_control",
+        "preference_optimization",
+        "evaluation_dataset"
+      ],
+      "claim": "Fine-grained word timing control and preference alignment can be addressed as distinct parts of song generation.",
+      "limits": [
+        "Specific open model and task; not Suno research"
+      ]
+    }
+  ],
+  "idea_seeds": [
+    "entropy_is_not_surprise",
+    "novelty_requires_reference",
+    "compression_as_structure_detection",
+    "repetition_as_code",
+    "structured_randomness",
+    "local_entropy_trajectories",
+    "controlled_unpredictability",
+    "parallel_generators",
+    "rule_probability_collision",
+    "emergence_from_constraints",
+    "complexity_without_noise",
+    "listener_relative_predictability"
+  ],
+  "evidence_policy": "Do not equate entropy, surprisal, novelty, compression, complexity, or aesthetic value. State the representation and reference model for any quantitative claim. No inference about Suno internals."
+}
