@@ -62,17 +62,17 @@ def strip_html(s: str) -> str:
 def fingerprint(url: str, text: str) -> str:
     return hashlib.sha256((url + "\n" + text).encode("utf-8")).hexdigest()
 
-def capture_record(url: str, title: str, description: str, source_type: str, hopper: str, out: Path) -> Path:
+def capture_record(url: str, title: str, description: str, source_type: str, hopper: str, out: Path, *, author: str | None = None, published: str | None = None, source_id_hint: str | None = None) -> Path:
     canonical = canonicalize(url)
     fp = fingerprint(canonical, title + "\n" + description)
     record = {
-        "source_id": "SRC-" + fp[:12].upper(),
+        "source_id": (source_id_hint or ("SRC-" + fp[:12])).upper(),
         "canonical_url": canonical,
         "original_url": url,
         "title": title[:500] or None,
         "platform": urlparse(canonical).netloc,
-        "author_or_creator": None,
-        "published_at": None,
+        "author_or_creator": author,
+        "published_at": published,
         "retrieved_at": datetime.now(timezone.utc).isoformat(),
         "source_type": source_type,
         "hopper": hopper,
@@ -128,7 +128,14 @@ def ingest_feed(url: str, out: Path, hopper: str, limit: int) -> list[Path]:
         if not link:
             continue
         desc = item.findtext("description") or item.findtext("atom:summary", namespaces=ns) or ""
-        records.append(capture_record(link, strip_html(title), strip_html(desc), "community_post", hopper, out))
+        author = item.findtext("author") or item.findtext("atom:author/atom:name", namespaces=ns)
+        published = (item.findtext("pubDate") or item.findtext("atom:published", namespaces=ns)
+                     or item.findtext("atom:updated", namespaces=ns))
+        guid = item.findtext("guid") or item.findtext("atom:id", namespaces=ns) or link
+        records.append(capture_record(link, strip_html(title), strip_html(desc), "community_post", hopper, out,
+                                      author=strip_html(author) if author else None,
+                                      published=published,
+                                      source_id_hint="SRC-" + hashlib.sha256(str(guid).encode("utf-8")).hexdigest()[:12]))
         time.sleep(0.2)
     return records
 
