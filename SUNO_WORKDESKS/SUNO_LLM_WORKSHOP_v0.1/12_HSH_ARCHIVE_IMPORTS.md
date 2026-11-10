@@ -2,7 +2,7 @@
 
 **Created:** 2026-11-10  
 **Status:** Initial source-grounded synthesis; exploratory claims remain unvalidated.  
-**Source register:** ../.. /corpus/Source_Hopper/HSH_MUSIC_SOURCE_MAP_2026-11-10.md
+**Source register:** ../../corpus/Source_Hopper/HSH_MUSIC_SOURCE_MAP_2026-11-10.md
 
 ## Purpose and boundary
 
@@ -158,3 +158,30 @@ Use matched settings and multiple generations when possible. Change one principa
 2. Recover the actual audio and generation lineage for the strongest cases, especially Predict the Song Style and Blowing up Suno.
 3. Only then decide which observations deserve new controlled experiments or behavior-registry entries.
 4. Re-run Mersearch across all three HsH/SAT/HSH_RESOURCES repositories when a shared request lane is safely available. Do not overwrite an occupied request.
+
+
+## HsH operating and strategy sources reviewed
+
+These are source pointers, not imported HsH control documents. The hashes identify the exact files inspected during this intake.
+
+| HsH source | Blob SHA | Transferable use in KMcKM |
+|---|---|---|
+| WORKSPACES/COMMON/NEW_INSTANCE_START_HERE.md | 43b577d42b8cced83f8836934598081685ea3ff3 | Re-enter through the current front door; do not rely on stale memory or a summary alone. |
+| WORKSPACES/COMMON/INSTANCE_ONBOARDING_3REPO.md | fe40260cda5ce360909f2adfd64a3cc3e2c92a05 | Preserve source-repository roles and lineage instead of flattening archives. |
+| WORKSPACES/COMMON/MERSEARCH_WORKER_START_HERE.md | 086778737a004c467b0b52142d71aa5b961fc166 | Use the archive's intended search system; do not overwrite occupied request lanes; inspect matched originals. |
+| WORKSPACES/COMMON/MERSEARCH_RELEASES.md | e44316bd01a5d8618433e866a209fe63e04e25a6 | Pin the search-engine version and record search limitations. |
+| WORKSPACES/COMMON/WORKFLOW_BRANCHING_MAP.md | 756c506780072591b2f48e22044f3368a57bfa7d | Continue an existing branch where possible; split only for a genuinely distinct question; leave a next cursor and exit condition. |
+| WORKSPACES/COMMON/EXPLORATION_COMMONS_ROUTER.md | 8ca5336860c20784bffbae4e17ed75d1734bca80 | Keep loose ideas, discoveries, deliberate tests, and committed project work distinct; do not promote by enthusiasm alone. |
+| WORKSPACES/COMMON/CARPE_TURNEM_POLICY.md | b3730f84858ca1a0880bb85bdca9ac870b8a10ba | Take a safe bounded step now when authority and context already exist. |
+| WORKSPACES/COMMON/CITATION_AS_DEFAULT_POLICY.md | 5d68c9162c8e132d934d885a482994c286cf169c | Put provenance beside claims; distinguish source, project history, measurement, and decision. |
+| WORKSPACES/COMMON/CURRENT_WORKFLOW_ORIENTATION_V2.md | 2bb6d996ca61f41b2b3fb34480cab1acf906bd4f | Read the current task/repository context; distinguish source identity, currentness, and evidence status. |
+| WORKSPACES/COMMON/CROSS_REPO_SCRIPT_EXECUTION_STANDARD.md | 4ce5f3df67edac81a656bdc1efb92c07a7a3a648 | Declare read/write scope, preserve originals, use fresh-base/CAS writes, validate and independently read back. |
+| WORKSPACES/COMMON/SHARED_STATE_WRITE_SAFETY.md | 3a8695beb03ca8fe51ce3ee8fa52a9dec52ed1c5 | Treat shared semantic state carefully; prefer append-only or worker-local updates and compare-and-swap. |
+| DEVELOPMENT_FULL_CONVOS/30SEP26_DUMP/DEEP DIVE PROMPT KNELLING BOX.txt | 8f273b13fb26d81df943f0191901b7b39a0a3b1f | Candidate LLM elicitation structures; examples require evaluation and domain-specific content should not be transplanted wholesale. |
+| DEVELOPMENT_FULL_CONVOS/SAT_CONVOS_21/CGPT_USAGE.txt | c7597ec17b7eee3aebf0297e6ddc07527af5725e | Historical tool/plugin-use inventory. It contains personal/account-use material and was not copied into KMcKM. |
+
+### Deliberate non-transfers
+
+Do not transplant HsH's physics-specific symbols, theory authority, worker identities, scheduler/lease machinery, quarantine taxonomies, or three-repository control plane into KMcKM. Those are controls for a different project. KMcKM should retain its own evidence model, corpus hoppers, experiment ledger, and distinct Workbench design.
+
+The only Mersearch result from this intake is a bounded fallback discovery pass, not a verified Mersearch search. The next comprehensive archive search should wait until a request lane can be used without overwriting existing work.
