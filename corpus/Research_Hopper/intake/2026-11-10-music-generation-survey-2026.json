@@ -1,0 +1,40 @@
+{
+  "source_id": "SNC-20261110MUSICGENERATIONSURVEY2026JSON",
+  "canonical_url": "https://link.springer.com/article/10.1007/s10462-026-11582-x",
+  "original_url": "https://link.springer.com/article/10.1007/s10462-026-11582-x",
+  "title": "Recent advances in music generation: methods, evaluation, and challenges",
+  "platform": "Web",
+  "author_or_creator": null,
+  "published_at": "2026-06-02T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:45:00-05:00",
+  "source_type": "research_paper",
+  "hopper": "research",
+  "evidence_class": "third_party_analysis",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "The survey reviews representations, architectures, training, controllability and evaluation. Its abstract highlights semantic/temporal/symbolic mismatches, difficulty translating high-level conditions into stable fine-grained variation, and fragmented evaluation.",
+  "creator_interpretation": "Supports separating consistency, controllability, musical quality, representation and evaluation in our research design.",
+  "our_hypothesis": "Suno prompt effects may be entangled, coarse or context-dependent; community findings should be measured across separate musical dimensions and repeated generations.",
+  "limitations": [
+    "Research capture summary, not a full audit of the source.",
+    "Community observations are self-reported unless otherwise specified.",
+    "Do not infer Suno's proprietary architecture from these observations."
+  ],
+  "rights_and_terms": "Not assessed. Retain canonical source link; do not redistribute source code, datasets, audio or full copyrighted text without a compatible license or permission.",
+  "access_notes": "Public search result/page. Minimal metadata and summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "research-survey",
+    "controllability",
+    "evaluation",
+    "representation",
+    "conditioning"
+  ]
+}
