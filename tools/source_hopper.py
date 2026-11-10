@@ -78,7 +78,7 @@ def iso_date(value: str | None) -> str | None:
                 parsed = parsed.replace(tzinfo=timezone.utc)
             return parsed.astimezone(timezone.utc).isoformat()
         except Exception:
-            return value
+            return None
 
 def fingerprint(url: str, text: str) -> str:
     return hashlib.sha256((url + "\n" + text).encode("utf-8")).hexdigest()
