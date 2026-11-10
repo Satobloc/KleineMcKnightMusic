@@ -1,0 +1,40 @@
+{
+  "source_id": "SNC-20261110REDDITFAKELANGUAGEEXTENDEDJSON",
+  "canonical_url": "https://www.reddit.com/r/SunoAI/comments/1vqnqn0/how_i_learned_to_make_a_fake_language_song_in/",
+  "original_url": "https://www.reddit.com/r/SunoAI/comments/1vqnqn0/how_i_learned_to_make_a_fake_language_song_in/",
+  "title": "How I learned to make a fake language song in Suno",
+  "platform": "Reddit",
+  "author_or_creator": null,
+  "published_at": "2026-08-17T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:45:00-05:00",
+  "source_type": "community_post",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Creator reports variable pronunciation of invented syllables in Roman letters and more repeatable results using katakana, along with greater perceived coherence when syllable groups recur.",
+  "creator_interpretation": "Anecdotal evidence that orthography and repeated phonotactic patterns may affect vocal realization.",
+  "our_hypothesis": "Lyrics ingestion and vocal generation may be sensitive to learned script and syllable patterns; it does not demonstrate that the model performs explicit phonetic transcription.",
+  "limitations": [
+    "Research capture summary, not a full audit of the source.",
+    "Community observations are self-reported unless otherwise specified.",
+    "Do not infer Suno's proprietary architecture from these observations."
+  ],
+  "rights_and_terms": "Not assessed. Retain canonical source link; do not redistribute source code, datasets, audio or full copyrighted text without a compatible license or permission.",
+  "access_notes": "Public search result/page. Minimal metadata and summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "invented-language",
+    "orthography",
+    "phonotactics",
+    "lyrics",
+    "vocal-generation"
+  ]
+}
