@@ -18,6 +18,23 @@ class SourceHopperTests(unittest.TestCase):
             "https://example.com/path"
         )
 
+    def test_blocked_platform_metadata_hosts(self):
+        with self.assertRaises(ValueError):
+            hopper.validate_target("https://suno.com/song/example-id")
+        with self.assertRaises(ValueError):
+            hopper.validate_target("https://www.udio.com/songs/example-id")
+        hopper.validate_target("https://www.reddit.com/r/SunoAI/.rss")
+
+    def test_invalid_published_date_is_nullable_but_preserved(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = hopper.capture_record(
+                "https://example.com/post", "Example", "Description",
+                "other", "source", Path(temp), published="date unknown"
+            )
+            data = json.loads(path.read_text(encoding="utf-8"))
+            self.assertIsNone(data["published_at"])
+            self.assertEqual(data["published_at_raw"], "date unknown")
+
     def test_strip_html_removes_tags_and_script(self):
         self.assertEqual(
             hopper.strip_html("<h1>Hello</h1><script>bad()</script><p>world</p>"),
