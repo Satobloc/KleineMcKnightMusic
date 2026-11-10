@@ -208,6 +208,13 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "published_at_raw": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Verbatim feed/page date value retained for provenance when normalization fails or is not lossless."
     }
   },
   "additionalProperties": false
