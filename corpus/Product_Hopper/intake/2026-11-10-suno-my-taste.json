@@ -1,0 +1,39 @@
+{
+  "source_id": "SNC-20261110SUNOMYTASTEJSON",
+  "canonical_url": "https://help.suno.com/en/articles/11362561",
+  "original_url": "https://help.suno.com/en/articles/11362561",
+  "title": "My Taste",
+  "platform": "Suno Help Center",
+  "author_or_creator": null,
+  "published_at": "2026-03-26T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:00:00-05:00",
+  "source_type": "official_documentation",
+  "hopper": "product",
+  "evidence_class": "official_claim",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Official documentation says My Taste uses listening and creation habits for personalized experiences and Style Augmentation.",
+  "creator_interpretation": "Personalization is a potentially important confound for multi-user comparisons.",
+  "our_hypothesis": "The same text prompt might produce different outputs across users when personalization/augmentation differs, and identical outputs across settings should not be presumed.",
+  "limitations": [
+    "Captured from publicly accessible search results; full source not yet audited.",
+    "Community interpretation is not evidence of Suno internal architecture.",
+    "Short excerpt retained; consult canonical source for full context."
+  ],
+  "rights_and_terms": "Not assessed; link to source rather than republishing source content.",
+  "access_notes": "Public web source. Metadata and short research summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "official",
+    "personalization",
+    "my-taste",
+    "style-augmentation"
+  ]
+}
