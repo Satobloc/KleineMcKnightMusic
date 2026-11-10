@@ -1,0 +1,192 @@
+{
+  "batch_id": "2026-11-10-complex-adaptive-systems",
+  "retrieved_at": "2026-11-10",
+  "scope": "Cellular automata, evolutionary music, multi-agent composition, stigmergy, self-organization, and bio-inspired computation",
+  "records": [
+    {
+      "id": "musicswarm-2026",
+      "title": "MusicSwarm: Biologically Inspired Intelligence for Music Composition",
+      "year": 2026,
+      "type": "peer_reviewed_open_access_research",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aisy.202501253",
+      "preprint": "https://arxiv.org/abs/2509.11973",
+      "code": "https://github.com/lamm-mit/MusicSwarm",
+      "mechanisms": [
+        "decentralized_agents",
+        "stigmergy",
+        "peer_to_peer_signals",
+        "short_term_memory",
+        "consensus",
+        "role_differentiation"
+      ],
+      "claim": "A decentralized swarm of frozen foundation-model agents is reported to produce coherent long-form music through shared signals and consensus without weight updates.",
+      "limits": [
+        "Specific model and evaluation",
+        "Reported superiority is not universal",
+        "Not Suno research"
+      ]
+    },
+    {
+      "id": "musical-agents-2019",
+      "title": "Musical agents: A typology and state of the art towards Musical Metacreation",
+      "year": 2019,
+      "type": "peer_reviewed_review",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/09298215.2018.1511736",
+      "repository_record": "https://research.chalmers.se/en/publication/540194",
+      "mechanisms": [
+        "agent_roles",
+        "autonomy",
+        "interaction",
+        "multi_agent_systems"
+      ],
+      "claim": "A typology of 78 musical-agent systems maps roles and tasks in musical metacreation.",
+      "limits": [
+        "Review reflects surveyed systems and publication period"
+      ]
+    },
+    {
+      "id": "eldridge-bown-2018",
+      "title": "Biologically-Inspired and Agent-Based Algorithms for Music",
+      "year": 2018,
+      "type": "scholarly_handbook_chapter",
+      "url": "https://zenodo.org/records/1194152/files/EldridgeBown_2018_BioInspiredMusic.pdf",
+      "mechanisms": [
+        "evolutionary_search",
+        "multi_agent_composition",
+        "adaptive_collaborators",
+        "self_organization",
+        "creative_ecosystems",
+        "feedback"
+      ],
+      "claim": "Biological and ecological models offer approaches to emergent, adaptive, agent-based music making.",
+      "limits": [
+        "Scholarly synthesis, not a controlled comparison"
+      ]
+    },
+    {
+      "id": "quantum-ca-music-2023",
+      "title": "Generative Music with Partitioned Quantum Cellular Automata",
+      "year": 2023,
+      "type": "peer_reviewed_research",
+      "url": "https://www.mdpi.com/2076-3417/13/4/2401",
+      "doi": "10.3390/app13042401",
+      "mechanisms": [
+        "cellular_automata",
+        "local_update_rules",
+        "space_time_evolution",
+        "state_to_music_mapping"
+      ],
+      "claim": "Cellular automata can generate musical material by evolving local states and mapping patterns into sound.",
+      "limits": [
+        "Specific automaton and mapping",
+        "Not Suno research"
+      ]
+    },
+    {
+      "id": "artificial-life-music-2011",
+      "title": "Artificial Life Music: An A-Life Approach to Generating Melodies Featuring Genetic Algorithms",
+      "year": 2011,
+      "type": "academic_project_report",
+      "url": "https://suspended-chord.info/static/archived-course-pages/416/pdf/alm-report-final.pdf",
+      "mechanisms": [
+        "L_systems",
+        "cellular_automata",
+        "genetic_algorithms"
+      ],
+      "claim": "An implementation combines L-systems, cellular automata, and genetic algorithms for melody generation.",
+      "limits": [
+        "Project report, not peer-reviewed"
+      ]
+    },
+    {
+      "id": "evolutionary-music-2020",
+      "title": "Evolutionary music: applying evolutionary computation to the art of creating music",
+      "year": 2020,
+      "type": "peer_reviewed_review",
+      "url": "https://doi.org/10.1007/s10710-020-09380-7",
+      "pdf": "https://ncra.ucd.ie/papers/LoughranONeillGPEM2020.pdf",
+      "mechanisms": [
+        "genetic_programming",
+        "mutation",
+        "selection",
+        "fitness_functions",
+        "representation_search"
+      ],
+      "claim": "Evolutionary approaches support varied musical tasks; no single method or fitness function is best for all composition.",
+      "limits": [
+        "Review scope and methods vary by task"
+      ]
+    },
+    {
+      "id": "miranda-evolution-2004",
+      "title": "At the crossroads of evolutionary computation and music: self-programming synthesizers, swarm orchestras and the origins of melody",
+      "year": 2004,
+      "type": "peer_reviewed_research",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15157372/",
+      "doi": "10.1162/106365604773955120",
+      "mechanisms": [
+        "genetic_algorithms",
+        "cellular_automata",
+        "swarm_orchestras",
+        "melody_evolution"
+      ],
+      "claim": "Evolutionary computation has engineering, compositional, and musicological applications in music.",
+      "limits": [
+        "Historical survey and examples; not current generative AI"
+      ]
+    },
+    {
+      "id": "creative-dna-2022",
+      "title": "Creative DNA computing: splicing systems for music composition",
+      "year": 2022,
+      "type": "peer_reviewed_open_access_research",
+      "url": "https://link.springer.com/article/10.1007/s00500-022-06828-z",
+      "mechanisms": [
+        "sequence_splicing",
+        "recombination",
+        "local_compatibility_rules"
+      ],
+      "claim": "DNA-inspired splicing systems can be applied to four-part composition and jazz solo generation.",
+      "limits": [
+        "Few practical systems in the literature",
+        "Specific implementations"
+      ]
+    },
+    {
+      "id": "computational-creativity-music-2020",
+      "title": "Computational Creativity and Music Generation Systems: An Introduction to the State of the Art",
+      "year": 2020,
+      "type": "peer_reviewed_review",
+      "url": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2020.00014/full",
+      "doi": "10.3389/frai.2020.00014",
+      "mechanisms": [
+        "Markov_chains",
+        "grammars",
+        "constraints",
+        "evolutionary_algorithms",
+        "chaos",
+        "self_similarity",
+        "agents"
+      ],
+      "claim": "Music-generation systems use diverse procedural approaches, each with different structures and open challenges.",
+      "limits": [
+        "Review synthesis and publication-period scope"
+      ]
+    }
+  ],
+  "idea_seeds": [
+    "stigmergic_composition",
+    "shared_environment_as_memory",
+    "role_emergence_without_specialist_models",
+    "local_rules_global_form",
+    "multi_objective_evolution",
+    "mutation_selection_recombination",
+    "cellular_automaton_to_music_mapping",
+    "creative_ecosystems",
+    "independent_processes_with_feedback",
+    "fitness_function_bias",
+    "emergence_vs_randomness",
+    "agent_interaction_as_composition"
+  ],
+  "evidence_policy": "Preserve evidence class and scope. Treat claims about system performance as study-specific. Do not infer Suno architecture or prompt semantics from external generative systems."
+}
