@@ -1,0 +1,9 @@
+batch_id,query,source_type,search_scope,retrieved_at,notes
+SB001-01,"Suno prompt experiment comparison A/B test",community,Reddit/GitHub,2026-11-10,"Look for controlled comparisons and exact prompt/output pairs"
+SB001-02,"Suno invented language lyrics pronunciation phonetic syllables",community,Reddit,2026-11-10,"Phonotactics, writing system and vocal behavior"
+SB001-03,"Suno word order style prompt tags bracket experiment",community,Reddit/GitHub,2026-11-10,"Text structure, field placement, section tags"
+SB001-04,"Suno same prompt same lyrics multi-user compare outputs",community,Reddit,2026-11-10,"Inter-user variability and personalization confounds"
+SB001-05,"Suno prompt engineering guide raw co-occurring style dataset",tooling,GitHub,2026-11-10,"Inspect data provenance/license, avoid adopting undocumented co-occurrence as ground truth"
+SB001-06,"Suno prompt library examples with embedded output audio",community,GitHub,2026-11-10,"Prefer versioned prompts and audio-linked case studies"
+SB001-07,"Suno official model v6 v6-wild v6-mini weirdness variety style influence",product,Official Help Center,2026-11-10,"Version and setting controls"
+SB001-08,"Text-to-music generation prompt conditioning disentangled representation controllability",research,arXiv/papers,2026-11-10,"Compare open architecture mechanisms; do not infer Suno internals"
