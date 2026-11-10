@@ -21,3 +21,27 @@ This is a raw intake area, not a vetted reference or prompt library.
 - Community disagreements and failed attempts
 
 See `../Source_Hopper/record.schema.json` for the shared intake record.
+
+
+## Evidence triage
+Assign every source one evidence class:
+- official_claim
+- direct_artifact
+- creator_report
+- creator_interpretation
+- third_party_analysis
+- our_hypothesis
+- replicated_observation
+- unknown
+
+Do not rank a claim by popularity alone. Record sample count, model/version, input field, settings, output/audio evidence, dates, counterexamples and source independence where available.
+
+## Community-mining priorities
+1. Prompt + audio linked cases, with exact input and generation metadata.
+2. Controlled A/B or multi-user replications.
+3. Unusual-language, invented-language, phonetic and onomatopoeic experiments.
+4. Reports about prompt order, punctuation, tags, Style/Lyrics field separation, exclusions and settings.
+5. Failures, contradictory outcomes and model-version transitions.
+
+## Collection boundaries
+Prefer public APIs, public feeds and manually curated URLs. Respect platform terms, robots directives, rate limits, privacy and access controls. Do not scrape private/login-walled posts or bulk-download user audio.
