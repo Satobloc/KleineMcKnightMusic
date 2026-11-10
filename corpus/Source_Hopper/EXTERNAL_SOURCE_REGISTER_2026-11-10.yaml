@@ -1,0 +1,87 @@
+schema_version: 1
+register_date: "2026-11-10"
+policy:
+  - "A public repository or file is not automatically reusable."
+  - "Review code, documentation, datasets, model weights, audio and third-party material separately."
+  - "Preserve links and short research summaries when reuse rights are unclear."
+  - "Do not assume Suno's proprietary training associations are revealed by community co-occurrence tables."
+
+sources:
+  - id: casini_text_conditioning_2026
+    url: "https://doi.org/10.5334/tismir.273"
+    type: research_paper
+    evidence: direct_artifact
+    license: "CC BY 4.0 for the article"
+    status: "core-reading"
+    notes:
+      - "Analyzes 101,953 songs from 60,342 users (May-October 2024), including 81,434 Suno songs."
+      - "Separates Suno Style-of-Music tags from Lyrics-box prompt text."
+      - "Dataset metadata is not released; public song URL lists and code are shared."
+      - "Authors state collection conflicted with platform terms and provide their own legal/ethical discussion. Do not replicate acquisition without independent review."
+
+  - id: aims_prompts_repository
+    url: "https://github.com/mister-magpie/aims_prompts"
+    type: software_repository
+    license: "No repository license verified"
+    status: "reference-only"
+    notes:
+      - "Contains analysis notebook, visualizations, URL lists and metadata-fetching code."
+      - "Do not run metadata-fetching scripts against Suno/Udio without independent authorization and terms review."
+      - "The repository says collected metadata is not distributed due to legal concerns."
+
+  - id: dawgshart_style_cooccurrence
+    url: "https://github.com/dawgshart/suno-prompt-engineering-guide"
+    type: community_guide_and_dataset
+    license: "MIT applies only to original code/documentation; repository LICENSE expressly excludes Suno-owned data"
+    status: "reference-only-no-data-copy"
+    notes:
+      - "co_existing_styles.json and default_styles.json are described as Suno platform data."
+      - "The co-occurrence values have unclear collection methodology and interpretation."
+      - "Do not copy or redistribute the data files into this repository."
+      - "Treat claims about style gravity and training associations as hypotheses, not verified model internals."
+
+  - id: mttkllr_field_guide
+    url: "https://github.com/mttkllr/suno-field-guide"
+    type: community_guide
+    license: "No explicit reuse license verified"
+    status: "reference-only"
+    notes:
+      - "Useful for terminology, claims and test ideas."
+      - "Its probabilistic style-mesh and genre-cloud explanations need independent evidence."
+
+  - id: danlex_suno_prompt_lab
+    url: "https://github.com/danlex/suno-lab"
+    type: prompt_audio_case_archive
+    license: "No explicit reuse license verified"
+    status: "link-and-observe"
+    notes:
+      - "README describes 126+ versioned prompts with embedded Suno players and engineering notes."
+      - "Use source links and original creator attribution; do not mirror audio or copy bulk prompt content without permission."
+
+  - id: ai_music_style_recipes
+    url: "https://github.com/samuelgrupolimex-prog/ai-music-style-recipes"
+    type: dataset
+    license: "Repository declares CC0 1.0"
+    status: "candidate-reference-dataset"
+    notes:
+      - "564 style recipes with suggested BPM, Weirdness and Style Influence."
+      - "Maintainer states authorship and CC0 dedication; preserve attribution and verify any external elements."
+      - "Treat recommended numeric settings as author assertions, not experimentally established universal controls."
+
+  - id: suno_official_v6_faq
+    url: "https://help.suno.com/en/articles/13924481"
+    type: official_documentation
+    license: "Suno documentation; quotation/reuse limits apply"
+    status: "current-product-reference"
+    notes:
+      - "Describes v6, v6-wild, v6-mini, Variety and Max Mode."
+      - "Suno says Variety adjusts/updates style prompts; record it as a product-level experimental variable."
+
+  - id: suno_my_taste
+    url: "https://help.suno.com/en/articles/11362561"
+    type: official_documentation
+    license: "Suno documentation; quotation/reuse limits apply"
+    status: "current-product-reference"
+    notes:
+      - "My Taste learns from listening/creation habits and can personalize Style Augmentation."
+      - "Record personalization and avoid Style Augmentation during controlled baseline experiments."
