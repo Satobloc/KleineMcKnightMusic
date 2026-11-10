@@ -1,0 +1,41 @@
+{
+  "source_id": "SNC-20261110OFFICIALV6FAQVARIETYJSON",
+  "canonical_url": "https://help.suno.com/en/articles/13924481",
+  "original_url": "https://help.suno.com/en/articles/13924481",
+  "title": "v6 FAQ: Variety, model variants and Max Mode",
+  "platform": "Suno",
+  "author_or_creator": null,
+  "published_at": "2026-09-09T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:45:00-05:00",
+  "source_type": "official_documentation",
+  "hopper": "product",
+  "evidence_class": "official_claim",
+  "model_version": "v6",
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Suno documents v6 as its reliable flagship, v6-wild as less predictable and more exploratory, and v6-mini as the faster free model. Its FAQ says Variety adjusts or updates style prompts and suggests Variety 0 when retaining full control of style tags is desired.",
+  "creator_interpretation": "Visible style text may be transformed or augmented by a product setting before model generation. Model family, Variety and Max Mode are confounds to log.",
+  "our_hypothesis": "The Variety setting may alter the effective prompt conditioning; this creates a direct, testable product-level transformation variable. Its exact implementation is not disclosed.",
+  "limitations": [
+    "Research capture summary, not a full audit of the source.",
+    "Community observations are self-reported unless otherwise specified.",
+    "Do not infer Suno's proprietary architecture from these observations."
+  ],
+  "rights_and_terms": "Not assessed. Retain canonical source link; do not redistribute source code, datasets, audio or full copyrighted text without a compatible license or permission.",
+  "access_notes": "Public search result/page. Minimal metadata and summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "official",
+    "v6",
+    "v6-wild",
+    "v6-mini",
+    "variety",
+    "prompt-transformation"
+  ]
+}
