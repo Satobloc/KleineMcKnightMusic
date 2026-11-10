@@ -1,0 +1,42 @@
+{
+  "source_id": "SNC-20261110REDDITV6PROMPTGUIDEEXTENDEDJSON",
+  "canonical_url": "https://www.reddit.com/r/SunoAI/comments/1wcyryw/unofficial_suno_v6_prompting_guide_what_has_been/",
+  "original_url": "https://www.reddit.com/r/SunoAI/comments/1wcyryw/unofficial_suno_v6_prompting_guide_what_has_been/",
+  "title": "Unofficial Suno v6 Prompting Guide: What Has Been Working for Me",
+  "platform": "Reddit",
+  "author_or_creator": null,
+  "published_at": "2026-09-10T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:45:00-05:00",
+  "source_type": "community_post",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": "v6",
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "The author reports that moving to v6 changed outcomes from their earlier prompting habits, including distant vocals, disappearing layers, unexpected instrumentation and unusual genre hybrids. Their own starting calibration uses Variety 0, Weirdness below 50%, high Style Influence and standard v6 before experimenting with Max Mode.",
+  "creator_interpretation": "This is a model-version-specific personal field report with explicit acknowledgment that it is not official guidance or guaranteed behavior.",
+  "our_hypothesis": "A shift in model family may change which prompt strategies are effective. The author's suggested settings are a test condition, not a universal optimum.",
+  "limitations": [
+    "Research capture summary, not a full audit of the source.",
+    "Community observations are self-reported unless otherwise specified.",
+    "Do not infer Suno's proprietary architecture from these observations."
+  ],
+  "rights_and_terms": "Not assessed. Retain canonical source link; do not redistribute source code, datasets, audio or full copyrighted text without a compatible license or permission.",
+  "access_notes": "Public search result/page. Minimal metadata and summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "v6",
+    "model-version",
+    "prompting",
+    "variety",
+    "weirdness",
+    "style-influence",
+    "audio-quality"
+  ]
+}
