@@ -1,0 +1,40 @@
+{
+  "source_id": "SNC-20261110REDDITPROMPTINGSKILLJSON",
+  "canonical_url": "https://www.reddit.com/r/SunoAI/comments/1tau0gh/suno_prompting_guideopen_agent_skill/",
+  "original_url": "https://www.reddit.com/r/SunoAI/comments/1tau0gh/suno_prompting_guideopen_agent_skill/",
+  "title": "Suno Prompting Guide / Open Agent Skill",
+  "platform": "Reddit r/SunoAI",
+  "author_or_creator": null,
+  "published_at": "2026-05-12T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:00:00-05:00",
+  "source_type": "community_post",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Creator describes a prompting system developed through repeated use, with structured section labels and performance direction combined inside individual bracketed instructions.",
+  "creator_interpretation": "Creators are developing practical conventions for bundling arrangement, section and performance information.",
+  "our_hypothesis": "Grouping related instructions may help Suno interpret them as one local event, but the claim requires controlled comparisons with separated tags and plain language.",
+  "limitations": [
+    "Captured from publicly accessible search results; full source not yet audited.",
+    "Community interpretation is not evidence of Suno internal architecture.",
+    "Short excerpt retained; consult canonical source for full context."
+  ],
+  "rights_and_terms": "Not assessed; link to source rather than republishing source content.",
+  "access_notes": "Public web source. Metadata and short research summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "metatags",
+    "brackets",
+    "section-structure",
+    "performance-directions",
+    "prompt-grammar"
+  ]
+}
