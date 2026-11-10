@@ -26,3 +26,12 @@ These are discovery leads, not vetted recommendations. Capture exact source link
 - Creator claims about prompt weighting, tokenization, hidden model architecture, exact BPM control, tag scope or universal effects are hypotheses unless independently supported.
 - Favor examples with paired prompt and audio, exact model/version, settings, generation count, dates and negative results.
 - Preserve contradictory claims and likely confounds.
+
+
+## Second-batch research leads
+- https://www.reddit.com/r/SunoAI/comments/1wcyryw/unofficial_suno_v6_prompting_guide_what_has_been/ — detailed creator report on v6 differences, failures, hybrid styles and suggested calibration settings. Personal field report, not official.
+- https://www.reddit.com/r/SunoAI/comments/1wlgjon/experiment_with_suno_make_the_same_song_as_this/ — multi-user same-prompt replication proposal. Useful design; control personalization and account/model differences.
+- https://github.com/dawgshart/suno-prompt-engineering-guide — co_existing_styles.json and default_styles.json advertised. Audit dataset origin, collection method, date range, missingness, license and representativeness before quantitative analysis.
+- https://usesuno.com/guide/prompting/ — one-variable A/B protocol, equal sample counts and blind listening. A conventional methodology reference, not the future Prompt Workbench design.
+- https://link.springer.com/article/10.1007/s10462-026-11582-x — 2026 survey of music-generation methods, evaluation and challenges, including controllability and semantic/temporal alignment.
+- https://suno.com/release-notes/introducing-v6 — official v6 family and expanded multimodal/editing workflows.
