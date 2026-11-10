@@ -1,0 +1,42 @@
+{
+  "source_id": "SNC-20261110SUNOSTYLERECIPES564JSON",
+  "canonical_url": "https://github.com/samuelgrupolimex-prog/ai-music-style-recipes",
+  "original_url": "https://github.com/samuelgrupolimex-prog/ai-music-style-recipes",
+  "title": "AI Music Style Recipes: 564 Styles with BPM and Settings",
+  "platform": "GitHub",
+  "author_or_creator": null,
+  "published_at": null,
+  "retrieved_at": "2026-11-10T23:55:00-05:00",
+  "source_type": "dataset",
+  "hopper": "community",
+  "evidence_class": "direct_artifact",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Repository advertises a CC0 dataset of 564 music styles, with style prompts and suggested BPM, Weirdness and Style Influence, in CSV/JSON/Parquet formats.",
+  "creator_interpretation": "Potentially useful as a reference set for conventional prompt vocabulary and genre baselines, but the dataset's methodology and whether the settings were measured or curated need audit.",
+  "our_hypothesis": "Compare its genre/style descriptors and numeric recommendations against the user's GENRELAB/GENECLECT corpus and independently test selected entries.",
+  "limitations": [
+    "Metadata and excerpt summary from publicly accessible web results; inspect full source before promotion.",
+    "Community claims do not reveal proprietary Suno internals.",
+    "Do not redistribute source contents or external datasets without license/terms review."
+  ],
+  "rights_and_terms": "Not yet audited. Preserve canonical source and review license, terms, and attribution before reuse.",
+  "access_notes": "Public research source capture; short summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "style-dataset",
+    "564-styles",
+    "CC0-claim",
+    "BPM",
+    "weirdness",
+    "style-influence",
+    "dataset-audit"
+  ]
+}
