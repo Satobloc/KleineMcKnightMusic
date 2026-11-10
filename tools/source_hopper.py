@@ -26,10 +26,13 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urlparse, urlunparse
 from urllib.request import Request, urlopen
+from urllib.robotparser import RobotFileParser
 from urllib.error import URLError, HTTPError
 import xml.etree.ElementTree as ET
 
-UA = "KleineMcKnightMusic-SourceHopper/0.3 (+public research; see repository policy)"
+UA = "KleineMcKnightMusic-SourceHopper/0.4 (+public research; see repository policy)"
+BLOCKED_PLATFORM_HOSTS = {"suno.com", "www.suno.com", "udio.com", "www.udio.com"}
+_ROBOTS_CACHE: dict[str, RobotFileParser] = {}
 
 def canonicalize(url: str) -> str:
     p = urlparse(url.strip())
@@ -38,13 +41,54 @@ def canonicalize(url: str) -> str:
     path = re.sub(r"/+$", "", p.path) or "/"
     return urlunparse((p.scheme.lower(), p.netloc.lower(), path, "", "", ""))
 
+def validate_target(url: str) -> None:
+    parsed = urlparse(url)
+    host = (parsed.hostname or "").lower()
+    if host in BLOCKED_PLATFORM_HOSTS or host.endswith(".suno.com") or host.endswith(".udio.com"):
+        raise ValueError(
+            "Direct Suno/Udio metadata crawling is disabled. Use official documentation, "
+            "public community sources, compatible third-party datasets, or authorized exports."
+        )
+
+def check_robots(url: str, timeout: int = 10) -> bool:
+    parsed = urlparse(url)
+    origin = f"{parsed.scheme}://{parsed.netloc}"
+    robot_parser = _ROBOTS_CACHE.get(origin)
+    if robot_parser is None:
+        robots_url = origin + "/robots.txt"
+        request = Request(robots_url, headers={"User-Agent": UA})
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                content = response.read(512_000).decode(
+                    response.headers.get_content_charset() or "utf-8",
+                    errors="replace"
+                )
+            robot_parser = RobotFileParser()
+            robot_parser.set_url(robots_url)
+            robot_parser.parse(content.splitlines())
+            _ROBOTS_CACHE[origin] = robot_parser
+        except HTTPError as exc:
+            if exc.code != 404:
+                raise ValueError(f"Could not verify robots.txt for {origin}; refusing collection.") from exc
+            robot_parser = RobotFileParser()
+            robot_parser.set_url(robots_url)
+            robot_parser.parse([])
+            _ROBOTS_CACHE[origin] = robot_parser
+        except URLError as exc:
+            raise ValueError(f"Could not verify robots.txt for {origin}; refusing collection.") from exc
+    return robot_parser.can_fetch(UA, url)
+
 def fetch(url: str, timeout: int = 20) -> tuple[str, str, str]:
+    validate_target(url)
+    if not check_robots(url, timeout=min(timeout, 10)):
+        raise ValueError(f"robots.txt disallows collection of {url}")
     req = Request(url, headers={
         "User-Agent": UA,
         "Accept": "text/html,application/atom+xml,application/rss+xml,application/xml"
     })
     with urlopen(req, timeout=timeout) as response:
         final_url = response.geturl()
+        validate_target(final_url)
         content_type = response.headers.get("Content-Type", "")
         raw = response.read(2_000_000)
         charset = response.headers.get_content_charset() or "utf-8"
