@@ -40,3 +40,5 @@ Some initial assistant-mined records were committed before this unified location
 ## New source-derived mining records
 
 - [2026-11-10 — Predict the Song Style, mining pass 01](raw_dumps/2026-11-10-predict-the-song-style-mining-01.md): first substantive map of the 612-user-message conversation, including phonetic/lyric experiments, title-led style inference, filk and reference work, moderation observations, Almote development, non-Western structure research, and the 19 embedded audio-asset references. Derived summaries only; original conversation remains private.
+
+- [2026-11-10 — Fictional Record Metadata, case study pass 02](raw_dumps/2026-11-10-fictional-record-metadata-case-study-02.md): reconstructs U45–U94 title/artist experiments, captures user listening reports, corrects prior assistant overclaims, and defines controlled follow-up tests.
