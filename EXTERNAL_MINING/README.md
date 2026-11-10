@@ -42,3 +42,6 @@ Some initial assistant-mined records were committed before this unified location
 - [2026-11-10 — Predict the Song Style, mining pass 01](raw_dumps/2026-11-10-predict-the-song-style-mining-01.md): first substantive map of the 612-user-message conversation, including phonetic/lyric experiments, title-led style inference, filk and reference work, moderation observations, Almote development, non-Western structure research, and the 19 embedded audio-asset references. Derived summaries only; original conversation remains private.
 
 - [2026-11-10 — Fictional Record Metadata, case study pass 02](raw_dumps/2026-11-10-fictional-record-metadata-case-study-02.md): reconstructs U45–U94 title/artist experiments, captures user listening reports, corrects prior assistant overclaims, and defines controlled follow-up tests.
+
+- [2026-11-10 — GENECLECT structural taxonomy review, pass 03](raw_dumps/2026-11-10-geneclect-structural-taxonomy-review-03.md): reconstructs the 15-to-10 candidate filter, five proposed structural pairings, source corrections, and QA of the recovered terminology corpus.
+- [GENECLECT terminology corpus v1](structured_inputs/2026-11-10-geneclect-terminology-corpus-v1.csv): restored 304-entry, three-column CSV from the original conversation; structurally checked, not yet term-by-term verified.
