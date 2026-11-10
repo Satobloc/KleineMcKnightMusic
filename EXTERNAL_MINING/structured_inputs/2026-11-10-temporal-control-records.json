@@ -1,0 +1,180 @@
+{
+  "batch_id": "2026-11-10-temporal-control",
+  "retrieved_at": "2026-11-10",
+  "scope": "Global versus local, symbolic, audio, and time-varying conditions in music generation",
+  "records": [
+    {
+      "id": "mustango-2024",
+      "title": "Mustango: Toward Controllable Text-to-Music Generation",
+      "year": 2024,
+      "type": "peer_reviewed_paper",
+      "url": "https://aclanthology.org/2024.naacl-long.459/",
+      "doi": "10.18653/v1/2024.naacl-long.459",
+      "conditions": [
+        "text",
+        "chords",
+        "beats",
+        "tempo",
+        "key",
+        "harmonic_features",
+        "rhythmic_features",
+        "dynamic_features"
+      ],
+      "scope": [
+        "global",
+        "musical_attribute"
+      ],
+      "claim": "Music-specific text conditions can improve control beyond broad captions in the evaluated system.",
+      "limits": [
+        "Not Suno research",
+        "Results are model- and benchmark-specific"
+      ]
+    },
+    {
+      "id": "music-controlnet-2024",
+      "title": "Music ControlNet: Multiple Time-Varying Controls for Music Generation",
+      "year": 2024,
+      "type": "peer_reviewed_paper",
+      "url": "https://gclef-cmu.org/static/pdfs/2024musiccontrolnet.pdf",
+      "doi": "10.1109/TASLP.2024.3399026",
+      "conditions": [
+        "text_style",
+        "melody",
+        "dynamics",
+        "rhythm"
+      ],
+      "scope": [
+        "global",
+        "time_varying",
+        "composable"
+      ],
+      "claim": "Global style text can coexist with composable time-varying musical controls.",
+      "limits": [
+        "Not Suno research",
+        "Specific diffusion architecture and training setup"
+      ]
+    },
+    {
+      "id": "jasco-2024",
+      "title": "Joint Audio and Symbolic Conditioning for Temporally Controlled Text-to-Music Generation",
+      "year": 2024,
+      "type": "research_preprint",
+      "url": "https://arxiv.org/abs/2406.10970",
+      "conditions": [
+        "global_text",
+        "chords",
+        "melody",
+        "separated_drums",
+        "full_mix_audio"
+      ],
+      "scope": [
+        "global",
+        "local",
+        "temporal",
+        "multimodal"
+      ],
+      "claim": "Text, symbolic signals, and audio references can jointly condition generation.",
+      "limits": [
+        "Not Suno research",
+        "Preprint"
+      ]
+    },
+    {
+      "id": "musecontrollite-2025",
+      "title": "MuseControlLite: Multifunctional Music Generation with Lightweight Conditioners",
+      "year": 2025,
+      "type": "peer_reviewed_paper",
+      "url": "https://proceedings.mlr.press/v267/tsai25a.html",
+      "conditions": [
+        "time_varying_attributes",
+        "reference_audio",
+        "inpainting",
+        "outpainting"
+      ],
+      "scope": [
+        "temporal",
+        "local",
+        "audio_reference"
+      ],
+      "claim": "Positional embeddings matter for conditions that vary over time in the evaluated model.",
+      "limits": [
+        "Not Suno research",
+        "Task- and model-specific result"
+      ]
+    },
+    {
+      "id": "global-local-text-2025",
+      "title": "Diffusion based Text-to-Music Generation with Global and Local Text based Conditioning",
+      "year": 2025,
+      "type": "research_preprint",
+      "url": "https://arxiv.org/abs/2501.14680",
+      "conditions": [
+        "local_text_embedding",
+        "global_text_audio_embedding"
+      ],
+      "scope": [
+        "global",
+        "local"
+      ],
+      "claim": "Combining global and local representations can shift trade-offs between adherence and audio quality.",
+      "limits": [
+        "Not Suno research",
+        "Preprint and benchmark-specific"
+      ]
+    },
+    {
+      "id": "music-generation-survey-2026",
+      "title": "Recent advances in music generation: methods, evaluation, and challenges",
+      "year": 2026,
+      "type": "survey",
+      "url": "https://doi.org/10.1007/s10462-026-11582-x",
+      "conditions": [
+        "semantic_labels",
+        "symbolic_structure",
+        "interactive_control",
+        "latent_control"
+      ],
+      "scope": [
+        "controllability",
+        "revision",
+        "constraint_composition"
+      ],
+      "claim": "Controllability includes specifying, combining, and revising constraints without excessive entanglement.",
+      "limits": [
+        "Review synthesis, not a Suno evaluation"
+      ]
+    },
+    {
+      "id": "community-combined-tags-2026",
+      "title": "Suno Prompting Guide/Open Agent Skill",
+      "year": 2026,
+      "type": "community_observation",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1tau0gh/suno_prompting_guideopen_agent_skill/",
+      "conditions": [
+        "combined_bracket_tags",
+        "section_labels",
+        "performance_directions"
+      ],
+      "scope": [
+        "section_local",
+        "textual"
+      ],
+      "claim": "One creator reports better results from combining section and performance cues in a single bracketed instruction.",
+      "limits": [
+        "Anecdotal",
+        "No controlled comparison",
+        "Not official syntax documentation"
+      ]
+    }
+  ],
+  "idea_seeds": [
+    "global_identity_vs_local_event",
+    "temporal_trajectory_as_instruction",
+    "separate_control_channels",
+    "reference_inheritance",
+    "scope_and_position_as_information",
+    "constraint_composition",
+    "preservation_vs_mutation"
+  ],
+  "evidence_policy": "Do not infer Suno internals from other systems. Preserve paper, survey, preprint, official documentation, and community observation as distinct evidence classes."
+}
