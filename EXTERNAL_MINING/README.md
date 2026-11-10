@@ -47,3 +47,5 @@ Some initial assistant-mined records were committed before this unified location
 - [GENECLECT terminology corpus v1](structured_inputs/2026-11-10-geneclect-terminology-corpus-v1.csv): restored 304-entry, three-column CSV from the original conversation; structurally checked, not yet term-by-term verified.
 
 - [2026-11-10 — GENECLECT sampled source verification, pass 04](raw_dumps/2026-11-10-geneclect-source-verification-04.md): checks the five structural pairings against institutional and scholarly sources; clarifies scope, regional variation, and several terminology distinctions.
+
+- [2026-11-10 — Predict the Song Style, phonetic and temporal experiments, pass 05](raw_dumps/2026-11-10-predict-the-song-style-phonetic-temporal-pass-05.md): maps U1–U44, including rhyme-preserving phonetic substitution, Swidgyy mixed language, staged vocal erosion, SPOOKENCHOLY's three-clock architecture, numeric motif notation, and user corrections to prior assistant interpretations.
