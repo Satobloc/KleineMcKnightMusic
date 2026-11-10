@@ -23,3 +23,4 @@ Each intake record should be immutable after capture. Corrections and later asse
 - [Second-pass source map](HSH_MUSIC_SECOND_PASS_2026-11-10.md)
 
 These are provenance registers and triage notes, not endorsements or approvals for reuse. HsH remains the authoritative location for the original conversations and source files.
+- [User-supplied music and reference drop](USER_REFERENCE_DROP_2026-11-10.md) — 12 uploaded conversation exports, deduplicated and routed without copying private raw chats.
