@@ -1,0 +1,38 @@
+{
+  "source_id": "SNC-20261110REDDITV6PROMPTTEMPLATEJSON",
+  "canonical_url": "https://www.reddit.com/r/SunoAI/comments/1xfnmdy/suno_v6_prompts_complete_guide_with_copyandpaste/",
+  "original_url": "https://www.reddit.com/r/SunoAI/comments/1xfnmdy/suno_v6_prompts_complete_guide_with_copyandpaste/",
+  "title": "Suno v6 Prompts: Complete Guide With Copy-and-Paste Examples",
+  "platform": "Reddit r/SunoAI",
+  "author_or_creator": null,
+  "published_at": "2026-10-26T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:30:00-05:00",
+  "source_type": "community_post",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": "v6",
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "A community post claims v6 responds differently from older versions and advocates clearer structure and more explicit instructions.",
+  "creator_interpretation": "The post proposes genre, style, instruments, vocals, rhythm, structure and additional notes as prompt dimensions.",
+  "our_hypothesis": "Useful as a source of testable prompt dimensions, not evidence that this exact template maps to internal model controls.",
+  "limitations": [
+    "Search-result-level capture; full content and linked media not independently audited.",
+    "Community claim is not evidence of Suno's private architecture.",
+    "Rights, terms, license and data provenance require review."
+  ],
+  "rights_and_terms": "Not assessed. Link to original; do not redistribute code, datasets, audio or full post without permission/compatible license.",
+  "access_notes": "Public web source. Metadata and summarized observations only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "v6",
+    "prompt-template",
+    "field-guide"
+  ]
+}
