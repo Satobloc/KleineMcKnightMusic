@@ -1,0 +1,41 @@
+{
+  "source_id": "SNC-20261110SUNOGPTCOMMASVSPIPESJSON",
+  "canonical_url": "https://sunogpt.app/blog/suno-commas-vs-pipes-tested",
+  "original_url": "https://sunogpt.app/blog/suno-commas-vs-pipes-tested",
+  "title": "Stop Using Commas in Suno? I Actually Tested It",
+  "platform": "SunoGPT blog",
+  "author_or_creator": null,
+  "published_at": "2026-07-29T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:55:00-05:00",
+  "source_type": "other",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Author reports comparing comma-separated and pipe-separated bracket tags for falsetto, a sax solo and a breakdown. Same style and lyrics, Weirdness 0, eight generations per version. The author reports no observable difference between punctuation variants; sax appeared in all eight examples for both.",
+  "creator_interpretation": "Potentially useful negative result about comma-vs-pipe myths. The experiment is self-reported and needs independent replication; the author also promotes a prompt product, which is a relevant conflict/bias note.",
+  "our_hypothesis": "The lexical content inside the tag may matter more than the comma/pipe separator for those three examples, but the sample is small and narrow.",
+  "limitations": [
+    "Metadata and excerpt summary from publicly accessible web results; inspect full source before promotion.",
+    "Community claims do not reveal proprietary Suno internals.",
+    "Do not redistribute source contents or external datasets without license/terms review."
+  ],
+  "rights_and_terms": "Not yet audited. Preserve canonical source and review license, terms, and attribution before reuse.",
+  "access_notes": "Public research source capture; short summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "punctuation",
+    "comma-vs-pipe",
+    "bracket-tags",
+    "eight-generations",
+    "negative-result",
+    "replication-needed"
+  ]
+}
