@@ -46,6 +46,13 @@ The future Suno Prompt Workbench will be built separately. It should draw from c
 - Minimize personal data and never collect credentials.
 - Record scraper version, query, retrieval timestamp, crawl scope, errors and coverage limitations.
 - Every automated capture remains unverified until reviewed.
+- The current source_hopper.py is a conservative public URL/RSS/Atom metadata collector. It is not a search engine, browser renderer, Reddit API client, or audio scraper.
+- The current script checks robots.txt and blocks direct Suno/Udio metadata crawling by default. Use official documentation, community discussions, published analyses, compatible third-party datasets, user-authorized exports, or explicitly permissioned data.
+- Do not reproduce the acquisition method from Casini et al. by scraping Suno/Udio public playlists. Their article says their collection conflicted with platform terms and explains their own legal rationale. That is not permission for this project.
+- The Casini et al. companion repository shares URL lists and analysis code but does not distribute collected song metadata. Its metadata-fetching code is reference material only pending independent authorization and terms review.
+- The co-existing-styles data in dawgshart/suno-prompt-engineering-guide is explicitly described in its LICENSE as Suno-owned and excluded from that repository's MIT license. Do not copy it into this repository.
+- CC0 or open-source claims on third-party repositories must be checked against the exact files, data provenance, and third-party components before adoption.
+- The source hopper has unit tests and a CI workflow, but test execution must be verified from an actual Actions run before labeling the utility production-ready.
 
 ## Future modules
 A. Query planner / search-run logger.
