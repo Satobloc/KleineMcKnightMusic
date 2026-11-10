@@ -1,0 +1,40 @@
+{
+  "source_id": "SNC-20261110GITHUBCOOCCURRENCEDATAJSON",
+  "canonical_url": "https://github.com/dawgshart/suno-prompt-engineering-guide",
+  "original_url": "https://github.com/dawgshart/suno-prompt-engineering-guide",
+  "title": "Suno Prompt Engineering Guide with co-existing style data",
+  "platform": "GitHub",
+  "author_or_creator": null,
+  "published_at": null,
+  "retrieved_at": "2026-11-10T23:00:00-05:00",
+  "source_type": "software_repository",
+  "hopper": "community",
+  "evidence_class": "direct_artifact",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Repository states it contains co-occurring style values and default style records, along with community observations and prompt guidance.",
+  "creator_interpretation": "Could become a source of candidate genre-association graphs if provenance and collection methodology are understood.",
+  "our_hypothesis": "Style co-occurrence might reveal clusters and common genre associations, but does not directly reveal neural model embeddings or token weights.",
+  "limitations": [
+    "Captured from publicly accessible search results; full source not yet audited.",
+    "Community interpretation is not evidence of Suno internal architecture.",
+    "Short excerpt retained; consult canonical source for full context."
+  ],
+  "rights_and_terms": "Not assessed; link to source rather than republishing source content.",
+  "access_notes": "Public web source. Metadata and short research summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "style-cooccurrence",
+    "dataset",
+    "genre-graph",
+    "provenance-audit",
+    "community-data"
+  ]
+}
