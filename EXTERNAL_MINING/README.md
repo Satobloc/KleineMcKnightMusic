@@ -49,3 +49,6 @@ Some initial assistant-mined records were committed before this unified location
 - [2026-11-10 — GENECLECT sampled source verification, pass 04](raw_dumps/2026-11-10-geneclect-source-verification-04.md): checks the five structural pairings against institutional and scholarly sources; clarifies scope, regional variation, and several terminology distinctions.
 
 - [2026-11-10 — Predict the Song Style, phonetic and temporal experiments, pass 05](raw_dumps/2026-11-10-predict-the-song-style-phonetic-temporal-pass-05.md): maps U1–U44, including rhyme-preserving phonetic substitution, Swidgyy mixed language, staged vocal erosion, SPOOKENCHOLY's three-clock architecture, numeric motif notation, and user corrections to prior assistant interpretations.
+
+- [2026-11-10 — Write Suno Prompts, source map and method extraction, pass 06](raw_dumps/2026-11-10-write-suno-prompts-source-map-06.md): records the user's nano-genre prompt specification, 40-item worklist progress (1–28 drafted), Funeral Polka revision, and spoken-word field-tape prompt lineage.
+- [2026-11-10 — Kroger fairground engine, case study pass 07](raw_dumps/2026-11-10-kroger-fairground-engine-case-study-07.md): recovers the exact prompt header and architecture from the Suno Library export, and indexes two full generations plus two previews without treating model tags as listening evidence.
