@@ -1,0 +1,273 @@
+{
+  "batch_id": "2026-11-10-symbolic-phonetic-grammar",
+  "retrieved_at": "2026-11-10",
+  "scope": "Symbolic notation, intermediate musical plans, musical grammar, phonetics, syllables, singing alignment, and fine-grained text-audio relations",
+  "records": [
+    {
+      "id": "notagen-2025",
+      "title": "NotaGen: Advancing Musicality in Symbolic Music Generation with Large Language Model Training Paradigms",
+      "year": 2025,
+      "type": "peer_reviewed_paper",
+      "url": "https://ijcai.org/proceedings/2025/1134",
+      "representations": [
+        "ABC_notation",
+        "metadata_header",
+        "multivoice_body",
+        "period_composer_instrumentation_prompt"
+      ],
+      "scope": [
+        "symbolic",
+        "hierarchical",
+        "long_sequence"
+      ],
+      "claim": "A language-model training pipeline can generate symbolic sheet music from ABC notation with metadata prompts.",
+      "limits": [
+        "Not Suno research",
+        "Classical symbolic music task"
+      ]
+    },
+    {
+      "id": "text2score-2026",
+      "title": "Text2Score: Generating Sheet Music From Textual Prompts",
+      "year": 2026,
+      "type": "research_preprint",
+      "url": "https://arxiv.org/abs/2605.13431",
+      "representations": [
+        "natural_language",
+        "measure_wise_plan",
+        "ABC_notation",
+        "sheet_music"
+      ],
+      "scope": [
+        "planning",
+        "symbolic",
+        "measure_level"
+      ],
+      "claim": "A structured intermediate plan can translate natural-language intent into generated notation.",
+      "limits": [
+        "Preprint",
+        "Not Suno research"
+      ]
+    },
+    {
+      "id": "musiclayout-2026",
+      "title": "MusicLayout: Explicit Structural Planning for Controllable Text-to-Music Generation",
+      "year": 2026,
+      "type": "research_preprint",
+      "url": "https://arxiv.org/abs/2608.09035",
+      "representations": [
+        "time_aligned_layout",
+        "sections",
+        "textures",
+        "repetitions",
+        "variations",
+        "instrument_arrangement"
+      ],
+      "scope": [
+        "global",
+        "section",
+        "temporal"
+      ],
+      "claim": "An inspectable time-aligned layout can serve as an intermediate representation before audio generation.",
+      "limits": [
+        "Preprint",
+        "Not Suno research"
+      ]
+    },
+    {
+      "id": "nlp-symbolic-music-survey",
+      "title": "Natural Language Processing Methods for Symbolic Music Generation and Information Retrieval: A Survey",
+      "year": 2025,
+      "type": "peer_reviewed_survey",
+      "url": "https://doi.org/10.1145/3714457",
+      "representations": [
+        "musical_grammar",
+        "symbolic_tokens",
+        "polyphonic_sequences"
+      ],
+      "scope": [
+        "syntax",
+        "expectation",
+        "structure"
+      ],
+      "claim": "Music grammar research models relations such as tension/relaxation and harmony, while acknowledging the absence of a universally accepted grammar.",
+      "limits": [
+        "Survey synthesis",
+        "Domain/style dependence"
+      ]
+    },
+    {
+      "id": "transinger-2025",
+      "title": "Transinger: Cross-Lingual Singing Voice Synthesis via IPA-Based Phonetic Alignment",
+      "year": 2025,
+      "type": "peer_reviewed_paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12542845/",
+      "representations": [
+        "IPA",
+        "phoneme_alignment",
+        "multilingual_lyrics"
+      ],
+      "scope": [
+        "phonetic",
+        "cross_lingual"
+      ],
+      "claim": "IPA offers a shared phonetic representation for cross-lingual singing synthesis.",
+      "limits": [
+        "Dedicated singing synthesis model",
+        "Does not imply Suno parses IPA prompts"
+      ]
+    },
+    {
+      "id": "prompt-singer-2024",
+      "title": "Prompt-Singer: Controllable Singing-Voice-Synthesis with Natural Language",
+      "year": 2024,
+      "type": "peer_reviewed_paper",
+      "url": "https://aclanthology.org/2024.naacl-long.268/",
+      "representations": [
+        "lyrics",
+        "phonemes",
+        "phoneme_duration",
+        "pitch",
+        "natural_language_style_prompt"
+      ],
+      "scope": [
+        "phonetic",
+        "temporal",
+        "vocal_style"
+      ],
+      "claim": "A singing synthesis pipeline can separate lyric content, phoneme timing, pitch, and style prompting.",
+      "limits": [
+        "Dedicated singing synthesis pipeline",
+        "Not Suno research"
+      ]
+    },
+    {
+      "id": "singing-to-speech-2025",
+      "title": "Singing to Speech Conversion with Generative Flow",
+      "year": 2025,
+      "type": "peer_reviewed_paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11893632/",
+      "representations": [
+        "phonetic_content",
+        "pitch",
+        "duration",
+        "timbre",
+        "alignment"
+      ],
+      "scope": [
+        "phonetic",
+        "temporal",
+        "performance"
+      ],
+      "claim": "Transcription to ordinary text can discard phonetic and timing information present in singing.",
+      "limits": [
+        "Conversion task",
+        "Not prompt interpretation research"
+      ]
+    },
+    {
+      "id": "stars-2025",
+      "title": "STARS: A Unified Framework for Singing Transcription, Alignment, and Refined Style Annotation",
+      "year": 2025,
+      "type": "peer_reviewed_paper",
+      "url": "https://aclanthology.org/2025.findings-acl.781/",
+      "representations": [
+        "phoneme_alignment",
+        "note_timing",
+        "vocal_technique",
+        "global_style"
+      ],
+      "scope": [
+        "frame",
+        "phoneme",
+        "word",
+        "note",
+        "sentence"
+      ],
+      "claim": "Singing can be annotated at nested phonetic, note, technique, and global-style levels.",
+      "limits": [
+        "Annotation and synthesis research",
+        "Not Suno research"
+      ]
+    },
+    {
+      "id": "figma-2026",
+      "title": "FIGMA: Towards FIne-Grained Music retrievAl",
+      "year": 2026,
+      "type": "peer_reviewed_paper",
+      "url": "https://aclanthology.org/2026.acl-long.2197/",
+      "representations": [
+        "global_text_audio_alignment",
+        "frame_level_token_alignment",
+        "fine_grained_music_caption"
+      ],
+      "scope": [
+        "global",
+        "local",
+        "attribute_binding"
+      ],
+      "claim": "Fine-grained text-audio alignment can improve retrieval of musical attributes such as tempo, key, chords, and rhythm.",
+      "limits": [
+        "Retrieval task, not generation",
+        "Not Suno research"
+      ]
+    },
+    {
+      "id": "dont-clap-2026",
+      "title": "Don't CLAP: Are Music-Text Models Bag-of-Words?",
+      "year": 2026,
+      "type": "research_preprint",
+      "url": "https://arxiv.org/abs/2609.30540",
+      "representations": [
+        "attribute_swap_tests",
+        "instrument_role_binding",
+        "temporal_order"
+      ],
+      "scope": [
+        "semantics",
+        "binding",
+        "order"
+      ],
+      "claim": "Tested contrastive music-text models often fail to distinguish captions that differ in attribute bindings or order.",
+      "limits": [
+        "Preprint",
+        "Model and benchmark scope limited"
+      ]
+    },
+    {
+      "id": "clamp3-2025",
+      "title": "CLaMP 3: Universal Music Information Retrieval Across Unaligned Modalities and Unseen Languages",
+      "year": 2025,
+      "type": "peer_reviewed_paper",
+      "url": "https://aclanthology.org/2025.findings-acl.133/",
+      "representations": [
+        "sheet_music",
+        "performance_signal",
+        "audio",
+        "multilingual_text"
+      ],
+      "scope": [
+        "cross_modal",
+        "cross_lingual"
+      ],
+      "claim": "A shared retrieval framework can align music modalities and multilingual text, including unseen languages.",
+      "limits": [
+        "Retrieval task",
+        "Not Suno research"
+      ]
+    }
+  ],
+  "idea_seeds": [
+    "notation_as_prompt_language",
+    "header_body_split",
+    "intermediate_score_plan",
+    "music_as_grammar",
+    "IPA_as_sound_material",
+    "phoneme_syllable_word_hierarchy",
+    "vocal_performance_not_equal_to_lyrics",
+    "attribute_binding_not_bag_of_words",
+    "parallel_representation_translation",
+    "symbolic_plan_vs_audio_realization"
+  ],
+  "evidence_policy": "Keep peer-reviewed work, preprints, surveys, community claims, and Suno-specific observations separate. Do not infer Suno's parsing or architecture from other systems."
+}
