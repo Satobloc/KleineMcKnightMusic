@@ -64,7 +64,7 @@ Git blob SHA-1 values below identify the exact uploaded JSON bytes as received. 
 - **Uploaded file:** `ND Predict the Song Style - raw.json`
 - **Conversation ID:** `6ad0cf68-eebc-83ea-9da8-4aa0b56bad53`
 - **Dates:** 2026-10-15; updated 2026-11-02
-- **User messages:** 597
+- **User-authored messages:** 612 (3,233 message-bearing mapping entries across all roles / tool records)
 - **Git blob SHA-1:** `4cd9a30c14b5eb206e6fd36c9a94e0ff43026ba5`
 - **Relationship to earlier intake:** this is the larger raw export of the same conversation already represented in HsH's `Predict the Song Style.txt` and in KMcKM's `corpus/Grab_Bag/Predict the Song Style — raw__chunk_0001_of_0003.txt`. Treat the current raw upload as the newer / fuller source snapshot, not a second independent conversation. The previously recorded 527-message description refers to the earlier derivative and should not be used as the count for this raw export.
 - **Main content:** extensive iterative prompt and output exploration: per-word / per-morpheme rhyme; syllable replacement by closest English-sounding syllables; malformed, pseudo-language and multilingual lyric material; unusual cross-regional genre combinations; user-reported descriptions of generated results; genre-structure taxonomy; gathering native terminology and musicological descriptors; and plans for Suno prompt, musical structure, instrument and Sonic Pi tooling.
