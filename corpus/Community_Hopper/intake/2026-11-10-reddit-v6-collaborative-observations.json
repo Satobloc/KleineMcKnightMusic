@@ -1,0 +1,39 @@
+{
+  "source_id": "SNC-20261110REDDITV6COLLABORATIVEOBSERVATIONSJSON",
+  "canonical_url": "https://www.reddit.com/r/SunoAI/comments/1wbu7fw/suno_v6_lets_share_what_actually_works/",
+  "original_url": "https://www.reddit.com/r/SunoAI/comments/1wbu7fw/suno_v6_lets_share_what_actually_works/",
+  "title": "Suno V6: Let's Share What Actually Works",
+  "platform": "Reddit r/SunoAI",
+  "author_or_creator": null,
+  "published_at": "2026-09-09T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:30:00-05:00",
+  "source_type": "community_post",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": "v6",
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Community request asks contributors to share model, mode, sliders, Max Mode, personalization, prompts, workflow, successes, failures and before/after links.",
+  "creator_interpretation": "The post explicitly solicits comparable metadata and failures.",
+  "our_hypothesis": "Could become a community observation protocol if responses can be collected with public provenance.",
+  "limitations": [
+    "Search-result-level capture; full content and linked media not independently audited.",
+    "Community claim is not evidence of Suno's private architecture.",
+    "Rights, terms, license and data provenance require review."
+  ],
+  "rights_and_terms": "Not assessed. Link to original; do not redistribute code, datasets, audio or full post without permission/compatible license.",
+  "access_notes": "Public web source. Metadata and summarized observations only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "v6",
+    "community-replication",
+    "metadata",
+    "failure-reports"
+  ]
+}
