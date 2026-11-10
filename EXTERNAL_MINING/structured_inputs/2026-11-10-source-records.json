@@ -1,0 +1,199 @@
+{
+  "collection": "external-mining-quarry",
+  "retrieved_on": "2026-11-10",
+  "purpose": "Research and idea sources for later creative work; not a prompt-workbench specification.",
+  "records": [
+    {
+      "id": "mustango-2024",
+      "title": "Mustango: Toward Controllable Text-to-Music Generation",
+      "url": "https://aclanthology.org/2024.naacl-long.459/",
+      "type": "peer_reviewed_research",
+      "date": "2024",
+      "evidence": "Research system conditions diffusion music generation on general text and musical features including chords, beats, tempo, and key.",
+      "idea_seeds": [
+        "multi-channel musical description",
+        "music-domain feature constraints",
+        "natural language mapped to explicit musical attributes"
+      ],
+      "confidence": "high for paper claims; no inference about Suno internals"
+    },
+    {
+      "id": "music-controlnet-2024",
+      "title": "Music ControlNet: Multiple Time-Varying Controls for Music Generation",
+      "url": "https://gclef-cmu.org/static/pdfs/2024musiccontrolnet.pdf",
+      "type": "peer_reviewed_research",
+      "date": "2024",
+      "evidence": "Research introduces time-varying controls for melody, dynamics, and rhythm in diffusion-based music generation.",
+      "idea_seeds": [
+        "temporal trajectories",
+        "event placement",
+        "global description versus local instruction"
+      ],
+      "confidence": "high for paper claims; transfer to Suno is speculative"
+    },
+    {
+      "id": "musecontrollite-2025",
+      "title": "MuseControlLite: Multifunctional Music Generation with Lightweight Conditioners",
+      "url": "https://proceedings.mlr.press/v267/tsai25a.html",
+      "type": "peer_reviewed_research",
+      "date": "2025",
+      "evidence": "Study reports positional embeddings improve control accuracy for time-varying musical attributes and demonstrates conditioning for melody, inpainting, and outpainting.",
+      "idea_seeds": [
+        "position as meaning",
+        "localized constraints",
+        "inpainting/outpainting as compositional operations"
+      ],
+      "confidence": "high for paper claims"
+    },
+    {
+      "id": "segtune-2026",
+      "title": "SegTune: Structured and Fine-Grained Control for Song Generation",
+      "url": "https://aclanthology.org/2026.acl-long.586/",
+      "type": "peer_reviewed_research",
+      "date": "2026",
+      "evidence": "Global prompts maintain stylistic coherence while local segment prompts align musical descriptions to time windows; lyric duration prediction supports alignment.",
+      "idea_seeds": [
+        "global/local duality",
+        "timestamped lyric phrases",
+        "segment-specific instruction bundles"
+      ],
+      "confidence": "high for paper claims; transfer to Suno is speculative"
+    },
+    {
+      "id": "music-generation-survey-2026",
+      "title": "Recent advances in music generation: methods, evaluation, and challenges",
+      "url": "https://link.springer.com/article/10.1007/s10462-026-11582-x",
+      "type": "open_access_survey",
+      "date": "2026-06-02",
+      "evidence": "Survey spans symbolic, audio, and multimodal music generation and highlights long-range structure, consistency, controllability, representation, and evaluation challenges.",
+      "idea_seeds": [
+        "multiple representations of one musical object",
+        "cross-modal translation",
+        "long-range structure as unresolved problem"
+      ],
+      "confidence": "high for survey content"
+    },
+    {
+      "id": "suno-creative-sliders",
+      "title": "How to Use: Creative Sliders",
+      "url": "https://help.suno.com/en/articles/6141377",
+      "type": "official_documentation",
+      "date": "2025-06-03",
+      "evidence": "Suno describes Weirdness, Style Influence, and Audio Influence as user-facing controls.",
+      "idea_seeds": [
+        "prompt content and slider settings are separate conditioning dimensions",
+        "safe/chaos as a user-facing continuum"
+      ],
+      "confidence": "high for documented UI; internals unknown"
+    },
+    {
+      "id": "suno-exclude",
+      "title": "How do I exclude elements of a song?",
+      "url": "https://help.suno.com/en/articles/3161921",
+      "type": "official_documentation",
+      "date": "2025-12-19",
+      "evidence": "Suno documents Exclude as an Advanced Option for specifying unwanted elements.",
+      "idea_seeds": [
+        "negative constraints as separate input channel",
+        "contrast between positive and excluded descriptors"
+      ],
+      "confidence": "high for documented UI"
+    },
+    {
+      "id": "suno-voices",
+      "title": "Voices FAQ",
+      "url": "https://help.suno.com/en/articles/11362433",
+      "type": "official_documentation",
+      "date": "2026-03-26",
+      "evidence": "Suno documents Voices, continued access to Style Personas, and Audio Influence behavior for voice use.",
+      "idea_seeds": [
+        "identity/voice continuity as a distinct dimension",
+        "style identity versus vocal identity"
+      ],
+      "confidence": "high for documented UI"
+    },
+    {
+      "id": "community-v6-fieldnotes",
+      "title": "Unofficial Suno v6 Prompting Guide: What Has Been Working for Me",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1wcyryw/unofficial_suno_v6_prompting_guide_what_has_been/",
+      "type": "creator_observation",
+      "date": "2026-09-10",
+      "evidence": "Creator reports both generation failures and unexpected genre/rhythm successes in v6.",
+      "idea_seeds": [
+        "failure taxonomy",
+        "productive drift",
+        "version-specific prompt behavior"
+      ],
+      "confidence": "low to moderate; single creator report"
+    },
+    {
+      "id": "community-v55-structure",
+      "title": "V5.5 Prompt Structure",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1s73tgz/v55_prompt_structure/",
+      "type": "creator_observation",
+      "date": "2026-03-29",
+      "evidence": "Creator reports fewer descriptors, explicit performance directions, and separation of sound from delivery were helpful.",
+      "idea_seeds": [
+        "sound/delivery separation",
+        "sparse versus dense instruction sets"
+      ],
+      "confidence": "low; individual report"
+    },
+    {
+      "id": "community-combined-tags",
+      "title": "Suno Prompting Guide/Open Agent Skill",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1tau0gh/suno-prompting-guideopen-agent-skill/",
+      "type": "creator_workflow",
+      "date": "2026-05-12",
+      "evidence": "Creator proposes combining section labels and performance cues into a single bracketed instruction.",
+      "idea_seeds": [
+        "compound tag syntax",
+        "section cue as a single semantic packet"
+      ],
+      "confidence": "low; not official syntax"
+    },
+    {
+      "id": "community-channel-syntax",
+      "title": "Lyrics prompt is All You Need",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1u0oil5/lyrics_prompt_is_all_you_need/",
+      "type": "community_theory",
+      "date": "2026-06-08",
+      "evidence": "Post proposes named bracketed channels for instrumental and vocal properties using pipe-separated descriptors.",
+      "idea_seeds": [
+        "channelized prompt representation",
+        "named lanes",
+        "pipe-delimited attribute clusters"
+      ],
+      "confidence": "very low for mechanism; high as an example of user-invented syntax"
+    },
+    {
+      "id": "community-syntax-disagreement",
+      "title": "Structuring prompts",
+      "url": "https://www.reddit.com/r/SunoAI/comments/1oj9bkp",
+      "type": "community_discussion",
+      "date": "2025-10-29",
+      "evidence": "Users report inconsistent interpretation of brackets and parentheses and occasional instruction text being sung.",
+      "idea_seeds": [
+        "ambiguity as a creative variable",
+        "format leakage into lyrics",
+        "syntax conventions may be unstable"
+      ],
+      "confidence": "low; anecdotal"
+    },
+    {
+      "id": "hookgenius-12k-claim",
+      "title": "Suno Prompt Guide (v6): What 12,000 Real Prompts Taught Us",
+      "url": "https://hookgenius.app/learn/suno-prompt-guide-2026/",
+      "type": "commercial_analysis_claim",
+      "date": "2026-10-29",
+      "evidence": "Commercial service claims analysis of 12,754 songs created on its platform; describes four Custom-mode fields.",
+      "idea_seeds": [
+        "service-specific prompt corpus",
+        "selection-bias audit",
+        "field-separated input analysis"
+      ],
+      "confidence": "unverified methodology"
+    }
+  ],
+  "caveat": "These records describe public papers, product documentation, and creator reports. They do not reveal Suno's proprietary architecture or establish that findings from other systems transfer to Suno."
+}
