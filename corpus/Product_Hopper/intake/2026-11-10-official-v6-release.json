@@ -1,0 +1,41 @@
+{
+  "source_id": "SNC-20261110OFFICIALV6RELEASEJSON",
+  "canonical_url": "https://suno.com/release-notes/introducing-v6",
+  "original_url": "https://suno.com/release-notes/introducing-v6",
+  "title": "Introducing v6",
+  "platform": "Suno",
+  "author_or_creator": null,
+  "published_at": "2026-09-09T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:45:00-05:00",
+  "source_type": "release_note",
+  "hopper": "product",
+  "evidence_class": "official_claim",
+  "model_version": "v6",
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "Suno's official release notes describe v6, v6-wild and v6-mini, including plain-language section editing, multi-source mashups, sampling/isolation, and creation using text, audio, images and video.",
+  "creator_interpretation": "The public interface now supports several task modes beyond a simple one-shot text-to-song prompt. Future experiments must log task and reference modality.",
+  "our_hypothesis": "Prompt effects may differ by task pathway and input modality; these should be isolated instead of treating all generations as the same experimental regime.",
+  "limitations": [
+    "Research capture summary, not a full audit of the source.",
+    "Community observations are self-reported unless otherwise specified.",
+    "Do not infer Suno's proprietary architecture from these observations."
+  ],
+  "rights_and_terms": "Not assessed. Retain canonical source link; do not redistribute source code, datasets, audio or full copyrighted text without a compatible license or permission.",
+  "access_notes": "Public search result/page. Minimal metadata and summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "official",
+    "v6",
+    "multimodal",
+    "editing",
+    "mashup",
+    "reference-audio"
+  ]
+}
