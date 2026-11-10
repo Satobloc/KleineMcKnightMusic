@@ -45,3 +45,5 @@ Some initial assistant-mined records were committed before this unified location
 
 - [2026-11-10 — GENECLECT structural taxonomy review, pass 03](raw_dumps/2026-11-10-geneclect-structural-taxonomy-review-03.md): reconstructs the 15-to-10 candidate filter, five proposed structural pairings, source corrections, and QA of the recovered terminology corpus.
 - [GENECLECT terminology corpus v1](structured_inputs/2026-11-10-geneclect-terminology-corpus-v1.csv): restored 304-entry, three-column CSV from the original conversation; structurally checked, not yet term-by-term verified.
+
+- [2026-11-10 — GENECLECT sampled source verification, pass 04](raw_dumps/2026-11-10-geneclect-source-verification-04.md): checks the five structural pairings against institutional and scholarly sources; clarifies scope, regional variation, and several terminology distinctions.
