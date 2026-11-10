@@ -1,0 +1,40 @@
+{
+  "source_id": "SNC-20261110COMMUNITYSAMEPROMPTREPLICATIONJSON",
+  "canonical_url": "https://www.reddit.com/r/SunoAI/comments/1wlgjon/experiment_with_suno_make_the_same_song_as_this/",
+  "original_url": "https://www.reddit.com/r/SunoAI/comments/1wlgjon/experiment_with_suno_make_the_same_song_as_this/",
+  "title": "Experiment with Suno: make the same song as this to compare",
+  "platform": "Reddit",
+  "author_or_creator": null,
+  "published_at": "2026-09-20T00:00:00Z",
+  "retrieved_at": "2026-11-10T23:45:00-05:00",
+  "source_type": "community_post",
+  "hopper": "community",
+  "evidence_class": "creator_report",
+  "model_version": null,
+  "generation_settings": null,
+  "input_field": null,
+  "prompt_text": null,
+  "prompt_excerpt": null,
+  "audio_url": null,
+  "audio_duration_seconds": null,
+  "has_prompt_and_audio": false,
+  "reported_observation": "A creator proposed that several people generate a song from the same lyrics and style text while sharing comparable settings, then compare results.",
+  "creator_interpretation": "This is a useful inter-user replication design, but personalisation, model version, account state, generation settings and sampling can confound comparisons.",
+  "our_hypothesis": "Multi-user output differences may reflect user-specific state or stochastic variation. A better design includes both personalization-off and personalization-on arms with all visible settings recorded.",
+  "limitations": [
+    "Research capture summary, not a full audit of the source.",
+    "Community observations are self-reported unless otherwise specified.",
+    "Do not infer Suno's proprietary architecture from these observations."
+  ],
+  "rights_and_terms": "Not assessed. Retain canonical source link; do not redistribute source code, datasets, audio or full copyrighted text without a compatible license or permission.",
+  "access_notes": "Public search result/page. Minimal metadata and summary only.",
+  "content_fingerprint": null,
+  "related_source_ids": [],
+  "tags": [
+    "replication",
+    "same-prompt",
+    "multi-user",
+    "personalization",
+    "variance"
+  ]
+}
