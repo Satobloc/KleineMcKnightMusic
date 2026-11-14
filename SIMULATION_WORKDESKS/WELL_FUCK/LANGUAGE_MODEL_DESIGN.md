@@ -23,7 +23,7 @@ This document is a proposal for discussion and staged implementation. It does no
 1. **Meaning is independent of wording.** Represent an intended message before selecting words or arranging them.
 2. **IPA remains authoritative.** Phoneme sequences are token arrays; orthography is a projection, not the underlying sound system.
 3. **Community variation is real state.** A community may have its own lexicon, phonology, and selected grammar parameters.
-4. **Preserve the phrase kernel.** Founder phrases and their histories remain as idioms, fossils, or formulaic expressions. Productive language grows alongside them.
+4. **Preserve provenance, not every form.** Existing phrases and their histories are part of the initial record. They may persist, transform, acquire new functions, or disappear through ordinary language change. No phrase class is guaranteed survival.
 5. **Event grounding comes before decorative context.** Contextual speech should be generated from actual simulation events or explicit speaker intentions.
 6. **Stochasticity remains inspectable.** Seeded language generation must be reproducible. UI observation uses its own presentation RNG and must not steer simulation evolution.
 7. **Incremental complexity.** Begin with a small, coherent grammar. Add typological variation only when a test or experiment can demonstrate its value.
