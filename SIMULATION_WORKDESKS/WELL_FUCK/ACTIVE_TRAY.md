@@ -19,6 +19,7 @@ started_utc: 2026-11-14T05:58:30Z
 - Implementation audit: `LANGUAGE_KERNEL_AUDIT.md`.
 - Research synthesis: `ENGLISH_LANGUAGE_CHANGE_RESEARCH.md`, version 0.1.
 - Existing working design: `LANGUAGE_MODEL_DESIGN.md`, version 0.3; proposal only.
+- Recovered player-facing intent: `LANGUAGE_GAMEPLAY_INTENT.md`; design direction, not implementation.
 - Confirmed starting point: contemporary informal, idiomatic English.
 - New source-design branch: dynamic sentence/expression reservoir with bounded sampling, provenance, licensing, and probabilistic grammatical annotation.
 
