@@ -33,10 +33,10 @@ No existing ChatGPT scheduled-task identity, schedule, phase, or enabled state i
 ## Current pin
 
 WF-CYCLE 01/08 — RE-ENTRY & SCOPE  
-WF-OP 00 — bootstrap receipt not yet verified  
-NOW: establish and verify this project home  
-NEXT: preserve and independently verify the 2.11 prototype in the repository  
-RETURN: this folder, beginning with PROJECT_CONTROL.md
+WF-OP 01 COMPLETE — repository home and continuity checks verified  
+NOW: preserve and independently verify Cities Laboratory 2.11 in the repository  
+NEXT: obtain a supported upload of the identified local HTML file, then commit and test it  
+RETURN: ACTIVE_TRAY.md and the WF-SIM-001 operation
 
 ## Truth conditions
 
