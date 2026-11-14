@@ -3,6 +3,7 @@
 ## Live documents
 
 - `01_ACTION_PLAN.md` — ordered work queue.
+- `13_OPERATING_PROTOCOL.md` — adaptable working operations and continuity practices.
 - `02_WORKING_THEORY.md` — communication model; confidence-tagged.
 - `03_TASTE_MODEL.md` — aesthetic attractors, counterforces, defaults to watch.
 - `04_PROMPT_GRAMMAR.md` — compact relational notation and field behavior.
