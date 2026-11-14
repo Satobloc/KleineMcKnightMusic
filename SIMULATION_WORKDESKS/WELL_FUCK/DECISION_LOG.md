@@ -60,6 +60,6 @@ Dated decisions are preserved with their provenance and status. A decision may b
 
 **Date:** 2026-11-13  
 **Status:** RECOMMENDED / PARTIALLY IMPLEMENTED  
-**Decision:** Adopt the HsH 36-hour interactive-heartbeat freshness threshold as a project-specific re-entry trigger. A GitHub Actions check runs every six hours and fails visibly when the heartbeat is stale. The check does not launch a ChatGPT worker or refresh the heartbeat.  
+**Decision:** Adopt the HsH 36-hour interactive-heartbeat freshness threshold as a project-specific re-entry trigger. A GitHub Actions check runs every six hours and on every relevant project validation; it fails visibly when the heartbeat is stale. The check does not launch a ChatGPT worker or refresh the heartbeat.  
 **Provenance:** HsH Big Push continuity recommendations, clarified by Nathan.  
 **Boundary:** No existing ChatGPT scheduled-task identity, schedule, phase, or enabled state is modified.
