@@ -34,7 +34,7 @@ If the limit arrives without warning, the last verified repository commit is the
 2. Read BOOT.md, PROJECT_CONTROL.md, ACTIVE_TRAY.md, WORK_QUEUE.md, and HEARTBEAT.md.
 3. Read the relevant sections of WORKFLOW_PROTOCOL.md and SUCCESSION.md.
 4. Independently inspect the exact code/artifact named by the active tray. Do not rely solely on the previous conversation's description.
-5. Check whether the interactive heartbeat is stale and whether the GitHub continuity workflow reports a failure.
+5. Check the interactive heartbeat against the project's current pilot threshold and inspect the continuity workflow. Treat the threshold and schedule as project settings to review, not inherited HsH requirements.
 6. Resume one bounded operation. Do not redesign the project or silently broaden scope just because a new conversation began.
 
 ## Minimum handoff packet

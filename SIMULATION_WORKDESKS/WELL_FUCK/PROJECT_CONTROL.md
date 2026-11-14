@@ -70,4 +70,4 @@ Do not mark a branch complete from intention, a plan, or an unverified claim.
 
 ## Review gates
 
-Review scope, dependencies, parked branches, source freshness, test coverage, and procedural overhead after every five completed operations or at a phase gate, whichever comes first. Record KEEP / CHANGE / PARK / RETIRE decisions. Conduct a wider project review at least weekly while active. Do not add process merely to make the paperwork look complete.
+Review scope, dependencies, parked branches, source freshness, test coverage, and procedural overhead after every five completed operations or at a phase gate, whichever comes first. Review the heartbeat threshold and scheduled-check cadence after five completed operations or 14 calendar days, whichever comes first. These are project pilot parameters, not inherited HsH requirements. Record KEEP / CHANGE / PARK / RETIRE decisions with evidence. Conduct a wider project review at a cadence that proves useful for the actual work; weekly is a candidate, not an obligation. Do not add process merely to make the paperwork look complete.

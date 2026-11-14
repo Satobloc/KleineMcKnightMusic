@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Structural and heartbeat-freshness checks for the Well, Fuck. workspace."""
+"""Structural and provisional heartbeat-freshness checks for the Well, Fuck. workspace."""
 
 from __future__ import annotations
 
@@ -120,7 +120,7 @@ def main() -> int:
     parser.add_argument(
         "--check-stale",
         action="store_true",
-        help="also fail when the interactive heartbeat exceeds its freshness threshold",
+        help="also fail when the interactive heartbeat meets or exceeds its provisional freshness threshold",
     )
     parser.add_argument(
         "--root",
@@ -154,7 +154,7 @@ def main() -> int:
 
     if stale:
         print(
-            f"STALE: interactive heartbeat {timestamp} exceeds "
+            f"STALE: interactive heartbeat {timestamp} meets or exceeds "
             f"the {threshold}-hour threshold.",
             file=sys.stderr,
         )

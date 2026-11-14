@@ -59,20 +59,17 @@ Use explicit labels when a statement's status could be misunderstood:
 
 Keep implemented, reported, tested, and hypothesized behavior separate.
 
-## 5. Project-specific turn ticker
+## 5. Project-specific attention ticker
 
-Use a tailored eight-slot attention cycle. The ticker advances once per substantive assistant response, not once per tool call and not once per user message. A brief clarification or unrelated exchange may leave it unchanged. A user-directed priority override always takes precedence.
+The ticker is an adaptive attention aid, not a borrowed HsH cycle and not a checklist that every turn must mechanically satisfy. The initial five modes reflect this project's present work and may be reordered, merged, split, skipped, or replaced as its needs change. Advance once per substantive assistant response when useful; a short clarification or unrelated exchange may leave it unchanged. Nathan's explicit priority always overrides the cycle.
 
-1. **RE-ENTRY & SCOPE:** recover mission, priority, active tray, cursor, and current repository state.
-2. **SIMULATION SUBSTRATE:** inspect current environment/civilization behavior and preserve integration; geology expansion remains paused.
-3. **LANGUAGE ENGINE:** phonology, lexicon, morphology, syntax, semantics, and compositional speech.
-4. **CULTURE & CONTACT:** settlement identity, migration, trade, borrowing, dialects, divergence, and intelligibility.
-5. **INSTRUMENTATION:** seeds, metrics, logs, test harnesses, and reproducibility.
-6. **INTEGRATION & REGRESSION:** cross-system interactions, performance, compatibility, and regression checks.
-7. **EXPLORATION & CROSS-POLLINATION:** alternative mechanics, unusual experiments, and relevant ideas from the creative repository or other disciplines.
-8. **EXECUTIVE REVIEW & REPLAN:** whole-project priorities, dependencies, parked branches, lessons, and capsule fitness.
+1. **RE-ENTRY & SCOPE:** recover the project purpose, current operation, exact return point, priorities, blockers, and repository state.
+2. **LANGUAGE ENGINE:** develop phonology, lexicon, morphology, syntax, semantics, pragmatics, and compositional speech. This is the current primary creative-development lane.
+3. **SIMULATION INTEGRATION & CULTURE:** connect language to settlements, events, contact, migration, trade, and social identity while preserving the existing simulation substrate. Geological feature development remains paused.
+4. **INSTRUMENTATION & VERIFICATION:** inspect source, build tests, track seeds and metrics, check RNG separation, reproduce results, and preserve working artifacts.
+5. **EXPLORATION & EXECUTIVE REPLAN:** pursue useful lateral ideas, revisit parked branches, review the whole project, identify process friction, and select the next highest-value operation.
 
-A slot is an attention cue, not an automatic assignment. Skip or defer a slot when it would distract from the active priority. Record a useful override rather than pretending the sequence was followed mechanically.
+The current five modes are a first pilot, not a permanent taxonomy. A slot is a prompt to inspect an aspect of the work, not an instruction to divert from the active operation. Record deliberate overrides when they materially affect the plan.
 
 ## 6. Separate operation counter
 
@@ -84,7 +81,7 @@ WF-CYCLE 01/08 | WF-OP 01 COMPLETE | NOW ... | NEXT ... | RETURN ...
 
 ## 7. Adaptive optimization
 
-After every five completed operations or at a phase gate, whichever comes first, evaluate:
+After every five completed operations or at a phase gate, whichever comes first, evaluate the workflow as a whole. Also review the heartbeat threshold and scheduled-check cadence after five completed operations or 14 calendar days, whichever comes first. Evaluate:
 
 - correct recovery of mission, priority, and exact cursor after interruption;
 - missed or duplicated operations;
@@ -101,6 +98,7 @@ Record KEEP / CHANGE / PARK / RETIRE decisions. Reorder, split, merge, or replac
 - Every substantive assistant turn: refresh the interactive heartbeat and the short return pin.
 - Every completed operation: update ACTIVE_TRAY.md, WORK_QUEUE.md, OPERATION_LOG.md, and affected decisions/control records.
 - Every five completed operations or phase gate: perform a process and scope review.
+- At five completed operations or 14 calendar days, whichever comes first: assess whether the heartbeat threshold and scheduled-check cadence are useful for this project's actual interruption pattern.
 - Weekly while active: reassess project direction, dependencies, neglected branches, and whether this scaffold remains proportionate.
 - Before context exhaustion or handoff: follow SUCCESSION.md and verify every referenced artifact.
 

@@ -82,7 +82,7 @@ The current direct project instructions establish:
 3. Preserve the project-relevant content of conversations in the repository so sudden context limits do not erase the working state. This is not a request to mirror the repositories generally.
 4. The user's independent file backups are already being maintained by the user.
 5. The attention/turn ticker must be tailored to this project and continuously optimized.
-6. The HsH interactive-heartbeat restart trigger is recommended even though the Big Push deployment record says its ChatGPT task overlay is not installed. Deployment status and recommendation status must not be conflated.
+6. Use the underlying lesson of an interactive heartbeat and visible re-entry trigger, but do not inherit HsH's exact implementation. The threshold, schedule, ticker, review cadence, and automation are this project's own design choices and must be justified against its workflow.
 7. Language mechanics are the current focus; geology development is paused.
 
 ## 7. Workflow design adopted for this project
@@ -102,7 +102,9 @@ The initial pilot uses:
 
 The attention cycle advances once per substantive assistant response. The operation counter advances only after a bounded operation has a checkable result or explicit disposition and a verified receipt. The two counters are not interchangeable.
 
-The proposed eight attention slots are: re-entry and scope; simulation substrate; language engine; culture and contact; instrumentation; integration and regression; exploration and cross-pollination; executive review and replan. The geology slot is maintenance-only while geological development remains paused.
+The initial five attention modes are: re-entry and scope; language engine; simulation integration and culture; instrumentation and verification; exploration and executive replan. These are tailored to the present project and remain subject to continuous review. The geology slot is maintenance-only while geological development remains paused. The separate operation counter prevents attention rotation from being mistaken for completed work.
+
+The 36-hour stale threshold and six-hour scheduled check are provisional starting settings, not inherited HsH requirements. They are due for review after five completed operations or 14 calendar days, whichever comes first.
 
 ## 8. Exact next actions
 
@@ -137,3 +139,10 @@ The HTML simulation file remains local-only. Do not treat this repository bootst
 The workflow is adapted from HsH's Primary Operational Guideline, Sections 8–10; Big Push worker recommendations; the first-blush pin/ticker pilot; and the Big Push succession protocol. These references are operational methods, not authority for the simulation's fictional or scientific content.
 
 Relevant local creative-repository research includes the 2026-11-10 symbolic-language/phonetics/music-grammar raw dump and the representational-languages idea mine. Treat these as exploratory source material and preserve the distinction between published research, community reports, and our own hypotheses.
+
+
+## 11. Methodology clarification — 2026-11-13
+
+Nathan clarified that HsH and the other Satobloc repositories are methodological sources, not templates. The project should extract useful lessons and independently design its own controls around its own creative priorities, interruption risks, scale, and operational needs. No particular HsH interval, schedule, ticker shape, automation, or documentation ritual is binding.
+
+The current five-mode attention ticker and the 36-hour / six-hour heartbeat settings are initial project pilots. They are not evidence-based optima. Review them against actual use and remove or redesign anything that adds friction without improving continuity or work quality.

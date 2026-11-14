@@ -32,7 +32,7 @@ No existing ChatGPT scheduled-task identity, schedule, phase, or enabled state i
 
 ## Current pin
 
-WF-CYCLE 01/08 — RE-ENTRY & SCOPE  
+WF-CYCLE 05/05 — EXPLORATION & EXECUTIVE REPLAN  
 WF-OP 01 COMPLETE — repository home and continuity checks verified  
 NOW: preserve and independently verify Cities Laboratory 2.11 in the repository  
 NEXT: obtain a supported upload of the identified local HTML file, then commit and test it  
