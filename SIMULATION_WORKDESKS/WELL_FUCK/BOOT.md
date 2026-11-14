@@ -18,7 +18,7 @@ At the start of every new conversation or resumed work session:
 
 1. Fetch the live repository state. Record the main-branch commit SHA; do not rely on a remembered or cached copy.
 2. Read this file, PROJECT_PLAN.md, PROJECT_CONTROL.md, ACTIVE_TRAY.md, WORK_QUEUE.md, and HEARTBEAT.md.
-3. Read only the current operation's named files and relevant source/code ranges. For language work, consult LANGUAGE_KERNEL_AUDIT.md for the current implementation, ENGLISH_LANGUAGE_CHANGE_RESEARCH.md for the historical evidence and mechanisms, and LANGUAGE_MODEL_DESIGN.md for the working design proposal.
+3. Read only the current operation's named files and relevant source/code ranges. For language work, consult LANGUAGE_KERNEL_AUDIT.md for the current implementation, ENGLISH_LANGUAGE_CHANGE_RESEARCH.md for historical evidence and mechanisms, LANGUAGE_MODEL_DESIGN.md for the working design proposal, and LANGUAGE_GAMEPLAY_INTENT.md for the recovered player-facing conceit and interaction goals.
 4. Load WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
 5. Load SUCCESSION.md before a handoff or whenever context exhaustion is possible.
 6. Use SESSION_CHECKPOINT_2026-11-13.md as a locator and project-state summary, not as a substitute for inspecting the named code or primary artifacts.
