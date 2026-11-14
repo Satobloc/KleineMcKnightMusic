@@ -38,6 +38,7 @@ class MachineStateTests(unittest.TestCase):
             parse_aware_timestamp("2026-11-14T03:27:51")
 
     def test_heartbeat_freshness_boundary(self):
+        # Equality with the threshold is stale: the restart condition is >= 36 hours.
         now = dt.datetime(2026, 11, 14, 12, 0, tzinfo=dt.timezone.utc)
         self.assertFalse(
             heartbeat_is_stale("2026-11-13T12:00:01Z", 24, now=now)
@@ -45,6 +46,10 @@ class MachineStateTests(unittest.TestCase):
         self.assertTrue(
             heartbeat_is_stale("2026-11-13T12:00:00Z", 24, now=now)
         )
+
+    def test_zero_threshold_is_rejected(self):
+        with self.assertRaises(ValueError):
+            heartbeat_is_stale("2026-11-13T12:00:00Z", 0)
 
     def test_future_heartbeat_is_rejected(self):
         now = dt.datetime(2026, 11, 14, 12, 0, tzinfo=dt.timezone.utc)
