@@ -1,0 +1,48 @@
+name: Well, Fuck. Continuity
+
+on:
+  push:
+    paths:
+      - "SIMULATION_WORKDESKS/WELL_FUCK/**"
+      - "tools/check_well_fuck_continuity.py"
+      - "tests/test_well_fuck_continuity.py"
+      - ".github/workflows/well-fuck-continuity.yml"
+  pull_request:
+    paths:
+      - "SIMULATION_WORKDESKS/WELL_FUCK/**"
+      - "tools/check_well_fuck_continuity.py"
+      - "tests/test_well_fuck_continuity.py"
+      - ".github/workflows/well-fuck-continuity.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: well-fuck-continuity-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  continuity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate continuity structure
+        run: python tools/check_well_fuck_continuity.py
+
+      - name: Run continuity tests
+        run: python -m unittest discover -s tests -p "test_well_fuck_continuity.py" -v
+
+      - name: Check interactive heartbeat freshness
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: python tools/check_well_fuck_continuity.py --check-stale

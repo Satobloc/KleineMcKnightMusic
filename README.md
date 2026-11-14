@@ -31,6 +31,10 @@ The workshop has three connected planes:
 
 A shared MusicBlueprint will eventually connect these planes to multiple backends, including Sonic Pi, MIDI/symbolic music, audio analysis, and generative services.
 
+## Secondary creative-systems workspace
+
+- [Well, Fuck. — Stochastic Speleological Civilization Simulator](SIMULATION_WORKDESKS/WELL_FUCK/README.md): a separate experimental project exploring emergent cavern environments, settlements, language, and culture. It uses this repository as a creative-systems home without changing the scope or authority of the music workshop.
+
 ## Status
 
 This repository is being initialized as a public-facing project. The toolbox inventory is an initial, evidence-tagged catalog, not an endorsement of every listed tool or a claim that all integrations are implemented.
