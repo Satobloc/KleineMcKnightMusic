@@ -70,3 +70,10 @@ Dated decisions are preserved with their provenance and status. A decision may b
 **Status:** CONFIRMED  
 **Decision:** Treat HsH and other Satobloc repositories as methodological sources. Extract useful principles, inspect why they work, and redesign their implementation for Well, Fuck.'s own objectives, risks, scale, and creative workflow. No inherited schedule, threshold, ticker shape, task count, architecture, or control ritual is binding merely because another repository uses it.  
 **Provenance:** Nathan's direct clarification in this conversation.
+
+## D-010 — Adopt an amendable project-plan baseline
+
+**Date:** 2026-11-13  
+**Status:** CONFIRMED  
+**Decision:** Adopt PROJECT_PLAN.md version 1.0 as the working roadmap for Well, Fuck. The plan is locked as the default direction, not made immutable: consequential amendments increment its version, preserve prior history through Git, and are recorded in this decision log when they change mission, priority, phase order, or design commitments. Nathan's direct instruction overrides assistant-maintained planning records.  
+**Provenance:** Nathan's direct instruction to make a plan, lock it in in a modifiable way, and move forward.

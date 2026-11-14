@@ -2,10 +2,11 @@
 
 **Status:** ACTIVE / language-system focus  
 **Workspace:** Satobloc/KleineMcKnightMusic/SIMULATION_WORKDESKS/WELL_FUCK/  
+**Canonical roadmap:** PROJECT_PLAN.md  
 **Canonical control:** PROJECT_CONTROL.md  
 **Current tray:** ACTIVE_TRAY.md  
 **Heartbeat:** HEARTBEAT.md  
-**Current operation:** WF-SIM-001, BLOCKED pending transfer of the 2.11 HTML artifact into the repository
+**Current operation:** WF-SIM-001, ACTIVE while the exact 2.11 artifact is published, read back, and tested
 
 ## Mission
 
@@ -16,7 +17,7 @@ Develop a playful, inspectable stochastic cavern-civilization simulation, curren
 At the start of every new conversation or resumed work session:
 
 1. Fetch the live repository state. Record the main-branch commit SHA; do not rely on a remembered or cached copy.
-2. Read this file, PROJECT_CONTROL.md, ACTIVE_TRAY.md, WORK_QUEUE.md, and HEARTBEAT.md.
+2. Read this file, PROJECT_PLAN.md, PROJECT_CONTROL.md, ACTIVE_TRAY.md, WORK_QUEUE.md, and HEARTBEAT.md.
 3. Read only the current operation's named files and relevant source/code ranges.
 4. Load WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
 5. Load SUCCESSION.md before a handoff or whenever context exhaustion is possible.
@@ -32,12 +33,13 @@ No existing ChatGPT scheduled-task identity, schedule, phase, or enabled state i
 
 ## Current pin
 
-WF-CYCLE 05/05 — EXPLORATION & EXECUTIVE REPLAN  
+WF-CYCLE 01/05 — RE-ENTRY & SCOPE  
 WF-OP 01 COMPLETE — repository home and continuity checks verified  
-NOW: preserve and independently verify Cities Laboratory 2.11 in the repository  
-NEXT: obtain a supported upload of the identified local HTML file, then commit and test it  
+WF-OP 02 IN PROGRESS — preserve and independently verify Cities Laboratory 2.11  
+NOW: publish the exact 2.11 artifact and complete its verification  
+NEXT: audit Language Kernel 0.1 against the committed source  
 RETURN: ACTIVE_TRAY.md and the WF-SIM-001 operation
 
 ## Truth conditions
 
-A local file is not a repository artifact. A planned test is not a test result. A reported prior test is not a test independently repeated in the current operation. A checkpoint is not a verbatim transcript. A scheduled check is not an autonomous worker. When state conflicts, stop and reconcile against the live repository and exact artifact.
+A local file is not a repository artifact. A prepared Git blob is not a branch commit. A planned test is not a test result. A reported prior test is not a test independently repeated in the current operation. A checkpoint is not a verbatim transcript. A scheduled check is not an autonomous worker. When state conflicts, stop and reconcile against the live repository and exact artifact.

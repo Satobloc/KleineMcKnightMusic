@@ -2,7 +2,7 @@
 
 <!-- machine-state:start -->
 operation_id: WF-SIM-001
-status: BLOCKED
+status: ACTIVE
 priority: P0
 started_utc: 2026-11-14T03:36:43Z
 <!-- machine-state:end -->
@@ -17,22 +17,26 @@ started_utc: 2026-11-14T03:36:43Z
 - File: Well_Fuck_Cities_Lab_2_11.html
 - Current session path: /mnt/data/Well_Fuck_Cities_Lab_2_11.html
 - Size: 1,549,198 bytes
-- SHA-256: 1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05
+- SHA-256: `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`
+- A generated conversation-file copy was materialized and compared byte-for-byte with the working file; the matching copy is the source for repository publication.
 
-**Blocker**
-The artifact is present in the current session's local working area, but the repository connector used for the documentation bootstrap did not provide a direct local-file upload path. Do not claim the HTML has been committed. The user maintains independent copies. Unblock by making the exact HTML file available as a conversation upload or through another explicitly supported transfer route.
+**Progress**
+- Exact source identity confirmed by SHA-256.
+- Full source text retrieved (969 lines) for publication.
+- Node.js v22.16.0 syntax check of the sole inline script: PASS.
+- Chromium headless DOM/smoke attempts did not complete within the available 25-second run; no JavaScript exception was captured before timeout. Browser behavior remains INCONCLUSIVE, not passed.
+- GitHub blob prepared: `67d17e7efac74434570f36f6b3f726e945db6f1e` (not yet committed at the time this record was prepared).
 
 **Planned repository destination:** builds/Well_Fuck_Cities_Lab_2_11.html
 
-**Scope after unblocking**
+**Scope**
 - Transfer the exact file without rewriting or normalizing it.
-- Verify the uploaded file's SHA-256 against the known local hash.
+- Verify repository readback against the source text and known SHA-256.
 - Record the repository blob SHA and commit.
-- Run syntax and browser checks, including the language/geology RNG separation test.
-- Read the committed artifact back independently.
+- Complete browser/runtime checks and the language/geology-city RNG separation test.
 
 **Stop condition**
-The repository copy is byte-identical to the identified local artifact, the commit and blob are recorded, and the defined tests have checkable receipts.
+The repository copy is byte-identical to the identified local artifact, the commit and blob are recorded, independent readback succeeds, and syntax plus runtime/RNG checks have explicit, checkable results. An inconclusive browser run does not satisfy the stop condition.
 
 **Out of scope**
 - New simulation mechanics.
@@ -40,4 +44,4 @@ The repository copy is byte-identical to the identified local artifact, the comm
 - Language redesign before the current implementation has been audited.
 - Changes to existing ChatGPT scheduled tasks.
 
-**Next cursor:** obtain the 2.11 HTML as an upload, then create the repository artifact.
+**Next cursor:** publish the prepared blob at the planned path, read it back independently, then resolve the browser/runtime test and RNG-isolation checks.

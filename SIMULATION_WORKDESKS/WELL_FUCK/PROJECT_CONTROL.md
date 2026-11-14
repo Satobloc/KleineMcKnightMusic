@@ -1,6 +1,7 @@
 # Well, Fuck. — Project Control
 
 **Status:** ACTIVE  
+**Plan:** PROJECT_PLAN.md, version 1.0 (adopted baseline; amendable)  
 **Phase:** 1 / prototype preservation  
 **Priority:** P0 prototype preservation; P1 language-system development  
 **Workspace:** Satobloc/KleineMcKnightMusic/SIMULATION_WORKDESKS/WELL_FUCK/  
@@ -16,25 +17,28 @@ The current priority is linguistic mechanics. Geology expansion is paused. Prese
 
 - Latest known prototype: Cities Laboratory 2.11, Language Kernel 0.1.
 - Artifact file: Well_Fuck_Cities_Lab_2_11.html.
-- Local size: 1,549,198 bytes.
-- Local SHA-256: 1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05.
-- Storage status: local working artifact only; not yet committed to this repository.
-- Previous local prototype: Cities Laboratory 2.10, SHA-256 90fd48b8e7f15c62bc7dacbcadcc73c5a46c21f142d197e52220d0ff7a253f19.
+- Source size: 1,549,198 bytes.
+- Source SHA-256: `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`.
+- Source artifact is available and its checksum has been independently verified in the working environment. Repository publication and runtime verification are in progress.
+- Previous local prototype: Cities Laboratory 2.10, SHA-256 `90fd48b8e7f15c62bc7dacbcadcc73c5a46c21f142d197e52220d0ff7a253f19`.
 - Language Kernel 0.1 is the active design surface. Productive grammar, broad lexicon, event-specific utterances, borrowing, dialect continua, and mutual intelligibility are not yet implemented.
 - Prior conversation reported Chromium runs and a comparison intended to show that language RNG did not alter geology/city outcomes. Those are historical assistant-reported results and have not been independently rerun in this repository bootstrap.
 
 ## Phase plan and exit evidence
 
+The canonical roadmap and detailed phase gates live in PROJECT_PLAN.md. The executive sequence is:
+
 | Phase | Purpose | Exit evidence |
 |---|---|---|
-| 0. Repository and continuity bootstrap | Establish the project home, state records, restart procedure, and automated integrity checks | COMPLETE: control files read back; continuity and repository test workflows pass |
-| 1. Prototype preservation | Bring the latest HTML artifact into the repository and verify identity, syntax, behavior, and a restorable version pointer | Committed artifact, SHA-256, independent readback, reproducible test record |
-| 2. Language-kernel audit | Inspect the actual 2.11 implementation and map its data structures, update rules, and limitations | Source-grounded language-kernel specification |
-| 3. Productive language | Develop a useful lexicon, morphology, syntax, semantic relations, and compositional utterances | Defined data model, examples, tests, and measured emergent behavior |
-| 4. Social language evolution | Add contact, borrowing, dialect divergence, language change, and mutual-intelligibility measures | Explicit interaction rules and repeatable experiments |
-| 5. Civilization integration | Connect language to settlement events, resource exchange, conflict, migration, and social organization | Event-linked utterances and cross-system regression evidence |
-| 6. Validation and exploration | Compare alternative mechanics, test seeded runs, inspect emergent patterns, and prune weak procedures | Reproducible experiments, evidence ledger, and reviewed lessons |
-| 7. Release and maintenance | Package stable builds and keep documentation, tests, and succession state current | Versioned release, verified artifacts, and maintainable project controls |
+| 0. Repository and continuity bootstrap | Establish project home and control system | COMPLETE: controls read back; continuity and repository test workflows pass |
+| 1. Prototype preservation | Preserve Cities Laboratory 2.11 exactly and verify its behavior | Committed artifact, checksum, independent readback, syntax/runtime evidence |
+| 2. Language-kernel audit and baseline | Inspect actual implementation and establish reproducible tests | Source-grounded implementation map and baseline test record |
+| 3. Productive language core | Add concepts, lexicon, phonology, morphology, syntax, semantics, composition | Novel compositional utterances, inspectable data, tests |
+| 4. Contextual speech | Generate utterances grounded in actual simulation events | Traceable event-linked speech examples and tests |
+| 5. Social language evolution | Develop contact, borrowing, dialect divergence, and intelligibility | Explicit rules and repeatable experiments |
+| 6. Civilization integration | Connect language to social processes | At least one traceable end-to-end social process |
+| 7. Experiment and refinement | Compare rules, measure outcomes, and prune weak mechanics | Reproducible experiments and evidence-led decisions |
+| 8. Release and maintenance | Package stable builds and preserve continuity | Versioned build, known identity, verified tests, current controls |
 
 Phases are revisitable. A phase is not complete merely because a narrative description exists.
 
@@ -60,6 +64,7 @@ Do not mark a branch complete from intention, a plan, or an unverified claim.
 
 ## Current control pointers
 
+- Canonical roadmap: PROJECT_PLAN.md.
 - Single active operation: ACTIVE_TRAY.md.
 - Priority and dependency map: WORK_QUEUE.md.
 - Dated decisions: DECISION_LOG.md.
