@@ -3,6 +3,8 @@
 
 **Project status:** ACTIVE WORKSHOP  
 **Workspace role:** Secondary creative-systems project inside Satobloc/KleineMcKnightMusic  
+**Project license:** [Proprietary Personal-Use License](LICENSE.md)  
+**Third-party materials:** [Third-Party Notices and Source Register](THIRD_PARTY_NOTICES.md)  
 **Canonical roadmap:** PROJECT_PLAN.md  
 **Canonical control:** PROJECT_CONTROL.md  
 **Boot sequence:** BOOT.md  
@@ -38,7 +40,7 @@ Repeatable tests:
 - Automated Node test: `tests/test_well_fuck_language_rng.js` (also run by the continuity workflow).
 - Optional browser regression: `tests/test_well_fuck_browser_regression.py` (requires Playwright and Chromium; run one seed per invocation).
 
-### Current simulation concepts### Current simulation concepts
+### Current simulation concepts
 
 - Grid cells distinguish void, rock, purple cavern/stalactite, mossy green terrain, and water.
 - Fractures spread; granular debris falls, lands, darkens, compacts, and erodes.
@@ -75,6 +77,8 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 
 | File | Function |
 |---|---|
+| LICENSE.md | Project-scoped proprietary personal-use license and development-sharing condition |
+| THIRD_PARTY_NOTICES.md | Source and license register for external materials |
 | BOOT.md | Tiny launch capsule and load order |
 | PROJECT_PLAN.md | Adopted, amendable roadmap and phase gates |
 | LANGUAGE_KERNEL_AUDIT.md | Source-grounded Language Kernel 0.1 map, test evidence, and defects |
@@ -94,7 +98,9 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 
 ## Public-repository boundary
 
-This is a public repository. Store project-specific state, code cleared for publication, methods, test results, and concise conversation-derived checkpoints. Do not commit raw ChatGPT exports, unrelated private conversation material, personal data, credentials, copyrighted lyrics, private recordings, or rights-restricted source material. The checkpoint is an assistant-prepared project record, not a verbatim transcript.
+This is a public repository. The Well, Fuck. project has its own license, located in this workspace. **That license applies only to Well, Fuck.** It does not govern the host repository, the music workshop, or any other project in the repository.
+
+Store project-specific state, code cleared for publication, methods, test results, and concise conversation-derived checkpoints. Do not commit raw ChatGPT exports, unrelated private conversation material, personal data, credentials, copyrighted lyrics, private recordings, or rights-restricted source material. The checkpoint is an assistant-prepared project record, not a verbatim transcript.
 
 ## Method references
 
