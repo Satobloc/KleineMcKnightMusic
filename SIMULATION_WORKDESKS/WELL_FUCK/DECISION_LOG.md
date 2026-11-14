@@ -116,3 +116,12 @@ Dated decisions are preserved with their provenance and status. A decision may b
 **Decision:** The next language-design step is to investigate what constitutes historically plausible language change, using English as the first empirical case study, and translate the findings into a computational model before implementing the productive language engine. English's particular trajectory is not assumed to be universal.  
 **Provenance:** Nathan's direct instruction in this conversation.  
 **Open distinction:** The intended initial condition—future descendant of contemporary English or reconstructed historical English stage—has not yet been selected.
+
+
+## D-016 — Contemporary informal English and dynamic source reservoir
+
+**Date:** 2026-11-14  
+**Status:** CONFIRMED DIRECTION / IMPLEMENTATION DETAILS OPEN  
+**Decision:** The initial language population is contemporary informal, idiomatic English, represented with substantial lexical, regional, social, and stylistic variation. Investigate a dynamic external reservoir of real sentences and expressions as replenishable source material. The active simulation should use a bounded working sample rather than loading an entire corpus. Grammatical annotation may be uncertain or ambiguous; preserve candidate parts of speech, contextual evidence, and confidence rather than forcing one definitive label.  
+**Provenance:** Nathan's direct instruction in this conversation.  
+**Boundary:** External-source material must retain provenance and licensing metadata. Do not assume that a publicly viewable website permits bulk scraping, redistribution, or permanent storage. Freeze and identify the sampled corpus/version for each reproducible experiment; refresh the reservoir between defined sampling periods or runs. Misanalysis may be explored as a linguistic innovation pathway, but preprocessing mistakes must remain distinguishable from changes speakers actually adopt.
