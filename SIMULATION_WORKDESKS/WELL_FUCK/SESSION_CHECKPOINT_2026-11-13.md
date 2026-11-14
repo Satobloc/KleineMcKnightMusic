@@ -106,13 +106,33 @@ The proposed eight attention slots are: re-entry and scope; simulation substrate
 
 ## 8. Exact next actions
 
-1. Complete the repository bootstrap and independently verify all control files.
-2. Preserve Cities Laboratory 2.11 in the repository and verify its hash, syntax, behavior, and independent readback.
-3. Audit Language Kernel 0.1 against the actual code.
-4. Design productive language mechanics and event-specific utterances.
-5. Add social diffusion, contact, dialect, borrowing, and intelligibility only after the language data model is clear.
+1. Preserve Cities Laboratory 2.11 in the repository and verify its hash, syntax, behavior, and independent readback. This is the current blocked operation because the exact HTML file has not yet been transferred into the repository.
+2. Audit Language Kernel 0.1 against the actual code.
+3. Design productive language mechanics and event-specific utterances.
+4. Add social diffusion, contact, dialect, borrowing, and intelligibility only after the language data model is clear.
 
-## 9. Method references
+## 9. Repository bootstrap receipt
+
+The project home is now present in Satobloc/KleineMcKnightMusic at SIMULATION_WORKDESKS/WELL_FUCK/. The root README links to it.
+
+The bootstrap and continuity scaffolding were published and verified through these commits:
+
+- 37997b4d8b3841760b839d3c6ae6ddde5065732b — initial project home and control records.
+- 5fcd3cfd6540a0b7b470b1cfea251fe60c0034ed — inclusive heartbeat threshold correction.
+- b732a2a50467b486e5e95ba513cd1057a1f638af — expanded boundary tests.
+- 5322e9d7b49e3212ddaac3ed003e2ce20400ace5 — freshness check on every relevant project validation.
+
+Verified workflow runs:
+- Well, Fuck. Continuity 43552338761: SUCCESS.
+- Well, Fuck. Continuity 43552401004: SUCCESS.
+- Source Hopper Checks 43552401001: SUCCESS.
+- Well, Fuck. Continuity 43552468360: SUCCESS, including the live heartbeat freshness check.
+
+The first continuity run failed because an exactly 36-hour-old heartbeat was not classified as stale. The comparison was corrected from greater-than to greater-than-or-equal, and the boundary test now passes.
+
+The HTML simulation file remains local-only. Do not treat this repository bootstrap as proof that the executable has been committed.
+
+## 10. Method references
 
 The workflow is adapted from HsH's Primary Operational Guideline, Sections 8–10; Big Push worker recommendations; the first-blush pin/ticker pilot; and the Big Push succession protocol. These references are operational methods, not authority for the simulation's fictional or scientific content.
 
