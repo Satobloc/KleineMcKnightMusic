@@ -5,7 +5,7 @@
 **Canonical control:** PROJECT_CONTROL.md  
 **Current tray:** ACTIVE_TRAY.md  
 **Heartbeat:** HEARTBEAT.md  
-**Current operation:** WF-BOOT-001, repository bootstrap in progress
+**Current operation:** WF-SIM-001, BLOCKED pending transfer of the 2.11 HTML artifact into the repository
 
 ## Mission
 
@@ -26,7 +26,7 @@ At the start of every new conversation or resumed work session:
 
 The repository is the durable project state; a ChatGPT conversation is a temporary work surface. Refresh the project heartbeat on every substantive assistant turn. Update the active tray, queue, decision log, and operation receipt after each bounded operation. If a context limit is suspected, checkpoint immediately rather than waiting for the conversation to end.
 
-The HsH 36-hour interactive-heartbeat restart pattern is a recommended design. This project uses a repository-side scheduled freshness check every six hours; it fails visibly when the interactive heartbeat is at least 36 hours old. This is an attention/re-entry alert, not an autonomous ChatGPT restart and not proof that work occurred. The check never refreshes the heartbeat. Actual continuation begins when a new conversation follows this boot sequence.
+The HsH 36-hour interactive-heartbeat restart pattern is a recommended design. This project checks heartbeat freshness on every relevant project push/pull request and on a six-hour schedule. It fails visibly when the interactive heartbeat is at least 36 hours old. This is an attention/re-entry alert, not an autonomous ChatGPT restart and not proof that work occurred. The check never refreshes the heartbeat. Actual continuation begins when a new conversation follows this boot sequence.
 
 No existing ChatGPT scheduled-task identity, schedule, phase, or enabled state is changed by this project setup.
 
