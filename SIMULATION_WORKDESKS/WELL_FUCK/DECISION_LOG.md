@@ -125,3 +125,12 @@ Dated decisions are preserved with their provenance and status. A decision may b
 **Decision:** The initial language population is contemporary informal, idiomatic English, represented with substantial lexical, regional, social, and stylistic variation. Investigate a dynamic external reservoir of real sentences and expressions as replenishable source material. The active simulation should use a bounded working sample rather than loading an entire corpus. Grammatical annotation may be uncertain or ambiguous; preserve candidate parts of speech, contextual evidence, and confidence rather than forcing one definitive label.  
 **Provenance:** Nathan's direct instruction in this conversation.  
 **Boundary:** External-source material must retain provenance and licensing metadata. Do not assume that a publicly viewable website permits bulk scraping, redistribution, or permanent storage. Freeze and identify the sampled corpus/version for each reproducible experiment; refresh the reservoir between defined sampling periods or runs. Misanalysis may be explored as a linguistic innovation pathway, but preprocessing mistakes must remain distinguishable from changes speakers actually adopt.
+
+
+## D-017 — Contemporary informal English and first population-model experiment
+
+**Date:** 2026-11-14  
+**Status:** CONFIRMED DIRECTION / PARAMETERS PROVISIONAL  
+**Decision:** Start with broad contemporary informal, idiomatic English without splitting late-twentieth-century and early-twenty-first-century usage into separate cohorts. Keep exact source attestations and retrieval/annotation provenance in backend logs; do not burden speaker memory or the visible language model with raw source text. Model language change as competition among form–function variants in individual speaker repertoires and community distributions, with exposure distinct from adoption and use. Proceed toward a small standalone population laboratory before integrating into the cave simulation. Use a bounded, frozen, stratified sample from a legally reusable corpus for each run; MASC/OANC is the initial candidate baseline, with source terms and package attribution checked at acquisition.  
+**Provenance:** User's direct instruction and subsequent design work, 2026-11-14.  
+**Parameters:** Initial population, innovation rate, contact rate, memory capacity, and interaction count in `LANGUAGE_CHANGE_LAB_DESIGN.md` are test settings, not empirical estimates or locked constants.
