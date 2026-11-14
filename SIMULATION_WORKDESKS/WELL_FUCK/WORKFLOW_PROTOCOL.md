@@ -95,12 +95,14 @@ Record KEEP / CHANGE / PARK / RETIRE decisions. Reorder, split, merge, or replac
 
 ## 8. Review rhythm
 
-- Every substantive assistant turn: refresh the interactive heartbeat and the short return pin.
+- Every substantive project turn: refresh the interactive heartbeat and short return pin with the actual interaction time. Do not advance either merely for unrelated conversation or automated repository activity.
 - Every completed operation: update ACTIVE_TRAY.md, WORK_QUEUE.md, OPERATION_LOG.md, and affected decisions/control records.
 - Every five completed operations or phase gate: perform a process and scope review.
 - At five completed operations or 14 calendar days, whichever comes first: assess whether the heartbeat threshold and scheduled-check cadence are useful for this project's actual interruption pattern.
 - Weekly while active: reassess project direction, dependencies, neglected branches, and whether this scaffold remains proportionate.
 - Before context exhaustion or handoff: follow SUCCESSION.md and verify every referenced artifact.
+
+The heartbeat timer is an idle/re-entry signal, not a context-window sensor. It cannot predict a sudden conversation limit. Protection against abrupt endings comes from small, durable checkpoints: preserve decisions and the exact active cursor after each bounded operation, reconcile the active tray and queue as work changes, and checkpoint immediately when context pressure is suspected. Do not wait for the heartbeat timer or the final moments of a conversation.
 
 ## 9. Tool and repository use
 

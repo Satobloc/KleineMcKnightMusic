@@ -130,7 +130,7 @@ Verified workflow runs:
 - Source Hopper Checks 43552401001: SUCCESS.
 - Well, Fuck. Continuity 43552468360: SUCCESS, including the live heartbeat freshness check.
 
-The first continuity run failed because an exactly 36-hour-old heartbeat was not classified as stale. The comparison was corrected from greater-than to greater-than-or-equal, and the boundary test now passes.
+The first continuity run failed because a synthetic unit-test heartbeat set exactly 36 hours in the past was not classified as stale. That timestamp was a deliberately constructed test input, not the project's live heartbeat. The comparison was corrected from greater-than to greater-than-or-equal, and the boundary test passed.
 
 The HTML simulation file remains local-only. Do not treat this repository bootstrap as proof that the executable has been committed.
 

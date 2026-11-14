@@ -19,7 +19,7 @@ Only bounded operations with checkable results or explicit dispositions receive 
 - Continuity workflow run 43552401004: SUCCESS (structure and unit tests).
 - Source Hopper Checks run 43552401001: SUCCESS (existing repository test suite plus the new continuity tests).
 - Continuity workflow run 43552468360: SUCCESS (structure, tests, and live heartbeat freshness check).
-- The first run, 43552273994, FAILED because the exact-threshold comparison used greater-than rather than greater-than-or-equal. The implementation was corrected and the boundary test now passes.
+- The first run, 43552273994, FAILED because a synthetic unit-test timestamp set exactly at the 36-hour threshold was not classified as stale. It was not the project's live heartbeat. The implementation was corrected to use greater-than-or-equal, and the boundary test passed.
 
 **Verified tested head before this receipt update:** 5322e9d7b49e3212ddaac3ed003e2ce20400ace5.
 
