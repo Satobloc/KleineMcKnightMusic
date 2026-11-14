@@ -130,28 +130,29 @@ The plan is locked as the default direction but amendable through versioned chan
 
 **WF-SIM-001 — Preserve and independently verify Cities Laboratory 2.11: COMPLETE.**
 
-- Exact local file: /mnt/data/Well_Fuck_Cities_Lab_2_11.html.
-- Size: 1,549,198 bytes.
-- SHA-256: 1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05.
-- Repository path: SIMULATION_WORKDESKS/WELL_FUCK/builds/Well_Fuck_Cities_Lab_2_11.html.
-- Commit: 4e2df3cb073b4b4dceefddf54831edab1378c17a.
-- Blob: 67d17e7efac74434570f36f6b3f726e945db6f1e.
-- Independent blob readback matched the full source text exactly.
-- Node syntax: PASS. Playwright/Chromium 144 browser run to turn 1,000: PASS, no page exceptions or console errors.
-- 2.10 vs 2.11, seed 42, 1,000 turns: sampled city/geology statistics and main-canvas screenshot hash identical.
+- 2.11 commit: 4e2df3cb073b4b4dceefddf54831edab1378c17a.
+- 2.11 blob: 67d17e7efac74434570f36f6b3f726e945db6f1e.
+- 2.11 source SHA-256: 1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05.
+- Exact source-text readback, Node syntax, and a 1,000-turn Playwright/Chromium run passed.
 
 **WF-LANG-001 — Audit Language Kernel 0.1: COMPLETE.**
 
-- Audit file: LANGUAGE_KERNEL_AUDIT.md.
-- Current kernel: 36-entry proto-lexicon, 14 founder phrases, 10 sound laws, eight phrase mutation operations, IPA-segment representation, community inheritance, and a shared language RNG.
-- Verified issue: “Overhear locals” consumes the language simulation RNG. A click at turn 100 changed the turn-1000 phrase under the same seed, while city statistics and the canvas remained identical.
-- Isolated language test: same seed repeated deterministically; a different seed changed the language trajectory; global city RNG state remained unchanged.
+- Audit: LANGUAGE_KERNEL_AUDIT.md.
+- The audit found that “Overhear locals” consumed the language simulation RNG and changed later language evolution.
 
-## 10. Exact next actions
+**WF-LANG-004 — Decouple notebook/UI sampling from language simulation RNG: COMPLETE.**
 
-1. WF-LANG-004: decouple notebook/UI sampling from the language simulation RNG and publish a new versioned build without overwriting 2.11.
-2. WF-TEST-001: add repeatable regression tests for UI-action independence and multi-seed physical/city behavior.
-3. Continue productive-language design with WF-LANG-002 after the RNG guardrail is tested.
+- 2.12 commit: 6241026fabccb413eea6630605fdb68a36db3e70.
+- 2.12 blob: 2be28e6df39bec77067dd147462fbf1799378a94.
+- 2.12 SHA-256: 0c26d03352d270cb0f3ff3771a0abd5cf542e5a3e1a8ff944a154d96f9f6f486.
+- Added a presentation RNG and moved “Overhear locals” to that stream.
+- 2.11 remains unchanged.
+
+**WF-TEST-001 — Establish reproducibility and RNG-isolation tests: COMPLETE.**
+
+- Automated Node test: tests/test_well_fuck_language_rng.js, included in the continuity workflow.
+- Optional browser test: tests/test_well_fuck_browser_regression.py.
+- Playwright tests at seeds 42, 7, and 2026 through 1,000 turns all passed: 2.11/2.12 baselines matched; UI sampling did not change 2.12 language evolution or physical/city output; no page or console errors.
 
 ## 11. Repository bootstrap receipt
 
@@ -197,3 +198,21 @@ Nathan clarified that HsH and the other Satobloc repositories are methodological
 **Verified defect:** “Overhear locals” consumes the language simulation RNG. One same-seed click at turn 100 changed the phrase at turn 1,000 while leaving city/geology outputs unchanged. This is a UI-to-language coupling defect, not a physical RNG leak.
 
 **Current operation:** WF-LANG-004, decouple notebook/UI sampling from the language simulation RNG. Preserve 2.11 unchanged; produce a new 2.12 build and a regression test.
+
+
+## 14. Latest project update — 2026-11-13
+
+**Project plan:** PROJECT_PLAN.md v1.2. Phase 2 (language audit and baseline) is complete; Phase 3 (productive language core) is active.
+
+**Latest prototype:** Cities Laboratory 2.12.
+- Commit: 6241026fabccb413eea6630605fdb68a36db3e70.
+- Blob: 2be28e6df39bec77067dd147462fbf1799378a94.
+- Size: 1,549,658 bytes.
+- SHA-256: 0c26d03352d270cb0f3ff3771a0abd5cf542e5a3e1a8ff944a154d96f9f6f486.
+- 2.11 remains preserved unchanged as the baseline.
+
+**Verified correction:** The notebook's “Overhear locals” action now uses a separate presentation RNG. It no longer changes the future language trajectory.
+
+**Regression evidence:** Node language-RNG test passed. Playwright tests at seeds 42, 7, and 2026 through 1,000 turns all passed. For each seed, 2.11 and 2.12 baseline language/physical outputs matched; a UI sample at turn 100 did not alter the 2.12 language result, city statistics, or canvas. The sample itself remained visible in the notebook.
+
+**Current operation:** WF-LANG-002, design the productive language model. LANGUAGE_MODEL_DESIGN.md is a proposal, not yet an approved implementation contract. The next step is to review a minimal message-frame schema, concept inventory, lexeme structure, and grammar profile.

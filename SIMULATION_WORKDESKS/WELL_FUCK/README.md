@@ -17,19 +17,28 @@ The project is a creative computational system, not a validated geological or so
 
 ## Current prototype
 
-The latest known prototype is **Cities Laboratory 2.11**, with Language Kernel 0.1.
+The latest prototype is **Cities Laboratory 2.12**, with the presentation-RNG correction.
 
-- Source artifact: Well_Fuck_Cities_Lab_2_11.html
-- Source size: 1,549,198 bytes
-- Source SHA-256: `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`
-- Repository path: `builds/Well_Fuck_Cities_Lab_2_11.html`
-- Repository commit: `4e2df3cb073b4b4dceefddf54831edab1378c17a`
-- Artifact blob: `67d17e7efac74434570f36f6b3f726e945db6f1e`
-- Verification: exact source-text readback; Node syntax PASS; Playwright/Chromium 144 completed 1,000 turns with no page or console errors. A seed-42 comparison with 2.10 also produced identical sampled city/geology statistics and an identical main-canvas screenshot. Broader multi-seed tests remain queued.
+- Repository artifact: `builds/Well_Fuck_Cities_Lab_2_12.html`
+- Size: 1,549,658 bytes
+- SHA-256: `0c26d03352d270cb0f3ff3771a0abd5cf542e5a3e1a8ff944a154d96f9f6f486`
+- Commit: `6241026fabccb413eea6630605fdb68a36db3e70`
+- Blob: `2be28e6df39bec77067dd147462fbf1799378a94`
+- Change: “Overhear locals” now uses a dedicated presentation/UI RNG. It no longer consumes the language simulation RNG.
 
-The preceding prototype, Cities Laboratory 2.10, has local SHA-256 `90fd48b8e7f15c62bc7dacbcadcc73c5a46c21f142d197e52220d0ff7a253f19`.
+**Preserved baseline:** Cities Laboratory 2.11 remains unchanged at `builds/Well_Fuck_Cities_Lab_2_11.html`, SHA-256 `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`, commit `4e2df3cb073b4b4dceefddf54831edab1378c17a`.
 
-### Current simulation concepts
+**Verification:** Node syntax and language-RNG regression tests pass. Playwright browser comparisons at seeds 42, 7, and 2026, each through 1,000 turns, show:
+- 2.11 and 2.12 produce matching language baselines, physical/city statistics, and main-canvas images;
+- a turn-100 “Overhear locals” interaction in 2.12 does not change the turn-1,000 language result or physical/city output;
+- the observation sample is still recorded;
+- no page exceptions or console errors occurred.
+
+Repeatable tests:
+- Automated Node test: `tests/test_well_fuck_language_rng.js` (also run by the continuity workflow).
+- Optional browser regression: `tests/test_well_fuck_browser_regression.py` (requires Playwright and Chromium; run one seed per invocation).
+
+### Current simulation concepts### Current simulation concepts
 
 - Grid cells distinguish void, rock, purple cavern/stalactite, mossy green terrain, and water.
 - Fractures spread; granular debris falls, lands, darkens, compacts, and erodes.
@@ -57,8 +66,9 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 3. Read ACTIVE_TRAY.md and WORK_QUEUE.md.
 4. Read WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
 5. Read LANGUAGE_KERNEL_AUDIT.md when working on the language kernel.
-6. Read SUCCESSION.md when handing off or recovering from a context limit.
-7. Read the dated session checkpoint for conversation-derived project state.
+6. Read LANGUAGE_MODEL_DESIGN.md when designing productive language mechanics.
+7. Read SUCCESSION.md when handing off or recovering from a context limit.
+8. Read the dated session checkpoint for conversation-derived project state.
 
 ## Workspace map
 
@@ -67,6 +77,7 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 | BOOT.md | Tiny launch capsule and load order |
 | PROJECT_PLAN.md | Adopted, amendable roadmap and phase gates |
 | LANGUAGE_KERNEL_AUDIT.md | Source-grounded Language Kernel 0.1 map, test evidence, and defects |
+| LANGUAGE_MODEL_DESIGN.md | Reviewable proposal for productive lexical, semantic, morphological, and syntactic machinery |
 | PROJECT_CONTROL.md | Executive control shelf and current status |
 | ACTIVE_TRAY.md | One bounded operation in focus |
 | WORK_QUEUE.md | Priority-aware branches and parked work |
@@ -76,6 +87,8 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 | WORKFLOW_PROTOCOL.md | Execution, evidence, turn ticker, operation ticker, review |
 | SUCCESSION.md | Context-limit and conversation handoff procedure |
 | SESSION_CHECKPOINT_2026-11-13.md | Project-specific checkpoint distilled from the originating conversation |
+| tests/test_well_fuck_language_rng.js | Automated deterministic-language and RNG-isolation regression |
+| tests/test_well_fuck_browser_regression.py | Optional multi-seed browser regression for 2.11/2.12 and UI independence |
 
 ## Public-repository boundary
 

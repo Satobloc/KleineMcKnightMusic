@@ -82,7 +82,24 @@ Dated decisions are preserved with their provenance and status. A decision may b
 ## D-011 — Presentation/UI randomness must not perturb simulation evolution
 
 **Date:** 2026-11-13  
-**Status:** WORKING DESIGN  
+**Status:** CONFIRMED  
 **Decision:** UI-only sampling and observational controls should not consume or alter the random streams governing world or language evolution. Use a separate presentation RNG or a stateless deterministic selector.  
 **Provenance:** Source-grounded Language Kernel 0.1 audit and paired same-seed browser experiment. One “Overhear locals” click at turn 100 changed the turn-1000 language phrase while leaving city/geology statistics and the main-canvas image unchanged.  
 **Review:** Confirm the correction with a regression test. Revisit only if a future interaction is deliberately designed to affect simulation state.
+
+
+## D-012 — Separate presentation RNG in Cities Laboratory 2.12
+
+**Date:** 2026-11-13  
+**Status:** CONFIRMED  
+**Decision:** “Overhear locals” and other observational sampling use a dedicated presentation RNG, initialized from the world seed with a distinct seed transform. They do not consume the language simulation RNG or physical/city RNG.  
+**Provenance:** Implemented in Cities Laboratory 2.12 and tested against 2.11 at seeds 42, 7, and 2026 through 1,000 turns. UI interaction preserved language output, physical statistics, and the main-canvas image in all three tested seeds.  
+**Boundary:** This confirms the current presentation/simulation separation; it does not establish that each speech community has its own independent RNG stream.
+
+## D-013 — Productive language architecture proposal
+
+**Date:** 2026-11-13  
+**Status:** PROPOSAL / NOT YET ADOPTED  
+**Decision:** Use LANGUAGE_MODEL_DESIGN.md as the reviewable proposal for a meaning-first, compositional language engine. It proposes message frames, concept IDs, community lexicons, a small grammar profile, and an inspectable realization pipeline.  
+**Provenance:** WF-LANG-002 design work.  
+**Review:** Nathan's feedback is required before the proposal becomes an implementation contract.

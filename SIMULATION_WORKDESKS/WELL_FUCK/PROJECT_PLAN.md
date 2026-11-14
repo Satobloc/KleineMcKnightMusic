@@ -1,11 +1,11 @@
 # Well, Fuck. — Living Project Plan
 
 **Plan ID:** WF-PLAN-001  
-**Version:** 1.1  
+**Version:** 1.2  
 **Status:** ADOPTED BASELINE / AMENDABLE  
 **Adopted:** 2026-11-13  
 **Project status:** ACTIVE WORKSHOP  
-**Current phase:** 2 — Language-kernel audit and baseline  
+**Current phase:** 3 — Productive language core  
 **Canonical roadmap:** This file
 
 ## 1. What is locked, and what is not
@@ -71,14 +71,16 @@ Preserve Cities Laboratory 2.11, including Language Kernel 0.1, as an identifiab
 **Gate:** The committed file matches the source checksum; its blob and commit are recorded; independent readback succeeds; syntax and a 1,000-turn browser run have checkable results; a restorable baseline is identified. Broader multi-seed regression remains part of Phase 2.
 
 ### Phase 2 — Audit the language kernel and establish the baseline
+**Status:** COMPLETE
 Inspect the actual 2.11 source. Map language state, lexicon representation, IPA handling, founder-phrase selection, mutation operations, sound-change application, community inheritance, event timing, UI/notebook behavior, and all random-number call paths.
 
 In parallel, establish repeatable baseline tests for reset behavior, seeded runs, turn stepping, language/geology-city RNG isolation, and independence from UI-only interactions. The initial audit found that “Overhear locals” currently consumes the language simulation RNG.
 
-**Gate:** A source-grounded implementation map, known limitations, and reproducible baseline test record exist. The initial source audit is recorded in LANGUAGE_KERNEL_AUDIT.md. Do not redesign the language engine before this audit.
+**Gate:** COMPLETE. The source-grounded audit is in LANGUAGE_KERNEL_AUDIT.md. The 2.12 UI-RNG correction and regression tests are recorded in OPERATION_LOG.md; three seeds were checked through 1,000 turns, with matching 2.11/2.12 physical outputs and no UI-induced language divergence.
 
 ### Phase 3 — Build a productive language core
-Design and implement the foundations needed to create new utterances rather than only mutate a fixed stock of phrases. Work through the following design areas, allowing the audit to determine their exact order:
+**Status:** ACTIVE
+Design and implement the foundations needed to create new utterances rather than only mutate a fixed stock of phrases. The first reviewable proposal is LANGUAGE_MODEL_DESIGN.md; it is not an approved implementation contract. Work through the following design areas, allowing the audit to determine their exact order:
 
 - a useful concept and semantic inventory, initially covering the world inhabitants' practical environment and social life;
 - phoneme inventories, phonotactics, syllable and word formation, and regular sound change;
@@ -131,11 +133,11 @@ Maintain versioned builds, concise change notes, reproducible tests, and a clean
 
 ## 7. Immediate execution sequence
 
-1. **WF-SIM-001 — Preserve Cities Laboratory 2.11.** COMPLETE: exact artifact committed, source identity and repository readback verified, syntax passed, and a 1,000-turn browser run completed without page or console errors.
+1. **WF-SIM-001 — Preserve Cities Laboratory 2.11.** COMPLETE: exact artifact committed, read back, syntax-checked, and browser-tested through 1,000 turns.
 2. **WF-LANG-001 — Audit Language Kernel 0.1.** COMPLETE: source-grounded implementation map and limitations are in LANGUAGE_KERNEL_AUDIT.md.
-3. **WF-LANG-004 — Decouple notebook/UI sampling from simulation RNG.** ACTIVE: prevent “Overhear locals” from changing future language evolution; preserve 2.11 as the baseline and create a new versioned build.
-4. **WF-TEST-001 — Broaden reproducibility tests.** Add repeatable tests for UI-action independence and multi-seed physical/city regression.
-5. **WF-LANG-002 — Design the productive language model.** Turn the audit into a concrete data model and staged implementation proposal before expanding the engine.
+3. **WF-LANG-004 — Decouple notebook/UI sampling from simulation RNG.** COMPLETE: Cities Laboratory 2.12 uses a separate presentation RNG; the 2.11 baseline remains unchanged.
+4. **WF-TEST-001 — Establish reproducibility tests.** COMPLETE: automated Node language-RNG regression plus optional Playwright browser regression; seeds 42, 7, and 2026 passed through 1,000 turns.
+5. **WF-LANG-002 — Design the productive language model.** ACTIVE: review LANGUAGE_MODEL_DESIGN.md, settle the minimal concept/message/lexeme model, and define the first implementation gate.
 6. Proceed to contextual speech, social evolution, and civilization integration through the gates above.
 
 The queue in WORK_QUEUE.md owns operation-level status and dependencies. ACTIVE_TRAY.md names the one operation currently being executed.
@@ -172,11 +174,14 @@ Record each consequential amendment in the change history and DECISION_LOG.md. K
 |---|---|---|
 | 1.0 | 2026-11-13 | Adopted the initial project mission, design commitments, phase gates, priority rules, and immediate execution sequence. |
 | 1.1 | 2026-11-13 | Updated the roadmap after the 2.11 browser and seeded-comparison tests; added the presentation-RNG isolation guardrail and the verified notebook RNG-coupling fix to the immediate sequence. |
+| 1.2 | 2026-11-13 | Recorded the 2.12 UI-RNG correction, multi-seed regression evidence, completion of Phase 2, and the first reviewable productive-language design proposal. |
 
 ## 11. Current return point
 
-- **Active operation:** WF-LANG-004 — decouple notebook/UI sampling from the language simulation RNG.
-- **Preserved baseline:** Cities Laboratory 2.11 at `builds/Well_Fuck_Cities_Lab_2_11.html`.
-- **Baseline commit:** `4e2df3cb073b4b4dceefddf54831edab1378c17a`; artifact blob `67d17e7efac74434570f36f6b3f726e945db6f1e`.
-- **Audit:** LANGUAGE_KERNEL_AUDIT.md. The “Overhear locals” button consumes `languageRng` and changes the later language trajectory.
-- **Next:** add a separate presentation/UI RNG (or stateless selector), test that notebook interaction does not change language evolution, and publish a new version without overwriting 2.11.
+- **Active operation:** WF-LANG-002 — design the productive language model.
+- **Latest prototype:** Cities Laboratory 2.12 at `builds/Well_Fuck_Cities_Lab_2_12.html`.
+- **2.12 commit:** `6241026fabccb413eea6630605fdb68a36db3e70`; artifact blob `2be28e6df39bec77067dd147462fbf1799378a94`.
+- **2.12 SHA-256:** `0c26d03352d270cb0f3ff3771a0abd5cf542e5a3e1a8ff944a154d96f9f6f486`.
+- **Preserved 2.11 baseline:** commit `4e2df3cb073b4b4dceefddf54831edab1378c17a`; unchanged.
+- **Audit:** LANGUAGE_KERNEL_AUDIT.md. **Design proposal:** LANGUAGE_MODEL_DESIGN.md (reviewable, not yet adopted).
+- **Next:** settle the first semantic/message-frame and lexeme schema, then specify a small productive clause generator.

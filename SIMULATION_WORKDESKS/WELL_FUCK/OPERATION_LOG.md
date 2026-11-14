@@ -72,3 +72,45 @@ Only bounded operations with checkable results or explicit dispositions receive 
 **Result:** The current kernel is a phrase-evolution prototype, not yet a productive language engine. The audit preserves its useful foundations and identifies UI RNG isolation as the next correction.
 
 **Next operation:** WF-LANG-004 — decouple notebook/UI sampling from language simulation RNG.
+
+
+## WF-LANG-004 — Decouple notebook/UI sampling from language simulation RNG
+
+**Status:** COMPLETE  
+**Artifact:** Cities Laboratory 2.12  
+**Repository path:** `SIMULATION_WORKDESKS/WELL_FUCK/builds/Well_Fuck_Cities_Lab_2_12.html`  
+**Commit:** `6241026fabccb413eea6630605fdb68a36db3e70`  
+**Blob:** `2be28e6df39bec77067dd147462fbf1799378a94`  
+**Size:** 1,549,658 bytes  
+**SHA-256:** `0c26d03352d270cb0f3ff3771a0abd5cf542e5a3e1a8ff944a154d96f9f6f486`
+
+**Change**
+- Added a dedicated `uiRng` stream with `seedUiRng`, `uiRandom`, `uiInt`, and `uiPick`.
+- The presentation stream is initialized on reset from the world seed with a distinct seed transform.
+- “Overhear locals” now uses `uiPick()` instead of `langPick()`.
+- Added language-kernel boundary markers for source-extracted regression tests.
+- Preserved Cities Laboratory 2.11 unchanged.
+
+**Verification**
+- Node syntax check: PASS.
+- Node language-RNG regression test: PASS. Same seed/action sequence reproduced; UI sampling changed only the presentation RNG; language RNG and physical RNG remained unchanged.
+- Playwright browser regression at seeds 42, 7, and 2026, each through 1,000 turns: PASS.
+- At each seed, 2.11 and 2.12 baseline language, physical/city statistics, and main-canvas image matched.
+- At each seed, a “Overhear locals” click at turn 100 in 2.12 did not change the turn-1,000 language phrase/IPA, physical/city statistics, or canvas; the notebook sample was recorded.
+- No page exceptions or console errors in tested runs.
+
+**Result:** The verified UI-to-language RNG coupling is corrected in 2.12. The 2.11 baseline remains available for comparison.
+
+## WF-TEST-001 — Establish reproducibility and RNG-isolation tests
+
+**Status:** COMPLETE  
+**Automated test:** `tests/test_well_fuck_language_rng.js`, added to the Well, Fuck. Continuity workflow.  
+**Optional browser test:** `tests/test_well_fuck_browser_regression.py`; requires Playwright and Chromium and is run manually, one seed per invocation.
+
+**Evidence**
+- Node test passed for deterministic same-seed language evolution, different-seed variation, UI/presentation RNG isolation, and physical RNG non-interference.
+- Playwright browser regression passed for seeds 42, 7, and 2026 through 1,000 turns.
+- For all three seeds, 2.11 and 2.12 baseline physical/city statistics and main-canvas PNG hashes matched.
+- For all three seeds, the 2.12 UI sample did not change language evolution or physical/city output.
+
+**Limit:** The three-seed suite is a useful initial regression set, not exhaustive coverage of all seeds or all possible user interactions.

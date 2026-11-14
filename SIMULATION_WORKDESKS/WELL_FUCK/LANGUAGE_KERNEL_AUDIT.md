@@ -159,3 +159,35 @@ The 2.10 comparison source was independently identified by SHA-256 `90fd48b8e7f1
 ## 8. Audit conclusion
 
 Language Kernel 0.1 is a working phrase-evolution prototype with real phonological state and community inheritance, not yet a productive language engine. The physical/city random stream remained unchanged in the tested seed-42 2.10/2.11 comparison. The most immediate defect is narrower: the notebook's “Overhear locals” interaction consumes the language simulation RNG and changes later linguistic evolution. Fix that coupling before expanding the language model.
+
+
+## 9. Follow-up correction and verification in Cities Laboratory 2.12
+
+The defect in Section 4 was corrected in 2.12 without modifying the preserved 2.11 artifact.
+
+**Implementation**
+- Added a separate `uiRng` stream, seeded on reset from the world seed with a distinct seed transform.
+- Added `seedUiRng()`, `uiRandom()`, `uiInt()`, and `uiPick()`.
+- Changed “Overhear locals” to use `uiPick()` rather than `langPick()`.
+- Added explicit language-kernel source markers so the simulation logic can be tested in isolation.
+- Kept 2.11 unchanged as the comparison baseline.
+
+**2.12 identity**
+- Commit: `6241026fabccb413eea6630605fdb68a36db3e70`.
+- Artifact blob: `2be28e6df39bec77067dd147462fbf1799378a94`.
+- SHA-256: `0c26d03352d270cb0f3ff3771a0abd5cf542e5a3e1a8ff944a154d96f9f6f486`.
+- Size: 1,549,658 bytes.
+
+**Regression result**
+At seeds 42, 7, and 2026, each run advanced to turn 1,000:
+
+- 2.11 and 2.12 baseline language phrase/IPA matched.
+- 2.11 and 2.12 physical/city statistics matched.
+- Main-canvas PNG hashes matched.
+- A turn-100 “Overhear locals” action in 2.12 did not change the turn-1,000 phrase/IPA or physical/city outputs.
+- The UI sample remained recorded in the notebook.
+- No page exceptions or console errors occurred.
+
+The automated Node regression is `tests/test_well_fuck_language_rng.js` and is included in the continuity workflow. The optional Playwright browser suite is `tests/test_well_fuck_browser_regression.py`; it can be run one seed per invocation.
+
+**Conclusion:** The specific UI-to-language RNG coupling identified in 2.11 is corrected and regression-tested in 2.12. The broader design question of one shared language RNG versus per-community streams remains open.

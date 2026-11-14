@@ -6,7 +6,7 @@
 **Canonical control:** PROJECT_CONTROL.md  
 **Current tray:** ACTIVE_TRAY.md  
 **Heartbeat:** HEARTBEAT.md  
-**Current operation:** WF-LANG-004, ACTIVE — decouple notebook/UI sampling from simulation RNG
+**Current operation:** WF-LANG-002, ACTIVE — design the productive language model
 
 ## Mission
 
@@ -18,7 +18,7 @@ At the start of every new conversation or resumed work session:
 
 1. Fetch the live repository state. Record the main-branch commit SHA; do not rely on a remembered or cached copy.
 2. Read this file, PROJECT_PLAN.md, PROJECT_CONTROL.md, ACTIVE_TRAY.md, WORK_QUEUE.md, and HEARTBEAT.md.
-3. Read only the current operation's named files and relevant source/code ranges. For language work, consult LANGUAGE_KERNEL_AUDIT.md before changing the kernel.
+3. Read only the current operation's named files and relevant source/code ranges. For language work, consult LANGUAGE_KERNEL_AUDIT.md before changing the kernel and LANGUAGE_MODEL_DESIGN.md before implementing productive grammar.
 4. Load WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
 5. Load SUCCESSION.md before a handoff or whenever context exhaustion is possible.
 6. Use SESSION_CHECKPOINT_2026-11-13.md as a locator and project-state summary, not as a substitute for inspecting the named code or primary artifacts.
@@ -37,10 +37,12 @@ WF-CYCLE 02/05 — LANGUAGE ENGINE
 WF-OP 01 COMPLETE — repository home and continuity checks verified  
 WF-OP 02 COMPLETE — Cities Laboratory 2.11 preserved and verified  
 WF-OP 03 COMPLETE — Language Kernel 0.1 source audit  
-WF-OP 04 IN PROGRESS — decouple notebook/UI sampling from simulation RNG  
-NOW: isolate “Overhear locals” from the language simulation stream  
-NEXT: add a regression test, then design productive lexical and grammatical machinery  
-RETURN: ACTIVE_TRAY.md and the WF-LANG-004 operation
+WF-OP 04 COMPLETE — 2.12 presentation-RNG correction  
+WF-OP 05 COMPLETE — deterministic and multi-seed regression tests  
+WF-OP 06 IN PROGRESS — design the productive language model  
+NOW: review the semantic/message-frame and lexeme proposal  
+NEXT: settle the minimal schema and first productive clause generator  
+RETURN: ACTIVE_TRAY.md and LANGUAGE_MODEL_DESIGN.md
 
 ## Truth conditions
 

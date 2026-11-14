@@ -1,43 +1,41 @@
 # Active Tray
 
 <!-- machine-state:start -->
-operation_id: WF-LANG-004
+operation_id: WF-LANG-002
 status: ACTIVE
 priority: P1
-started_utc: 2026-11-14T05:01:52Z
+started_utc: 2026-11-14T05:26:01Z
 <!-- machine-state:end -->
 
 ## Operation
 
-**Title:** Decouple notebook/UI sampling from language simulation RNG.
+**Title:** Design the productive language model.
 
-**Question:** Can the “Overhear locals” observation control remain useful without changing the future language trajectory for a fixed world seed?
+**Question:** What is the smallest coherent semantic, lexical, and grammatical system that lets a speech community generate new, compositional utterances from simulation events and speaker intentions?
 
 **Baseline**
-- Preserved source: `builds/Well_Fuck_Cities_Lab_2_11.html`
-- Baseline commit: `4e2df3cb073b4b4dceefddf54831edab1378c17a`
-- Baseline artifact SHA-256: `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`
-- Source audit: `LANGUAGE_KERNEL_AUDIT.md`
-
-**Verified defect**
-The “Overhear locals” button uses `langPick()`, which consumes the same `languageRng` stream as founder phrase adoption, phrase mutation, and sound changes. In a same-seed browser comparison, one click at turn 100 changed the turn-1000 phrase from “Vi fuk!” /ʋi fʌk/ to “We're fucked!” /ʋɪɹ fʌkt/. City/geology statistics and the main-canvas screenshot remained identical.
+- Latest build: Cities Laboratory 2.12, `builds/Well_Fuck_Cities_Lab_2_12.html`.
+- Preserved baseline: Cities Laboratory 2.11, unchanged.
+- Source audit: `LANGUAGE_KERNEL_AUDIT.md`.
+- Current proposal: `LANGUAGE_MODEL_DESIGN.md`, version 0.1, reviewable and not yet an implementation contract.
 
 **Scope**
-- Preserve 2.11 unchanged as the baseline.
-- Add a separate presentation/UI RNG, or use a stateless deterministic context selector.
-- Ensure reset initializes the presentation stream from the world seed without sharing mutable state with language or physical simulation streams.
-- Change only the notebook's context-sampling path.
-- Produce a new versioned build (2.12), not an overwrite of 2.11.
-- Add a repeatable regression test proving that UI sampling does not alter the language trajectory.
-- Confirm same-seed determinism and unchanged physical/city output.
+- Define a compact, simulation-grounded concept inventory.
+- Define a message-frame representation independent of surface wording.
+- Define the minimal lexeme schema and community-specific mapping from concepts to forms.
+- Choose a first, deliberately small set of grammatical distinctions and clause patterns.
+- Preserve IPA token arrays, community inheritance, and the existing phrase/idiom system.
+- Specify the generation pipeline and the tests required before implementation.
+- Identify open decisions without prematurely fixing them.
 
 **Stop condition**
-A new build passes syntax and browser checks; same-seed runs with and without notebook interactions produce identical language evolution and identical physical/city outcomes; UI context sampling remains functional and deterministic; the new artifact is committed and independently read back.
+A reviewable design identifies the first concept domains, message-frame schema, lexeme structure, minimal grammar profile, utterance-generation pipeline, implementation sequence, and test gates. Major choices are either supported by a worked example or explicitly left open for Nathan's decision.
 
 **Out of scope**
-- Productive grammar or broad lexicon design.
-- Social contact, borrowing, dialect continua, or intelligibility.
-- Geological feature development.
+- Implementing the productive grammar before the design gate.
+- Replacing the existing phrase kernel.
+- Social contact, borrowing, dialect continua, or mutual intelligibility implementation.
+- Geology feature development.
 - Changes to existing ChatGPT scheduled tasks.
 
-**Next cursor:** patch the UI sampling RNG path, run the paired same-seed browser regression, then publish and verify 2.12.
+**Next cursor:** work through LANGUAGE_MODEL_DESIGN.md, build one or two worked message-frame-to-utterance examples, and resolve the minimum schema.
