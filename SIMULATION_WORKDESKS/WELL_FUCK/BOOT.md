@@ -39,10 +39,10 @@ WF-OP 02 COMPLETE — Cities Laboratory 2.11 preserved and verified
 WF-OP 03 COMPLETE — Language Kernel 0.1 source audit  
 WF-OP 04 COMPLETE — 2.12 presentation-RNG correction  
 WF-OP 05 COMPLETE — deterministic and multi-seed regression tests  
-WF-OP 06 IN PROGRESS — research realistic English language change  
-NOW: define socially transmitted variation and change mechanisms  
-NEXT: choose the English starting condition and population/cohort representation  
-RETURN: ACTIVE_TRAY.md and ENGLISH_LANGUAGE_CHANGE_RESEARCH.md
+WF-OP 06 IN PROGRESS — specify and calibrate the usage-driven Language Change Laboratory  
+NOW: acquire and verify the MASC source package; freeze a stratified sample manifest  
+NEXT: implement E0 ingestion checks, then E1 no-innovation transmission baseline  
+RETURN: ACTIVE_TRAY.md, LANGUAGE_CHANGE_LAB_DESIGN.md, and LANGUAGE_GAMEPLAY_INTENT.md
 
 ## Truth conditions
 
