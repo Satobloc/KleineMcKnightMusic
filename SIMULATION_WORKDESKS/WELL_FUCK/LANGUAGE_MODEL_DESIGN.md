@@ -1,6 +1,7 @@
 # Productive Language Model — Design Proposal 0.1
 
 **Design ID:** WF-LANG-DESIGN-001  
+**Version:** 0.2  
 **Status:** PROPOSAL / REVIEWABLE, NOT YET AN IMPLEMENTATION CONTRACT  
 **Target baseline:** Cities Laboratory 2.12  
 **Phase:** 3 — Productive language core  
@@ -220,3 +221,142 @@ These questions should be answered after the first data-model sketch and a small
 ## 9. Status and amendment rule
 
 This is a working proposal, not an approved specification. Nathan's feedback may change the concept inventory, grammar approach, data structures, or implementation order. Once a minimal model is accepted, record it as a dated decision and update this document's version. Do not let this proposal silently become a code contract.
+
+
+## 10. Worked message-frame examples
+
+These examples exercise the proposed architecture without inventing community word forms prematurely. Lexeme IDs and morphemes are placeholders; the actual IPA forms should come from the community phonology and lexicon.
+
+### Example A — Warn that a nearby shelter is about to collapse
+
+**Simulation event:** a collapse-risk or collapse event affects a building near the speaker's settlement.
+
+**Communicative intent:** warn nearby community members.
+
+**Illustrative message frame:**
+
+```json
+{
+  "id": "frame:warning:001",
+  "speech_act": "warning",
+  "predicate": "event.collapse",
+  "arguments": [
+    {
+      "role": "theme",
+      "concept_id": "entity.shelter",
+      "referent_id": "building:17"
+    },
+    {
+      "role": "location",
+      "relation": "near_speaker",
+      "referent_id": "place:nearby"
+    }
+  ],
+  "features": {
+    "polarity": "positive",
+    "time": "imminent",
+    "urgency": "high"
+  },
+  "provenance": {
+    "source": "simulation_event",
+    "event_id": "collapse-risk:17",
+    "turn": 234
+  }
+}
+```
+
+**Lexicalization slots:** `entity.shelter`, `event.collapse`, a near-speaker relation, and an imminent/aspect marker.
+
+**Illustrative grammar profile:** SOV-like clause order, locative particle after the location phrase, imminent marker after the predicate. This is an example profile only, not the default for every community.
+
+**Schematic realization:** `[SHELTER] [NEAR] [COLLAPSE] [IMMINENT]`
+
+The realization trace should retain the original frame, selected lexeme IDs, morpheme IDs, final IPA token array, orthography, and gloss. A different community may order or mark these same roles differently while preserving the same message frame.
+
+### Example B — Report that the group found water here
+
+**Simulation event:** a community member discovers a water source.
+
+**Communicative intent:** report the discovery to the group.
+
+**Illustrative message frame:**
+
+```json
+{
+  "id": "frame:report:002",
+  "speech_act": "report",
+  "predicate": "event.find",
+  "arguments": [
+    {
+      "role": "agent",
+      "concept_id": "entity.group",
+      "referent_id": "community:1"
+    },
+    {
+      "role": "theme",
+      "concept_id": "entity.water",
+      "referent_id": "water-source:9"
+    },
+    {
+      "role": "location",
+      "concept_id": "deictic.here",
+      "referent_id": "place:current"
+    }
+  ],
+  "features": {
+    "polarity": "positive",
+    "time": "completed"
+  },
+  "provenance": {
+    "source": "simulation_event",
+    "event_id": "discovery:9",
+    "turn": 241
+  }
+}
+```
+
+**Lexicalization slots:** group/we, water, find, here, and a completed/past marker if the community marks it.
+
+**Schematic SOV realization:** `[WE] [WATER] [FIND] [COMPLETED] [HERE]`
+
+Again, these are structural slots, not proposed IPA forms.
+
+## 11. First concept inventory — candidate set
+
+The current 36-entry `PROTO_LEXICON` is largely English-derived phrase material: pronouns, function words, expletives, evaluatives, and idiom components. It does not contain a useful core vocabulary for rock, water, shelter, food, movement, or cavern events. It should not be treated as the complete semantic lexicon.
+
+**Recommended direction:** preserve the current phrase stock as a formulaic/discourse layer, map its entries to concept IDs where that is meaningful, and build a separate concept-driven lexicon for the simulated world. This preserves the project's original “Well, fuck.” lineage without forcing every new environmental word to descend from English expletives.
+
+A first candidate concept set:
+
+| Domain | Candidate concept IDs |
+|---|---|
+| Entities | `entity.person`, `entity.group`, `entity.outsider`, `entity.shelter`, `entity.rock`, `entity.water`, `entity.food`, `entity.tunnel`, `entity.path`, `entity.light`, `entity.dark` |
+| Events and actions | `event.collapse`, `event.crack`, `event.flow`, `event.build`, `event.enter`, `event.leave`, `event.find`, `event.lose`, `event.give`, `event.take`, `event.help`, `event.want` |
+| Qualities and relations | `property.safe`, `property.dangerous`, `relation.near`, `relation.far`, `deictic.here`, `deictic.there`, `time.now`, `time.soon`, `polarity.not`, `quantity.many` |
+
+This is a candidate inventory, not a final ontology. Concepts should be retained only when they can be used in an event, interaction, or meaningful utterance.
+
+## 12. Proposed minimum viable grammar profile
+
+The first productive-language milestone should not attempt to model every natural-language distinction. A small community profile could expose only:
+
+- **Clause order:** SOV, SVO, or VSO.
+- **Role marking:** primarily position, a separate particle, or a case-like affix.
+- **Negation:** a separate particle or an affix.
+- **Time/aspect:** no marking, a separate particle, or an affix.
+- **Number/collective:** no marking, a plural/collective particle, or an affix.
+
+A community receives a stable initial profile from its seed. Changes should be rare, recorded, and testable. Do not independently randomize every parameter every turn; that would produce noise rather than a recognizable language.
+
+For the first generator, three speech acts (report, warning, request) and a small number of event predicates are likely enough. The exact count should be set after selecting the first event set.
+
+## 13. Separation of event, intention, and utterance
+
+Keep three objects distinct:
+
+1. **Simulation event:** what happened in the world.
+2. **Communicative intent:** whether a speaker chooses to tell someone, warn them, request something, or remain silent.
+3. **Message frame / utterance:** the intended content and the language-specific realization.
+
+An event should not automatically become speech. This separation leaves room for attention, knowledge, audience, urgency, social relationship, and pragmatic choice later, without forcing those systems into the first lexical/grammar implementation.

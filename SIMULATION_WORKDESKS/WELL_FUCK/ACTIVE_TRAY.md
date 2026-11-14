@@ -38,4 +38,4 @@ A reviewable design identifies the first concept domains, message-frame schema, 
 - Geology feature development.
 - Changes to existing ChatGPT scheduled tasks.
 
-**Next cursor:** work through LANGUAGE_MODEL_DESIGN.md, build one or two worked message-frame-to-utterance examples, and resolve the minimum schema.
+**Next cursor:** decide whether the existing English-derived phrase lexicon remains a discourse/idiom layer beside a new concept-driven cavern-world lexicon; then settle the first message-frame and lexeme schemas.
