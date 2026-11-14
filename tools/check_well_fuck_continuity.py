@@ -62,7 +62,7 @@ def heartbeat_is_stale(
     age = current.astimezone(dt.timezone.utc) - last
     if age.total_seconds() < -300:
         raise ValueError("heartbeat timestamp is unexpectedly in the future")
-    return age > dt.timedelta(hours=threshold_hours)
+    return age >= dt.timedelta(hours=threshold_hours)
 
 
 def structural_errors(repository_root: Path) -> list[str]:
