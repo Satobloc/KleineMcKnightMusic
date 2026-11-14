@@ -37,11 +37,19 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Validate continuity structure
         run: python tools/check_well_fuck_continuity.py
 
       - name: Run continuity tests
         run: python -m unittest discover -s tests -p "test_well_fuck_continuity.py" -v
+
+      - name: Run language RNG regression tests
+        run: node tests/test_well_fuck_language_rng.js SIMULATION_WORKDESKS/WELL_FUCK/builds/Well_Fuck_Cities_Lab_2_12.html
 
       - name: Check interactive heartbeat freshness
         run: python tools/check_well_fuck_continuity.py --check-stale
