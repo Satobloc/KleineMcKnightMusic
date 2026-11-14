@@ -1,7 +1,7 @@
 # Well, Fuck. — Living Project Plan
 
 **Plan ID:** WF-PLAN-001  
-**Version:** 1.3  
+**Version:** 1.4  
 **Status:** ADOPTED BASELINE / AMENDABLE  
 **Adopted:** 2026-11-13  
 **Project status:** ACTIVE WORKSHOP  
@@ -80,7 +80,7 @@ In parallel, establish repeatable baseline tests for reset behavior, seeded runs
 
 ### Phase 3 — Build a productive language core
 **Status:** ACTIVE
-Research and design the foundations needed to create new utterances and historically plausible language change before implementing the productive engine. The first empirical case study is the documented history of English, summarized in ENGLISH_LANGUAGE_CHANGE_RESEARCH.md. English is a calibration case, not a universal template. LANGUAGE_MODEL_DESIGN.md remains a reviewable proposal, not an implementation contract. The current 36 proto-lexicon entries and 14 founder phrases are examples, not a closed inventory or protected layer. Work through the following design areas:
+Research and design the foundations needed to create new utterances and historically plausible language change before implementing the productive engine. The starting population is now contemporary informal, idiomatic English with broad regional, social, lexical, and stylistic variation. Historical English remains an empirical calibration case, not a prescribed trajectory. Investigate a replenishable external sentence/expression reservoir with a bounded active sample, provenance and licensing controls, and uncertain grammatical annotation. LANGUAGE_MODEL_DESIGN.md remains a reviewable proposal, not an implementation contract. The current 36 proto-lexicon entries and 14 founder phrases are examples, not a closed inventory or protected layer. Work through the following design areas:
 
 - a useful concept and semantic inventory, initially covering the world inhabitants' practical environment and social life;
 - phoneme inventories, phonotactics, syllable and word formation, and regular sound change;
@@ -137,7 +137,7 @@ Maintain versioned builds, concise change notes, reproducible tests, and a clean
 2. **WF-LANG-001 — Audit Language Kernel 0.1.** COMPLETE: source-grounded implementation map and limitations are in LANGUAGE_KERNEL_AUDIT.md.
 3. **WF-LANG-004 — Decouple notebook/UI sampling from simulation RNG.** COMPLETE: Cities Laboratory 2.12 uses a separate presentation RNG; the 2.11 baseline remains unchanged.
 4. **WF-TEST-001 — Establish reproducibility tests.** COMPLETE: automated Node language-RNG regression plus optional Playwright browser regression; seeds 42, 7, and 2026 passed through 1,000 turns.
-5. **WF-LANG-002 — Research realistic language evolution and specify the change model.** ACTIVE: use English as an empirical case study; define variant populations, use, transmission, and calibration experiments before building the productive engine.
+5. **WF-LANG-002 — Research realistic language evolution and specify the change model.** ACTIVE: start from contemporary informal idiomatic English; design a dynamic, bounded source reservoir and a population model for variant use, transmission, and historical calibration before building the productive engine.
 6. **WF-LANG-003 — Build event-grounded productive utterances.** QUEUED: connect speaker intention and message frames to the new language model after the change architecture is accepted.
 7. **WF-SOC-001 — Model social language evolution.** QUEUED: implement contact, borrowing, dialect divergence, convergence, and intelligibility as supported by the research and change model.
 8. Proceed to civilization integration, measurement, and refinement through the phase gates above.
@@ -178,6 +178,7 @@ Record each consequential amendment in the change history and DECISION_LOG.md. K
 | 1.1 | 2026-11-13 | Updated the roadmap after the 2.11 browser and seeded-comparison tests; added the presentation-RNG isolation guardrail and the verified notebook RNG-coupling fix to the immediate sequence. |
 | 1.2 | 2026-11-13 | Recorded the 2.12 UI-RNG correction, multi-seed regression evidence, completion of Phase 2, and the first reviewable productive-language design proposal. |
 | 1.3 | 2026-11-14 | Marked prototype preservation complete; placed historical English language-change research and a usage-driven population model ahead of productive-engine implementation; clarified that the initial phrase stock is illustrative and open-ended. |
+| 1.4 | 2026-11-14 | Selected contemporary informal, idiomatic English as the starting population; added investigation of a replenishable external sentence reservoir with bounded sampling, source provenance, licensing controls, and uncertain grammatical annotation. |
 
 ## 11. Current return point
 
