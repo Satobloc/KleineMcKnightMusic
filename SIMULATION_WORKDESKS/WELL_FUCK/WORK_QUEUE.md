@@ -9,7 +9,7 @@ The queue is a branching priority map, not a second active tray. Only the operat
 | WF-LANG-001 | P1 | COMPLETE | Audit Language Kernel 0.1 against the committed source; map data model, sound-change pipeline, phrase lineage, community inheritance, and RNG boundaries | Audit in LANGUAGE_KERNEL_AUDIT.md |
 | WF-LANG-004 | P1 | COMPLETE | Decouple “Overhear locals” UI sampling from the language simulation RNG; publish and verify 2.12 | Receipt in OPERATION_LOG.md; 2.11 preserved |
 | WF-TEST-001 | P1 | COMPLETE | Establish repeatable seeded tests for UI-action independence and multi-seed 2.11/2.12 physical/city regression | Node test in CI; optional Playwright browser test and three-seed receipts |
-| WF-LANG-002 | P1 | ACTIVE | Research realistic language evolution using English as an empirical case; specify a usage-driven population model and calibration experiments before implementation | ENGLISH_LANGUAGE_CHANGE_RESEARCH.md; LANGUAGE_MODEL_DESIGN.md v0.3 |
+| WF-LANG-002 | P1 | ACTIVE | Specify and calibrate a usage-driven population model from contemporary informal English; build a standalone lab and test before integration | LANGUAGE_CHANGE_LAB_DESIGN.md v0.1; frozen corpus manifest and E0–E4 results pending |
 | WF-LANG-003 | P1 | QUEUED | Build the first event-grounded productive utterance generator | WF-LANG-002 research and change-model design accepted |
 | WF-SOC-001 | P2 | QUEUED | Explore contact, borrowing, dialect continua, divergence, and mutual intelligibility | Language production and community state available |
 | WF-CIV-001 | P2 | QUEUED | Integrate language with trade, migration, conflict, settlement identity, and social organization | WF-LANG-003 |
