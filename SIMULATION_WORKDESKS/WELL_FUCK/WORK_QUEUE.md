@@ -6,7 +6,7 @@ The queue is a branching priority map, not a second active tray. Only the operat
 |---|---:|---|---|---|
 | WF-BOOT-001 | P0 | COMPLETE | Establish and verify project home and continuity scaffold | Receipt in OPERATION_LOG.md |
 | WF-SIM-001 | P0 | BLOCKED | Preserve Cities Laboratory 2.11 in the repository; verify hash, syntax, behavior, and independent readback | Requires the exact local HTML file as an upload or supported transfer |
-| WF-LANG-001 | P1 | READY | Audit Language Kernel 0.1 against the actual source; map data model, sound-change pipeline, phrase lineage, and RNG boundaries | WF-SIM-001 |
+| WF-LANG-001 | P1 | QUEUED | Audit Language Kernel 0.1 against the actual source; map data model, sound-change pipeline, phrase lineage, and RNG boundaries | WF-SIM-001 |
 | WF-LANG-002 | P1 | QUEUED | Design productive lexical and grammatical machinery: concepts, phonological forms, morphology, syntax, semantic relations, and composition | WF-LANG-001 |
 | WF-LANG-003 | P1 | QUEUED | Develop event-specific speech acts and contextual utterances tied to simulation events | WF-LANG-002 |
 | WF-SOC-001 | P2 | QUEUED | Explore contact, borrowing, dialect continua, divergence, and mutual intelligibility | Language production and community state available |
