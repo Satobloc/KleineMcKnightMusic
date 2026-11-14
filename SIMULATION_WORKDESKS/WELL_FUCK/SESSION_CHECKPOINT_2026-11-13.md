@@ -216,3 +216,14 @@ Nathan clarified that HsH and the other Satobloc repositories are methodological
 **Regression evidence:** Node language-RNG test passed. Playwright tests at seeds 42, 7, and 2026 through 1,000 turns all passed. For each seed, 2.11 and 2.12 baseline language/physical outputs matched; a UI sample at turn 100 did not alter the 2.12 language result, city statistics, or canvas. The sample itself remained visible in the notebook.
 
 **Current operation:** WF-LANG-002, design the productive language model. LANGUAGE_MODEL_DESIGN.md is a proposal, not yet an approved implementation contract. The next step is to review a minimal message-frame schema, concept inventory, lexeme structure, and grammar profile.
+
+
+## 15. Research direction update — 2026-11-14
+
+Nathan confirmed that the existing 36 proto-lexicon entries and 14 founder phrases are examples, not a limit or protected layer. They may survive, change, gain new functions, be replaced, or disappear. New vocabulary and constructions must arise through multiple mechanisms.
+
+The active operation WF-LANG-002 now begins with research into realistic English language change before implementation. ENGLISH_LANGUAGE_CHANGE_RESEARCH.md v0.1 is the initial evidence synthesis. It recommends a usage-driven, population-level model of variation, innovation, exposure, adoption, diffusion, reanalysis, retention, and loss. It treats English as an empirical case study, not a universal template.
+
+An important open choice remains: whether the simulated language begins as a future descendant of contemporary English or whether the project deliberately reconstructs a historical English stage. The current prototype uses contemporary English-derived expressions and does not contain a reconstructed Old English system.
+
+The working proposal LANGUAGE_MODEL_DESIGN.md is now v0.3 and is not an implementation contract. No new language engine has been implemented in this research step.

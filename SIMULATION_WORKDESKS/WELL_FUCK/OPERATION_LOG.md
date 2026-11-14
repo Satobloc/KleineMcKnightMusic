@@ -114,3 +114,25 @@ Only bounded operations with checkable results or explicit dispositions receive 
 - For all three seeds, the 2.12 UI sample did not change language evolution or physical/city output.
 
 **Limit:** The three-seed suite is a useful initial regression set, not exhaustive coverage of all seeds or all possible user interactions.
+
+
+## WF-LANG-002 — Historical language-change research and computational design (progress checkpoint)
+
+**Status:** ACTIVE / RESEARCH IN PROGRESS  
+**Date:** 2026-11-14  
+**Research artifact:** `ENGLISH_LANGUAGE_CHANGE_RESEARCH.md`, version 0.1.  
+**Working proposal:** `LANGUAGE_MODEL_DESIGN.md`, version 0.3.
+
+**Direction established**
+- Historical English is the first empirical case study for realistic language-change mechanisms.
+- The model must represent population-level variation, innovation, exposure, adoption, diffusion, and loss.
+- Phonology, morphology, syntax, lexicon, semantics, pragmatics, contact, and dialect structure must be able to interact.
+- The current 36 proto-lexicon entries and 14 founder phrases are illustrative seed material, not a closed inventory or mandatory protected layer.
+- The prior suggestion that all initial phrases should necessarily remain as a separate discourse/idiom layer is withdrawn.
+- The starting condition remains open: contemporary-English future descendant versus reconstructed historical English.
+
+**Research sources**
+The initial synthesis draws on The Open University, Oxford Research Encyclopedia of Linguistics, and the 2025–2026 New Cambridge History of the English Language chapters on sociolinguistic sources, historical morphology, syntax, semantics, phonology, pragmatic markers, and traditional dialects. Full source details and links are recorded in ENGLISH_LANGUAGE_CHANGE_RESEARCH.md.
+
+**Next**
+Decide the intended English starting condition and select the smallest useful computational representation for speaker variation and transmission. Do not begin a large language-engine rewrite before this design gate.

@@ -66,9 +66,10 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 3. Read ACTIVE_TRAY.md and WORK_QUEUE.md.
 4. Read WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
 5. Read LANGUAGE_KERNEL_AUDIT.md when working on the language kernel.
-6. Read LANGUAGE_MODEL_DESIGN.md when designing productive language mechanics.
-7. Read SUCCESSION.md when handing off or recovering from a context limit.
-8. Read the dated session checkpoint for conversation-derived project state.
+6. Read ENGLISH_LANGUAGE_CHANGE_RESEARCH.md when designing realistic language change.
+7. Read LANGUAGE_MODEL_DESIGN.md when designing productive language mechanics.
+8. Read SUCCESSION.md when handing off or recovering from a context limit.
+9. Read the dated session checkpoint for conversation-derived project state.
 
 ## Workspace map
 
@@ -77,7 +78,8 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 | BOOT.md | Tiny launch capsule and load order |
 | PROJECT_PLAN.md | Adopted, amendable roadmap and phase gates |
 | LANGUAGE_KERNEL_AUDIT.md | Source-grounded Language Kernel 0.1 map, test evidence, and defects |
-| LANGUAGE_MODEL_DESIGN.md | Reviewable proposal for productive lexical, semantic, morphological, and syntactic machinery |
+| ENGLISH_LANGUAGE_CHANGE_RESEARCH.md | Historical English change research and computational requirements for realistic language evolution |
+| LANGUAGE_MODEL_DESIGN.md | Working proposal for productive lexical, semantic, morphological, and syntactic machinery |
 | PROJECT_CONTROL.md | Executive control shelf and current status |
 | ACTIVE_TRAY.md | One bounded operation in focus |
 | WORK_QUEUE.md | Priority-aware branches and parked work |

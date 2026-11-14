@@ -1,9 +1,9 @@
 # Well, Fuck. — Project Control
 
 **Status:** ACTIVE  
-**Plan:** PROJECT_PLAN.md, version 1.0 (adopted baseline; amendable)  
+**Plan:** PROJECT_PLAN.md, version 1.3 (adopted baseline; amendable)  
 **Phase:** 3 / productive language core  
-**Priority:** P1 productive language design and implementation  
+**Priority:** P1 historical language-change research and computational model design  
 **Workspace:** Satobloc/KleineMcKnightMusic/SIMULATION_WORKDESKS/WELL_FUCK/  
 **Project authority:** Nathan's direct instructions govern intent and priority. This file and the other workspace records are assistant-maintained execution records, not user-authored doctrine or scientific authority.
 
@@ -30,7 +30,9 @@ The current priority is linguistic mechanics. Geology expansion is paused. Prese
 - WF-LANG-004 is complete: 2.12 gives notebook sampling its own presentation RNG.
 - WF-TEST-001 is complete: automated language-RNG tests and optional Playwright browser regression passed at seeds 42, 7, and 2026 through 1,000 turns.
 - Productive grammar, broad lexicon, event-specific utterances, borrowing, dialect continua, and mutual intelligibility remain future work.
-- The first productive-language proposal is in LANGUAGE_MODEL_DESIGN.md; it is reviewable, not yet an approved implementation contract.
+- Historical English language-change research is in ENGLISH_LANGUAGE_CHANGE_RESEARCH.md v0.1; it is an initial evidence synthesis, not an implementation spec.
+- LANGUAGE_MODEL_DESIGN.md is v0.3 and remains a reviewable proposal. The 36 initial lexicon entries and 14 founder phrases are examples, not a closed inventory or protected layer.
+- The active design priority is a usage-driven model of population variation, innovation, exposure, adoption, and diffusion before productive-engine implementation.
 - Prior conversation reported Chromium runs and a comparison intended to show that language RNG did not alter geology/city outcomes. Those are historical assistant-reported results and have not been independently rerun in this repository bootstrap.
 
 ## Phase plan and exit evidence
@@ -42,7 +44,7 @@ The canonical roadmap and detailed phase gates live in PROJECT_PLAN.md. The exec
 | 0. Repository and continuity bootstrap | Establish project home and control system | COMPLETE: controls read back; continuity and repository test workflows pass |
 | 1. Prototype preservation | Preserve Cities Laboratory 2.11 exactly and verify its behavior | COMPLETE: committed artifact, checksum, independent readback, syntax check, and 1,000-turn browser run |
 | 2. Language-kernel audit and baseline | Inspect actual implementation and establish reproducible tests | COMPLETE: audit, 2.12 RNG correction, automated and three-seed browser regression |
-| 3. Productive language core | Add concepts, lexicon, phonology, morphology, syntax, semantics, composition | ACTIVE: review LANGUAGE_MODEL_DESIGN.md and settle the first schema | Novel compositional utterances, inspectable data, tests |
+| 3. Productive language core | Build a historically grounded, usage-driven language-change engine before productive composition | ACTIVE: English change research and population-transmission model design | Novel compositional utterances, inspectable data, tests |
 | 4. Contextual speech | Generate utterances grounded in actual simulation events | Traceable event-linked speech examples and tests |
 | 5. Social language evolution | Develop contact, borrowing, dialect divergence, and intelligibility | Explicit rules and repeatable experiments |
 | 6. Civilization integration | Connect language to social processes | At least one traceable end-to-end social process |
@@ -81,7 +83,8 @@ Do not mark a branch complete from intention, a plan, or an unverified claim.
 - Completed operation receipts: OPERATION_LOG.md.
 - Interactive heartbeat: HEARTBEAT.md.
 - Language implementation audit: LANGUAGE_KERNEL_AUDIT.md.
-- Productive-language proposal: LANGUAGE_MODEL_DESIGN.md.
+- English language-change research: ENGLISH_LANGUAGE_CHANGE_RESEARCH.md.
+- Productive-language working proposal: LANGUAGE_MODEL_DESIGN.md.
 - Execution and ticker method: WORKFLOW_PROTOCOL.md.
 - Context handoff: SUCCESSION.md.
 

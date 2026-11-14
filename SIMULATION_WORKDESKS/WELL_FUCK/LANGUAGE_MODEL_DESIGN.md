@@ -1,9 +1,10 @@
-# Productive Language Model — Design Proposal 0.1
+# Productive Language Model — Working Design
 
 **Design ID:** WF-LANG-DESIGN-001  
-**Version:** 0.2  
+**Version:** 0.3  
 **Status:** PROPOSAL / REVIEWABLE, NOT YET AN IMPLEMENTATION CONTRACT  
 **Target baseline:** Cities Laboratory 2.12  
+**Research foundation:** ENGLISH_LANGUAGE_CHANGE_RESEARCH.md  
 **Phase:** 3 — Productive language core  
 **Purpose:** Move from evolving fixed expressions toward communities that can form new, compositional utterances.
 
@@ -16,6 +17,8 @@ The goal is not to bolt a miniature English grammar onto the simulation. Communi
 This document is a proposal for discussion and staged implementation. It does not authorize a wholesale rewrite of 2.12.
 
 ## 2. Design constraints and guardrails
+
+**Research-first amendment (2026-11-14):** Historical English is now the first empirical case study for designing realistic language-change mechanisms. Read ENGLISH_LANGUAGE_CHANGE_RESEARCH.md before treating this proposal as an implementation plan. The goal is not to copy English's historical trajectory into every community. The 36 existing proto-lexicon entries and 14 founder phrases are examples of initial material, not a closed inventory, protected layer, or limit on future expression. They may survive, change, acquire new functions, be replaced, or disappear. New lexical and grammatical material must be able to arise through multiple mechanisms. The prior suggestion that these entries should necessarily be retained as a separate discourse/idiom layer is withdrawn.
 
 1. **Meaning is independent of wording.** Represent an intended message before selecting words or arranging them.
 2. **IPA remains authoritative.** Phoneme sequences are token arrays; orthography is a projection, not the underlying sound system.
@@ -360,3 +363,10 @@ Keep three objects distinct:
 3. **Message frame / utterance:** the intended content and the language-specific realization.
 
 An event should not automatically become speech. This separation leaves room for attention, knowledge, audience, urgency, social relationship, and pragmatic choice later, without forcing those systems into the first lexical/grammar implementation.
+
+
+## 14. Research-first direction
+
+The design must now be grounded in a model of socially transmitted variation and change. Do not implement phrase mutations as the primary engine of language evolution. Phrase-level change remains a possible mechanism for particular expressions, but the language model must account for change in pronunciation, morphology, syntax, lexicon, semantics, pragmatics, and the social distribution of language.
+
+The first design deliverable is a computationally economical representation of competing variants, use, exposure, adoption, and diffusion. See ENGLISH_LANGUAGE_CHANGE_RESEARCH.md for the current synthesis and proposed calibration experiments.

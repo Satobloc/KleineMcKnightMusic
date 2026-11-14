@@ -6,7 +6,7 @@
 **Canonical control:** PROJECT_CONTROL.md  
 **Current tray:** ACTIVE_TRAY.md  
 **Heartbeat:** HEARTBEAT.md  
-**Current operation:** WF-LANG-002, ACTIVE — design the productive language model
+**Current operation:** WF-LANG-002, ACTIVE — research realistic language evolution and specify the change model
 
 ## Mission
 
@@ -18,7 +18,7 @@ At the start of every new conversation or resumed work session:
 
 1. Fetch the live repository state. Record the main-branch commit SHA; do not rely on a remembered or cached copy.
 2. Read this file, PROJECT_PLAN.md, PROJECT_CONTROL.md, ACTIVE_TRAY.md, WORK_QUEUE.md, and HEARTBEAT.md.
-3. Read only the current operation's named files and relevant source/code ranges. For language work, consult LANGUAGE_KERNEL_AUDIT.md before changing the kernel and LANGUAGE_MODEL_DESIGN.md before implementing productive grammar.
+3. Read only the current operation's named files and relevant source/code ranges. For language work, consult LANGUAGE_KERNEL_AUDIT.md for the current implementation, ENGLISH_LANGUAGE_CHANGE_RESEARCH.md for the historical evidence and mechanisms, and LANGUAGE_MODEL_DESIGN.md for the working design proposal.
 4. Load WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
 5. Load SUCCESSION.md before a handoff or whenever context exhaustion is possible.
 6. Use SESSION_CHECKPOINT_2026-11-13.md as a locator and project-state summary, not as a substitute for inspecting the named code or primary artifacts.
@@ -39,10 +39,10 @@ WF-OP 02 COMPLETE — Cities Laboratory 2.11 preserved and verified
 WF-OP 03 COMPLETE — Language Kernel 0.1 source audit  
 WF-OP 04 COMPLETE — 2.12 presentation-RNG correction  
 WF-OP 05 COMPLETE — deterministic and multi-seed regression tests  
-WF-OP 06 IN PROGRESS — design the productive language model  
-NOW: review the semantic/message-frame and lexeme proposal  
-NEXT: settle the minimal schema and first productive clause generator  
-RETURN: ACTIVE_TRAY.md and LANGUAGE_MODEL_DESIGN.md
+WF-OP 06 IN PROGRESS — research realistic English language change  
+NOW: define socially transmitted variation and change mechanisms  
+NEXT: choose the English starting condition and population/cohort representation  
+RETURN: ACTIVE_TRAY.md and ENGLISH_LANGUAGE_CHANGE_RESEARCH.md
 
 ## Truth conditions
 

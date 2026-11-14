@@ -9,8 +9,8 @@ The queue is a branching priority map, not a second active tray. Only the operat
 | WF-LANG-001 | P1 | COMPLETE | Audit Language Kernel 0.1 against the committed source; map data model, sound-change pipeline, phrase lineage, community inheritance, and RNG boundaries | Audit in LANGUAGE_KERNEL_AUDIT.md |
 | WF-LANG-004 | P1 | COMPLETE | Decouple “Overhear locals” UI sampling from the language simulation RNG; publish and verify 2.12 | Receipt in OPERATION_LOG.md; 2.11 preserved |
 | WF-TEST-001 | P1 | COMPLETE | Establish repeatable seeded tests for UI-action independence and multi-seed 2.11/2.12 physical/city regression | Node test in CI; optional Playwright browser test and three-seed receipts |
-| WF-LANG-002 | P1 | ACTIVE | Design productive language architecture: concept inventory, message frames, lexeme schema, community grammar profile, and compositional generation | Audit complete; proposal in LANGUAGE_MODEL_DESIGN.md |
-| WF-LANG-003 | P1 | QUEUED | Develop event-specific speech acts and contextual utterances tied to actual simulation events | WF-LANG-002 design accepted and productive core implemented |
+| WF-LANG-002 | P1 | ACTIVE | Research realistic language evolution using English as an empirical case; specify a usage-driven population model and calibration experiments before implementation | ENGLISH_LANGUAGE_CHANGE_RESEARCH.md; LANGUAGE_MODEL_DESIGN.md v0.3 |
+| WF-LANG-003 | P1 | QUEUED | Build the first event-grounded productive utterance generator | WF-LANG-002 research and change-model design accepted |
 | WF-SOC-001 | P2 | QUEUED | Explore contact, borrowing, dialect continua, divergence, and mutual intelligibility | Language production and community state available |
 | WF-CIV-001 | P2 | QUEUED | Integrate language with trade, migration, conflict, settlement identity, and social organization | WF-LANG-003 |
 | WF-GEO-001 | P3 | PARKED | Resume geological feature development only when language milestone or user reprioritization permits | Geology is explicitly paused |

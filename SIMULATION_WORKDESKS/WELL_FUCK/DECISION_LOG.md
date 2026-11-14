@@ -29,7 +29,7 @@ Dated decisions are preserved with their provenance and status. A decision may b
 
 **Date:** 2026-11-13  
 **Status:** CONFIRMED  
-**Decision:** Pause geology development and prioritize linguistic mechanics. Preserve the existing geology/civilization substrate unless maintenance or integration requires a change.  
+**Decision:** Pause geology development and prioritize linguistic mechanics. Preserve the existing geological simulation and change it only when needed for maintenance, integration, or an explicitly reprioritized task.  
 **Provenance:** Current project direction carried forward in the conversation.
 
 ## D-005 — Language representation
@@ -78,7 +78,6 @@ Dated decisions are preserved with their provenance and status. A decision may b
 **Decision:** Adopt PROJECT_PLAN.md version 1.0 as the working roadmap for Well, Fuck. The plan is locked as the default direction, not made immutable: consequential amendments increment its version, preserve prior history through Git, and are recorded in this decision log when they change mission, priority, phase order, or design commitments. Nathan's direct instruction overrides assistant-maintained planning records.  
 **Provenance:** Nathan's direct instruction to make a plan, lock it in in a modifiable way, and move forward.
 
-
 ## D-011 — Presentation/UI randomness must not perturb simulation evolution
 
 **Date:** 2026-11-13  
@@ -86,7 +85,6 @@ Dated decisions are preserved with their provenance and status. A decision may b
 **Decision:** UI-only sampling and observational controls should not consume or alter the random streams governing world or language evolution. Use a separate presentation RNG or a stateless deterministic selector.  
 **Provenance:** Source-grounded Language Kernel 0.1 audit and paired same-seed browser experiment. One “Overhear locals” click at turn 100 changed the turn-1000 language phrase while leaving city/geology statistics and the main-canvas image unchanged.  
 **Review:** Confirm the correction with a regression test. Revisit only if a future interaction is deliberately designed to affect simulation state.
-
 
 ## D-012 — Separate presentation RNG in Cities Laboratory 2.12
 
@@ -103,3 +101,18 @@ Dated decisions are preserved with their provenance and status. A decision may b
 **Decision:** Use LANGUAGE_MODEL_DESIGN.md as the reviewable proposal for a meaning-first, compositional language engine. It proposes message frames, concept IDs, community lexicons, a small grammar profile, and an inspectable realization pipeline.  
 **Provenance:** WF-LANG-002 design work.  
 **Review:** Nathan's feedback is required before the proposal becomes an implementation contract.
+
+## D-014 — The initial phrase inventory is illustrative, not a boundary
+
+**Date:** 2026-11-14  
+**Status:** CONFIRMED  
+**Decision:** The 36 existing proto-lexicon entries and 14 founder phrases are examples of initial linguistic material, not a closed vocabulary, mandatory protected discourse layer, or limit on future lexical and grammatical development. Existing forms may persist, change, gain new functions, be replaced, or disappear. The language system must permit new forms and constructions to arise through multiple mechanisms.  
+**Provenance:** Nathan's direct clarification in this conversation.
+
+## D-015 — Research historical English change before implementing the engine
+
+**Date:** 2026-11-14  
+**Status:** CONFIRMED  
+**Decision:** The next language-design step is to investigate what constitutes historically plausible language change, using English as the first empirical case study, and translate the findings into a computational model before implementing the productive language engine. English's particular trajectory is not assumed to be universal.  
+**Provenance:** Nathan's direct instruction in this conversation.  
+**Open distinction:** The intended initial condition—future descendant of contemporary English or reconstructed historical English stage—has not yet been selected.
