@@ -18,10 +18,16 @@ started_utc: 2026-11-14T05:58:30Z
 - Preserved baseline: Cities Laboratory 2.11, unchanged.
 - Implementation audit: `LANGUAGE_KERNEL_AUDIT.md`.
 - Research synthesis: `ENGLISH_LANGUAGE_CHANGE_RESEARCH.md`, version 0.1.
-- Existing working design: `LANGUAGE_MODEL_DESIGN.md`, version 0.3; proposal only.\n- Confirmed starting point: contemporary informal, idiomatic English.\n- New source-design branch: dynamic sentence/expression reservoir with bounded sampling, provenance, licensing, and probabilistic grammatical annotation.
+- Existing working design: `LANGUAGE_MODEL_DESIGN.md`, version 0.3; proposal only.
+- Confirmed starting point: contemporary informal, idiomatic English.
+- New source-design branch: dynamic sentence/expression reservoir with bounded sampling, provenance, licensing, and probabilistic grammatical annotation.
 
 **Scope**
-- Establish contemporary informal, idiomatic English as the initial population.\n- Acquire a bounded, stratified sample from an openly reusable contemporary-English corpus; preserve exact attestations in backend provenance only.\n- Evaluate source quality, licensing, provenance, refresh cadence, deduplication, and reproducibility.\n- Represent grammatical annotation as contextual candidates with confidence, not infallible labels.\n- Establish historical English change as an evidence-based case study.
+- Establish contemporary informal, idiomatic English as the initial population.
+- Acquire a bounded, stratified sample from an openly reusable contemporary-English corpus; preserve exact attestations in backend provenance only.
+- Evaluate source quality, licensing, provenance, refresh cadence, deduplication, and reproducibility.
+- Represent grammatical annotation as contextual candidates with confidence, not infallible labels.
+- Establish historical English change as an evidence-based case study.
 - Separate documented patterns from debated causal explanations.
 - Define variation, innovation, exposure, adoption, diffusion, reanalysis, retention, and loss.
 - Determine an economical population/cohort representation.
