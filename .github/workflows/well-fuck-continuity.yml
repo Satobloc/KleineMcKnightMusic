@@ -44,5 +44,4 @@ jobs:
         run: python -m unittest discover -s tests -p "test_well_fuck_continuity.py" -v
 
       - name: Check interactive heartbeat freshness
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: python tools/check_well_fuck_continuity.py --check-stale
