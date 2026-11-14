@@ -46,4 +46,6 @@ A research-backed mechanism map and reviewable computational design exist. The d
 - Geology feature development.
 - Changes to existing ChatGPT scheduled tasks.
 
-**Next cursor:** implement the standalone laboratory against a frozen MASC sample manifest. Run E0 ingestion checks first, then E1 no-innovation baseline. Do not modify Cities Laboratory 2.12 during calibration.
+**Next cursor:** resolve the MASC package-level terms, acquire the annotated MASC 3.0.0 release, and freeze a stratified sample manifest. Then implement the standalone laboratory and run E0 ingestion checks followed by E1 no-innovation baseline. Do not modify Cities Laboratory 2.12 during calibration.
+
+**Acquisition note (2026-11-14):** the official MASC download page lists both the annotated 3.0.0 package and a data-only package. The official MASC About page says the corpus is distributed without license or other restrictions, while the MASC landing page describes CC BY 3.0 US terms. Resolve this discrepancy against the exact downloaded package metadata before freezing the manifest. Initial download attempts from this environment failed; no corpus has been acquired and no E0/E1 run has occurred.
