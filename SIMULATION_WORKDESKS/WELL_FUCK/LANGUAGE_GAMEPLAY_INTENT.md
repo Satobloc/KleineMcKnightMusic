@@ -12,7 +12,7 @@ The civilizations begin in a shared English-speaking world. The signature expres
 
 The phrase is not meant to be the whole language. It is a memorable tracer through which the player can notice that a community has changed. The player should be able to get a quick, approximate sense of a city's history or current circumstances from how its familiar expression has evolved.
 
-A second founder phrase is **“The irony deepens.”** Preserve it as an additional founding expression alongside “Well, fuck.” It broadens the initial expressive material; it does not replace the signature phrase or imply that every community must retain or evolve both expressions.
+The founder stock should contain **more than two expressions**. “Well, fuck.” and **“The irony deepens.”** are two confirmed examples, not an exhaustive pair. Preserve a varied, open-ended collection of founder expressions, with different registers, functions, tones, and constructions. Do not reduce the starting language to these phrases, require every community to retain all of them, or treat the list as closed. The eventual size and composition of the founder stock remain to be established.
 
 The more recent decision to use broad contemporary informal, idiomatic English as the starting population refines this original idea: the signature phrase remains important, but the underlying linguistic material is open-ended and varied. The 36 proto-lexicon entries and 14 founder phrases are examples, not a closed inventory or protected layer.
 
