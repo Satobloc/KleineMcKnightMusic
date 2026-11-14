@@ -1,11 +1,11 @@
 # Well, Fuck. — Living Project Plan
 
 **Plan ID:** WF-PLAN-001  
-**Version:** 1.0  
+**Version:** 1.1  
 **Status:** ADOPTED BASELINE / AMENDABLE  
 **Adopted:** 2026-11-13  
 **Project status:** ACTIVE WORKSHOP  
-**Current phase:** 1 — Prototype preservation  
+**Current phase:** 2 — Language-kernel audit and baseline  
 **Canonical roadmap:** This file
 
 ## 1. What is locked, and what is not
@@ -36,6 +36,7 @@ This is a creative computational experiment. It is not presently a validated geo
 6. **Incremental, testable development.** Make bounded changes with explicit stop conditions, inspectable artifacts, and regression evidence.
 7. **Creative latitude with honest labels.** Keep implemented behavior, tested behavior, prior reports, hypotheses, and speculative ideas visibly distinct.
 8. **Process serves the work.** Repository controls and continuity methods should reduce lost work and drift, not become a second project that consumes the first.
+9. **Presentation does not steer the simulation.** UI-only actions and observational sampling must not consume or perturb the random streams that govern world or language evolution.
 
 ## 4. System map
 
@@ -67,14 +68,14 @@ Establish the project home, launch sequence, active tray, queue, decision and op
 
 Preserve Cities Laboratory 2.11, including Language Kernel 0.1, as an identifiable repository artifact without rewriting or normalizing the source.
 
-**Gate:** The committed file matches the source checksum; its blob and commit are recorded; independent readback succeeds; syntax and runtime checks have explicit results; a restorable baseline is identified.
+**Gate:** The committed file matches the source checksum; its blob and commit are recorded; independent readback succeeds; syntax and a 1,000-turn browser run have checkable results; a restorable baseline is identified. Broader multi-seed regression remains part of Phase 2.
 
 ### Phase 2 — Audit the language kernel and establish the baseline
 Inspect the actual 2.11 source. Map language state, lexicon representation, IPA handling, founder-phrase selection, mutation operations, sound-change application, community inheritance, event timing, UI/notebook behavior, and all random-number call paths.
 
-In parallel, establish repeatable baseline tests for reset behavior, seeded runs, turn stepping, and language/geology-city RNG isolation.
+In parallel, establish repeatable baseline tests for reset behavior, seeded runs, turn stepping, language/geology-city RNG isolation, and independence from UI-only interactions. The initial audit found that “Overhear locals” currently consumes the language simulation RNG.
 
-**Gate:** A source-grounded implementation map, known limitations, and reproducible baseline test record exist. Do not redesign the language engine before this audit.
+**Gate:** A source-grounded implementation map, known limitations, and reproducible baseline test record exist. The initial source audit is recorded in LANGUAGE_KERNEL_AUDIT.md. Do not redesign the language engine before this audit.
 
 ### Phase 3 — Build a productive language core
 Design and implement the foundations needed to create new utterances rather than only mutate a fixed stock of phrases. Work through the following design areas, allowing the audit to determine their exact order:
@@ -130,11 +131,12 @@ Maintain versioned builds, concise change notes, reproducible tests, and a clean
 
 ## 7. Immediate execution sequence
 
-1. **WF-SIM-001 — Preserve Cities Laboratory 2.11.** Commit the exact source, verify its identity and readback, and finish the syntax/runtime baseline checks.
-2. **WF-LANG-001 — Audit Language Kernel 0.1.** Inspect the committed source and write a concise implementation map and limitations register.
-3. **WF-TEST-001 — Establish baseline reproducibility.** Confirm seeded behavior and language/geology-city RNG separation with repeatable tests.
-4. **WF-LANG-002 — Design the productive language model.** Turn the audit into a concrete data model and staged implementation proposal before changing the engine.
-5. Proceed to contextual speech, social evolution, and civilization integration through the gates above.
+1. **WF-SIM-001 — Preserve Cities Laboratory 2.11.** COMPLETE: exact artifact committed, source identity and repository readback verified, syntax passed, and a 1,000-turn browser run completed without page or console errors.
+2. **WF-LANG-001 — Audit Language Kernel 0.1.** COMPLETE: source-grounded implementation map and limitations are in LANGUAGE_KERNEL_AUDIT.md.
+3. **WF-LANG-004 — Decouple notebook/UI sampling from simulation RNG.** ACTIVE: prevent “Overhear locals” from changing future language evolution; preserve 2.11 as the baseline and create a new versioned build.
+4. **WF-TEST-001 — Broaden reproducibility tests.** Add repeatable tests for UI-action independence and multi-seed physical/city regression.
+5. **WF-LANG-002 — Design the productive language model.** Turn the audit into a concrete data model and staged implementation proposal before expanding the engine.
+6. Proceed to contextual speech, social evolution, and civilization integration through the gates above.
 
 The queue in WORK_QUEUE.md owns operation-level status and dependencies. ACTIVE_TRAY.md names the one operation currently being executed.
 
@@ -169,10 +171,12 @@ Record each consequential amendment in the change history and DECISION_LOG.md. K
 | Version | Date | Change |
 |---|---|---|
 | 1.0 | 2026-11-13 | Adopted the initial project mission, design commitments, phase gates, priority rules, and immediate execution sequence. |
+| 1.1 | 2026-11-13 | Updated the roadmap after the 2.11 browser and seeded-comparison tests; added the presentation-RNG isolation guardrail and the verified notebook RNG-coupling fix to the immediate sequence. |
 
 ## 11. Current return point
 
-- **Active operation:** WF-SIM-001 — preserve and verify Cities Laboratory 2.11.
-- **Source identity:** 1,549,198 bytes; SHA-256 `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`.
-- **Next:** publish the exact artifact to `builds/Well_Fuck_Cities_Lab_2_11.html`, independently read it back, and complete the remaining runtime and RNG-isolation checks.
-- **After that:** WF-LANG-001, source audit of Language Kernel 0.1.
+- **Active operation:** WF-LANG-004 — decouple notebook/UI sampling from the language simulation RNG.
+- **Preserved baseline:** Cities Laboratory 2.11 at `builds/Well_Fuck_Cities_Lab_2_11.html`.
+- **Baseline commit:** `4e2df3cb073b4b4dceefddf54831edab1378c17a`; artifact blob `67d17e7efac74434570f36f6b3f726e945db6f1e`.
+- **Audit:** LANGUAGE_KERNEL_AUDIT.md. The “Overhear locals” button consumes `languageRng` and changes the later language trajectory.
+- **Next:** add a separate presentation/UI RNG (or stateless selector), test that notebook interaction does not change language evolution, and publish a new version without overwriting 2.11.

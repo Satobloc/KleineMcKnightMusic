@@ -77,3 +77,12 @@ Dated decisions are preserved with their provenance and status. A decision may b
 **Status:** CONFIRMED  
 **Decision:** Adopt PROJECT_PLAN.md version 1.0 as the working roadmap for Well, Fuck. The plan is locked as the default direction, not made immutable: consequential amendments increment its version, preserve prior history through Git, and are recorded in this decision log when they change mission, priority, phase order, or design commitments. Nathan's direct instruction overrides assistant-maintained planning records.  
 **Provenance:** Nathan's direct instruction to make a plan, lock it in in a modifiable way, and move forward.
+
+
+## D-011 — Presentation/UI randomness must not perturb simulation evolution
+
+**Date:** 2026-11-13  
+**Status:** WORKING DESIGN  
+**Decision:** UI-only sampling and observational controls should not consume or alter the random streams governing world or language evolution. Use a separate presentation RNG or a stateless deterministic selector.  
+**Provenance:** Source-grounded Language Kernel 0.1 audit and paired same-seed browser experiment. One “Overhear locals” click at turn 100 changed the turn-1000 language phrase while leaving city/geology statistics and the main-canvas image unchanged.  
+**Review:** Confirm the correction with a regression test. Revisit only if a future interaction is deliberately designed to affect simulation state.

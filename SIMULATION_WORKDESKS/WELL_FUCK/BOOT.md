@@ -6,7 +6,7 @@
 **Canonical control:** PROJECT_CONTROL.md  
 **Current tray:** ACTIVE_TRAY.md  
 **Heartbeat:** HEARTBEAT.md  
-**Current operation:** WF-SIM-001, ACTIVE while the exact 2.11 artifact is published, read back, and tested
+**Current operation:** WF-LANG-004, ACTIVE — decouple notebook/UI sampling from simulation RNG
 
 ## Mission
 
@@ -18,7 +18,7 @@ At the start of every new conversation or resumed work session:
 
 1. Fetch the live repository state. Record the main-branch commit SHA; do not rely on a remembered or cached copy.
 2. Read this file, PROJECT_PLAN.md, PROJECT_CONTROL.md, ACTIVE_TRAY.md, WORK_QUEUE.md, and HEARTBEAT.md.
-3. Read only the current operation's named files and relevant source/code ranges.
+3. Read only the current operation's named files and relevant source/code ranges. For language work, consult LANGUAGE_KERNEL_AUDIT.md before changing the kernel.
 4. Load WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
 5. Load SUCCESSION.md before a handoff or whenever context exhaustion is possible.
 6. Use SESSION_CHECKPOINT_2026-11-13.md as a locator and project-state summary, not as a substitute for inspecting the named code or primary artifacts.
@@ -33,12 +33,14 @@ No existing ChatGPT scheduled-task identity, schedule, phase, or enabled state i
 
 ## Current pin
 
-WF-CYCLE 01/05 — RE-ENTRY & SCOPE  
+WF-CYCLE 02/05 — LANGUAGE ENGINE  
 WF-OP 01 COMPLETE — repository home and continuity checks verified  
-WF-OP 02 IN PROGRESS — preserve and independently verify Cities Laboratory 2.11  
-NOW: publish the exact 2.11 artifact and complete its verification  
-NEXT: audit Language Kernel 0.1 against the committed source  
-RETURN: ACTIVE_TRAY.md and the WF-SIM-001 operation
+WF-OP 02 COMPLETE — Cities Laboratory 2.11 preserved and verified  
+WF-OP 03 COMPLETE — Language Kernel 0.1 source audit  
+WF-OP 04 IN PROGRESS — decouple notebook/UI sampling from simulation RNG  
+NOW: isolate “Overhear locals” from the language simulation stream  
+NEXT: add a regression test, then design productive lexical and grammatical machinery  
+RETURN: ACTIVE_TRAY.md and the WF-LANG-004 operation
 
 ## Truth conditions
 

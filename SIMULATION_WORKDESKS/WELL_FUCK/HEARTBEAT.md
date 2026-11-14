@@ -3,12 +3,12 @@
 The heartbeat records meaningful, human-directed project activity. Scheduled checks and automated repository writes do not refresh it.
 
 <!-- machine-state:start -->
-last_interactive_update_utc: 2026-11-14T05:01:52Z
+last_interactive_update_utc: 2026-11-14T05:14:40Z
 stale_after_hours: 36
-current_cycle_slot: 01/05
-completed_operations: 1
-last_completed_operation: WF-BOOT-001
-current_operation: WF-SIM-001
+current_cycle_slot: 02/05
+completed_operations: 3
+last_completed_operation: WF-LANG-001
+current_operation: WF-LANG-004
 <!-- machine-state:end -->
 
 ## Restart behavior and pilot settings

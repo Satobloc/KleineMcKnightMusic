@@ -22,8 +22,10 @@ The latest known prototype is **Cities Laboratory 2.11**, with Language Kernel 0
 - Source artifact: Well_Fuck_Cities_Lab_2_11.html
 - Source size: 1,549,198 bytes
 - Source SHA-256: `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`
-- Planned repository path: `builds/Well_Fuck_Cities_Lab_2_11.html`
-- Publication and independent verification: IN PROGRESS. Do not treat the source hash or a prepared Git blob as proof of a completed repository commit.
+- Repository path: `builds/Well_Fuck_Cities_Lab_2_11.html`
+- Repository commit: `4e2df3cb073b4b4dceefddf54831edab1378c17a`
+- Artifact blob: `67d17e7efac74434570f36f6b3f726e945db6f1e`
+- Verification: exact source-text readback; Node syntax PASS; Playwright/Chromium 144 completed 1,000 turns with no page or console errors. A seed-42 comparison with 2.10 also produced identical sampled city/geology statistics and an identical main-canvas screenshot. Broader multi-seed tests remain queued.
 
 The preceding prototype, Cities Laboratory 2.10, has local SHA-256 `90fd48b8e7f15c62bc7dacbcadcc73c5a46c21f142d197e52220d0ff7a253f19`.
 
@@ -43,7 +45,7 @@ The preceding prototype, Cities Laboratory 2.10, has local SHA-256 `90fd48b8e7f1
 - Communities independently adopt founder phrases, then evolve them through expansion, reduction, replacement, reordering, reduplication, fusion, splitting/resegmentation, semantic drift, and occasional idiom replacement.
 - IPA phoneme sequences are the authoritative sound representation.
 - Sound changes apply across a community's lexicon and have a recorded history.
-- Language randomness is intended to be separate from geology/city randomness; source inspection and seeded regression tests must establish the actual behavior.
+- Language evolution uses a separate RNG from geology/city evolution. A source audit found one UI exception: “Overhear locals” consumes the language RNG and changes later language outcomes. See LANGUAGE_KERNEL_AUDIT.md.
 - A Phrase Field Notebook records community, phrase, IPA, working gloss, phoneme inventory, sound changes, phrase lineage, contextual samples, and overheard speech.
 
 The kernel is an initial phrase-evolution layer, not yet a complete productive language. Productive lexicon, morphology, syntax, contextual utterances, borrowing, dialect continua, and mutual intelligibility remain future work.
@@ -54,8 +56,9 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 2. Read PROJECT_CONTROL.md and PROJECT_PLAN.md.
 3. Read ACTIVE_TRAY.md and WORK_QUEUE.md.
 4. Read WORKFLOW_PROTOCOL.md when planning, executing, or reviewing a substantial operation.
-5. Read SUCCESSION.md when handing off or recovering from a context limit.
-6. Read the dated session checkpoint for conversation-derived project state.
+5. Read LANGUAGE_KERNEL_AUDIT.md when working on the language kernel.
+6. Read SUCCESSION.md when handing off or recovering from a context limit.
+7. Read the dated session checkpoint for conversation-derived project state.
 
 ## Workspace map
 
@@ -63,6 +66,7 @@ The kernel is an initial phrase-evolution layer, not yet a complete productive l
 |---|---|
 | BOOT.md | Tiny launch capsule and load order |
 | PROJECT_PLAN.md | Adopted, amendable roadmap and phase gates |
+| LANGUAGE_KERNEL_AUDIT.md | Source-grounded Language Kernel 0.1 map, test evidence, and defects |
 | PROJECT_CONTROL.md | Executive control shelf and current status |
 | ACTIVE_TRAY.md | One bounded operation in focus |
 | WORK_QUEUE.md | Priority-aware branches and parked work |

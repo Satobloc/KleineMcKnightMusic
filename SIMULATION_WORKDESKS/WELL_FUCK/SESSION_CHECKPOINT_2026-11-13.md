@@ -67,12 +67,17 @@ Not yet implemented, according to the carried-forward project state:
 - mutual intelligibility;
 - contextual diplomacy and richer social pragmatics.
 
-## 5. Prior testing status
+## 5. Testing status
 
-The preceding conversation reported that the 2.11 code passed a Node syntax check and Chromium testing to 1,000 turns. It also reported a comparison of 2.10 and 2.11 through 1,020 turns with matching geology/city statistics, intended to show that the language RNG did not perturb the existing simulation streams.
+The preceding conversation had reported Chromium runs to 1,000 turns and a 2.10/2.11 comparison. Those reports have now been independently checked in this session.
 
-These are prior assistant-reported results. They have not been independently rerun as part of this repository bootstrap. A successor must inspect the code and repeat the relevant tests before treating them as verified.
+- Node.js v22.16.0 syntax check of 2.11's sole inline script: PASS.
+- Playwright 1.57.0 / Chromium 144.0.7559.96 browser run: 2.11 reached turn 1,000 with no page exceptions or console errors.
+- 2.10 vs 2.11, seed 42, 1,000 turns: sampled city/geology statistics and main-canvas PNG hash identical.
+- Isolated language-kernel harness: same seed repeated deterministically; a different seed produced a different language trajectory; the city RNG state was unchanged by language evolution.
+- A same-seed browser test also confirmed that clicking “Overhear locals” changes later language evolution because it consumes the language RNG. City statistics and canvas remain unchanged. This defect is documented in LANGUAGE_KERNEL_AUDIT.md and is the next correction.
 
+Broader multi-seed regression remains to be run.
 ## 6. Current user direction
 
 The current direct project instructions establish:
@@ -123,22 +128,30 @@ The plan is locked as the default direction but amendable through versioned chan
 
 ## 9. Current operation and test progress
 
-**WF-SIM-001 — Preserve and independently verify Cities Laboratory 2.11.**
+**WF-SIM-001 — Preserve and independently verify Cities Laboratory 2.11: COMPLETE.**
 
-- Exact local file exists at /mnt/data/Well_Fuck_Cities_Lab_2_11.html.
-- SHA-256 recomputed: 1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05.
-- A generated conversation-file copy was materialized and compared byte-for-byte with the local file.
-- The sole inline JavaScript block was extracted and checked with Node.js v22.16.0: PASS.
-- Two Chromium headless DOM/smoke attempts timed out without producing a DOM dump. No JavaScript exception was captured before timeout. Runtime behavior is therefore INCONCLUSIVE, not passed.
-- The exact source text was retrieved in full (969 lines) and a GitHub blob was prepared. The branch commit and independent repository readback remain to be verified.
-- Next: publish at builds/Well_Fuck_Cities_Lab_2_11.html, read back independently, then complete runtime and RNG-isolation checks.
+- Exact local file: /mnt/data/Well_Fuck_Cities_Lab_2_11.html.
+- Size: 1,549,198 bytes.
+- SHA-256: 1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05.
+- Repository path: SIMULATION_WORKDESKS/WELL_FUCK/builds/Well_Fuck_Cities_Lab_2_11.html.
+- Commit: 4e2df3cb073b4b4dceefddf54831edab1378c17a.
+- Blob: 67d17e7efac74434570f36f6b3f726e945db6f1e.
+- Independent blob readback matched the full source text exactly.
+- Node syntax: PASS. Playwright/Chromium 144 browser run to turn 1,000: PASS, no page exceptions or console errors.
+- 2.10 vs 2.11, seed 42, 1,000 turns: sampled city/geology statistics and main-canvas screenshot hash identical.
+
+**WF-LANG-001 — Audit Language Kernel 0.1: COMPLETE.**
+
+- Audit file: LANGUAGE_KERNEL_AUDIT.md.
+- Current kernel: 36-entry proto-lexicon, 14 founder phrases, 10 sound laws, eight phrase mutation operations, IPA-segment representation, community inheritance, and a shared language RNG.
+- Verified issue: “Overhear locals” consumes the language simulation RNG. A click at turn 100 changed the turn-1000 phrase under the same seed, while city statistics and the canvas remained identical.
+- Isolated language test: same seed repeated deterministically; a different seed changed the language trajectory; global city RNG state remained unchanged.
 
 ## 10. Exact next actions
 
-1. Complete WF-SIM-001: publish the prepared source, independently verify repository readback and identity, and resolve runtime/RNG testing.
-2. WF-LANG-001: audit Language Kernel 0.1 against the committed source and produce a source-grounded implementation map.
-3. WF-TEST-001: establish repeatable seeded behavior and language/geology-city RNG isolation tests.
-4. WF-LANG-002: design productive lexical and grammatical machinery from the audit before implementing it.
+1. WF-LANG-004: decouple notebook/UI sampling from the language simulation RNG and publish a new versioned build without overwriting 2.11.
+2. WF-TEST-001: add repeatable regression tests for UI-action independence and multi-seed physical/city behavior.
+3. Continue productive-language design with WF-LANG-002 after the RNG guardrail is tested.
 
 ## 11. Repository bootstrap receipt
 
@@ -166,3 +179,21 @@ The HTML simulation file remains subject to its own artifact-preservation and ru
 ## 12. Methodology clarification
 
 Nathan clarified that HsH and the other Satobloc repositories are methodological sources, not templates. The project should extract useful lessons and independently design its own controls around its own creative priorities, interruption risks, scale, and operational needs. No particular HsH interval, schedule, ticker shape, automation, or documentation ritual is binding.
+
+
+## 13. Latest project update — 2026-11-13
+
+**Project plan:** PROJECT_PLAN.md v1.1 is the adopted, amendable roadmap. It adds the working guardrail that UI/presentation actions must not perturb simulation RNG streams.
+
+**Preserved 2.11 baseline**
+- Commit: 4e2df3cb073b4b4dceefddf54831edab1378c17a.
+- Artifact blob: 67d17e7efac74434570f36f6b3f726e945db6f1e.
+- Source SHA-256: 1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05.
+- Exact source-text readback, Node syntax check, and a 1,000-turn Playwright/Chromium browser run all passed.
+- Seed-42 comparison with 2.10 through 1,000 turns yielded identical sampled physical/city statistics and identical main-canvas screenshot hash.
+
+**Language audit:** WF-LANG-001 is complete. LANGUAGE_KERNEL_AUDIT.md records the 36-entry proto-lexicon, 14 founder phrases, 10 sound laws, eight phrase mutation operations, community inheritance, shared language RNG, current limitations, and test results.
+
+**Verified defect:** “Overhear locals” consumes the language simulation RNG. One same-seed click at turn 100 changed the phrase at turn 1,000 while leaving city/geology outputs unchanged. This is a UI-to-language coupling defect, not a physical RNG leak.
+
+**Current operation:** WF-LANG-004, decouple notebook/UI sampling from the language simulation RNG. Preserve 2.11 unchanged; produce a new 2.12 build and a regression test.

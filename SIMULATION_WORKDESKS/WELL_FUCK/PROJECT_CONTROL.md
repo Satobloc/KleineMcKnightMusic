@@ -2,8 +2,8 @@
 
 **Status:** ACTIVE  
 **Plan:** PROJECT_PLAN.md, version 1.0 (adopted baseline; amendable)  
-**Phase:** 1 / prototype preservation  
-**Priority:** P0 prototype preservation; P1 language-system development  
+**Phase:** 2 / language-kernel audit and baseline  
+**Priority:** P1 language-system correctness; P1 baseline reproducibility  
 **Workspace:** Satobloc/KleineMcKnightMusic/SIMULATION_WORKDESKS/WELL_FUCK/  
 **Project authority:** Nathan's direct instructions govern intent and priority. This file and the other workspace records are assistant-maintained execution records, not user-authored doctrine or scientific authority.
 
@@ -19,9 +19,14 @@ The current priority is linguistic mechanics. Geology expansion is paused. Prese
 - Artifact file: Well_Fuck_Cities_Lab_2_11.html.
 - Source size: 1,549,198 bytes.
 - Source SHA-256: `1b31d2d9683a416eb3e6b37f0bfbd44529aca73c971a2fc5459a7243c4bf3a05`.
-- Source artifact is available and its checksum has been independently verified in the working environment. Repository publication and runtime verification are in progress.
+- Repository path: `builds/Well_Fuck_Cities_Lab_2_11.html`.
+- Repository commit: `4e2df3cb073b4b4dceefddf54831edab1378c17a`; blob: `67d17e7efac74434570f36f6b3f726e945db6f1e`.
+- Source SHA-256 was verified locally; independent repository blob readback matched the full source text exactly.
+- Node syntax check passed. Playwright/Chromium completed 1,000 turns without page exceptions or console errors.
+- Seed-42 comparison of 2.10 and 2.11 through 1,000 turns produced identical sampled physical/city statistics and identical main-canvas screenshot hashes.
 - Previous local prototype: Cities Laboratory 2.10, SHA-256 `90fd48b8e7f15c62bc7dacbcadcc73c5a46c21f142d197e52220d0ff7a253f19`.
-- Language Kernel 0.1 is the active design surface. Productive grammar, broad lexicon, event-specific utterances, borrowing, dialect continua, and mutual intelligibility are not yet implemented.
+- Language Kernel 0.1 is the active design surface. The source audit is recorded in LANGUAGE_KERNEL_AUDIT.md. Productive grammar, broad lexicon, event-specific utterances, borrowing, dialect continua, and mutual intelligibility are not yet implemented.
+- Verified defect: “Overhear locals” consumes the language simulation RNG and changes later language evolution. WF-LANG-004 is active to isolate presentation sampling.
 - Prior conversation reported Chromium runs and a comparison intended to show that language RNG did not alter geology/city outcomes. Those are historical assistant-reported results and have not been independently rerun in this repository bootstrap.
 
 ## Phase plan and exit evidence
@@ -31,8 +36,8 @@ The canonical roadmap and detailed phase gates live in PROJECT_PLAN.md. The exec
 | Phase | Purpose | Exit evidence |
 |---|---|---|
 | 0. Repository and continuity bootstrap | Establish project home and control system | COMPLETE: controls read back; continuity and repository test workflows pass |
-| 1. Prototype preservation | Preserve Cities Laboratory 2.11 exactly and verify its behavior | Committed artifact, checksum, independent readback, syntax/runtime evidence |
-| 2. Language-kernel audit and baseline | Inspect actual implementation and establish reproducible tests | Source-grounded implementation map and baseline test record |
+| 1. Prototype preservation | Preserve Cities Laboratory 2.11 exactly and verify its behavior | COMPLETE: committed artifact, checksum, independent readback, syntax check, and 1,000-turn browser run |
+| 2. Language-kernel audit and baseline | Inspect actual implementation and establish reproducible tests | ACTIVE: source-grounded audit complete; fix UI RNG coupling and broaden seeded tests |
 | 3. Productive language core | Add concepts, lexicon, phonology, morphology, syntax, semantics, composition | Novel compositional utterances, inspectable data, tests |
 | 4. Contextual speech | Generate utterances grounded in actual simulation events | Traceable event-linked speech examples and tests |
 | 5. Social language evolution | Develop contact, borrowing, dialect divergence, and intelligibility | Explicit rules and repeatable experiments |
@@ -47,7 +52,8 @@ Phases are revisitable. A phase is not complete merely because a narrative descr
 1. Preserve project intent and continuity before extending features.
 2. Preserve the current 2.11 artifact and establish a verified repository copy.
 3. Work on language mechanics before resuming geology expansion.
-4. Keep the language RNG independent from geology/city RNG unless a deliberate, tested design change is approved.
+4. Keep language RNG independent from geology/city RNG unless a deliberate, tested design change is approved.
+5. Keep UI/presentation randomness out of simulation RNG streams; observational controls must not change future world or language evolution.
 5. New features enter through a bounded operation with a stop condition and a verification plan.
 6. Keep speculative mechanics distinguishable from implemented and tested behavior.
 
@@ -70,6 +76,7 @@ Do not mark a branch complete from intention, a plan, or an unverified claim.
 - Dated decisions: DECISION_LOG.md.
 - Completed operation receipts: OPERATION_LOG.md.
 - Interactive heartbeat: HEARTBEAT.md.
+- Language implementation audit: LANGUAGE_KERNEL_AUDIT.md.
 - Execution and ticker method: WORKFLOW_PROTOCOL.md.
 - Context handoff: SUCCESSION.md.
 
