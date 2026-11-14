@@ -1,8 +1,8 @@
 # Well, Fuck. — Project Control
 
 **Status:** ACTIVE  
-**Phase:** 0 / repository and continuity bootstrap  
-**Priority:** P0 continuity; P1 prototype preservation; P2 language-system development  
+**Phase:** 1 / prototype preservation  
+**Priority:** P0 prototype preservation; P1 language-system development  
 **Workspace:** Satobloc/KleineMcKnightMusic/SIMULATION_WORKDESKS/WELL_FUCK/  
 **Project authority:** Nathan's direct instructions govern intent and priority. This file and the other workspace records are assistant-maintained execution records, not user-authored doctrine or scientific authority.
 
@@ -27,7 +27,7 @@ The current priority is linguistic mechanics. Geology expansion is paused. Prese
 
 | Phase | Purpose | Exit evidence |
 |---|---|---|
-| 0. Repository and continuity bootstrap | Establish the project home, state records, restart procedure, and automated integrity checks | Boot sequence works; control files are present; continuity workflow passes |
+| 0. Repository and continuity bootstrap | Establish the project home, state records, restart procedure, and automated integrity checks | COMPLETE: control files read back; continuity and repository test workflows pass |
 | 1. Prototype preservation | Bring the latest HTML artifact into the repository and verify identity, syntax, behavior, and a restorable version pointer | Committed artifact, SHA-256, independent readback, reproducible test record |
 | 2. Language-kernel audit | Inspect the actual 2.11 implementation and map its data structures, update rules, and limitations | Source-grounded language-kernel specification |
 | 3. Productive language | Develop a useful lexicon, morphology, syntax, semantic relations, and compositional utterances | Defined data model, examples, tests, and measured emergent behavior |
