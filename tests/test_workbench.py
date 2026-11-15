@@ -28,11 +28,9 @@ class WorkbenchTests(unittest.TestCase):
 
     def test_inventory_is_read_only_and_writes_report(self):
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td) / "corpus"
-            root.mkdir()
-            (root / "sample.txt").write_text("sample", encoding="utf-8")
+            root = module.ROOT / "corpus"
             out = Path(td) / "out"
-            report = module.inventory(str(root.relative_to(module.ROOT)) if root.is_relative_to(module.ROOT) else "README.md", out)
+            report = module.inventory("corpus", out)
             self.assertEqual(report["command"], "inventory")
             self.assertTrue((out / "inventory.json").exists())
 
