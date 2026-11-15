@@ -1,5 +1,12 @@
 name: Hopper Compiler Trial
 on:
+  push:
+    branches:
+      - prototype/hopper-trial
+    paths:
+      - ".github/workflows/hopper-compiler-trial.yml"
+      - "SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py"
+      - "tests/test_random_hopper_compiler.py"
   workflow_dispatch:
     inputs:
       ref:
@@ -30,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.ref }}
+          ref: ${{ inputs.ref || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
