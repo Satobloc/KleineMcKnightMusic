@@ -302,8 +302,7 @@ def main() -> None:
             "Lyrics and writing/content hoppers are strongly Lyrics-biased. "
             "All hoppers remain eligible for either field."
         ),
-        "divider": ".
-",
+"divider": ".\\n",
         "text_only_note": (
             "Binary audio/image/video files are not embedded. Their filenames "
             "become short text fragments; text sidecars, captions, and metadata "
