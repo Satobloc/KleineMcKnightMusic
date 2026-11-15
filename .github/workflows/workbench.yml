@@ -2,14 +2,10 @@ name: KMcKM Workbench
 
 on:
   push:
-    branches: [main, "workbench/**"]
+    branches: ["workbench/**"]
     paths:
       - ".workbench/REQUEST.json"
-      - ".github/workflows/workbench.yml"
-      - "tools/workbench.py"
-      - "SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py"
-      - "tests/test_workbench.py"
-  workflow_dispatch:
+      - ".workbench/REQUEST.json"
 
 permissions:
   contents: read
@@ -37,14 +33,11 @@ jobs:
           python -m py_compile tools/workbench.py
           python -m unittest discover -s tests -p "test_workbench.py" -v
       - name: Run request
-        id: run
-        run: |
-          python tools/workbench.py
-          echo "output=$(python -c 'import json,pathlib; p=json.loads(pathlib.Path(".workbench/REQUEST.json").read_text()); print("workbench_runs/"+p["request_id"])')" >> "$GITHUB_OUTPUT"
+        run: python tools/workbench.py
       - name: Upload workbench result
         uses: actions/upload-artifact@v4
         with:
           name: workbench-${{ github.run_number }}
-          path: ${{ steps.run.outputs.output }}/
+          path: workbench_runs/
           if-no-files-found: error
           retention-days: 14
