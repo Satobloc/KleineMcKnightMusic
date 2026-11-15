@@ -312,8 +312,9 @@ def apply_song_structure(
     choose partial or full pressure. Decisions are purely positional: content
     is never classified, filtered, or interpreted.
     """
-    segmentation_on = rng.random() < 0.50
-    repetition_on = rng.random() < 0.50
+    structure_gate = rng.random() < 0.50
+    segmentation_on = structure_gate and rng.random() < 0.50
+    repetition_on = structure_gate and rng.random() < 0.50
     segmentation_mode = rng.choice(["partial", "full"]) if segmentation_on else "off"
     repetition_mode = rng.choice(["partial", "full"]) if repetition_on else "off"
 
@@ -369,6 +370,7 @@ def apply_song_structure(
         result = separator.join(repeated)
 
     return result, {
+        "structure_gate": "open" if structure_gate else "closed",
         "segmentation": segmentation_mode,
         "repetition": repetition_mode,
         "line_count": line_count,
