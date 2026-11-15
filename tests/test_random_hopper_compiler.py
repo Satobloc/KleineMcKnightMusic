@@ -1,8 +1,8 @@
-import importlib.util, random, tempfile, unittest
+import importlib.util, random, tempfile, unittest, sys
 from pathlib import Path
 SCRIPT=Path("SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py")
 spec=importlib.util.spec_from_file_location("hopper_compiler",SCRIPT)
-module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+module=importlib.util.module_from_spec(spec); sys.modules[spec.name]=module; spec.loader.exec_module(module)
 
 class HopperCompilerTests(unittest.TestCase):
     def test_writing_voice_excluded_by_default(self):
