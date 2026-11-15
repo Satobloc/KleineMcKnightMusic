@@ -1,15 +1,9 @@
 {
   "version": 1,
-  "request_id": "hopper_trial_smoke_002",
-  "command": "hopper-trial",
-  "corpus": "corpus",
-  "include_hoppers": [
-    "Genre_Hopper",
-    "Structure_Hopper",
-    "Prompt_Hopper",
-    "Lyrics_Hopper"
-  ],
-  "lyrics_chars": 400,
-  "styles_chars": 180,
-  "seed": 20261114
+  "request_id": "extract_lyrics_hopper_v1_001",
+  "command": "extract-text",
+  "target": "corpus/Lyrics_Hopper",
+  "min_chars": 24,
+  "max_files": 3000,
+  "max_fragments": 15000
 }
