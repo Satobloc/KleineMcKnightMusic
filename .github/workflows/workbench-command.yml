@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   run-command:
-    if: startsWith(github.event.issue.title, '[workbench]') && github.event.issue.user.login == 'Satobloc'
+    if: startsWith(github.event.issue.title, '[workbench]') || startsWith(github.event.issue.title, '[workbench-check]') && github.event.issue.user.login == 'Satobloc'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
