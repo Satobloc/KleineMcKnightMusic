@@ -27,4 +27,6 @@ jobs:
       - name: Compile source hopper
         run: python -m py_compile tools/source_hopper.py
       - name: Run unit tests
-        run: python -m unittest discover -s tests -p "test_source_hopper.py" -v\n      - name: Run hopper compiler tests\n        run: python -m unittest discover -s tests -p "test_random_hopper_compiler.py" -v
+        run: python -m unittest discover -s tests -p "test_source_hopper.py" -v
+      - name: Run hopper compiler tests
+        run: python -m unittest discover -s tests -p "test_random_hopper_compiler.py" -v
