@@ -253,14 +253,22 @@ def separator_for(connector: str, boundary_index: int) -> str:
     return CONCATENATOR_CHOICES[connector]
 
 
+def closing_parenthesis_for_count(sample_count: int, connector: str) -> str:
+    """Close an odd number of alternating parenthesis boundaries at song end."""
+    if connector == "alternating_parentheses" and sample_count >= 2 and sample_count % 2 == 0:
+        return ")"
+    return ""
+
+
 def concatenate_samples(samples: list[str], connector: str) -> str:
-    """Join samples with one selected connector, alternating parentheses if chosen."""
+    """Join samples with one selected connector, balancing alternating parentheses."""
     if not samples:
         return ""
     pieces = [samples[0]]
     for index, sample in enumerate(samples[1:]):
         pieces.append(separator_for(connector, index))
         pieces.append(sample)
+    pieces.append(closing_parenthesis_for_count(len(samples), connector))
     return "".join(pieces)
 
 
@@ -290,10 +298,15 @@ def compile_both(
     def rendered(destination: str) -> str:
         return concatenate_samples(samples[destination], connector)
 
-    def can_accept(destination: str) -> bool:
+    def next_sample_overhead(destination: str) -> int:
         parts = samples[destination]
         next_separator = separator_for(connector, len(parts) - 1) if parts else ""
-        return len(rendered(destination)) + len(next_separator) < limits[destination]
+        current_closer = closing_parenthesis_for_count(len(parts), connector)
+        next_closer = closing_parenthesis_for_count(len(parts) + 1, connector)
+        return len(next_separator) + len(next_closer) - len(current_closer)
+
+    def can_accept(destination: str) -> bool:
+        return len(rendered(destination)) + next_sample_overhead(destination) < limits[destination]
 
     while any(can_accept(key) for key in samples):
         available_destinations = [
@@ -323,7 +336,7 @@ def compile_both(
 
         prior_parts = samples[destination]
         separator = separator_for(connector, len(prior_parts) - 1) if prior_parts else ""
-        remaining = limits[destination] - len(rendered(destination)) - len(separator)
+        remaining = limits[destination] - len(rendered(destination)) - next_sample_overhead(destination)
         if remaining <= 0:
             continue
         used = fragment_text[:remaining]

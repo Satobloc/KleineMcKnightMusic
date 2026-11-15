@@ -48,6 +48,14 @@ class ConcatenatorTests(unittest.TestCase):
             "one——two",
         )
         self.assertEqual(
+            compiler.concatenate_samples(["one", "two"], "alternating_parentheses"),
+            "one(two)",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two", "three"], "alternating_parentheses"),
+            "one(two)three",
+        )
+        self.assertEqual(
             compiler.concatenate_samples(["one", "two", "three", "four"], "alternating_parentheses"),
             "one(two)three(four)",
         )
