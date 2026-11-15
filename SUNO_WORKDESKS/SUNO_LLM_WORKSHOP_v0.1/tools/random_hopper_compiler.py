@@ -389,14 +389,16 @@ def main() -> None:
                         help="Local output directory (default: ./hopper_pulls)")
     parser.add_argument("--lyrics-chars", type=int, default=5000)
     parser.add_argument("--styles-chars", type=int, default=1000)
+    parser.add_argument("--variants", type=int, default=4,
+                        help="Independent lyrics/styles pairs to generate (default: 4)")
     parser.add_argument("--seed", type=int, default=None,
                         help="Optional integer seed for reproducible pulls")
     parser.add_argument("--include-hoppers", default=None,
                         help="Comma-separated exact hopper directory names; default is user-supplied hoppers only")
     args = parser.parse_args()
 
-    if args.lyrics_chars < 1 or args.styles_chars < 1:
-        raise SystemExit("Character limits must be positive integers.")
+    if args.lyrics_chars < 1 or args.styles_chars < 1 or args.variants < 1:
+        raise SystemExit("Character limits and variant count must be positive integers.")
 
     rng = random.Random(args.seed)
     include_hoppers = (
@@ -407,65 +409,92 @@ def main() -> None:
     if not hoppers:
         raise SystemExit("No eligible text fragments found in any hopper.")
 
-    lyrics, lyrics_manifest, styles, styles_manifest = compile_both(
-        hoppers, args.lyrics_chars, args.styles_chars, rng
-    )
-    lyrics, lyrics_structure = apply_song_structure(lyrics, rng)
-    styles, styles_structure = apply_song_structure(styles, rng)
-    lyrics_structure["truncated_to_field_limit"] = len(lyrics) > args.lyrics_chars
-    styles_structure["truncated_to_field_limit"] = len(styles) > args.styles_chars
-    lyrics = lyrics[:args.lyrics_chars]
-    styles = styles[:args.styles_chars]
     args.out.mkdir(parents=True, exist_ok=True)
-    (args.out / "lyrics_pull.txt").write_text(lyrics, encoding="utf-8")
-    (args.out / "styles_pull.txt").write_text(styles, encoding="utf-8")
-
-    manifest = {
+    run_manifest = {
         "compiler": "random_hopper_compiler.py",
         "seed": args.seed,
+        "variant_count": args.variants,
         "corpus": str(args.corpus),
         "hopper_count": len(hoppers),
         "fragment_count": sum(len(items) for items in hoppers.values()),
         "hoppers_loaded": {name: len(items) for name, items in sorted(hoppers.items())},
-        "lyrics": {
-            "target_characters": args.lyrics_chars,
-            "actual_characters": len(lyrics),
-            "pull_count": len(lyrics_manifest),
-            "structure": lyrics_structure,
-            "pulls": lyrics_manifest,
-        },
-        "styles": {
-            "target_characters": args.styles_chars,
-            "actual_characters": len(styles),
-            "pull_count": len(styles_manifest),
-            "structure": styles_structure,
-            "pulls": styles_manifest,
-        },
-        "routing_note": (
-            "Genre and Structure hoppers are strongly Styles-biased; "
-            "Lyrics and writing/content hoppers are strongly Lyrics-biased. "
-            "Only user-supplied hoppers are eligible by default; assistant research/documentation hoppers are separate. " 
-            "All selected user hoppers remain eligible for either field."
-        ),
-"divider": "",
-        "text_only_note": (
-            "Binary audio/image/video files are not embedded. Their filenames "
-            "become short text fragments; text sidecars, captions, and metadata "
-            "are also eligible."
-        ),
+        "variants": [],
     }
-    (args.out / "pull_manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
 
-    print(f"Loaded {len(hoppers)} hoppers and {manifest['fragment_count']} fragments.")
-    print(f"Lyrics: {len(lyrics)}/{args.lyrics_chars} characters "
-          f"from {len(lyrics_manifest)} pulls")
-    print(f"Styles: {len(styles)}/{args.styles_chars} characters "
-          f"from {len(styles_manifest)} pulls")
+    for index in range(1, args.variants + 1):
+        lyrics, lyrics_manifest, styles, styles_manifest = compile_both(
+            hoppers, args.lyrics_chars, args.styles_chars, rng
+        )
+        lyrics, lyrics_structure = apply_song_structure(lyrics, rng)
+        styles, styles_structure = apply_song_structure(styles, rng)
+        lyrics_structure["truncated_to_field_limit"] = len(lyrics) > args.lyrics_chars
+        styles_structure["truncated_to_field_limit"] = len(styles) > args.styles_chars
+        lyrics = lyrics[:args.lyrics_chars]
+        styles = styles[:args.styles_chars]
+
+        variant_dir = args.out / f"variant_{index:02d}"
+        variant_dir.mkdir(parents=True, exist_ok=True)
+        (variant_dir / "lyrics_pull.txt").write_text(lyrics, encoding="utf-8")
+        (variant_dir / "styles_pull.txt").write_text(styles, encoding="utf-8")
+
+        manifest = {
+            "compiler": "random_hopper_compiler.py",
+            "variant": index,
+            "seed": args.seed,
+            "corpus": str(args.corpus),
+            "hopper_count": len(hoppers),
+            "fragment_count": run_manifest["fragment_count"],
+            "hoppers_loaded": run_manifest["hoppers_loaded"],
+            "lyrics": {
+                "target_characters": args.lyrics_chars,
+                "actual_characters": len(lyrics),
+                "pull_count": len(lyrics_manifest),
+                "structure": lyrics_structure,
+                "pulls": lyrics_manifest,
+            },
+            "styles": {
+                "target_characters": args.styles_chars,
+                "actual_characters": len(styles),
+                "pull_count": len(styles_manifest),
+                "structure": styles_structure,
+                "pulls": styles_manifest,
+            },
+            "routing_note": (
+                "Genre and Structure hoppers are strongly Styles-biased; "
+                "Lyrics and writing/content hoppers are strongly Lyrics-biased. "
+                "Only user-supplied hoppers are eligible by default; assistant research/documentation hoppers are separate. "
+                "All selected user hoppers remain eligible for either field."
+            ),
+            "divider": "",
+            "text_only_note": (
+                "Binary audio/image/video files are not embedded. Their filenames "
+                "become short text fragments; text sidecars, captions, and metadata "
+                "are also eligible."
+            ),
+        }
+        (variant_dir / "pull_manifest.json").write_text(
+            json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        run_manifest["variants"].append({
+            "variant": index,
+            "directory": variant_dir.name,
+            "lyrics_characters": len(lyrics),
+            "styles_characters": len(styles),
+            "lyrics_structure": lyrics_structure,
+            "styles_structure": styles_structure,
+        })
+        print(
+            f"Variant {index:02d}: Lyrics {len(lyrics)}/{args.lyrics_chars} "
+            f"({len(lyrics_manifest)} pulls); Styles {len(styles)}/{args.styles_chars} "
+            f"({len(styles_manifest)} pulls)"
+        )
+
+    (args.out / "run_manifest.json").write_text(
+        json.dumps(run_manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    print(f"Loaded {len(hoppers)} hoppers and {run_manifest['fragment_count']} fragments.")
+    print(f"Generated {args.variants} independent Lyrics/Styles pairs.")
     print(f"Outputs: {args.out.resolve()}")
-    if len(lyrics) < args.lyrics_chars or len(styles) < args.styles_chars:
-        print("WARNING: available material did not fill one or both targets.", file=sys.stderr)
 
 
 if __name__ == "__main__":
