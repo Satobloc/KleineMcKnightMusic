@@ -60,6 +60,26 @@ class StructuralTransformTests(unittest.TestCase):
         self.assertGreater(meta["repeated_units"], 0)
         self.assertGreater(len(result), len(source))
 
+    def test_repetition_caps_full_units_and_allows_short_final_tag(self):
+        source = ("A" * 40) + ("B" * 40) + ("C" * 20)
+        result, meta = compiler.apply_song_structure(
+            source, StructuralRng([0.1, 0.9, 0.1] + [0.0] * 100, "full")
+        )
+        self.assertEqual(result.count("A" * 40), 2)
+        self.assertEqual(result.count("B" * 40), 2)
+        self.assertEqual(result.count("C" * 20), 3)
+        self.assertEqual(meta["closing_triple_repeats"], 1)
+
+    def test_long_final_unit_does_not_get_a_third_copy(self):
+        source = ("A" * 40) + ("B" * 40) + ("C" * 40)
+        result, meta = compiler.apply_song_structure(
+            source, StructuralRng([0.1, 0.9, 0.1] + [0.0] * 100, "full")
+        )
+        self.assertEqual(result.count("A" * 40), 2)
+        self.assertEqual(result.count("B" * 40), 2)
+        self.assertEqual(result.count("C" * 40), 2)
+        self.assertEqual(meta["closing_triple_repeats"], 0)
+
     def test_both_operations_can_run_together(self):
         source = "abcdefghijklmnopqrstuvwxyz" * 8
         result, meta = compiler.apply_song_structure(

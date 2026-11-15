@@ -38,3 +38,9 @@ Choose one or more:
 
 ## Conservation question
 What must remain identifiable after transformation?
+
+## Chorus succession guard
+- Avoid three full choruses in a row.
+- Two consecutive chorus passes are the normal maximum.
+- A third consecutive pass is permitted only as a very short closing tag/coda at the absolute end of the song, not as another full chorus.
+- When a return is needed, use a verse, bridge, breakdown, instrumental passage, or a meaningfully changed section to create contrast before the next full chorus.

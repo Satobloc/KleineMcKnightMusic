@@ -31,6 +31,12 @@ SKIP_NAMES = {
 }
 MAX_FILE_BYTES = 25 * 1024 * 1024
 
+# Repetition policy: no three consecutive full-size copies. A third copy is
+# reserved for a very short final tag/coda (64 characters or fewer).
+MAX_REPEATED_UNIT_RUN = 2
+MAX_SHORT_CLOSING_UNIT_RUN = 3
+SHORT_CLOSING_REPEAT_MAX_CHARS = 64
+
 # Only user-supplied creative hoppers participate in ordinary pulls.
 # Research/documentation hoppers created during assistant-supported repo work
 # remain separate and are never included by default.
@@ -292,6 +298,55 @@ def compile_both(
 
 
 
+def _repeat_units(
+    units: list[str], rng: random.Random, repetition_mode: str, separator: str
+) -> tuple[str, int, int]:
+    """Repeat units without creating a third full-size consecutive pass.
+
+    A third consecutive copy is allowed only for the final unit when it is
+    64 characters or fewer, treating it as a brief closing tag/coda.
+    """
+    repeated: list[str] = []
+    repeated_units = 0
+    closing_triple_repeats = 0
+    chance = 0.65 if repetition_mode == "full" else 0.30
+
+    for index, unit in enumerate(units):
+        repeated.append(unit)
+
+        trailing_run = 1
+        for previous in reversed(repeated[:-1]):
+            if previous != unit:
+                break
+            trailing_run += 1
+
+        # Keep one probability draw per unit, even when the run is already at
+        # its limit, so seeded runs remain stable in their random-call order.
+        if rng.random() >= chance:
+            continue
+
+        short_closing_unit = (
+            index == len(units) - 1
+            and len(unit.strip()) <= SHORT_CLOSING_REPEAT_MAX_CHARS
+        )
+        max_run = (
+            MAX_SHORT_CLOSING_UNIT_RUN
+            if short_closing_unit
+            else MAX_REPEATED_UNIT_RUN
+        )
+        available_copies = max_run - trailing_run
+        if available_copies <= 0:
+            continue
+
+        copies = rng.randint(1, available_copies)
+        repeated.extend([unit] * copies)
+        repeated_units += 1
+        if short_closing_unit and trailing_run + copies >= 3:
+            closing_triple_repeats += 1
+
+    return separator.join(repeated), repeated_units, closing_triple_repeats
+
+
 def _random_chunks(value: str, rng: random.Random, minimum: int, maximum: int) -> list[str]:
     """Split text at stochastic character offsets without interpreting its content."""
     chunks: list[str] = []
@@ -322,6 +377,7 @@ def apply_song_structure(
     line_count = 0
     stanza_count = 0
     repeated_units = 0
+    closing_triple_repeats = 0
 
     if segmentation_on and result:
         # Partial pressure leaves irregular stretches untouched; full pressure
@@ -358,16 +414,10 @@ def apply_song_structure(
             units = result.split("\n\n")
         else:
             units = _random_chunks(result, rng, 32, 96)
-        repeated: list[str] = []
-        for unit in units:
-            repeated.append(unit)
-            chance = 0.65 if repetition_mode == "full" else 0.30
-            if rng.random() < chance:
-                copies = rng.randint(1, 3 if repetition_mode == "full" else 2)
-                repeated.extend([unit] * copies)
-                repeated_units += 1
         separator = "\n\n" if segmentation_on else ""
-        result = separator.join(repeated)
+        result, repeated_units, closing_triple_repeats = _repeat_units(
+            units, rng, repetition_mode, separator
+        )
 
     return result, {
         "structure_gate": "open" if structure_gate else "closed",
@@ -376,6 +426,7 @@ def apply_song_structure(
         "line_count": line_count,
         "stanza_count": stanza_count,
         "repeated_units": repeated_units,
+        "closing_triple_repeats": closing_triple_repeats,
     }
 
 
