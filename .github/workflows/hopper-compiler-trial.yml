@@ -1,0 +1,42 @@
+name: Hopper Compiler Trial
+on:
+  workflow_dispatch:
+    inputs:
+      seed:
+        description: "Random seed (blank = fresh run)"
+        required: false
+        type: string
+      lyrics_chars:
+        description: "Lyrics field character ceiling"
+        required: true
+        default: "5000"
+        type: string
+      styles_chars:
+        description: "Styles field character ceiling"
+        required: true
+        default: "1000"
+        type: string
+permissions:
+  contents: read
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile selected music hoppers
+        shell: bash
+        run: |
+          args=(--corpus corpus --out hopper_pulls --include-hoppers "Genre_Hopper,Structure_Hopper,Prompt_Hopper,Prompt_Examples_Hopper,Lyrics_Hopper,Grab_Bag,Sample_Hopper,Audio_Case_Hopper,Tooling_Hopper,Research_Hopper,Source_Hopper,Community_Hopper,Product_Hopper,Sonic_Pi" --lyrics-chars "${{ inputs.lyrics_chars }}" --styles-chars "${{ inputs.styles_chars }}")
+          if [[ -n "${{ inputs.seed }}" ]]; then args+=(--seed "${{ inputs.seed }}"); fi
+          python SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py "${args[@]}"
+      - name: Upload trial outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: hopper-trial-${{ github.run_number }}
+          path: hopper_pulls/
+          if-no-files-found: error
+          retention-days: 7
