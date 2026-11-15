@@ -126,8 +126,8 @@ def json_strings(value: object) -> Iterator[str]:
 
 
 def split_text(text: str, suffix: str) -> list[str]:
-    """Extract plausible independent pulls from a text-bearing file."""
-    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    """Extract sentence/line-sized independent pulls from a text-bearing file."""
+    text = text.replace("\\r\\n", "\\n").replace("\\r", "\\n")
     if suffix == ".json":
         try:
             parsed = json.loads(text)
@@ -140,44 +140,35 @@ def split_text(text: str, suffix: str) -> list[str]:
             return pieces
 
     if suffix in {".csv", ".tsv"}:
-        delimiter = "\t" if suffix == ".tsv" else ","
+        delimiter = "\\t" if suffix == ".tsv" else ","
         try:
             rows = csv.reader(text.splitlines(), delimiter=delimiter)
-            pieces = [" | ".join(cell.strip() for cell in row if cell.strip())
-                      for row in rows]
-            return [p for p in pieces if p]
+            cells = [" | ".join(cell.strip() for cell in row if cell.strip())
+                     for row in rows]
+            text = "\\n".join(cells)
         except csv.Error:
             pass
 
-    # Blank-line-separated blocks retain internal lineation, useful for lyrics.
-    blocks = re.split(r"\n\s*\n+", text)
-    pieces: list[str] = []
-    for block in blocks:
-        block = clean_fragment(block)
-        if not block:
+    # Every physical line and every period is a sample boundary. Keep the
+    # period attached to the preceding sample; never recombine sentences into
+    # paragraph-sized blocks. This intentionally favors small, plentiful
+    # source pulls over preserving prose paragraph structure.
+    pieces = re.split(r"(?<=\\.)[ \\t]*|[\\n]+", text)
+    samples: list[str] = []
+    for piece in pieces:
+        piece = clean_fragment(piece)
+        if not piece:
             continue
-        # Avoid one huge document swallowing an entire prompt. Prefer line
-        # boundaries; only hard-split when a single line is itself enormous.
-        if len(block) > 2400:
-            lines = [clean_fragment(line) for line in block.split("\n")]
-            lines = [line for line in lines if line]
-            current = ""
-            for line in lines:
-                if len(line) > 2400:
-                    if current:
-                        pieces.append(current)
-                        current = ""
-                    pieces.extend(line[i:i + 1800] for i in range(0, len(line), 1800))
-                elif current and len(current) + len(line) + 1 > 1800:
-                    pieces.append(current)
-                    current = line
-                else:
-                    current = f"{current}\n{line}" if current else line
-            if current:
-                pieces.append(current)
+        # Preserve the existing safety limit for unusually long unpunctuated
+        # lines, splitting only those exceptional samples into smaller chunks.
+        if len(piece) > 2400:
+            samples.extend(
+                clean_fragment(piece[i:i + 1800])
+                for i in range(0, len(piece), 1800)
+            )
         else:
-            pieces.append(block)
-    return pieces
+            samples.append(piece)
+    return [sample for sample in samples if sample]
 
 
 def load_hoppers(
