@@ -101,12 +101,13 @@ def hopper_trial(payload: dict, out: Path) -> dict:
     if not corpus.is_dir():
         raise ValueError("corpus must be a directory")
     include = payload.get("include_hoppers")
-    if not isinstance(include, list) or not include:
-        raise ValueError("include_hoppers must be a non-empty list of exact directory names")
-    available = {p.name for p in corpus.iterdir() if p.is_dir()}
-    missing = sorted(set(include) - available)
-    if missing:
-        raise ValueError(f"Unknown hopper names: {', '.join(missing)}")
+    if include is not None:
+        if not isinstance(include, list) or not include:
+            raise ValueError("include_hoppers, when supplied, must be a non-empty list of exact directory names")
+        available = {p.name for p in corpus.iterdir() if p.is_dir()}
+        missing = sorted(set(include) - available)
+        if missing:
+            raise ValueError(f"Unknown hopper names: {', '.join(missing)}")
     lyrics = int(payload.get("lyrics_chars", 1800))
     styles = int(payload.get("styles_chars", 500))
     seed_value = payload.get("seed")
@@ -117,8 +118,9 @@ def hopper_trial(payload: dict, out: Path) -> dict:
         sys.executable, str(compiler), "--corpus", str(corpus),
         "--out", str(out / "hopper_pulls"),
         "--lyrics-chars", str(lyrics), "--styles-chars", str(styles),
-        "--include-hoppers", ",".join(include),
     ]
+    if include is not None:
+        args += ["--include-hoppers", ",".join(include)]
     if seed is not None:
         args += ["--seed", str(seed)]
     completed = subprocess.run(args, cwd=ROOT, text=True, capture_output=True, timeout=240)
@@ -133,7 +135,7 @@ def hopper_trial(payload: dict, out: Path) -> dict:
     return {
         "command": "hopper-trial",
         "corpus": payload.get("corpus", "corpus"),
-        "include_hoppers": include,
+        "include_hoppers": include if include is not None else "ALL",
         "seed": seed,
         "lyrics_chars": lyrics,
         "styles_chars": styles,
