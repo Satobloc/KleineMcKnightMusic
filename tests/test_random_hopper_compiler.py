@@ -8,7 +8,7 @@ class HopperCompilerTests(unittest.TestCase):
     def test_writing_voice_excluded_by_default(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)/"corpus"
-            for name,body in (("Genre_Hopper","acid techno"),("Writing_Voice","private prose")):
+            for name,body in (("Genre_Hopper","acid techno instrumental groove"),("Writing_Voice","private prose sample fragment long enough")):
                 (root/name).mkdir(parents=True)
                 (root/name/"sample.txt").write_text(body,encoding="utf-8")
             self.assertEqual(set(module.load_hoppers(root)),{"Genre_Hopper"})
@@ -16,7 +16,7 @@ class HopperCompilerTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)/"corpus"
             for name in ("Genre_Hopper","Lyrics_Hopper"):
-                (root/name).mkdir(parents=True); (root/name/"x.txt").write_text(name)
+                (root/name).mkdir(parents=True); (root/name/"x.txt").write_text(name+" experimental prompt fragment")
             self.assertEqual(set(module.load_hoppers(root,{"Lyrics_Hopper"})),{"Lyrics_Hopper"})
     def test_seed_reproduces_outputs(self):
         h={"Genre_Hopper":[module.Fragment("acid","Genre_Hopper","a"),module.Fragment("drone","Genre_Hopper","b")]}
