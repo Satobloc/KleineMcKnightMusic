@@ -134,12 +134,12 @@ def split_text(text: str, suffix: str) -> list[str]:
     return pieces
 
 
-def load_hoppers(corpus: Path) -> dict[str, list[Fragment]]:
+def load_hoppers(\n    corpus: Path,\n    include_hoppers: set[str] | None = None,\n) -> dict[str, list[Fragment]]:
     if not corpus.is_dir():
         raise SystemExit(f"Corpus directory not found: {corpus}")
 
     hoppers: dict[str, list[Fragment]] = {}
-    hopper_dirs = sorted(p for p in corpus.iterdir() if p.is_dir())
+    hopper_dirs = sorted(\n        p for p in corpus.iterdir()\n        if p.is_dir() and (include_hoppers is None or p.name in include_hoppers)\n    )
     if not hopper_dirs:
         raise SystemExit(f"No hopper directories found under: {corpus}")
 
@@ -255,7 +255,7 @@ def main() -> None:
         raise SystemExit("Character limits must be positive integers.")
 
     rng = random.Random(args.seed)
-    hoppers = load_hoppers(args.corpus)
+    include_hoppers = (\n        {name.strip() for name in args.include_hoppers.split(",") if name.strip()}\n        if args.include_hoppers else None\n    )\n    hoppers = load_hoppers(args.corpus, include_hoppers)
     if not hoppers:
         raise SystemExit("No eligible text fragments found in any hopper.")
 
