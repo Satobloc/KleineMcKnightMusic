@@ -140,6 +140,206 @@ def hopper_trial(payload: dict, out: Path) -> dict:
     }
 
 
+
+TEXT_EXTENSIONS = {
+    ".txt", ".md", ".markdown", ".rst", ".csv", ".tsv", ".json",
+    ".jsonl", ".yaml", ".yml", ".toml", ".ini", ".cfg", ".xml",
+}
+SKIP_DIRS = {".git", ".github", "__pycache__", ".venv", "node_modules"}
+
+
+def discover(target: str, out: Path, extensions: list[str] | None = None,
+             max_files: int = 5000) -> dict:
+    source = safe_relative(target)
+    if not source.is_dir():
+        raise ValueError("discover target must be a directory")
+    allowed = {e.lower() if e.startswith(".") else "." + e.lower()
+               for e in (extensions or sorted(TEXT_EXTENSIONS))}
+    rows = []
+    skipped = 0
+    for path in sorted(source.rglob("*")):
+        if any(part in SKIP_DIRS for part in path.parts):
+            continue
+        if not path.is_file() or path.suffix.lower() not in allowed:
+            continue
+        if path.stat().st_size > 25 * 1024 * 1024:
+            skipped += 1
+            continue
+        rows.append({
+            "path": path.relative_to(ROOT).as_posix(),
+            "bytes": path.stat().st_size,
+            "extension": path.suffix.lower(),
+        })
+        if len(rows) >= max_files:
+            break
+    result = {
+        "command": "discover", "target": target, "created_at": utc_now(),
+        "extensions": sorted(allowed), "files_observed": len(rows),
+        "file_limit": max_files, "truncated": len(rows) >= max_files,
+        "oversized_skipped": skipped, "files": rows,
+    }
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "discovery.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (out / "discovery.txt").write_text("\n".join(row["path"] for row in rows) + "\n", encoding="utf-8")
+    return result
+
+
+def text_leaves(value: object):
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, list):
+        for item in value:
+            yield from text_leaves(item)
+    elif isinstance(value, dict):
+        for item in value.values():
+            yield from text_leaves(item)
+
+
+def extract_text(target: str, out: Path, min_chars: int = 24,
+                 max_files: int = 1000, max_fragments: int = 20000) -> dict:
+    source = safe_relative(target)
+    if not source.is_dir():
+        raise ValueError("extract-text target must be a directory")
+    if not 1 <= min_chars <= 1000:
+        raise ValueError("min_chars must be between 1 and 1000")
+    records = []
+    files_seen = 0
+    errors = []
+    for path in sorted(source.rglob("*")):
+        if any(part in SKIP_DIRS for part in path.parts):
+            continue
+        if not path.is_file() or path.suffix.lower() not in TEXT_EXTENSIONS:
+            continue
+        if files_seen >= max_files or len(records) >= max_fragments:
+            break
+        if path.stat().st_size > 5 * 1024 * 1024:
+            continue
+        files_seen += 1
+        try:
+            raw = path.read_text(encoding="utf-8-sig")
+            if path.suffix.lower() == ".json":
+                try:
+                    values = list(text_leaves(json.loads(raw)))
+                except (json.JSONDecodeError, RecursionError):
+                    values = [raw]
+            else:
+                values = [raw]
+            for value in values:
+                blocks = [re.sub(r"[ \t]+", " ", b).strip()
+                          for b in re.split(r"\n\s*\n+", value)]
+                for block in blocks:
+                    if len(block) < min_chars:
+                        continue
+                    records.append({
+                        "fragment_id": hashlib.sha256(
+                            (path.relative_to(ROOT).as_posix() + "\n" + block).encode("utf-8")
+                        ).hexdigest()[:16],
+                        "source": path.relative_to(ROOT).as_posix(),
+                        "characters": len(block),
+                        "text": block,
+                    })
+                    if len(records) >= max_fragments:
+                        break
+        except (OSError, UnicodeError, ValueError) as exc:
+            errors.append({"path": path.relative_to(ROOT).as_posix(), "error": str(exc)})
+    out.mkdir(parents=True, exist_ok=True)
+    jsonl = "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in records)
+    (out / "fragments.jsonl").write_text(jsonl, encoding="utf-8")
+    (out / "fragments.txt").write_text(
+        "\n\n".join(f"[{r['source']} | {r['fragment_id']}]\n{r['text']}" for r in records) + "\n",
+        encoding="utf-8",
+    )
+    result = {
+        "command": "extract-text", "target": target, "created_at": utc_now(),
+        "files_read": files_seen, "fragments": len(records),
+        "min_chars": min_chars, "max_files": max_files,
+        "max_fragments": max_fragments, "truncated": len(records) >= max_fragments,
+        "errors": errors,
+    }
+    (out / "extraction_manifest.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return result
+
+
+def transform_fragments(payload: dict, out: Path) -> dict:
+    source = safe_relative(payload.get("input", ""))
+    if not source.is_file():
+        raise ValueError("transform input must be a file")
+    if source.suffix.lower() == ".jsonl":
+        rows = [json.loads(line) for line in source.read_text(encoding="utf-8").splitlines() if line.strip()]
+        fragments = [str(row.get("text", "")) for row in rows]
+    else:
+        fragments = [x.strip() for x in re.split(r"\n\s*\n+", source.read_text(encoding="utf-8")) if x.strip()]
+    steps = payload.get("steps", [])
+    if not isinstance(steps, list) or len(steps) > 20:
+        raise ValueError("steps must be a list of at most 20 operations")
+    rng = random.Random(payload.get("seed"))
+    for step in steps:
+        if not isinstance(step, dict):
+            raise ValueError("each transform step must be an object")
+        op = step.get("op")
+        if op == "deduplicate":
+            seen = set()
+            fragments = [x for x in fragments if not (x in seen or seen.add(x))]
+        elif op == "normalize_whitespace":
+            fragments = [re.sub(r"[ \t]+", " ", re.sub(r"\n{3,}", "\n\n", x)).strip() for x in fragments]
+        elif op == "shuffle":
+            rng.shuffle(fragments)
+        elif op == "reverse_order":
+            fragments.reverse()
+        elif op == "replace":
+            old, new = str(step.get("old", "")), str(step.get("new", ""))
+            if not old:
+                raise ValueError("replace requires a non-empty old value")
+            fragments = [x.replace(old, new) for x in fragments]
+        elif op == "prefix":
+            fragments = [str(step.get("text", "")) + x for x in fragments]
+        elif op == "suffix":
+            fragments = [x + str(step.get("text", "")) for x in fragments]
+        elif op == "filter_min_chars":
+            limit = int(step.get("value", 1))
+            fragments = [x for x in fragments if len(x) >= limit]
+        elif op == "sample":
+            count = int(step.get("value", 1))
+            if count < 1 or count > 10000:
+                raise ValueError("sample value must be between 1 and 10000")
+            fragments = rng.sample(fragments, min(count, len(fragments)))
+        else:
+            raise ValueError(f"unsupported transform operation: {op}")
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "transformed.txt").write_text("\n\n".join(fragments) + "\n", encoding="utf-8")
+    (out / "transformed.json").write_text(json.dumps({
+        "input": payload["input"], "seed": payload.get("seed"),
+        "steps": steps, "fragment_count": len(fragments),
+        "fragments": fragments,
+    }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return {"command": "transform", "input": payload["input"],
+            "steps": steps, "fragment_count": len(fragments)}
+
+
+def assemble(payload: dict, out: Path) -> dict:
+    sections = payload.get("sections")
+    if not isinstance(sections, list) or not sections or len(sections) > 100:
+        raise ValueError("assemble requires 1 to 100 sections")
+    rendered = []
+    manifest = []
+    for section in sections:
+        if not isinstance(section, dict) or "path" not in section:
+            raise ValueError("each section requires a path")
+        path = safe_relative(str(section["path"]))
+        if not path.is_file():
+            raise ValueError(f"section is not a file: {section['path']}")
+        content = path.read_text(encoding="utf-8-sig")
+        title = str(section.get("title") or path.stem)
+        rendered.append(f"## {title}\n\n{content.strip()}")
+        manifest.append({"title": title, "path": path.relative_to(ROOT).as_posix(),
+                         "characters": len(content)})
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "assembled.md").write_text("\n\n".join(rendered) + "\n", encoding="utf-8")
+    result = {"command": "assemble", "sections": manifest,
+              "total_characters": sum(x["characters"] for x in manifest)}
+    (out / "assembly_manifest.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return result
+
 def load_request(path: Path) -> dict:
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -154,7 +354,7 @@ def load_request(path: Path) -> dict:
         raise ValueError("request_id may contain only letters, digits, hyphens and underscores")
     if payload.get("version") != 1:
         raise ValueError("unsupported request version; expected version=1")
-    if payload.get("command") not in {"inventory", "hopper-trial"}:
+    if payload.get("command") not in {"inventory", "hopper-trial", "discover", "extract-text", "transform", "assemble"}:
         raise ValueError("unsupported command; allowed: inventory, hopper-trial")
     return payload
 
@@ -182,8 +382,16 @@ def run_request(request: dict, output_root: Path) -> Path:
     try:
         if request["command"] == "inventory":
             result = inventory(str(request.get("target", "corpus")), out, int(request.get("max_files", 10000)))
-        else:
+        elif request["command"] == "hopper-trial":
             result = hopper_trial(request, out)
+        elif request["command"] == "discover":
+            result = discover(str(request.get("target", "corpus")), out, request.get("extensions"), int(request.get("max_files", 5000)))
+        elif request["command"] == "extract-text":
+            result = extract_text(str(request.get("target", "corpus")), out, int(request.get("min_chars", 24)), int(request.get("max_files", 1000)), int(request.get("max_fragments", 20000)))
+        elif request["command"] == "transform":
+            result = transform_fragments(request, out)
+        elif request["command"] == "assemble":
+            result = assemble(request, out)
         receipt.update({"status": "COMPLETED", "completed_at": utc_now(), "result": result})
         (out / "receipt.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         return out
