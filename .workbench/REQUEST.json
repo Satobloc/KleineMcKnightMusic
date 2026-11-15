@@ -1,7 +1,15 @@
 {
   "version": 1,
-  "request_id": "inventory_corpus_v1_001",
-  "command": "inventory",
-  "target": "corpus",
-  "max_files": 10000
+  "request_id": "hopper_trial_smoke_001",
+  "command": "hopper-trial",
+  "corpus": "corpus",
+  "include_hoppers": [
+    "Genre_Hopper",
+    "Structure_Hopper",
+    "Prompt_Hopper",
+    "Lyrics_Hopper"
+  ],
+  "lyrics_chars": 400,
+  "styles_chars": 180,
+  "seed": 20261114
 }
