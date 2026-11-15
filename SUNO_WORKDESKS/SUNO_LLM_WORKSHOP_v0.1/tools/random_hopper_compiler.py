@@ -379,6 +379,7 @@ def apply_song_structure(
     }
 
 
+# Default run produces four independent Lyrics/Styles candidate pairs.
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Randomly compile lyrics and styles pulls from user-supplied hoppers."
