@@ -176,7 +176,28 @@ The project map is the workdesk front door. Current known work includes completi
 
 The random hopper compiler is a build capability, not an experimental result. Its output still requires a real corpus run, manifest inspection, prompt review, and listening-based evaluation.
 
-## 12. Completion test
+## 12. HsH onboarding transfer and exclusions
+
+The methods below have been checked against the HsH onboarding/control surfaces. They are adapted as methods, not inherited as HsH authority:
+
+| HsH method | Music-workshop adaptation |
+|---|---|
+| Source-first / archive literacy | Use the project map and source hoppers as maps, then inspect original prompts, conversations, audio, source files, and exact context. |
+| Citation by construction | Keep provenance adjacent to imported genre/technique/source claims and prompt fragments. Cite ancestry, not as proof of efficacy. |
+| Symbol registry / namespace discipline | No global music symbol registry is required now. Define local notation, units, meter, tempo, tuning, rhythmic grouping, chord symbols, and operator meanings where ambiguity would affect a score, script, or interface. Reuse standard musical notation carefully and declare deviations. |
+| Mersearch / inherited-term search | Search existing hoppers and case studies before creating duplicate tags, genre labels, phonetic inventories, prompt operations, or tool features. Preserve spelling variants and source-specific uses. |
+| Branching map / task lifecycle | Continue an existing case or experiment when it covers the question. Split only for a distinct test/deliverable; use planned, active, blocked, parked, complete, or superseded states where they clarify actual work. |
+| Exploration Commons | Keep sparks, observations, source leads, controlled experiments, and committed build tasks distinct without forcing every idea into a formal experiment. |
+| Carpe turnem | When the request and available tools permit a safe bounded action, do it now. Do not claim execution when only a plan or script has been written. |
+| Worker autonomy / soft specialization | Use judgment and cross-domain exploration; don't confuse a tool's or assistant's current strength with permanent jurisdiction. |
+| Handoff / continuity | Leave exact artifacts, model/version, source coverage, unresolved points, next cursor, and guardrails. |
+| Scheduler authority | No HsH scheduling or lease machinery is imported. Use the current chat/task context; recurring automation requires explicit setup and available capacity. |
+| Shared-state write safety | Inspect current content before editing, preserve unrelated material, make focused writes, and independently fetch/read back the result. |
+| Review/reassessment | Review when model versions, tools, workflow, evidence, or creative aims materially change; avoid calendar ritual. |
+
+HsH-specific protections that do not transfer as music-project rules include its owl-signet rule, conversation-title rule, SAT/H(s)H theory-authority and sandbox boundaries, physics-specific symbol registry, worker-instance identities, recurrence leases, scheduler ownership, theory-phase machinery, and three-repository operational control plane. General privacy, source attribution, intellectual-property, rights, and user-intent safeguards still apply under the music repository's own policy.
+
+## 13. Completion test
 
 A work session is adequately oriented when it can answer:
 
