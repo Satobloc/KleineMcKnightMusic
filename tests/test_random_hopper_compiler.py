@@ -29,6 +29,63 @@ class StructuralRng:
         return 0
 
 
+class ConcatenatorTests(unittest.TestCase):
+    def test_fixed_concatenators(self):
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two", "three"], "line_break"),
+            "one\\ntwo\\nthree",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two", "three"], "ellipsis"),
+            "one…two…three",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two"], "em_dash"),
+            "one—two",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two"], "double_em_dash"),
+            "one——two",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two", "three", "four"], "alternating_parentheses"),
+            "one(two)three(four)",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two"], "period"),
+            "one.two",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two"], "pipe"),
+            "one|two",
+        )
+        self.assertEqual(
+            compiler.concatenate_samples(["one", "two"], "none"),
+            "onetwo",
+        )
+
+    def test_concatenator_choice_is_one_of_supported_options(self):
+        class ChoiceRng:
+            def choice(self, values):
+                self.values = values
+                return values[3]
+        rng = ChoiceRng()
+        chosen = compiler.choose_concatenator(rng)
+        self.assertEqual(chosen, "double_em_dash")
+        self.assertEqual(set(rng.values), set(compiler.CONCATENATOR_CHOICES))
+
+    def test_structural_operations_leave_styles_unchanged(self):
+        lyrics = "abcdefghijklmnopqrstuvwxyz" * 8
+        styles = "STYLE FIELD MUST NOT BE SEGMENTED OR REPEATED"
+        transformed, untouched, meta = compiler.apply_lyrics_only_structure(
+            lyrics, styles, StructuralRng([0.1, 0.1, 0.1] + [0.0] * 100, "full")
+        )
+        self.assertNotEqual(transformed, lyrics)
+        self.assertEqual(untouched, styles)
+        self.assertEqual(meta["segmentation"], "full")
+        self.assertEqual(meta["repetition"], "full")
+
+
 class StructuralTransformTests(unittest.TestCase):
     def test_neither_operation_leaves_text_untouched(self):
         source = "A strange fjord narrative with musical instructions."

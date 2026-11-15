@@ -31,6 +31,19 @@ SKIP_NAMES = {
 }
 MAX_FILE_BYTES = 25 * 1024 * 1024
 
+# One connector is selected per generated song pair and reused in both fields.
+# Alternating parentheses are generated as a sequence of "(" then ")" joins.
+CONCATENATOR_CHOICES = {
+    "line_break": "\\n",
+    "ellipsis": "…",
+    "em_dash": "—",
+    "double_em_dash": "——",
+    "alternating_parentheses": None,
+    "period": ".",
+    "pipe": "|",
+    "none": "",
+}
+
 # Repetition policy: no three consecutive full-size copies. A third copy is
 # reserved for a very short final tag/coda (32 characters or fewer).
 MAX_REPEATED_UNIT_RUN = 2
@@ -233,11 +246,35 @@ def style_probability(hopper: str) -> float:
     return STYLE_BIAS.get(hopper.lower(), 0.50)
 
 
+def separator_for(connector: str, boundary_index: int) -> str:
+    """Return the separator at a sample boundary for the song's connector."""
+    if connector == "alternating_parentheses":
+        return "(" if boundary_index % 2 == 0 else ")"
+    return CONCATENATOR_CHOICES[connector]
+
+
+def concatenate_samples(samples: list[str], connector: str) -> str:
+    """Join samples with one selected connector, alternating parentheses if chosen."""
+    if not samples:
+        return ""
+    pieces = [samples[0]]
+    for index, sample in enumerate(samples[1:]):
+        pieces.append(separator_for(connector, index))
+        pieces.append(sample)
+    return "".join(pieces)
+
+
+def choose_concatenator(rng: random.Random) -> str:
+    """Choose one connector for a complete Lyrics/Styles song pair."""
+    return rng.choice(tuple(CONCATENATOR_CHOICES))
+
+
 def compile_both(
     hoppers: dict[str, list[Fragment]],
     lyrics_chars: int,
     styles_chars: int,
     rng: random.Random,
+    connector: str,
 ) -> tuple[str, list[dict[str, str]], str, list[dict[str, str]]]:
     """Choose a random document, then a random sample within that document."""
     documents: dict[tuple[str, str, str], list[Fragment]] = defaultdict(list)
@@ -246,13 +283,21 @@ def compile_both(
             documents[(hopper, fragment.source, fragment.encoding)].append(fragment)
 
     document_keys = list(documents)
-    outputs = {"lyrics": "", "styles": ""}
+    samples = {"lyrics": [], "styles": []}
     manifests: dict[str, list[dict[str, str]]] = {"lyrics": [], "styles": []}
     limits = {"lyrics": lyrics_chars, "styles": styles_chars}
 
-    while any(len(outputs[key]) < limits[key] for key in outputs):
+    def rendered(destination: str) -> str:
+        return concatenate_samples(samples[destination], connector)
+
+    def can_accept(destination: str) -> bool:
+        parts = samples[destination]
+        next_separator = separator_for(connector, len(parts) - 1) if parts else ""
+        return len(rendered(destination)) + len(next_separator) < limits[destination]
+
+    while any(can_accept(key) for key in samples):
         available_destinations = [
-            key for key in outputs if len(outputs[key]) < limits[key]
+            key for key in samples if can_accept(key)
         ]
         if not available_destinations or not document_keys:
             break
@@ -276,24 +321,30 @@ def compile_both(
         if destination not in available_destinations:
             destination = available_destinations[0]
 
-        remaining = limits[destination] - len(outputs[destination])
+        prior_parts = samples[destination]
+        separator = separator_for(connector, len(prior_parts) - 1) if prior_parts else ""
+        remaining = limits[destination] - len(rendered(destination)) - len(separator)
+        if remaining <= 0:
+            continue
         used = fragment_text[:remaining]
         if not used:
             continue
 
-        # Samples are concatenated directly. No synthetic separator is added.
-        outputs[destination] += used
+        samples[destination].append(used)
         manifests[destination].append({
             "hopper": hopper,
             "source": source,
             "source_encoding": encoding,
             "characters_used": str(len(used)),
             "truncated": str(len(used) < len(fragment_text)).lower(),
+            "separator_before": (
+                separator if separator else ("none" if prior_parts else "start")
+            ),
         })
 
     return (
-        outputs["lyrics"], manifests["lyrics"],
-        outputs["styles"], manifests["styles"],
+        rendered("lyrics"), manifests["lyrics"],
+        rendered("styles"), manifests["styles"],
     )
 
 
@@ -356,6 +407,7 @@ def _random_chunks(value: str, rng: random.Random, minimum: int, maximum: int) -
         chunks.append(value[position:position + width])
         position += width
     return chunks
+
 
 
 def apply_song_structure(
@@ -430,6 +482,13 @@ def apply_song_structure(
     }
 
 
+def apply_lyrics_only_structure(
+    lyrics: str, styles: str, rng: random.Random
+) -> tuple[str, str, dict[str, object]]:
+    """Apply segmentation/repetition to Lyrics only; leave Styles untouched."""
+    transformed_lyrics, metadata = apply_song_structure(lyrics, rng)
+    return transformed_lyrics, styles, metadata
+
 # Default run produces four independent Lyrics/Styles candidate pairs.
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -474,15 +533,19 @@ def main() -> None:
     }
 
     for index in range(1, args.variants + 1):
+        connector = choose_concatenator(rng)
         lyrics, lyrics_manifest, styles, styles_manifest = compile_both(
-            hoppers, args.lyrics_chars, args.styles_chars, rng
+            hoppers, args.lyrics_chars, args.styles_chars, rng, connector
         )
-        lyrics, lyrics_structure = apply_song_structure(lyrics, rng)
-        styles, styles_structure = apply_song_structure(styles, rng)
+        lyrics, styles, lyrics_structure = apply_lyrics_only_structure(
+            lyrics, styles, rng
+        )
         lyrics_structure["truncated_to_field_limit"] = len(lyrics) > args.lyrics_chars
-        styles_structure["truncated_to_field_limit"] = len(styles) > args.styles_chars
         lyrics = lyrics[:args.lyrics_chars]
-        styles = styles[:args.styles_chars]
+        styles_structure = {
+            "applied": False,
+            "reason": "segmentation and repetition operate on Lyrics only",
+        }
 
         variant_dir = args.out / f"variant_{index:02d}"
         variant_dir.mkdir(parents=True, exist_ok=True)
@@ -517,7 +580,14 @@ def main() -> None:
                 "Only user-supplied hoppers are eligible by default; assistant research/documentation hoppers are separate. "
                 "All selected user hoppers remain eligible for either field."
             ),
-            "divider": "",
+            "concatenator": {
+                "choice": connector,
+                "separator": (
+                    "alternating ( and )"
+                    if connector == "alternating_parentheses"
+                    else CONCATENATOR_CHOICES[connector]
+                ),
+            },
             "text_only_note": (
                 "Binary audio/image/video files are not embedded. Their filenames "
                 "become short text fragments; text sidecars, captions, and metadata "
@@ -534,6 +604,7 @@ def main() -> None:
             "styles_characters": len(styles),
             "lyrics_structure": lyrics_structure,
             "styles_structure": styles_structure,
+            "concatenator": connector,
         })
         print(
             f"Variant {index:02d}: Lyrics {len(lyrics)}/{args.lyrics_chars} "

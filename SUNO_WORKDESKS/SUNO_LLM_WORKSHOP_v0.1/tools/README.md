@@ -30,7 +30,7 @@ python SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py --c
 - Lyrics and writing/content-oriented hoppers are strongly biased toward Lyrics. Other hoppers use mixed routing.
 - No hopper is exclusive to either field. If a preferred destination is already full, a pull can fill the other field.
 - Fragments are selected randomly without replacement within a run. A shared fragment is not inserted twice.
-- Fragments are concatenated with the literal divider `.` followed by a newline.
+- One connector is chosen randomly per generated song pair and reused for all sample boundaries in both Lyrics and Styles. Options: line break, ellipsis, em dash, double em dash, alternating `(` / `)`, period, pipe, or no separator.
 - The character limits are ceilings. If the available material is insufficient, the script reports the shortfall rather than inventing text.
 
 Text-bearing files are split into paragraphs/rows/string values. Binary assets are not embedded; their filenames become short text fragments, while text sidecars and metadata remain eligible. Unsupported file types are ignored.
@@ -42,3 +42,9 @@ This is a mashup generator, not a semantic editor. It does not try to repair gra
 Outputs are written locally and should be treated as private working material. Do not commit generated pulls or redistribute excerpts without checking source rights and privacy. Use the manifest to trace surprising or useful fragments back to their source files.
 
 The random seed makes a run reproducible against an unchanged corpus and script version.
+
+
+## Song-level transforms
+- Stochastic segmentation and repetition are applied to the Lyrics field only.
+- Styles is left exactly as assembled by the hopper compiler; no structural segmentation or repetition pass is run on it.
+- The chorus succession guard remains in the song-architecture guidance: no three full choruses in succession, except a very short closing tag/coda at the absolute end.

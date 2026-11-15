@@ -44,3 +44,8 @@ What must remain identifiable after transformation?
 - Two consecutive chorus passes are the normal maximum.
 - A third consecutive pass is permitted only as a very short closing tag/coda at the absolute end of the song, not as another full chorus.
 - When a return is needed, use a verse, bridge, breakdown, instrumental passage, or a meaningfully changed section to create contrast before the next full chorus.
+
+
+## Compiler field scope and concatenation
+- Stochastic segmentation and repetition apply to the Lyrics field only. The Styles field is not structurally transformed.
+- Each generated song pair selects one concatenation connector, reused consistently between source samples: line break, ellipsis, em dash, double em dash, alternating open/close parentheses, period, pipe, or none.
