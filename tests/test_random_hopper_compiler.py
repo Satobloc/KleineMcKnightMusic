@@ -1,11 +1,13 @@
 import importlib.util
 import random
+import sys
 import unittest
 from pathlib import Path
 
 MODULE_PATH = Path(__file__).parents[1] / "SUNO_WORKDESKS" / "SUNO_LLM_WORKSHOP_v0.1" / "tools" / "random_hopper_compiler.py"
 SPEC = importlib.util.spec_from_file_location("random_hopper_compiler", MODULE_PATH)
 compiler = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = compiler
 SPEC.loader.exec_module(compiler)
 
 
