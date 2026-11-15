@@ -412,6 +412,10 @@ def main() -> None:
     )
     lyrics, lyrics_structure = apply_song_structure(lyrics, rng)
     styles, styles_structure = apply_song_structure(styles, rng)
+    lyrics_structure["truncated_to_field_limit"] = len(lyrics) > args.lyrics_chars
+    styles_structure["truncated_to_field_limit"] = len(styles) > args.styles_chars
+    lyrics = lyrics[:args.lyrics_chars]
+    styles = styles[:args.styles_chars]
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "lyrics_pull.txt").write_text(lyrics, encoding="utf-8")
     (args.out / "styles_pull.txt").write_text(styles, encoding="utf-8")
