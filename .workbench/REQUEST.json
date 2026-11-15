@@ -1,9 +1,8 @@
 {
   "version": 1,
-  "request_id": "extract_lyrics_hopper_v1_002",
-  "command": "extract-text",
-  "target": "corpus/Lyrics_Hopper",
-  "min_chars": 24,
-  "max_files": 1000,
-  "max_fragments": 20000
+  "request_id": "all_hoppers_lyrics_styles_5000_1000_v1_001",
+  "command": "hopper-trial",
+  "corpus": "corpus",
+  "lyrics_chars": 5000,
+  "styles_chars": 1000
 }
