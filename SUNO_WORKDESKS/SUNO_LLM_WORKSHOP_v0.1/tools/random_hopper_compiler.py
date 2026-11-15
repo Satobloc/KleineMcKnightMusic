@@ -92,6 +92,11 @@ def clean_fragment(value: str) -> str:
     return value.strip()
 
 
+def trim_output(value: str) -> str:
+    """Normalize repeated literal spaces and remove outer whitespace."""
+    return re.sub(r" {2,}", " ", value).strip()
+
+
 def json_strings(value: object) -> Iterator[str]:
     """Yield string leaves from JSON without serializing structural keys."""
     if isinstance(value, str):
@@ -234,7 +239,10 @@ def compile_both(
             break
         hopper = rng.choice(available)
         fragment = pools[hopper].pop()
-        fingerprint = hashlib.sha256(fragment.text.encode("utf-8")).hexdigest()
+        fragment_text = trim_output(fragment.text)
+        if not fragment_text:
+            continue
+        fingerprint = hashlib.sha256(fragment_text.encode("utf-8")).hexdigest()
         if fingerprint in seen:
             continue
         seen.add(fingerprint)
@@ -249,19 +257,19 @@ def compile_both(
             continue
 
         current = outputs[destination]
-        divider = ".\n" if current else ""
+        divider = " " if current else ""
         remaining = limits[destination] - len(current) - len(divider)
         if remaining <= 0:
             continue
-        used = fragment.text[:remaining].rstrip()
+        used = fragment_text[:remaining].rstrip()
         if not used:
             continue
-        outputs[destination] = current + divider + used
+        outputs[destination] = trim_output(current + divider + used)
         manifests[destination].append({
             "hopper": fragment.hopper,
             "source": fragment.source,
             "characters_used": str(len(used)),
-            "truncated": str(len(used) < len(fragment.text)).lower(),
+            "truncated": str(len(used) < len(fragment_text)).lower(),
         })
     return (
         outputs["lyrics"], manifests["lyrics"],
@@ -329,7 +337,7 @@ def main() -> None:
             "Only user-supplied hoppers are eligible by default; assistant research/documentation hoppers are separate. " 
             "All selected user hoppers remain eligible for either field."
         ),
-"divider": ".\\n",
+"divider": " ",
         "text_only_note": (
             "Binary audio/image/video files are not embedded. Their filenames "
             "become short text fragments; text sidecars, captions, and metadata "
