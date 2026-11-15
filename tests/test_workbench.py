@@ -68,5 +68,5 @@ class WorkbenchTests(unittest.TestCase):
                 module.safe_relative = original
 
 
-if __name__ == "__main":
+if __name__ == "__main__":
     unittest.main()
