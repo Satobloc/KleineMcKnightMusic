@@ -32,10 +32,10 @@ SKIP_NAMES = {
 MAX_FILE_BYTES = 25 * 1024 * 1024
 
 # Repetition policy: no three consecutive full-size copies. A third copy is
-# reserved for a very short final tag/coda (64 characters or fewer).
+# reserved for a very short final tag/coda (32 characters or fewer).
 MAX_REPEATED_UNIT_RUN = 2
 MAX_SHORT_CLOSING_UNIT_RUN = 3
-SHORT_CLOSING_REPEAT_MAX_CHARS = 64
+SHORT_CLOSING_REPEAT_MAX_CHARS = 32
 
 # Only user-supplied creative hoppers participate in ordinary pulls.
 # Research/documentation hoppers created during assistant-supported repo work
@@ -304,7 +304,7 @@ def _repeat_units(
     """Repeat units without creating a third full-size consecutive pass.
 
     A third consecutive copy is allowed only for the final unit when it is
-    64 characters or fewer, treating it as a brief closing tag/coda.
+    32 characters or fewer, treating it as a brief closing tag/coda.
     """
     repeated: list[str] = []
     repeated_units = 0
