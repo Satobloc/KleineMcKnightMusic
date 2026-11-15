@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "request_id": "extract_lyrics_hopper_v1_001",
+  "request_id": "extract_lyrics_hopper_v1_002",
   "command": "extract-text",
   "target": "corpus/Lyrics_Hopper",
   "min_chars": 24,
-  "max_files": 3000,
-  "max_fragments": 15000
+  "max_files": 1000,
+  "max_fragments": 20000
 }
