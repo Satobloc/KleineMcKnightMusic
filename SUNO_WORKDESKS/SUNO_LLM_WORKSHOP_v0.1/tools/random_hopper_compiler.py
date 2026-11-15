@@ -331,30 +331,30 @@ def apply_song_structure(
             if not any(selected):
                 selected[rng.randrange(len(chunks))] = True
             rendered = [
-                ("\\n" if selected[i] and i else "") + chunk
+                ("\n" if selected[i] and i else "") + chunk
                 for i, chunk in enumerate(chunks)
             ]
             # Group the resulting lines into irregular stanzas.
             lines: list[str] = []
             for item in rendered:
-                lines.extend(item.split("\\n"))
+                lines.extend(item.split("\n"))
         else:
             lines = chunks
         grouped: list[str] = []
         cursor = 0
         while cursor < len(lines):
             size = rng.randint(2, 5)
-            grouped.append("\\n".join(lines[cursor:cursor + size]))
+            grouped.append("\n".join(lines[cursor:cursor + size]))
             cursor += size
-        result = "\\n\\n".join(grouped)
-        line_count = sum(len(group.split("\\n")) for group in grouped)
+        result = "\n\n".join(grouped)
+        line_count = sum(len(group.split("\n")) for group in grouped)
         stanza_count = len(grouped)
 
     if repetition_on and result:
         # Repeat whole stanzas when segmentation created them. Otherwise use
         # arbitrary positional chunks. Each stanza/unit gets its own chance.
         if segmentation_on:
-            units = result.split("\\n\\n")
+            units = result.split("\n\n")
         else:
             units = _random_chunks(result, rng, 32, 96)
         repeated: list[str] = []
@@ -365,7 +365,7 @@ def apply_song_structure(
                 copies = rng.randint(1, 3 if repetition_mode == "full" else 2)
                 repeated.extend([unit] * copies)
                 repeated_units += 1
-        separator = "\\n\\n" if segmentation_on else ""
+        separator = "\n\n" if segmentation_on else ""
         result = separator.join(repeated)
 
     return result, {
