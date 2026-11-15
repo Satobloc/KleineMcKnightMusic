@@ -291,6 +291,92 @@ def compile_both(
     )
 
 
+
+def _random_chunks(value: str, rng: random.Random, minimum: int, maximum: int) -> list[str]:
+    """Split text at stochastic character offsets without interpreting its content."""
+    chunks: list[str] = []
+    position = 0
+    while position < len(value):
+        width = rng.randint(minimum, maximum)
+        chunks.append(value[position:position + width])
+        position += width
+    return chunks
+
+
+def apply_song_structure(
+    value: str, rng: random.Random
+) -> tuple[str, dict[str, object]]:
+    """Independently and stochastically impose segmentation and repetition.
+
+    Each operation has a 50% song-level activation chance. Activated operations
+    choose partial or full pressure. Decisions are purely positional: content
+    is never classified, filtered, or interpreted.
+    """
+    segmentation_on = rng.random() < 0.50
+    repetition_on = rng.random() < 0.50
+    segmentation_mode = rng.choice(["partial", "full"]) if segmentation_on else "off"
+    repetition_mode = rng.choice(["partial", "full"]) if repetition_on else "off"
+
+    result = value
+    line_count = 0
+    stanza_count = 0
+    repeated_units = 0
+
+    if segmentation_on and result:
+        # Partial pressure leaves irregular stretches untouched; full pressure
+        # segments the entire text. Character boundaries are deliberately blind.
+        chunks = _random_chunks(result, rng, 28, 76)
+        if segmentation_mode == "partial" and len(chunks) > 1:
+            selected = [rng.random() < 0.55 for _ in chunks]
+            if not any(selected):
+                selected[rng.randrange(len(chunks))] = True
+            rendered = [
+                ("\\n" if selected[i] and i else "") + chunk
+                for i, chunk in enumerate(chunks)
+            ]
+            # Group the resulting lines into irregular stanzas.
+            lines: list[str] = []
+            for item in rendered:
+                lines.extend(item.split("\\n"))
+        else:
+            lines = chunks
+        grouped: list[str] = []
+        cursor = 0
+        while cursor < len(lines):
+            size = rng.randint(2, 5)
+            grouped.append("\\n".join(lines[cursor:cursor + size]))
+            cursor += size
+        result = "\\n\\n".join(grouped)
+        line_count = sum(len(group.split("\\n")) for group in grouped)
+        stanza_count = len(grouped)
+
+    if repetition_on and result:
+        # Repeat whole stanzas when segmentation created them. Otherwise use
+        # arbitrary positional chunks. Each stanza/unit gets its own chance.
+        if segmentation_on:
+            units = result.split("\\n\\n")
+        else:
+            units = _random_chunks(result, rng, 32, 96)
+        repeated: list[str] = []
+        for unit in units:
+            repeated.append(unit)
+            chance = 0.65 if repetition_mode == "full" else 0.30
+            if rng.random() < chance:
+                copies = rng.randint(1, 3 if repetition_mode == "full" else 2)
+                repeated.extend([unit] * copies)
+                repeated_units += 1
+        separator = "\\n\\n" if segmentation_on else ""
+        result = separator.join(repeated)
+
+    return result, {
+        "segmentation": segmentation_mode,
+        "repetition": repetition_mode,
+        "line_count": line_count,
+        "stanza_count": stanza_count,
+        "repeated_units": repeated_units,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Randomly compile lyrics and styles pulls from user-supplied hoppers."
@@ -322,6 +408,8 @@ def main() -> None:
     lyrics, lyrics_manifest, styles, styles_manifest = compile_both(
         hoppers, args.lyrics_chars, args.styles_chars, rng
     )
+    lyrics, lyrics_structure = apply_song_structure(lyrics, rng)
+    styles, styles_structure = apply_song_structure(styles, rng)
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "lyrics_pull.txt").write_text(lyrics, encoding="utf-8")
     (args.out / "styles_pull.txt").write_text(styles, encoding="utf-8")
@@ -337,12 +425,14 @@ def main() -> None:
             "target_characters": args.lyrics_chars,
             "actual_characters": len(lyrics),
             "pull_count": len(lyrics_manifest),
+            "structure": lyrics_structure,
             "pulls": lyrics_manifest,
         },
         "styles": {
             "target_characters": args.styles_chars,
             "actual_characters": len(styles),
             "pull_count": len(styles_manifest),
+            "structure": styles_structure,
             "pulls": styles_manifest,
         },
         "routing_note": (
