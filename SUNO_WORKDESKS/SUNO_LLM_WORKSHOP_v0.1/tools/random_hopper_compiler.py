@@ -19,7 +19,7 @@ import sys
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable, Iterator
+from typing import Iterator
 
 TEXT_EXTENSIONS = {
     ".txt", ".md", ".markdown", ".csv", ".tsv", ".json", ".jsonl",
@@ -150,6 +150,11 @@ def load_hoppers(corpus: Path) -> dict[str, list[Fragment]]:
             if not path.is_file() or path.name.lower() in SKIP_NAMES:
                 continue
             if path.suffix.lower() not in TEXT_EXTENSIONS:
+                # Binary assets cannot be inserted as text, but their filenames
+                # are useful descriptive seeds (especially in Sample_Hopper).
+                label = re.sub(r"[_-]+", " ", path.stem).strip()
+                if label:
+                    found.append(Fragment(label, name, path.relative_to(corpus).as_posix()))
                 continue
             try:
                 if path.stat().st_size > MAX_FILE_BYTES:
@@ -173,63 +178,6 @@ def style_probability(hopper: str) -> float:
     return STYLE_BIAS.get(hopper.lower(), 0.50)
 
 
-def compile_prompt(
-    hoppers: dict[str, list[Fragment]],
-    target_chars: int,
-    destination: str,
-    rng: random.Random,
-) -> tuple[str, list[dict[str, str]]]:
-    """Draw without replacement, using equal hopper opportunity per pull."""
-    pools = {name: list(items) for name, items in hoppers.items()}
-    for items in pools.values():
-        rng.shuffle(items)
-
-    selected: list[dict[str, str]] = []
-    seen: set[str] = set()
-    output = ""
-
-    while len(output) < target_chars:
-        available = [name for name, items in pools.items() if items]
-        if not available:
-            break
-        hopper = rng.choice(available)
-        probability = style_probability(hopper)
-        goes_to_styles = rng.random() < probability
-        routed = "styles" if goes_to_styles else "lyrics"
-        fragment = pools[hopper].pop()
-
-        if routed != destination:
-            # A fragment is consumed only when routed to this destination;
-            # otherwise return it to the pool's opposite output via a queue.
-            # Independent calls use a shared seed but cannot share state, so
-            # route selection is instead performed inside the destination loop.
-            continue
-
-        fingerprint = hashlib.sha256(fragment.text.encode("utf-8")).hexdigest()
-        if fingerprint in seen:
-            continue
-        seen.add(fingerprint)
-
-        divider = ".\n" if output else ""
-        remaining = target_chars - len(output) - len(divider)
-        if remaining <= 0:
-            break
-        text = fragment.text
-        if len(text) > remaining:
-            text = text[:remaining].rstrip()
-        if not text:
-            continue
-        output += divider + text
-        selected.append({
-            "hopper": fragment.hopper,
-            "source": fragment.source,
-            "characters_used": str(len(text)),
-            "truncated": str(len(text) < len(fragment.text)).lower(),
-        })
-
-    return output, selected
-
-
 def compile_both(
     hoppers: dict[str, list[Fragment]],
     lyrics_chars: int,
@@ -248,7 +196,6 @@ def compile_both(
 
     # Alternate destinations when both have room, while every individual
     # fragment is routed according to its hopper bias.
-    turn = "lyrics"
     while any(len(outputs[k]) < limits[k] for k in outputs):
         available = [name for name, items in pools.items() if items]
         if not available:
@@ -284,8 +231,6 @@ def compile_both(
             "characters_used": str(len(used)),
             "truncated": str(len(used) < len(fragment.text)).lower(),
         })
-        turn = other
-
     return (
         outputs["lyrics"], manifests["lyrics"],
         outputs["styles"], manifests["styles"],
