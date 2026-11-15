@@ -65,7 +65,7 @@ def parse_names(raw:str|None)->set[str]:
 
 def load_hoppers(corpus:Path,includes:set[str]|None=None,excludes:set[str]|None=None)->dict[str,list[Fragment]]:
     if not corpus.is_dir(): raise SystemExit(f"Corpus directory not found: {corpus}")
-    excluded={x.casefold() for x in (excludes or set())}
+    excluded={x.casefold() for x in (DEFAULT_EXCLUDES if excludes is None else excludes)}
     dirs=sorted(p for p in corpus.iterdir() if p.is_dir())
     if includes:
         wanted={x.casefold() for x in includes}
@@ -128,7 +128,7 @@ def main():
     ap.add_argument("--styles-chars",type=int,default=1000)
     ap.add_argument("--seed",type=int)
     ap.add_argument("--include-hoppers",help="Comma-separated allowlist of immediate corpus hopper directories")
-    ap.add_argument("--exclude-hoppers",default="Writing_Voice",help="Comma-separated hopper names excluded by default: Writing_Voice")
+    ap.add_argument("--exclude-hoppers",default=None,help="Comma-separated hopper names to exclude (Writing_Voice is excluded by default)")
     a=ap.parse_args()
     if a.lyrics_chars<1 or a.styles_chars<1: raise SystemExit("Character limits must be positive integers.")
     hoppers=load_hoppers(a.corpus,parse_names(a.include_hoppers) or None,parse_names(a.exclude_hoppers))
