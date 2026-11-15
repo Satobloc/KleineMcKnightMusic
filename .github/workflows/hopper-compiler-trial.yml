@@ -34,10 +34,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Run compiler tests
+        run: python -m unittest discover -s tests -p "test_random_hopper_compiler.py" -v
       - name: Compile selected music hoppers
         shell: bash
         run: |
-          args=(--corpus corpus --out hopper_pulls --include-hoppers "Genre_Hopper,Structure_Hopper,Prompt_Hopper,Prompt_Examples_Hopper,Lyrics_Hopper,Grab_Bag,Sample_Hopper,Audio_Case_Hopper,Tooling_Hopper,Research_Hopper,Source_Hopper,Community_Hopper,Product_Hopper,Sonic_Pi" --lyrics-chars "${{ inputs.lyrics_chars || '5000' }}" --styles-chars "${{ inputs.styles_chars || '1000' }}")
+          args=(--corpus SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/corpus --out hopper_pulls --include-hoppers "Genre_Hopper,Structure_Hopper,Prompt_Hopper,Prompt_Examples_Hopper,Lyrics_Hopper,Grab_Bag,Sample_Hopper,Audio_Case_Hopper,Tooling_Hopper,Research_Hopper,Source_Hopper,Community_Hopper,Product_Hopper,Sonic_Pi" --lyrics-chars "${{ inputs.lyrics_chars || '5000' }}" --styles-chars "${{ inputs.styles_chars || '1000' }}")
           if [[ -n "${{ inputs.seed }}" ]]; then args+=(--seed "${{ inputs.seed }}"); fi
           python SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py "${args[@]}"
       - name: Upload trial outputs
