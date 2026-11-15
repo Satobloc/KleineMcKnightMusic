@@ -31,6 +31,7 @@ jobs:
         run: |
           python -m py_compile tools/workbench.py SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py
           python -m unittest discover -s tests -p "test_workbench.py" -v
+          python -m unittest discover -s tests -p "test_source_hopper.py" -v
       - name: Run request
         run: python tools/workbench.py
       - name: Upload workbench result
