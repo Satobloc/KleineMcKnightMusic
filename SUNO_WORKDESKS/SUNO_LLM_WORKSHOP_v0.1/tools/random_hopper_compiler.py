@@ -126,8 +126,8 @@ def json_strings(value: object) -> Iterator[str]:
 
 
 def split_text(text: str, suffix: str) -> list[str]:
-    """Extract sentence/line-sized independent pulls from a text-bearing file."""
-    text = text.replace("\\r\\n", "\\n").replace("\\r", "\\n")
+    """Extract divider-bounded samples at periods and physical line breaks."""
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
     if suffix == ".json":
         try:
             parsed = json.loads(text)
@@ -140,35 +140,33 @@ def split_text(text: str, suffix: str) -> list[str]:
             return pieces
 
     if suffix in {".csv", ".tsv"}:
-        delimiter = "\\t" if suffix == ".tsv" else ","
+        delimiter = "\t" if suffix == ".tsv" else ","
         try:
             rows = csv.reader(text.splitlines(), delimiter=delimiter)
-            cells = [" | ".join(cell.strip() for cell in row if cell.strip())
-                     for row in rows]
-            text = "\\n".join(cells)
+            text = "\n".join(
+                " | ".join(cell.strip() for cell in row if cell.strip())
+                for row in rows
+            )
         except csv.Error:
             pass
 
-    # Every physical line and every period is a sample boundary. Keep the
-    # period attached to the preceding sample; never recombine sentences into
-    # paragraph-sized blocks. This intentionally favors small, plentiful
-    # source pulls over preserving prose paragraph structure.
-    pieces = re.split(r"(?<=\\.)[ \\t]*|[\\n]+", text)
+    # A period or physical line break ends a sample. Keep punctuation attached.
+    # Empty lines and one-character lines are not useful samples.
+    pieces = re.split(r"(?<=\.)[ \t]*|\n+", text)
     samples: list[str] = []
     for piece in pieces:
         piece = clean_fragment(piece)
-        if not piece:
+        if len(piece) <= 1:
             continue
-        # Preserve the existing safety limit for unusually long unpunctuated
-        # lines, splitting only those exceptional samples into smaller chunks.
         if len(piece) > 2400:
             samples.extend(
                 clean_fragment(piece[i:i + 1800])
                 for i in range(0, len(piece), 1800)
+                if len(clean_fragment(piece[i:i + 1800])) > 1
             )
         else:
             samples.append(piece)
-    return [sample for sample in samples if sample]
+    return samples
 
 
 def load_hoppers(
@@ -235,57 +233,58 @@ def compile_both(
     styles_chars: int,
     rng: random.Random,
 ) -> tuple[str, list[dict[str, str]], str, list[dict[str, str]]]:
-    """One shared draw stream, so each source fragment can enter only once."""
-    pools = {name: list(items) for name, items in hoppers.items()}
-    for items in pools.values():
-        rng.shuffle(items)
+    """Choose a random document, then a random sample within that document."""
+    documents: dict[tuple[str, str, str], list[Fragment]] = defaultdict(list)
+    for hopper, fragments in hoppers.items():
+        for fragment in fragments:
+            documents[(hopper, fragment.source, fragment.encoding)].append(fragment)
 
+    document_keys = list(documents)
     outputs = {"lyrics": "", "styles": ""}
     manifests: dict[str, list[dict[str, str]]] = {"lyrics": [], "styles": []}
     limits = {"lyrics": lyrics_chars, "styles": styles_chars}
-    seen: set[str] = set()
 
-    # Route each fragment according to its hopper bias; when that field is
-    # full, spill into the other field if it still has room.
-    while any(len(outputs[k]) < limits[k] for k in outputs):
-        available = [name for name, items in pools.items() if items]
-        if not available:
+    while any(len(outputs[key]) < limits[key] for key in outputs):
+        available_destinations = [
+            key for key in outputs if len(outputs[key]) < limits[key]
+        ]
+        if not available_destinations or not document_keys:
             break
-        hopper = rng.choice(available)
-        fragment = pools[hopper].pop()
-        fragment_text = trim_output(fragment.text)
-        if not fragment_text:
-            continue
-        fingerprint = hashlib.sha256(fragment_text.encode("utf-8")).hexdigest()
-        if fingerprint in seen:
-            continue
-        seen.add(fingerprint)
 
-        p_styles = style_probability(hopper)
-        destination = "styles" if rng.random() < p_styles else "lyrics"
-        other = "lyrics" if destination == "styles" else "styles"
-        if len(outputs[destination]) >= limits[destination]:
-            destination = other
-        if len(outputs[destination]) >= limits[destination]:
-            # The selected route is full. Leave this fragment unused.
+        # First draw: every document has equal selection probability.
+        doc_key = rng.choice(document_keys)
+        hopper, source, encoding = doc_key
+        # Second draw: select one divider-bounded sample from that document.
+        sample = rng.choice(documents[doc_key])
+        fragment_text = trim_output(sample.text)
+        if len(fragment_text) <= 1:
             continue
 
-        current = outputs[destination]
-        divider = " " if current else ""
-        remaining = limits[destination] - len(current) - len(divider)
-        if remaining <= 0:
-            continue
-        used = fragment_text[:remaining].rstrip()
+        destination = (
+            "styles" if rng.random() < style_probability(hopper) else "lyrics"
+        )
+        if destination not in available_destinations:
+            destination = (
+                "lyrics" if destination == "styles" else "styles"
+            )
+        if destination not in available_destinations:
+            destination = available_destinations[0]
+
+        remaining = limits[destination] - len(outputs[destination])
+        used = fragment_text[:remaining]
         if not used:
             continue
-        outputs[destination] = trim_output(current + divider + used)
+
+        # Samples are concatenated directly. No synthetic separator is added.
+        outputs[destination] += used
         manifests[destination].append({
-            "hopper": fragment.hopper,
-            "source": fragment.source,
-            "source_encoding": fragment.encoding,
+            "hopper": hopper,
+            "source": source,
+            "source_encoding": encoding,
             "characters_used": str(len(used)),
             "truncated": str(len(used) < len(fragment_text)).lower(),
         })
+
     return (
         outputs["lyrics"], manifests["lyrics"],
         outputs["styles"], manifests["styles"],
@@ -352,7 +351,7 @@ def main() -> None:
             "Only user-supplied hoppers are eligible by default; assistant research/documentation hoppers are separate. " 
             "All selected user hoppers remain eligible for either field."
         ),
-"divider": " ",
+"divider": "",
         "text_only_note": (
             "Binary audio/image/video files are not embedded. Their filenames "
             "become short text fragments; text sidecars, captions, and metadata "
