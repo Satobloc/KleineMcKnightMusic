@@ -228,7 +228,27 @@ def extract_text(target: str, out: Path, min_chars: int = 24,
             for value in values:
                 blocks = [re.sub(r"[ \t]+", " ", b).strip()
                           for b in re.split(r"\n\s*\n+", value)]
+                bounded = []
                 for block in blocks:
+                    if len(block) <= 1800:
+                        bounded.append(block)
+                        continue
+                    # Keep line boundaries when possible; hard-split only giant lines.
+                    current = ""
+                    for line in block.splitlines():
+                        if len(line) > 1800:
+                            if current:
+                                bounded.append(current)
+                                current = ""
+                            bounded.extend(line[i:i + 1800] for i in range(0, len(line), 1800))
+                        elif current and len(current) + len(line) + 1 > 1800:
+                            bounded.append(current)
+                            current = line
+                        else:
+                            current = current + "\n" + line if current else line
+                    if current:
+                        bounded.append(current)
+                for block in bounded:
                     if len(block) < min_chars:
                         continue
                     records.append({
