@@ -2,6 +2,11 @@ name: Hopper Compiler Trial
 on:
   workflow_dispatch:
     inputs:
+      ref:
+        description: "Branch or ref to run (for example prototype/hopper-trial)"
+        required: true
+        default: "prototype/hopper-trial"
+        type: string
       seed:
         description: "Random seed (blank = fresh run)"
         required: false
@@ -24,9 +29,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Run compiler tests
+        run: python -m unittest discover -s tests -p "test_random_hopper_compiler.py" -v
       - name: Compile selected music hoppers
         shell: bash
         run: |
