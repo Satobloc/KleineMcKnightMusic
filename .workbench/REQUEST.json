@@ -1,8 +1,19 @@
 {
   "version": 1,
-  "request_id": "all_hoppers_lyrics_styles_5000_1000_v1_001",
+  "request_id": "user_hoppers_lyrics_styles_5000_1000_v1_002",
   "command": "hopper-trial",
   "corpus": "corpus",
   "lyrics_chars": 5000,
-  "styles_chars": 1000
+  "styles_chars": 1000,
+  "include_hoppers": [
+    "Lyrics_Hopper",
+    "Genre_Hopper",
+    "Structure_Hopper",
+    "Grab_Bag",
+    "Sample_Hopper",
+    "Sonic_Pi",
+    "Prompt_Hopper",
+    "Others_Writing",
+    "Writing_Voice"
+  ]
 }
