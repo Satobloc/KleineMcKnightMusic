@@ -33,7 +33,7 @@ class ConcatenatorTests(unittest.TestCase):
     def test_fixed_concatenators(self):
         self.assertEqual(
             compiler.concatenate_samples(["one", "two", "three"], "line_break"),
-            "one\\ntwo\\nthree",
+            "one\ntwo\nthree",
         )
         self.assertEqual(
             compiler.concatenate_samples(["one", "two", "three"], "ellipsis"),

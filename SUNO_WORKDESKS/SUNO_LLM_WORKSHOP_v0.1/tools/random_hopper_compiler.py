@@ -34,7 +34,7 @@ MAX_FILE_BYTES = 25 * 1024 * 1024
 # One connector is selected per generated song pair and reused in both fields.
 # Alternating parentheses are generated as a sequence of "(" then ")" joins.
 CONCATENATOR_CHOICES = {
-    "line_break": "\\n",
+    "line_break": "\n",
     "ellipsis": "…",
     "em_dash": "—",
     "double_em_dash": "——",
