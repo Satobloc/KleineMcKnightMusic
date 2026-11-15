@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - prototype/hopper-trial
+      - workbench/v1
     paths:
       - ".github/workflows/hopper-compiler-trial.yml"
       - "SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py"
@@ -12,7 +13,7 @@ on:
       ref:
         description: "Branch or ref to run (for example prototype/hopper-trial)"
         required: true
-        default: "prototype/hopper-trial"
+        default: "workbench/v1"
         type: string
       seed:
         description: "Random seed (blank = fresh run)"
