@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "request_id": "hopper_trial_smoke_001",
+  "request_id": "hopper_trial_smoke_002",
   "command": "hopper-trial",
   "corpus": "corpus",
   "include_hoppers": [
