@@ -249,7 +249,7 @@ def main() -> None:
     parser.add_argument("--styles-chars", type=int, default=1000)
     parser.add_argument("--seed", type=int, default=None,
                         help="Optional integer seed for reproducible pulls")
-    args = parser.parse_args()
+    parser.add_argument("--include-hoppers", default=None,\n                        help="Comma-separated exact hopper directory names; default is all hoppers")\n    args = parser.parse_args()
 
     if args.lyrics_chars < 1 or args.styles_chars < 1:
         raise SystemExit("Character limits must be positive integers.")
