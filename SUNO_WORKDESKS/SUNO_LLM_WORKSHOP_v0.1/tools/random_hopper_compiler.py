@@ -194,8 +194,8 @@ def compile_both(
     limits = {"lyrics": lyrics_chars, "styles": styles_chars}
     seen: set[str] = set()
 
-    # Alternate destinations when both have room, while every individual
-    # fragment is routed according to its hopper bias.
+    # Route each fragment according to its hopper bias; when that field is
+    # full, spill into the other field if it still has room.
     while any(len(outputs[k]) < limits[k] for k in outputs):
         available = [name for name, items in pools.items() if items]
         if not available:
@@ -292,9 +292,9 @@ def main() -> None:
         ),
         "divider": ".\\n",
         "text_only_note": (
-            "Binary audio/image/video files are not embedded. Their textual "
-            "sidecars, captions, metadata, and filenames represented in text "
-            "files remain eligible."
+            "Binary audio/image/video files are not embedded. Their filenames "
+            "become short text fragments; text sidecars, captions, and metadata "
+            "are also eligible."
         ),
     }
     (args.out / "pull_manifest.json").write_text(
