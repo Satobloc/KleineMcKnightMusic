@@ -161,6 +161,10 @@ A useful handoff is concise and operational:
 
 This is a continuity aid, not a substitute for inspecting sources when the next task depends on them.
 
-## 12. Revision rule
+## 12. Onboarding and continuity
+
+Use `14_ONBOARDING_AND_CONTINUITY.md` as the workdesk cold-start and reentry route. It translates source-first reading, provenance, bounded execution, branch management, tool reconnaissance, and continuity from HsH into the music domain. It does not supersede this protocol or import HsH's project-specific control architecture.
+
+## 13. Revision rule
 
 This protocol is a living aid. Change it when experience shows a better way to work. Keep revisions proportionate, explain meaningful changes, and do not import another project's machinery simply because it is available.
