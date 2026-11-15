@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "request_id": "inventory_corpus_initial",
+  "request_id": "inventory_corpus_v1_001",
   "command": "inventory",
   "target": "corpus",
   "max_files": 10000
