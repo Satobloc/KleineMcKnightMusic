@@ -9,6 +9,7 @@ from typing import Iterator
 TEXT_EXTENSIONS={".txt",".md",".markdown",".csv",".tsv",".json",".jsonl",".yaml",".yml",".toml",".ini",".cfg",".xml",".html",".htm",".rst",".log"}
 SKIP_NAMES={".ds_store","thumbs.db","desktop.ini"}
 MAX_FILE_BYTES=25*1024*1024
+MIN_FRAGMENT_CHARS=24
 DEFAULT_EXCLUDES={"Writing_Voice"}
 STYLE_BIAS={"genre_hopper":.84,"structure_hopper":.84,"prompt_hopper":.34,"prompt_examples_hopper":.38,"lyrics_hopper":.12,"writing_voice":.16,"others_writing":.18,"grab_bag":.35,"product_hopper":.28,"community_hopper":.42,"research_hopper":.5,"source_hopper":.5,"audio_case_hopper":.55,"sample_hopper":.58,"sonic_pi":.65,"tooling_hopper":.55}
 
@@ -80,7 +81,7 @@ def load_hoppers(corpus:Path,includes:set[str]|None=None,excludes:set[str]|None=
             if not path.is_file() or path.name.casefold() in SKIP_NAMES: continue
             if path.suffix.casefold() not in TEXT_EXTENSIONS:
                 label=re.sub(r"[_-]+"," ",path.stem).strip()
-                if label: found.append(Fragment(label,d.name,path.relative_to(corpus).as_posix()))
+                if len(label)>=MIN_FRAGMENT_CHARS: found.append(Fragment(label,d.name,path.relative_to(corpus).as_posix()))
                 continue
             try:
                 if path.stat().st_size>MAX_FILE_BYTES:
@@ -90,7 +91,7 @@ def load_hoppers(corpus:Path,includes:set[str]|None=None,excludes:set[str]|None=
                 print(f"SKIP unreadable {path}: {exc}",file=sys.stderr); continue
             for piece in split_text(raw,path.suffix.casefold()):
                 piece=clean_fragment(piece)
-                if piece: found.append(Fragment(piece,d.name,path.relative_to(corpus).as_posix()))
+                if len(piece)>=MIN_FRAGMENT_CHARS: found.append(Fragment(piece,d.name,path.relative_to(corpus).as_posix()))
         if found: hoppers[d.name]=found
     if not hoppers: raise SystemExit("No eligible text fragments found in selected hoppers.")
     return hoppers
@@ -136,7 +137,7 @@ def main():
     a.out.mkdir(parents=True,exist_ok=True)
     (a.out/"lyrics_pull.txt").write_text(lyrics,encoding="utf-8")
     (a.out/"styles_pull.txt").write_text(styles,encoding="utf-8")
-    manifest={"compiler":"random_hopper_compiler.py","seed":a.seed,"corpus":str(a.corpus),"included_hoppers":sorted(hoppers),"hopper_count":len(hoppers),"fragment_count":sum(map(len,hoppers.values())),"hoppers_loaded":{k:len(v) for k,v in sorted(hoppers.items())},"lyrics":{"target_characters":a.lyrics_chars,"actual_characters":len(lyrics),"pull_count":len(lm),"pulls":lm},"styles":{"target_characters":a.styles_chars,"actual_characters":len(styles),"pull_count":len(sm),"pulls":sm},"routing_note":"Hopper-specific probabilistic bias; any selected hopper may feed either field.","text_only_note":"Binary files are not embedded; filenames may be used as text fragments."}
+    manifest={"compiler":"random_hopper_compiler.py","seed":a.seed,"corpus":str(a.corpus),"included_hoppers":sorted(hoppers),"hopper_count":len(hoppers),"fragment_count":sum(map(len,hoppers.values())),"hoppers_loaded":{k:len(v) for k,v in sorted(hoppers.items())},"lyrics":{"target_characters":a.lyrics_chars,"actual_characters":len(lyrics),"pull_count":len(lm),"pulls":lm},"styles":{"target_characters":a.styles_chars,"actual_characters":len(styles),"pull_count":len(sm),"pulls":sm},"routing_note":"Hopper-specific probabilistic bias; any selected hopper may feed either field.","text_only_note":"Binary files are not embedded; only filenames at least MIN_FRAGMENT_CHARS characters long may be used as text fragments.","minimum_fragment_characters":MIN_FRAGMENT_CHARS}
     (a.out/"pull_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     print(f"Loaded {len(hoppers)} hoppers and {manifest['fragment_count']} fragments.")
     print(f"Lyrics: {len(lyrics)}/{a.lyrics_chars} characters from {len(lm)} pulls")
