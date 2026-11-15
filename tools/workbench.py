@@ -12,6 +12,7 @@ import json
 import os
 import platform
 import random
+import re
 import subprocess
 import sys
 from collections import Counter
