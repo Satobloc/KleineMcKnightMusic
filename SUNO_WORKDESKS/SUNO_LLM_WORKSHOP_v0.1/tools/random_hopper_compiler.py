@@ -134,12 +134,18 @@ def split_text(text: str, suffix: str) -> list[str]:
     return pieces
 
 
-def load_hoppers(\n    corpus: Path,\n    include_hoppers: set[str] | None = None,\n) -> dict[str, list[Fragment]]:
+def load_hoppers(
+    corpus: Path,
+    include_hoppers: set[str] | None = None,
+) -> dict[str, list[Fragment]]:
     if not corpus.is_dir():
         raise SystemExit(f"Corpus directory not found: {corpus}")
 
     hoppers: dict[str, list[Fragment]] = {}
-    hopper_dirs = sorted(\n        p for p in corpus.iterdir()\n        if p.is_dir() and (include_hoppers is None or p.name in include_hoppers)\n    )
+    hopper_dirs = sorted(
+        p for p in corpus.iterdir()
+        if p.is_dir() and (include_hoppers is None or p.name in include_hoppers)
+    )
     if not hopper_dirs:
         raise SystemExit(f"No hopper directories found under: {corpus}")
 
@@ -249,13 +255,19 @@ def main() -> None:
     parser.add_argument("--styles-chars", type=int, default=1000)
     parser.add_argument("--seed", type=int, default=None,
                         help="Optional integer seed for reproducible pulls")
-    parser.add_argument("--include-hoppers", default=None,\n                        help="Comma-separated exact hopper directory names; default is all hoppers")\n    args = parser.parse_args()
+    parser.add_argument("--include-hoppers", default=None,
+                        help="Comma-separated exact hopper directory names; default is all hoppers")
+    args = parser.parse_args()
 
     if args.lyrics_chars < 1 or args.styles_chars < 1:
         raise SystemExit("Character limits must be positive integers.")
 
     rng = random.Random(args.seed)
-    include_hoppers = (\n        {name.strip() for name in args.include_hoppers.split(",") if name.strip()}\n        if args.include_hoppers else None\n    )\n    hoppers = load_hoppers(args.corpus, include_hoppers)
+    include_hoppers = (
+        {name.strip() for name in args.include_hoppers.split(",") if name.strip()}
+        if args.include_hoppers else None
+    )
+    hoppers = load_hoppers(args.corpus, include_hoppers)
     if not hoppers:
         raise SystemExit("No eligible text fragments found in any hopper.")
 
