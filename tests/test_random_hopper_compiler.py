@@ -33,7 +33,7 @@ class StructuralTransformTests(unittest.TestCase):
     def test_neither_operation_leaves_text_untouched(self):
         source = "A strange fjord narrative with musical instructions."
         result, meta = compiler.apply_song_structure(
-            source, StructuralRng([0.1])
+            source, StructuralRng([0.9])
         )
         self.assertEqual(result, source)
         self.assertEqual(meta["structure_gate"], "closed")
@@ -43,7 +43,7 @@ class StructuralTransformTests(unittest.TestCase):
     def test_segmentation_is_independent_of_repetition(self):
         source = "abcdefghijklmnopqrstuvwxyz" * 8
         result, meta = compiler.apply_song_structure(
-            source, StructuralRng([0.9, 0.1, 0.9], "full")
+            source, StructuralRng([0.1, 0.1, 0.9], "full")
         )
         self.assertIn("\n", result)
         self.assertEqual(meta["segmentation"], "full")
@@ -53,7 +53,7 @@ class StructuralTransformTests(unittest.TestCase):
         source = "abcdefghijklmnopqrstuvwxyz" * 8
         # First two draws activate repetition only; per-unit draws activate repeats.
         result, meta = compiler.apply_song_structure(
-            source, StructuralRng([0.9, 0.9, 0.1] + [0.0] * 100, "full")
+            source, StructuralRng([0.1, 0.9, 0.1] + [0.0] * 100, "full")
         )
         self.assertEqual(meta["segmentation"], "off")
         self.assertEqual(meta["repetition"], "full")
@@ -63,7 +63,7 @@ class StructuralTransformTests(unittest.TestCase):
     def test_both_operations_can_run_together(self):
         source = "abcdefghijklmnopqrstuvwxyz" * 8
         result, meta = compiler.apply_song_structure(
-            source, StructuralRng([0.9, 0.1, 0.1] + [0.0] * 100, "full")
+            source, StructuralRng([0.1, 0.1, 0.1] + [0.0] * 100, "full")
         )
         self.assertEqual(meta["segmentation"], "full")
         self.assertEqual(meta["repetition"], "full")
