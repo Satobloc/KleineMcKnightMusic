@@ -31,8 +31,33 @@ SKIP_NAMES = {
 }
 MAX_FILE_BYTES = 25 * 1024 * 1024
 
-# Probability that a pull from a hopper goes to Styles. The complement goes
-# to Lyrics. No hopper is exclusive to either destination.
+# Only user-supplied creative hoppers participate in ordinary pulls.
+# Research/documentation hoppers created during assistant-supported repo work
+# remain separate and are never included by default.
+USER_HOPPERS = {
+    "Lyrics_Hopper",
+    "Genre_Hopper",
+    "Structure_Hopper",
+    "Grab_Bag",
+    "Sample_Hopper",
+    "Sonic_Pi",
+    "Prompt_Hopper",
+    "Others_Writing",
+    "Writing_Voice",
+}
+
+ASSISTANT_RESEARCH_HOPPERS = {
+    "Audio_Case_Hopper",
+    "Community_Hopper",
+    "Product_Hopper",
+    "Prompt_Examples_Hopper",
+    "Research_Hopper",
+    "Source_Hopper",
+    "Tooling_Hopper",
+}
+
+# Probability that a pull from a user hopper goes to Styles. The complement
+# goes to Lyrics. No hopper is exclusive to either destination.
 STYLE_BIAS = {
     "genre_hopper": 0.84,
     "structure_hopper": 0.84,
@@ -142,9 +167,10 @@ def load_hoppers(
         raise SystemExit(f"Corpus directory not found: {corpus}")
 
     hoppers: dict[str, list[Fragment]] = {}
+    eligible_hoppers = USER_HOPPERS if include_hoppers is None else include_hoppers
     hopper_dirs = sorted(
         p for p in corpus.iterdir()
-        if p.is_dir() and (include_hoppers is None or p.name in include_hoppers)
+        if p.is_dir() and p.name in eligible_hoppers
     )
     if not hopper_dirs:
         raise SystemExit(f"No hopper directories found under: {corpus}")
@@ -245,7 +271,7 @@ def compile_both(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Randomly compile lyrics and styles prompts from all corpus hoppers."
+        description="Randomly compile lyrics and styles pulls from user-supplied hoppers."
     )
     parser.add_argument("--corpus", type=Path, default=Path("corpus"),
                         help="Corpus root containing hopper subdirectories (default: ./corpus)")
@@ -256,7 +282,7 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=None,
                         help="Optional integer seed for reproducible pulls")
     parser.add_argument("--include-hoppers", default=None,
-                        help="Comma-separated exact hopper directory names; default is all hoppers")
+                        help="Comma-separated exact hopper directory names; default is user-supplied hoppers only")
     args = parser.parse_args()
 
     if args.lyrics_chars < 1 or args.styles_chars < 1:
@@ -300,7 +326,8 @@ def main() -> None:
         "routing_note": (
             "Genre and Structure hoppers are strongly Styles-biased; "
             "Lyrics and writing/content hoppers are strongly Lyrics-biased. "
-            "All hoppers remain eligible for either field."
+            "Only user-supplied hoppers are eligible by default; assistant research/documentation hoppers are separate. " 
+            "All selected user hoppers remain eligible for either field."
         ),
 "divider": ".\\n",
         "text_only_note": (
