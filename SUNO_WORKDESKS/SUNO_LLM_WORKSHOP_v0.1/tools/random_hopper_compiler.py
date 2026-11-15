@@ -83,6 +83,22 @@ class Fragment:
     text: str
     hopper: str
     source: str
+    encoding: str = "not-applicable"
+
+
+def decode_text_file(path: Path) -> tuple[str, str]:
+    """Decode common text encodings without modifying the source file."""
+    raw = path.read_bytes()
+    try:
+        return raw.decode("utf-8-sig"), "utf-8-sig"
+    except UnicodeDecodeError:
+        pass
+    try:
+        return raw.decode("cp1252"), "cp1252"
+    except UnicodeDecodeError:
+        # Latin-1 maps every byte. Keep this last-resort path explicit in logs
+        # and the pull manifest rather than silently losing the source.
+        return raw.decode("latin-1"), "latin-1"
 
 
 def clean_fragment(value: str) -> str:
@@ -197,15 +213,22 @@ def load_hoppers(
                 if path.stat().st_size > MAX_FILE_BYTES:
                     print(f"SKIP oversized: {path}", file=sys.stderr)
                     continue
-                raw = path.read_text(encoding="utf-8-sig")
-            except (OSError, UnicodeError) as exc:
+                raw, source_encoding = decode_text_file(path)
+                if source_encoding != "utf-8-sig":
+                    print(
+                        f"DECODED {path} using {source_encoding}; source left unchanged",
+                        file=sys.stderr,
+                    )
+            except OSError as exc:
                 print(f"SKIP unreadable {path}: {exc}", file=sys.stderr)
                 continue
 
             for piece in split_text(raw, path.suffix.lower()):
                 piece = clean_fragment(piece)
                 if piece:
-                    found.append(Fragment(piece, name, path.relative_to(corpus).as_posix()))
+                    found.append(Fragment(
+                        piece, name, path.relative_to(corpus).as_posix(), source_encoding
+                    ))
         if found:
             hoppers[name] = found
     return hoppers
@@ -268,6 +291,7 @@ def compile_both(
         manifests[destination].append({
             "hopper": fragment.hopper,
             "source": fragment.source,
+            "source_encoding": fragment.encoding,
             "characters_used": str(len(used)),
             "truncated": str(len(used) < len(fragment_text)).lower(),
         })
