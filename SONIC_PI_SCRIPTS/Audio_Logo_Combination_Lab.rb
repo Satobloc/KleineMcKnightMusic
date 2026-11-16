@@ -31,42 +31,42 @@ SAMPLE_SUSTAIN = 0.48
 SAMPLE_RELEASE = 0.04
 SAMPLE_WAIT = 0.62
 
-definable = nil
-
 puts "Indexing Hyperflirt library..."
 LIBRARY_PATHS = sample_paths(LIBRARY_GLOB)
 puts "Indexed #{LIBRARY_PATHS.length} supported files."
 
-if SOURCE_PATHS.nil?
+ $source_paths_for_lab = SOURCE_PATHS
+
+if $source_paths_for_lab.nil?
   if LIBRARY_PATHS.length < 3
     puts "ERROR: Need at least three supported files."
   else
-    SOURCE_PATHS = LIBRARY_PATHS.shuffle.take(3)
+    $source_paths_for_lab = LIBRARY_PATHS.shuffle.take(3)
   end
 end
 
-if SOURCE_PATHS.length != 3
+if $source_paths_for_lab.nil? || $source_paths_for_lab.length != 3
   puts "ERROR: SOURCE_PATHS must contain exactly three file paths."
 else
   puts ""
   puts "COMBINATION SOURCES:"
-  SOURCE_PATHS.each_with_index do |path, i|
+   $source_paths_for_lab.each_with_index do |path, i|
     puts "SOURCE #{i + 1}: #{path}"
   end
 
   puts "Preloading the three sources..."
-  load_samples SOURCE_PATHS
+  load_samples $source_paths_for_lab
   sleep 2
   puts "Ready."
 
   # Select a different excerpt point for each source, but reuse those
   # positions in all three treatments for a fair A/B/C comparison.
-  STARTS = [rrand(0.05, 0.45), rrand(0.05, 0.45), rrand(0.05, 0.45)]
+  $source_starts_for_lab = [rrand(0.05, 0.45), rrand(0.05, 0.45), rrand(0.05, 0.45)]
 
   define :play_source do |index, amp=0.82, rate=1|
-    sample SOURCE_PATHS[index],
-      start: STARTS[index],
-      finish: STARTS[index] + 0.30,
+    sample $source_paths_for_lab[index],
+      start: $source_starts_for_lab[index],
+      finish: $source_starts_for_lab[index] + 0.30,
       rate: rate,
       amp: amp,
       attack: 0.01,
