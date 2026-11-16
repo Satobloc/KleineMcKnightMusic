@@ -400,13 +400,11 @@ define :audio_logo do |n|
 end
 
 # ---------- CUMULATIVE COUNTING TOCKS ----------
-# A short, dry tock for each count. Every fifth tock gets a longer pause.
-# The tenth tock is lower, louder, and slightly longer so it reads as a marker.
-# From 20 onward, each completed ten collapses into one accented TOCK.
+# One tock per count through 19. The tenth is accented.
+# From 20 onward, each completed decade is represented by one accented TOCK.
 COUNT_TICK_GAP = 0.12
 COUNT_GROUP_GAP = 0.50
 
-# accent=true makes the tenth / completed-decade marker.
 define :count_tock do |accent=false|
   use_synth :beep
   if accent
@@ -418,7 +416,6 @@ end
 
 define :count_sequence do |n|
   if n < 20
-    # Keep the first decade expanded: 1..9 plain tocks, then a marked tenth.
     n.times do |i|
       count_tock(i == 9)
       if i < n - 1
@@ -430,7 +427,6 @@ define :count_sequence do |n|
       end
     end
   else
-    # At 20, completed decades collapse to accented tocks; units follow after a gap.
     tens = n / 10
     units = n % 10
 
@@ -458,7 +454,7 @@ end
 # ---------- RUN ----------
 puts "=============================================="
 puts "WHOLE-LIBRARY AUDIO LOGO AUDITION"
-puts "30 designs | cumulative tock counter | decade accents"
+puts "30 designs | cumulative tock counter"
 puts "Library: #{LIBRARY_GLOB}"
 puts "Indexed sample count: #{LIBRARY_PATHS.length}"
 puts "First run may take time while Sonic Pi indexes files."
@@ -469,9 +465,10 @@ LOGO_COUNT.times do |offset|
   puts "AUDITION #{logo_number}/#{LOGO_COUNT}"
   audio_logo logo_number
   sleep LOGO_GAP
-
+  
   count_sequence logo_number
   puts "COUNT #{logo_number}"
+  
   sleep MARKER_GAP
 end
 
