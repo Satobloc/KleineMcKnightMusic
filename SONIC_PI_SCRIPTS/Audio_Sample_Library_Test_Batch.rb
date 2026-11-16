@@ -33,16 +33,27 @@ puts "Sonic Pi indexed #{LIBRARY_PATHS.length} supported audio files."
 if LIBRARY_PATHS.empty?
   puts "ERROR: Sonic Pi found no supported audio files. Nothing to audition."
 else
-  # Group by the first folder below the library's immediate category folder.
-  # For example, WORLD and ELECTRONIC remain separate survey pools.
-  folder_groups = LIBRARY_PATHS.group_by do |path|
-    parts = path.split("/")
-    parts.length > 4 ? parts[0..3].join("/") : parts[0..-2].join("/")
+  # Build folder groups explicitly. Sonic Pi's sample_paths result is a
+  # RingVector, which does not implement Ruby's group_by method.
+  library_array = []
+  LIBRARY_PATHS.each do |path|
+    library_array << path
   end
 
-  folder_firsts = folder_groups.values.map { |paths| paths.choose }
+  folder_groups = {}
+  library_array.each do |path|
+    folder_key = path.split("/")[0..-2].join("/")
+    folder_groups[folder_key] = [] unless folder_groups.key?(folder_key)
+    folder_groups[folder_key] << path
+  end
+
+  folder_firsts = []
+  folder_groups.each do |folder_key, paths|
+    folder_firsts << paths.choose
+  end
+
   diversified = folder_firsts.shuffle
-  remaining = LIBRARY_PATHS - diversified
+  remaining = library_array - diversified
   TEST_PATHS = (diversified + remaining.shuffle).take(TEST_COUNT)
 
   puts "Selected #{TEST_PATHS.length} distinct files, without replacement."
