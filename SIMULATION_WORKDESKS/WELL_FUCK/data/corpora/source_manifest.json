@@ -1,0 +1,72 @@
+{
+  "schema": "well-fuck-language-source-manifest-v1",
+  "project": "Well, Fuck.",
+  "operation": "WF-LANG-002",
+  "manifest_status": "candidate_sources_not_yet_acquired",
+  "assets": [
+    {
+      "id": "MASC-3.0.0-ANNOTATED",
+      "title": "MASC 3.0.0 annotated corpus",
+      "filename": "MASC-3.0.0.zip",
+      "url": "https://github.com/nancyide/anc-website/releases/download/datasets-2026-09-25/MASC-3.0.0.zip",
+      "expected_bytes": 36358521,
+      "sha256": "0b300d96016233c7c79b43559b477a6bb0ed16bb416d5c517eccb108a6228493",
+      "license_status": "conflicting_official_page_wording_pending_package_notice_inspection",
+      "provisional_handling": "conservatively apply CC BY 3.0 US attribution requirements pending inspection",
+      "intended_role": "annotated_balanced_multi_genre_baseline",
+      "approved_for_download": true,
+      "approved_for_extraction": false,
+      "approved_for_derived_data": false,
+      "source_metadata": "Official ANC download link and 2026 migration release metadata",
+      "notes": "Package and embedded notices have not yet been inspected. Do not freeze sample quotas before archive inspection."
+    },
+    {
+      "id": "MAICHAT-1.0",
+      "title": "MaiChat 1.0 conversational dataset",
+      "filename": "maichat_dataset.tar.gz",
+      "url": "https://datashare.ed.ac.uk/bitstreams/5e731957-f140-4ce5-b1ed-6877ad3839a7/download",
+      "expected_bytes": null,
+      "sha256": null,
+      "license_status": "depositor_agreement_and_README_pending_inspection",
+      "provisional_handling": "no derived-data or redistribution permission assumed",
+      "intended_role": "recent_informal_interaction_supplement",
+      "approved_for_download": true,
+      "approved_for_extraction": false,
+      "approved_for_derived_data": false,
+      "source_metadata": "Edinburgh DataShare dataset record; dataset page and depositor agreement require inspection",
+      "notes": "After first acquisition, compute and pin the hash. Review terms and README before processing or generating any source-derived dataset."
+    },
+    {
+      "id": "GUM-CORPUS",
+      "title": "Georgetown University Multilayer corpus",
+      "filename": null,
+      "url": "https://gucorpling.org/gum/",
+      "expected_bytes": null,
+      "sha256": null,
+      "license_status": "mixed_per_document_rights",
+      "provisional_handling": "metadata and documentation reference only; no text acquisition approved",
+      "intended_role": "annotation_design_reference",
+      "approved_for_download": false,
+      "approved_for_extraction": false,
+      "approved_for_derived_data": false,
+      "source_metadata": "Official GUM website",
+      "notes": "Not all source texts are distributed. Rights vary by text type and source. Not a first-run intake source."
+    },
+    {
+      "id": "LANA-CASE",
+      "title": "LANA-CASE everyday conversation corpus",
+      "filename": null,
+      "url": "https://cass.lancs.ac.uk/lana-case/",
+      "expected_bytes": null,
+      "sha256": null,
+      "license_status": "standard_license_incompatible_with_current_cloud_ai_workflow",
+      "provisional_handling": "excluded absent separate written permission",
+      "intended_role": "reference_only",
+      "approved_for_download": false,
+      "approved_for_extraction": false,
+      "approved_for_derived_data": false,
+      "source_metadata": "Official CASS corpus page and posted license",
+      "notes": "Current terms restrict AI training, uploading transcripts to AI services that collect/save data, redistribution, and external cloud storage."
+    }
+  ]
+}
