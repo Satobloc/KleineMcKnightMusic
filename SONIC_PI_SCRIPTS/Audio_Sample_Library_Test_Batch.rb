@@ -46,7 +46,7 @@ else
     fragment_finish = fragment_start + 0.35
 
     puts ""
-    short_name = picked_path.split(/[\\\\\/]/).last
+    short_name = picked_path.split("/").last
     puts "=============================================="
     puts "SAMPLE ID: #{sample_number}"
     puts "FILENAME: #{short_name}"
