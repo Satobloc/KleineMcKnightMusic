@@ -19,8 +19,8 @@ LIBRARY_ROOT = "D:/HYPERFLIRT"
 LIBRARY_GLOB = "D:/HYPERFLIRT/**"
 LOGO_COUNT = 30
 GROUP_SIZE = 5
-LOGO_GAP = 0.48
-MARKER_GAP = 0.22
+LOGO_GAP = 1.5
+MARKER_GAP = 0.5
 
 # Ask Sonic Pi for the actual recursive file list. This is the authoritative
 # candidate pool for this installation, not an atlas-derived estimate.
@@ -67,8 +67,9 @@ define :audio_logo do |n|
     with_fx :reverb, room: 0.78, mix: 0.32 do
       with_fx :echo, phase: 0.10, decay: 0.38, mix: 0.20 do
         library_fragment 0.18
+        sleep 0.75
         logo_tone [76, 83, 88], :pretty_bell, 0.30, 0.48
-        sleep 0.12
+        sleep 0.36
         logo_tone 96, :pretty_bell, 0.23, 0.45
       end
     end
@@ -77,10 +78,11 @@ define :audio_logo do |n|
     puts "02 | THREE DROPS"
     with_fx :reverb, room: 0.62, mix: 0.24 do
       library_fragment 0.16
+      sleep 0.75
       logo_tone 84, :dull_bell, 0.25, 0.22
-      sleep 0.10
+      sleep 0.30
       logo_tone 91, :dull_bell, 0.27, 0.22
-      sleep 0.10
+      sleep 0.30
       logo_tone 98, :pretty_bell, 0.24, 0.38
     end
 
@@ -88,10 +90,11 @@ define :audio_logo do |n|
     puts "03 | PRISM LIFT"
     with_fx :reverb, room: 0.82, mix: 0.34 do
       library_fragment 0.15, 2.8, 6.0
+      sleep 0.75
       logo_tone 72, :sine, 0.24, 0.20
-      sleep 0.08
+      sleep 0.24
       logo_tone 79, :sine, 0.23, 0.20
-      sleep 0.08
+      sleep 0.24
       logo_tone 88, :pretty_bell, 0.29, 0.48
     end
 
@@ -100,6 +103,7 @@ define :audio_logo do |n|
     with_fx :reverb, room: 0.9, mix: 0.36 do
       with_fx :echo, phase: 0.12, decay: 0.35, mix: 0.2 do
         library_fragment 0.18
+        sleep 0.75
         logo_tone [72, 79, 84, 91], :pretty_bell, 0.22, 0.58
       end
     end
@@ -108,10 +112,11 @@ define :audio_logo do |n|
     puts "05 | FALLING STAR"
     with_fx :reverb, room: 0.8, mix: 0.3 do
       library_fragment 0.2
+      sleep 0.75
       logo_tone 100, :pretty_bell, 0.28, 0.16
-      sleep 0.10
+      sleep 0.30
       logo_tone 93, :pretty_bell, 0.23, 0.18
-      sleep 0.10
+      sleep 0.30
       logo_tone 84, :pretty_bell, 0.21, 0.48
     end
 
@@ -121,10 +126,11 @@ define :audio_logo do |n|
     with_fx :bitcrusher, bits: 8, sample_rate: 12000, mix: 0.22 do
       with_fx :reverb, room: 0.35, mix: 0.12 do
         library_fragment 0.18, 3.0, 6.0
+        sleep 0.75
         logo_tone 48, :fm, 0.25, 0.18
-        sleep 0.10
+        sleep 0.30
         logo_tone 72, :fm, 0.23, 0.16
-        sleep 0.08
+        sleep 0.24
         logo_tone 84, :fm, 0.26, 0.34
       end
     end
@@ -133,10 +139,11 @@ define :audio_logo do |n|
     puts "07 | PIXEL HALO"
     with_fx :echo, phase: 0.07, decay: 0.25, mix: 0.2 do
       library_fragment 0.14
+      sleep 0.75
       logo_tone 90, :pulse, 0.22, 0.12
-      sleep 0.07
+      sleep 0.21
       logo_tone 97, :pulse, 0.21, 0.12
-      sleep 0.07
+      sleep 0.21
       logo_tone 102, :tri, 0.25, 0.38
     end
 
@@ -144,10 +151,11 @@ define :audio_logo do |n|
     puts "08 | SOFT CIRCUIT"
     with_fx :reverb, room: 0.55, mix: 0.2 do
       library_fragment 0.16
+      sleep 0.75
       logo_tone 60, :sine, 0.24, 0.15
-      sleep 0.09
+      sleep 0.27
       logo_tone 72, :sine, 0.23, 0.15
-      sleep 0.09
+      sleep 0.27
       logo_tone 84, :saw, 0.15, 0.32
     end
 
@@ -155,8 +163,9 @@ define :audio_logo do |n|
     puts "09 | ORBITAL PING"
     with_fx :echo, phase: 0.13, decay: 0.42, mix: 0.3 do
       library_fragment 0.17
+      sleep 0.75
       logo_tone 89, :beep, 0.28, 0.12
-      sleep 0.10
+      sleep 0.30
       logo_tone 96, :beep, 0.25, 0.22
     end
 
@@ -165,8 +174,9 @@ define :audio_logo do |n|
     with_fx :reverb, room: 0.65, mix: 0.22 do
       with_fx :distortion, distort: 0.12, mix: 0.15 do
         library_fragment 0.20, 2.2, 4.5
+        sleep 0.75
         logo_tone 52, :dsaw, 0.22, 0.20
-        sleep 0.12
+        sleep 0.36
         logo_tone [76, 83, 91], :pretty_bell, 0.23, 0.42
       end
     end
@@ -176,8 +186,9 @@ define :audio_logo do |n|
     puts "11 | WOODEN SPARK"
     with_fx :reverb, room: 0.48, mix: 0.18 do
       library_fragment 0.24
+      sleep 0.75
       logo_tone 79, :pluck, 0.28, 0.30
-      sleep 0.12
+      sleep 0.36
       logo_tone 86, :pretty_bell, 0.20, 0.38
     end
 
@@ -185,10 +196,11 @@ define :audio_logo do |n|
     puts "12 | THUMBPRINT"
     with_fx :reverb, room: 0.5, mix: 0.2 do
       library_fragment 0.17
+      sleep 0.75
       logo_tone 67, :pluck, 0.30, 0.20
-      sleep 0.11
+      sleep 0.33
       logo_tone 74, :pluck, 0.26, 0.20
-      sleep 0.11
+      sleep 0.33
       logo_tone 79, :pluck, 0.24, 0.36
     end
 
@@ -196,6 +208,7 @@ define :audio_logo do |n|
     puts "13 | TINY GAMELAN"
     with_fx :reverb, room: 0.7, mix: 0.26 do
       library_fragment 0.21, 2.4, 5.0
+      sleep 0.75
       logo_tone [72, 76, 83], :pretty_bell, 0.23, 0.48
     end
 
@@ -203,7 +216,8 @@ define :audio_logo do |n|
     puts "14 | SITAR GLINT"
     with_fx :reverb, room: 0.48, mix: 0.18 do
       library_fragment 0.23
-      sleep 0.10
+      sleep 0.75
+      sleep 0.30
       logo_tone 91, :pretty_bell, 0.22, 0.38
     end
 
@@ -211,8 +225,9 @@ define :audio_logo do |n|
     puts "15 | AUT HARP AURORA"
     with_fx :reverb, room: 0.78, mix: 0.32 do
       library_fragment 0.17
+      sleep 0.75
       logo_tone [67, 74, 79, 86], :pretty_bell, 0.21, 0.58
-      sleep 0.09
+      sleep 0.27
       logo_tone 98, :pretty_bell, 0.20, 0.48
     end
 
@@ -221,7 +236,8 @@ define :audio_logo do |n|
     puts "16 | ZORRO ZAP"
     with_fx :reverb, room: 0.28, mix: 0.1 do
       library_fragment 0.26, 2.5, 6.0
-      sleep 0.10
+      sleep 0.75
+      sleep 0.30
       logo_tone 88, :fm, 0.22, 0.28
     end
 
@@ -229,10 +245,11 @@ define :audio_logo do |n|
     puts "17 | RUBBER COMET"
     with_fx :echo, phase: 0.09, decay: 0.28, mix: 0.2 do
       library_fragment 0.15
+      sleep 0.75
       logo_tone 55, :tb303, 0.18, 0.13
-      sleep 0.08
+      sleep 0.24
       logo_tone 79, :tb303, 0.17, 0.13
-      sleep 0.08
+      sleep 0.24
       logo_tone 91, :pretty_bell, 0.23, 0.34
     end
 
@@ -240,6 +257,7 @@ define :audio_logo do |n|
     puts "18 | CLOCKWORK MOTE"
     with_fx :reverb, room: 0.44, mix: 0.15 do
       library_fragment 0.22
+      sleep 0.75
       logo_tone 83, :pretty_bell, 0.24, 0.38
     end
 
@@ -248,10 +266,11 @@ define :audio_logo do |n|
     with_fx :reverb, room: 0.6, mix: 0.22 do
       with_fx :echo, phase: 0.10, decay: 0.34, mix: 0.2 do
         library_fragment 0.16, 2.8, 6.0
+        sleep 0.75
         logo_tone 64, :fm, 0.21, 0.11
-        sleep 0.07
+        sleep 0.21
         logo_tone 83, :fm, 0.20, 0.11
-        sleep 0.07
+        sleep 0.21
         logo_tone 95, :pretty_bell, 0.23, 0.42
       end
     end
@@ -260,6 +279,7 @@ define :audio_logo do |n|
     puts "20 | TINY IMPACT"
     with_fx :reverb, room: 0.52, mix: 0.16 do
       library_fragment 0.24, 3.0, 6.0
+      sleep 0.75
       logo_tone 86, :pretty_bell, 0.23, 0.40
     end
 
@@ -268,8 +288,9 @@ define :audio_logo do |n|
     puts "21 | BRASS AND GLASS"
     with_fx :reverb, room: 0.72, mix: 0.28 do
       library_fragment 0.16
+      sleep 0.75
       logo_tone 60, :prophet, 0.18, 0.15
-      sleep 0.12
+      sleep 0.36
       logo_tone [72, 79, 84], :pretty_bell, 0.24, 0.48
     end
 
@@ -277,8 +298,9 @@ define :audio_logo do |n|
     puts "22 | VELVET CHORD"
     with_fx :reverb, room: 0.84, mix: 0.32 do
       library_fragment 0.18
+      sleep 0.75
       logo_tone [69, 76, 81, 88], :piano, 0.23, 0.44
-      sleep 0.12
+      sleep 0.36
       logo_tone 93, :pretty_bell, 0.19, 0.42
     end
 
@@ -286,10 +308,11 @@ define :audio_logo do |n|
     puts "23 | CELESTIAL STAMP"
     with_fx :reverb, room: 0.9, mix: 0.34 do
       library_fragment 0.16
+      sleep 0.75
       logo_tone 72, :sine, 0.17, 0.22
-      sleep 0.12
+      sleep 0.36
       logo_tone 84, :pretty_bell, 0.26, 0.46
-      sleep 0.06
+      sleep 0.18
       logo_tone 91, :pretty_bell, 0.19, 0.42
     end
 
@@ -297,8 +320,9 @@ define :audio_logo do |n|
     puts "24 | GOLDEN INTERVAL"
     with_fx :reverb, room: 0.72, mix: 0.26 do
       library_fragment 0.18
+      sleep 0.75
       logo_tone [67, 74, 81], :pretty_bell, 0.23, 0.44
-      sleep 0.12
+      sleep 0.36
       logo_tone 90, :pretty_bell, 0.22, 0.46
     end
 
@@ -307,10 +331,11 @@ define :audio_logo do |n|
     with_fx :echo, phase: 0.105, decay: 0.38, mix: 0.2 do
       with_fx :reverb, room: 0.8, mix: 0.28 do
         library_fragment 0.16
+        sleep 0.75
         logo_tone 76, :tri, 0.20, 0.13
-        sleep 0.08
+        sleep 0.24
         logo_tone 83, :tri, 0.20, 0.13
-        sleep 0.08
+        sleep 0.24
         logo_tone 91, :pretty_bell, 0.23, 0.50
       end
     end
@@ -320,8 +345,9 @@ define :audio_logo do |n|
     puts "26 | GAMELAN BOOT"
     with_fx :reverb, room: 0.62, mix: 0.22 do
       library_fragment 0.18, 2.8, 5.8
+      sleep 0.75
       logo_tone 48, :fm, 0.17, 0.13
-      sleep 0.10
+      sleep 0.30
       logo_tone [76, 83, 88], :pretty_bell, 0.22, 0.44
     end
 
@@ -329,8 +355,9 @@ define :audio_logo do |n|
     puts "27 | CHIME AND CIRCUIT"
     with_fx :echo, phase: 0.08, decay: 0.3, mix: 0.2 do
       library_fragment 0.16
+      sleep 0.75
       logo_tone 96, :pulse, 0.17, 0.09
-      sleep 0.10
+      sleep 0.30
       logo_tone 88, :pretty_bell, 0.24, 0.42
     end
 
@@ -339,8 +366,9 @@ define :audio_logo do |n|
     with_fx :reverb, room: 0.76, mix: 0.27 do
       with_fx :echo, phase: 0.12, decay: 0.34, mix: 0.18 do
         library_fragment 0.18
+        sleep 0.75
         logo_tone 78, :sine, 0.18, 0.18
-        sleep 0.10
+        sleep 0.30
         logo_tone 91, :pretty_bell, 0.21, 0.44
       end
     end
@@ -349,8 +377,9 @@ define :audio_logo do |n|
     puts "29 | CHORDAL SPARK"
     with_fx :reverb, room: 0.9, mix: 0.36 do
       library_fragment 0.15
+      sleep 0.75
       logo_tone [72, 79, 84, 91], :pretty_bell, 0.18, 0.58
-      sleep 0.08
+      sleep 0.24
       logo_tone 100, :pretty_bell, 0.19, 0.48
     end
 
@@ -359,10 +388,11 @@ define :audio_logo do |n|
     with_fx :reverb, room: 0.8, mix: 0.28 do
       with_fx :echo, phase: 0.09, decay: 0.34, mix: 0.18 do
         library_fragment 0.18, 2.5, 5.5
+        sleep 0.75
         logo_tone 72, :fm, 0.17, 0.12
-        sleep 0.09
+        sleep 0.27
         logo_tone 79, :fm, 0.17, 0.12
-        sleep 0.09
+        sleep 0.27
         logo_tone [84, 91, 96], :pretty_bell, 0.22, 0.54
       end
     end
