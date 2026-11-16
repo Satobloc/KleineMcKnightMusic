@@ -39,10 +39,10 @@ MARKER_GAP = 0.22
 
 # Sample fragments: narrow windows + accelerated playback keep long files brief.
 # The window is a fraction of the source file, not seconds.
-WINDOW_MIN = 0.003
-WINDOW_MAX = 0.014
-RATE_MIN = 1.8
-RATE_MAX = 5.5
+WINDOW_MIN = 0.0015
+WINDOW_MAX = 0.0045
+RATE_MIN = 3.0
+RATE_MAX = 8.0
 
 # ---------- RANDOM WHOLE-LIBRARY SAMPLE ENGINE ----------
 define :library_fragment do |amp=0.22, rate_lo=1.8, rate_hi=5.5|
@@ -279,7 +279,7 @@ define :audio_logo do |n|
     puts "21 | BRASS AND GLASS"
     with_fx :reverb, room: 0.72, mix: 0.28 do
       in_thread { library_fragment 0.16 }
-      spark 60, :braids, 0.18, 0.15
+      spark 60, :prophet, 0.18, 0.15
       sleep 0.12
       spark [72, 79, 84], :pretty_bell, 0.24, 0.48
     end
@@ -297,7 +297,7 @@ define :audio_logo do |n|
     puts "23 | CELESTIAL STAMP"
     with_fx :reverb, room: 0.9, mix: 0.34 do
       in_thread { library_fragment 0.16 }
-      spark 72, :hollow, 0.17, 0.22
+      spark 72, :sine, 0.17, 0.22
       sleep 0.12
       spark 84, :pretty_bell, 0.26, 0.46
       sleep 0.06
