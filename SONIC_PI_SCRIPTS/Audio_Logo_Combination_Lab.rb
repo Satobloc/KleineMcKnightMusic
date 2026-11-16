@@ -49,6 +49,29 @@ define :play_source do |index, amp=0.90, rate=1|
     release: SAMPLE_RELEASE
 end
 
+
+# The familiar cumulative wooden tocker, restored between every section.
+define :play_tocker do |count|
+  use_synth :pluck
+  count.times do |i|
+    if i == 9
+      play 40, amp: 0.42, attack: 0.001, decay: 0.035,
+        sustain: 0, release: 0.045, coef: 0.82
+    else
+      play 47, amp: 0.25, attack: 0.001, decay: 0.025,
+        sustain: 0, release: 0.035, coef: 0.76
+    end
+    if i < count - 1
+      if (i + 1) % 5 == 0
+        sleep 0.28
+      else
+        sleep 0.08
+      end
+    end
+  end
+  sleep 0.30
+end
+
 define :play_source_blend do |amp_scale=1.0|
   # Small stagger creates a three-part composite instead of a single
   # transient pile-up. Each source remains independently identifiable.
@@ -94,14 +117,17 @@ puts "PART A | RAW SOURCES, ONE AT A TIME"
 puts "SOURCE 1 SOLO | CHINESE TRADITIONAL"
 play_source 0, 0.95
 sleep SOURCE_GAP
+play_tocker 1
 
 puts "SOURCE 2 SOLO | TABLA PERFORMANCE"
 play_source 1, 0.95
 sleep SOURCE_GAP
+play_tocker 2
 
 puts "SOURCE 3 SOLO | POP SONG SKELETON GLITCHY"
 play_source 2, 0.95
 sleep TAKE_GAP
+play_tocker 3
 
 # ------------------------------------------------------------
 # PART B: COMBINE WITHOUT EFFECTS
@@ -113,6 +139,7 @@ play_source_blend 0.85
 sleep 0.95
 start_signature
 sleep TAKE_GAP
+play_tocker 4
 
 # ------------------------------------------------------------
 # PART C: THREE CLEARLY DIFFERENT EFFECT TREATMENTS
@@ -131,6 +158,8 @@ end
 sleep 0.80
 start_signature
 sleep TAKE_GAP
+play_tocker 6
+play_tocker 5
 
 # TAKE 3: BIG, ROUND, BOUNCY
 # Low-pass softens the edges; distortion adds body; short echo
@@ -160,6 +189,7 @@ with_fx :reverb, room: 0.72, mix: 0.42 do
     wink_signature
   end
 end
+play_tocker 7
 
 puts ""
 puts "COMBINATION LAB COMPLETE."
