@@ -136,3 +136,27 @@ The initial synthesis draws on The Open University, Oxford Research Encyclopedia
 
 **Next**
 Decide the intended English starting condition and select the smallest useful computational representation for speaker variation and transmission. Do not begin a large language-engine rewrite before this design gate.
+
+
+## WF-LANG-002 — MASC source identity and acquisition investigation (progress checkpoint)
+
+**Status:** ACTIVE / acquisition still blocked  
+**Date:** 2026-11-16  
+**Artifact:** `MASC_SOURCE_ACQUISITION.md`
+
+**Work performed**
+- Re-entered from the live repository control records and re-read the active tray, project plan, workflow protocol, language-change laboratory design, and source/gameplay references.
+- Rechecked the official ANC download, MASC overview, About, and annotation pages.
+- Followed the official MASC download links to the September 2026 GitHub migration release.
+- Retrieved release metadata and the migration manifest. Identified the annotated MASC 3.0.0 archive (36,358,521 bytes; published SHA-256 `0b300d96016233c7c79b43559b477a6bb0ed16bb416d5c517eccb108a6228493`) and the data-only archive (1,351,682 bytes; published SHA-256 `0c3f1fd3314ee5ec09830d6f6b217c19a6899d1cabd22c42264578c3348b2d01`).
+- Confirmed the official MASC landing page states CC BY 3.0 US while the About page says no license or other restrictions. The migration release says existing dataset-specific license and attribution terms continue to apply. Adopted conservative CC BY attribution handling provisionally pending inspection of the exact archive README and source notices.
+- Attempted archive retrieval through the available download route; it failed. No archive bytes were obtained.
+
+**Result and limits**
+- Package identity and release-published integrity metadata are now known.
+- The archive itself, package README, and text-level notices remain uninspected. Published hashes have not been recomputed locally.
+- No corpus manifest has been frozen. No E0 or E1 experiment has run.
+- MASC remains a balanced 500K-word, 19-genre baseline, not a comprehensive representation of contemporary informal conversation.
+
+**Next**
+Obtain the annotated archive through a working route, verify its hash and internal notices, inspect the resource headers and genre/document mapping, then freeze the stratified sample manifest. Do not substitute web snippets or invented sample records for corpus data.
