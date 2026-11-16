@@ -23,6 +23,7 @@ started_utc: 2026-11-14T05:58:30Z
 - Confirmed starting point: contemporary informal, idiomatic English.
 - New source-design branch: dynamic multi-source sentence/expression reservoir with bounded sampling, provenance, licensing, and probabilistic grammatical annotation.
 - Source evaluation: MASC 3.0.0 remains a useful annotated baseline but is not current conversational English by itself; MaiChat 1.0 is a candidate recent informal-dialogue supplement. See LANGUAGE_CORPUS_SOURCE_EVALUATION.md.
+- Repository-native data intake: private corpus workspace, source manifest, acquisition utility, and GitHub Actions acquisition/workbench command. See `data/corpora/README.md`.
 
 **Scope**
 - Establish contemporary informal, idiomatic English as the initial population.
@@ -47,7 +48,7 @@ A research-backed mechanism map and reviewable computational design exist. The d
 - Geology feature development.
 - Changes to existing ChatGPT scheduled tasks.
 
-**Next cursor:** obtain the annotated MASC 3.0.0 archive and inspect its package-level terms; also obtain and inspect MaiChat 1.0 as a recent informal-conversation supplement. Evaluate the multi-source reservoir in LANGUAGE_CORPUS_SOURCE_EVALUATION.md, then freeze a stratified sample manifest only after the actual archives and licenses are verified. Run E0 ingestion checks followed by E1 no-innovation baseline. Do not modify Cities Laboratory 2.12 during calibration.
+**Next cursor:** run the repository-native `well-fuck-corpus-acquire` command via GitHub Actions. Confirm archive downloads, package hashes, and acquisition artifact readback; then inspect MASC internal notices and MaiChat depositor agreement/README before extraction. Keep source text local/private, update the manifest with verified archive hashes and terms, then freeze a stratified sample and run E0. E1 follows only after E0 passes. Do not modify Cities Laboratory 2.12 during calibration.
 
 **Acquisition update (2026-11-16):** official ANC pages confirm the annotated MASC 3.0.0 download and the separate data-only package. The current GitHub migration release metadata and migration manifest now identify both archives and publish their sizes and SHA-256 digests. The official MASC landing page states CC BY 3.0 US, while the About page says no license or restrictions; until the exact package README and text-level notices are inspected, use the conservative CC BY attribution handling rule. See `MASC_SOURCE_ACQUISITION.md`. The archive download still fails in this execution environment: no archive bytes have been obtained, no local hash or extraction has been performed, and E0/E1 remain unrun. The earlier 2026-11-14 attempts are superseded by this more specific source-identity and integrity-metadata check, but the acquisition blocker remains.
 
