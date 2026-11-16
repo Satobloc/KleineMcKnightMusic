@@ -402,8 +402,8 @@ end
 # ---------- CUMULATIVE COUNTING TOCKS ----------
 # Direct play calls in the main audition thread. No helper-function nesting.
 # Plain tocks are short; decade markers are lower, louder, and longer.
-COUNT_TICK_GAP = 0.12
-COUNT_GROUP_GAP = 0.50
+COUNT_TICK_GAP = 0.04
+COUNT_GROUP_GAP = 0.28
 
 # ---------- RUN ----------
 puts "=============================================="
@@ -421,14 +421,14 @@ LOGO_COUNT.times do |offset|
   sleep LOGO_GAP
   
   puts "COUNT #{logo_number}"
-  use_synth :tri
+  use_synth :pluck
 
   if logo_number < 20
     logo_number.times do |i|
       if i == 9
-        play 43, amp: 1.0, attack: 0.001, sustain: 0.06, release: 0.30
+        play 40, amp: 0.42, attack: 0.001, decay: 0.035, sustain: 0, release: 0.045, coef: 0.82
       else
-        play 55, amp: 0.72, attack: 0.001, sustain: 0.015, release: 0.13
+        play 47, amp: 0.25, attack: 0.001, decay: 0.025, sustain: 0, release: 0.035, coef: 0.76
       end
 
       if i < logo_number - 1
@@ -444,14 +444,14 @@ LOGO_COUNT.times do |offset|
     units = logo_number % 10
 
     tens.times do |i|
-      play 43, amp: 1.0, attack: 0.001, sustain: 0.06, release: 0.30
+      play 40, amp: 0.42, attack: 0.001, decay: 0.035, sustain: 0, release: 0.045, coef: 0.82
       sleep COUNT_TICK_GAP if i < tens - 1
     end
 
     if units > 0
       sleep COUNT_GROUP_GAP
       units.times do |i|
-        play 55, amp: 0.72, attack: 0.001, sustain: 0.015, release: 0.13
+        play 47, amp: 0.25, attack: 0.001, decay: 0.025, sustain: 0, release: 0.035, coef: 0.76
         if i < units - 1
           if (i + 1) % GROUP_SIZE == 0
             sleep COUNT_GROUP_GAP
