@@ -160,3 +160,25 @@ Decide the intended English starting condition and select the smallest useful co
 
 **Next**
 Obtain the annotated archive through a working route, verify its hash and internal notices, inspect the resource headers and genre/document mapping, then freeze the stratified sample manifest. Do not substitute web snippets or invented sample records for corpus data.
+
+
+## WF-LANG-002 — Multi-source reservoir evaluation (progress checkpoint)
+
+**Status:** ACTIVE / candidate selection open  
+**Date:** 2026-11-16  
+**Artifact:** `LANGUAGE_CORPUS_SOURCE_EVALUATION.md`
+
+**Finding**
+MASC 3.0.0 remains useful for its annotations and genre breadth, but should not define contemporary informal English alone. Its public browse catalogue includes dated materials (including a blog item from May 2010), and its 19-genre balance is not equivalent to a sample of everyday current conversation.
+
+**Candidates inspected**
+- MaiChat 1.0: 50 dyadic conversations, 100 participants, 4,975 messages / approximately 33,100 words, collected December 2023–May 2025, released June 2026. The README states CC BY-SA 4.0, requires attribution, and requires derivative datasets to use the same license. Promising recent typed-conversation supplement; small and not topic-annotated.
+- GUM 7.0: 275 documents / approximately 273K tokens across 24 text types, with rough speech-act and rich discourse/syntactic annotation. Source rights vary; Reddit text is not included in the download and must not be treated as corpus text available for redistribution.
+- LANA-CASE: very relevant 2022–2024 everyday conversation at scale, but its posted license limits use to non-commercial research/teaching, prohibits AI training and uploading transcripts to AI services that collect/save data, prohibits redistribution, and prohibits external cloud storage. Excluded from this project workflow absent separate written permission.
+- English Everyday-Conversation ASR dataset: 34,777 clips / about 40 hours, stated CC BY-SA 4.0, combining spontaneous EdAcc benchmark material and scripted DailyTalk. Candidate for a later separate spoken-style stratum, subject to upstream-license and attribution verification.
+
+**Result**
+A provisional multi-source reservoir is preferable to MASC alone: MASC for annotated genre breadth, MaiChat for recent informal interaction, and possibly a separately labelled spoken corpus later. This is a candidate architecture, not a frozen source decision or sample manifest. Source-specific dates remain provenance, not separate historical speaker cohorts.
+
+**Next**
+Acquire and inspect MASC 3.0.0 and MaiChat 1.0 archives; verify their hashes, internal notices, and file structures; then choose source quotas and freeze the sample manifest. No corpus archive has been downloaded or processed in this environment. E0 and E1 remain unrun.
