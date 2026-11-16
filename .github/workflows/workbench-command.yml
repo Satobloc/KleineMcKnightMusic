@@ -8,13 +8,16 @@ permissions:
   contents: read
 
 jobs:
-  run-command:
+  parse-command:
     if: startsWith(github.event.issue.title, '[workbench]') && github.event.issue.user.login == 'Satobloc'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    outputs:
+      command: ${{ steps.parse.outputs.command }}
+      lyrics_chars: ${{ steps.parse.outputs.lyrics_chars }}
+      styles_chars: ${{ steps.parse.outputs.styles_chars }}
+      seed: ${{ steps.parse.outputs.seed }}
     steps:
-      - name: Parse and validate command
-        id: command
+      - id: parse
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
         run: |
@@ -24,74 +27,71 @@ jobs:
           command = payload.get("command")
           if command not in {"hopper-trial", "well-fuck-corpus-acquire"}:
               raise SystemExit("Unsupported command.")
-          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-              f.write(f"command={command}\n")
+          lines = [f"command={command}"]
           if command == "hopper-trial":
               lyrics = int(payload.get("lyrics_chars", 1800))
               styles = int(payload.get("styles_chars", 500))
               if not (1 <= lyrics <= 5000 and 1 <= styles <= 1000):
                   raise SystemExit("Character limits outside allowed range.")
-              seed = payload.get("seed")
-              if seed is not None:
-                  seed = int(seed)
-              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                  f.write(f"lyrics_chars={lyrics}\nstyles_chars={styles}\n")
-                  if seed is not None:
-                      f.write(f"seed={seed}\n")
+              lines.extend([f"lyrics_chars={lyrics}", f"styles_chars={styles}"])
+              if payload.get("seed") is not None:
+                  lines.append(f"seed={int(payload['seed'])}")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write("\n".join(lines) + "\n")
           PY
 
+  run-hopper:
+    needs: parse-command
+    if: needs.parse-command.outputs.command == 'hopper-trial'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
       - name: Check out prototype code
-        if: steps.command.outputs.command == 'hopper-trial'
         uses: actions/checkout@v4
         with:
           ref: prototype/hopper-trial
-
-      - name: Check out main for Well, Fuck. intake
-        if: steps.command.outputs.command == 'well-fuck-corpus-acquire'
-        uses: actions/checkout@v4
-        with:
-          ref: main
-
       - name: Fetch current corpus from main
-        if: steps.command.outputs.command == 'hopper-trial'
         run: |
           git fetch origin main --depth=1
           mkdir -p corpus
           git archive FETCH_HEAD corpus | tar -x
-
-      - name: Acquire and verify Well, Fuck. corpora
-        if: steps.command.outputs.command == 'well-fuck-corpus-acquire'
-        run: |
-          python SIMULATION_WORKDESKS/WELL_FUCK/tools/acquire_language_corpora.py \
-            --manifest SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/source_manifest.json \
-            --out SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming
-
       - name: Run compiler tests
-        if: steps.command.outputs.command == 'hopper-trial'
         run: python -m unittest discover -s tests -p "test_random_hopper_compiler.py" -v
-
       - name: Compile selected music hoppers
-        if: steps.command.outputs.command == 'hopper-trial'
         shell: bash
         run: |
-          args=(--corpus corpus --out hopper_pulls --include-hoppers "Genre_Hopper,Structure_Hopper,Prompt_Hopper,Prompt_Examples_Hopper,Lyrics_Hopper" --lyrics-chars "${{ steps.command.outputs.lyrics_chars }}" --styles-chars "${{ steps.command.outputs.styles_chars }}")
-          if [[ -n "${{ steps.command.outputs.seed }}" ]]; then args+=(--seed "${{ steps.command.outputs.seed }}"); fi
+          args=(--corpus corpus --out hopper_pulls --include-hoppers "Genre_Hopper,Structure_Hopper,Prompt_Hopper,Prompt_Examples_Hopper,Lyrics_Hopper" --lyrics-chars "${{ needs.parse-command.outputs.lyrics_chars }}" --styles-chars "${{ needs.parse-command.outputs.styles_chars }}")
+          if [[ -n "${{ needs.parse-command.outputs.seed }}" ]]; then args+=(--seed "${{ needs.parse-command.outputs.seed }}"); fi
           python SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/tools/random_hopper_compiler.py "${args[@]}"
-
-      - name: Upload Well, Fuck. corpus intake
-        if: steps.command.outputs.command == 'well-fuck-corpus-acquire'
-        uses: actions/upload-artifact@v4
-        with:
-          name: well-fuck-corpus-intake-${{ github.event.issue.number }}-${{ github.run_number }}
-          path: SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming/
-          if-no-files-found: error
-          retention-days: 30
-
       - name: Upload workbench outputs
-        if: steps.command.outputs.command == 'hopper-trial'
         uses: actions/upload-artifact@v4
         with:
           name: workbench-${{ github.event.issue.number }}-${{ github.run_number }}
           path: hopper_pulls/
           if-no-files-found: error
           retention-days: 7
+
+  run-well-fuck-corpus-acquire:
+    needs: parse-command
+    if: needs.parse-command.outputs.command == 'well-fuck-corpus-acquire'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Acquire and verify approved corpus archives
+        run: |
+          python SIMULATION_WORKDESKS/WELL_FUCK/tools/acquire_language_corpora.py \
+            --manifest SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/source_manifest.json \
+            --out SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming
+      - name: Upload Well, Fuck corpus intake
+        uses: actions/upload-artifact@v4
+        with:
+          name: well-fuck-corpus-intake-${{ github.event.issue.number }}-${{ github.run_number }}
+          path: SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming/
+          if-no-files-found: error
+          retention-days: 30
