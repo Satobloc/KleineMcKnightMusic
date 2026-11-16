@@ -12,7 +12,8 @@
 #
 # Run the whole buffer. Note favourites as 01 yes / 02 maybe / etc.
 
-use_bpm 120
+BPM = 120
+use_bpm BPM
 # ---------- SETTINGS ----------
 LIBRARY_ROOT = "D:/HYPERFLIRT"
 LIBRARY_GLOB = "D:/HYPERFLIRT/**"
@@ -33,7 +34,7 @@ puts "Indexed #{LIBRARY_PATHS.length} supported audio files."
 # ---------- RANDOM WHOLE-LIBRARY SAMPLE ENGINE ----------
 define :library_fragment do |amp=0.22, rate_lo=1.8, rate_hi=5.5|
   picked_path = LIBRARY_PATHS.choose
-  source_seconds = sample_duration picked_path
+  source_seconds = (sample_duration picked_path) * (60.0 / BPM)
   speed = rrand(rate_lo, rate_hi)
   target_seconds = rrand(0.075, 0.19)
   width = (target_seconds * speed) / [source_seconds, 0.001].max
