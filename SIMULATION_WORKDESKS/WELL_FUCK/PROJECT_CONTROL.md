@@ -86,6 +86,7 @@ Do not mark a branch complete from intention, a plan, or an unverified claim.
 - English language-change research: ENGLISH_LANGUAGE_CHANGE_RESEARCH.md.
 - Productive-language working proposal: LANGUAGE_MODEL_DESIGN.md.
 - MASC source acquisition, package integrity metadata, and license caution: MASC_SOURCE_ACQUISITION.md.
+- Comparative evaluation of contemporary informal-English corpus candidates: LANGUAGE_CORPUS_SOURCE_EVALUATION.md.
 - Recovered player-facing language conceit and communication goals: LANGUAGE_GAMEPLAY_INTENT.md.
 - Execution and ticker method: WORKFLOW_PROTOCOL.md.
 - Context handoff: SUCCESSION.md.
