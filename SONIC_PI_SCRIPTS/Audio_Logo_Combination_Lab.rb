@@ -23,7 +23,7 @@ SOURCE_PATHS = [
 SAMPLE_AMP = 0.90
 SAMPLE_SUSTAIN = 0.80
 SAMPLE_RELEASE = 0.05
-SOURCE_GAP = 0.75
+SOURCE_GAP = 1.0
 TAKE_GAP = 1.0
 
 puts "Preloading the three identified source files..."
