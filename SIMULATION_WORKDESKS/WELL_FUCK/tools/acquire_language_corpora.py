@@ -1,127 +1,111 @@
 #!/usr/bin/env python3
-"""Download and verify the pinned language-corpus archives for Well, Fuck.
+"""Acquire and verify approved language-corpus archives.
 
-Run from any directory:
-  python acquire_language_corpora.py
+Usage:
+  python SIMULATION_WORKDESKS/WELL_FUCK/tools/acquire_language_corpora.py \
+      --manifest SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/source_manifest.json \
+      --out SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming
 
-Files are stored under:
-  SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming/
-
-The script verifies the exact size and SHA-256 published by the upstream
-ANC migration release. It does not extract archives or redistribute their
-contents. Inspect each archive's README and embedded source notices before
-using its text in derived datasets or publishing anything.
+This utility downloads only entries explicitly marked approved_for_download.
+It preserves archives, verifies byte count and SHA-256, and writes a report.
+It never extracts, transforms, or commits source text.
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
+import os
 import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "corpora" / "incoming"
-
-ASSETS = [
-    {
-        "name": "MASC-3.0.0.zip",
-        "url": "https://github.com/nancyide/anc-website/releases/download/datasets-2026-09-25/MASC-3.0.0.zip",
-        "size": 36_358_521,
-        "sha256": "0b300d96016233c7c79b43559b477a6bb0ed16bb416d5c517eccb108a6228493",
-        "role": "annotated_baseline",
-    },
-    {
-        "name": "MaiChat-1.0.zip",
-        "url": "https://datashare.ed.ac.uk/bitstreams/5e731957-f140-4ce5-b1ed-6877ad3839a7/download",
-        "size": None,  # Release size is recorded in dataset page metadata; compute locally.
-        "sha256": None,  # Verify against the repository's pinned acquisition record when published.
-        "role": "recent_informal_conversation_supplement",
-    },
-]
+from typing import Any
 
 CHUNK = 1024 * 1024
+UA = "WellFuck-CorpusAcquisition/0.2 (+https://github.com/Satobloc/KleineMcKnightMusic)"
 
 
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as stream:
-        for block in iter(lambda: stream.read(CHUNK), b""):
-            digest.update(block)
-    return digest.hexdigest()
+def digest_file(path: Path) -> tuple[int, str]:
+    h = hashlib.sha256()
+    n = 0
+    with path.open("rb") as f:
+        for block in iter(lambda: f.read(CHUNK), b""):
+            n += len(block)
+            h.update(block)
+    return n, h.hexdigest()
 
 
-def download(asset: dict) -> dict:
-    name = asset["name"]
-    url = asset["url"]
-    target = OUT / name
-    partial = target.with_suffix(target.suffix + ".part")
-
+def fetch_one(item: dict[str, Any], out: Path, timeout: int) -> dict[str, Any]:
+    name = str(item["filename"])
+    url = str(item["url"])
+    expected_size = item.get("expected_bytes")
+    expected_hash = item.get("sha256")
+    target = out / name
+    partial = out / (name + ".part")
     if target.exists():
-        current_hash = sha256_file(target)
-        current_size = target.stat().st_size
-        expected_hash = asset["sha256"]
-        expected_size = asset["size"]
-        if (expected_hash is None or current_hash == expected_hash) and (
-            expected_size is None or current_size == expected_size
+        actual_size, actual_hash = digest_file(target)
+        if (expected_size is None or actual_size == expected_size) and (
+            expected_hash is None or actual_hash == expected_hash
         ):
-            return {
-                "name": name, "status": "already_present",
-                "size": current_size, "sha256": current_hash,
-            }
-        target.rename(target.with_suffix(target.suffix + ".unverified"))
+            return {"id": item["id"], "status": "already_verified", "filename": name,
+                    "bytes": actual_size, "sha256": actual_hash}
+        target.rename(out / (name + ".previous-unverified"))
 
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "WellFuck-Language-Corpus-Acquisition/1.0"},
-    )
+    request = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
-        with urllib.request.urlopen(request, timeout=60) as response, partial.open("wb") as output:
+        with urllib.request.urlopen(request, timeout=timeout) as response, partial.open("wb") as dst:
+            final_url = response.geturl()
+            content_type = response.headers.get("Content-Type", "")
+            if "text/html" in content_type.lower():
+                raise ValueError(f"Unexpected HTML response for archive: {content_type}")
             while True:
                 block = response.read(CHUNK)
                 if not block:
                     break
-                output.write(block)
-    except (urllib.error.URLError, TimeoutError, OSError) as exc:
+                dst.write(block)
+    except Exception as exc:
         partial.unlink(missing_ok=True)
-        return {"name": name, "status": "download_failed", "error": str(exc)}
+        return {"id": item["id"], "status": "download_failed", "filename": name,
+                "error": f"{type(exc).__name__}: {exc}"}
 
-    actual_size = partial.stat().st_size
-    actual_hash = sha256_file(partial)
-    if asset["size"] is not None and actual_size != asset["size"]:
+    actual_size, actual_hash = digest_file(partial)
+    if expected_size is not None and actual_size != int(expected_size):
         partial.unlink(missing_ok=True)
-        return {
-            "name": name, "status": "size_mismatch",
-            "expected": asset["size"], "actual": actual_size,
-        }
-    if asset["sha256"] is not None and actual_hash != asset["sha256"]:
+        return {"id": item["id"], "status": "size_mismatch", "filename": name,
+                "expected_bytes": expected_size, "actual_bytes": actual_size}
+    if expected_hash is not None and actual_hash.lower() != str(expected_hash).lower():
         partial.unlink(missing_ok=True)
-        return {
-            "name": name, "status": "sha256_mismatch",
-            "expected": asset["sha256"], "actual": actual_hash,
-        }
-
+        return {"id": item["id"], "status": "sha256_mismatch", "filename": name,
+                "expected_sha256": expected_hash, "actual_sha256": actual_hash}
     partial.replace(target)
-    return {
-        "name": name, "status": "downloaded_and_verified" if asset["sha256"] else "downloaded_hash_recorded",
-        "size": actual_size, "sha256": actual_hash, "role": asset["role"],
-    }
+    return {"id": item["id"], "status": "downloaded_verified" if expected_hash else "downloaded_hash_computed",
+            "filename": name, "bytes": actual_size, "sha256": actual_hash,
+            "final_url": final_url, "content_type": content_type}
 
 
 def main() -> int:
-    OUT.mkdir(parents=True, exist_ok=True)
-    results = [download(asset) for asset in ASSETS]
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--timeout", type=int, default=90)
+    args = parser.parse_args()
+
+    manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
+    assets = [x for x in manifest["assets"] if x.get("approved_for_download") is True]
+    if not assets:
+        parser.error("No assets are marked approved_for_download in the manifest.")
+    args.out.mkdir(parents=True, exist_ok=True)
+    results = [fetch_one(x, args.out, args.timeout) for x in assets]
     report = {
-        "operation": "WF-LANG-002",
-        "script": str(Path(__file__).name),
+        "schema": "well-fuck-corpus-acquisition-report-v1",
+        "manifest": str(args.manifest),
         "results": results,
-        "note": "MaiChat has no pinned SHA-256 yet; its local hash is recorded but must be reconciled against the official archive metadata before use.",
     }
-    report_path = OUT / "acquisition-report.json"
+    report_path = args.out / "acquisition-report.json"
     report_path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
-    return 0 if all(r["status"] in {"downloaded_and_verified", "downloaded_hash_recorded", "already_present"} for r in results) else 1
+    return 0 if all(x["status"] in {"already_verified", "downloaded_verified", "downloaded_hash_computed"} for x in results) else 1
 
 
 if __name__ == "__main__":
