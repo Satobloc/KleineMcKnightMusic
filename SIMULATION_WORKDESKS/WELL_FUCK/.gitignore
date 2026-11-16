@@ -1,0 +1,6 @@
+# Third-party language corpora and derived text are not public repository assets.
+data/corpora/incoming/*
+!data/corpora/incoming/.gitkeep
+data/corpora/extracted/
+data/corpora/processed/
+data/corpora/private/
