@@ -28,23 +28,21 @@ puts "Indexing the Hyperflirt sample library..."
 LIBRARY_PATHS = sample_paths(LIBRARY_GLOB)
 puts "Indexed #{LIBRARY_PATHS.length} supported audio files."
 
-# Sample fragments are targeted by audible duration, not a guessed fraction
-# of the source file. This keeps a 3-minute track and a 0.2-second one-shot
-# in roughly the same logo-sized sonic territory.
+# Sample fragments are time-limited with Sonic Pi's sample envelope rather
+# than by guessing a source-file duration. This also works across the mixed
+# WAV / MP3 / FLAC pool without relying on a file-duration probe.
 # ---------- RANDOM WHOLE-LIBRARY SAMPLE ENGINE ----------
 define :library_fragment do |amp=0.22, rate_lo=1.8, rate_hi=5.5|
   picked_path = LIBRARY_PATHS.choose
-  source_seconds = (sample_duration picked_path) * (60.0 / BPM)
   speed = rrand(rate_lo, rate_hi)
   target_seconds = rrand(0.075, 0.19)
-  width = (target_seconds * speed) / [source_seconds, 0.001].max
-  width = [[width, 0.95].min, 0.001].max
-  head = rrand(0.0, [0.999 - width, 0.0].max)
-  tail = head + width
+  release_beats = target_seconds * BPM / 60.0
+  head = rrand(0.0, 0.88)
   short_name = picked_path.split("/").last
   puts "    library pull: #{short_name} | ~#{target_seconds.round(2)}s | rate #{speed.round(2)}"
   sample picked_path,
-    start: head, finish: tail, rate: speed, amp: amp,
+    start: head, rate: speed, amp: amp,
+    attack: 0.003, sustain: 0, release: release_beats,
     pan: rrand(-0.65, 0.65)
 end
 
