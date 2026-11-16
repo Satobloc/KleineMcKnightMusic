@@ -133,3 +133,22 @@ The earlier related conversation was inspected at source level; the other large 
 - Don't claim Sonic Pi runtime validation unless actually tested.
 - Treat filenames as useful guides, not proof of sonic contents.
 - No further full-library cataloguing unless useful to a concrete creative task.
+
+
+## Workshop resource philosophy and permissions (clarified 2026-11-16)
+
+The user clarified the intended relationship to the repository's heterogeneous source material:
+
+- The user's personal hoppers under `/corpus` are the principal raw-material pool and remain the user's authored/source collections. Treat them as source material to read, draw from, recombine and transform into derived working outputs; do not silently rewrite, reorganize, delete, or replace the originals.
+- GPT-built hoppers are a distinct provenance class. They are assistant/workshop-generated material and may be freely used, remixed, reorganized, extended and used as experimental feedstock. A clearer label such as **Workshop Hoppers** or **Assistant-Generated Hoppers** should distinguish them from the user's personal hoppers.
+- The user authorizes use of the rest of the repository for this work, except the gaming section, which is a separate project and out of scope.
+- The repository is intentionally a heterogeneous data dump in many formats. The goal is to build multiple ways to access, search, extract, compile, transform and recombine it, not to force it into a uniform pristine database. The user may deliberately break or stress-test the machinery.
+- The creative posture is raw-material-first: take available material and jam it into a structure that works, while retaining more unexpected chaos than conventional production practice would usually tolerate.
+
+### Implementation implications
+
+- Keep source material and derived artifacts separate. Prefer read-only source access and write generated pulls, converted samples, chopped audio, analysis outputs and arrangements to separate working/output locations with provenance manifests.
+- Do not assume every file should be normalized or every format should be converted in advance. Build format-specific access adapters as tasks demand.
+- The existing `random_hopper_compiler.py` currently scans every immediate subdirectory under `corpus/` as one undifferentiated pool. Before expanding its use, introduce explicit source/provenance classes or separate input roots so personal hoppers and assistant-generated hoppers can be selected independently or deliberately mixed. Its current text extraction is not an audio-sample engine: binary assets contribute filenames, not audio content.
+- For Sonic Pi, preserve execution correctness while letting source selection, timing, layering, transformation, meter and arrangement remain adventurous. Build sample discovery/selection and arrangement tools around the actual local audio files; do not mistake a filename atlas for an audition.
+- Keep the gaming section out of scope unless the user explicitly reopens that project.
