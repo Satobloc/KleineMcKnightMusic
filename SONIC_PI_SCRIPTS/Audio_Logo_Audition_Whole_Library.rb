@@ -400,56 +400,10 @@ define :audio_logo do |n|
 end
 
 # ---------- CUMULATIVE COUNTING TOCKS ----------
-# One tock per count through 19. The tenth is accented.
-# From 20 onward, each completed decade is represented by one accented TOCK.
+# Direct play calls in the main audition thread. No helper-function nesting.
+# Plain tocks are short; decade markers are lower, louder, and longer.
 COUNT_TICK_GAP = 0.12
 COUNT_GROUP_GAP = 0.50
-
-define :count_tock do |accent=false|
-  use_synth :beep
-  if accent
-    play 43, amp: 0.82, attack: 0.001, sustain: 0.035, release: 0.22
-  else
-    play 55, amp: 0.42, attack: 0.001, sustain: 0.008, release: 0.085
-  end
-end
-
-define :count_sequence do |n|
-  if n < 20
-    n.times do |i|
-      count_tock(i == 9)
-      if i < n - 1
-        if (i + 1) % GROUP_SIZE == 0
-          sleep COUNT_GROUP_GAP
-        else
-          sleep COUNT_TICK_GAP
-        end
-      end
-    end
-  else
-    tens = n / 10
-    units = n % 10
-
-    tens.times do |i|
-      count_tock true
-      sleep COUNT_TICK_GAP if i < tens - 1
-    end
-
-    if units > 0
-      sleep COUNT_GROUP_GAP
-      units.times do |i|
-        count_tock false
-        if i < units - 1
-          if (i + 1) % GROUP_SIZE == 0
-            sleep COUNT_GROUP_GAP
-          else
-            sleep COUNT_TICK_GAP
-          end
-        end
-      end
-    end
-  end
-end
 
 # ---------- RUN ----------
 puts "=============================================="
@@ -466,9 +420,49 @@ LOGO_COUNT.times do |offset|
   audio_logo logo_number
   sleep LOGO_GAP
   
-  count_sequence logo_number
   puts "COUNT #{logo_number}"
-  
+  use_synth :tri
+
+  if logo_number < 20
+    logo_number.times do |i|
+      if i == 9
+        play 43, amp: 1.0, attack: 0.001, sustain: 0.06, release: 0.30
+      else
+        play 55, amp: 0.72, attack: 0.001, sustain: 0.015, release: 0.13
+      end
+
+      if i < logo_number - 1
+        if (i + 1) % GROUP_SIZE == 0
+          sleep COUNT_GROUP_GAP
+        else
+          sleep COUNT_TICK_GAP
+        end
+      end
+    end
+  else
+    tens = logo_number / 10
+    units = logo_number % 10
+
+    tens.times do |i|
+      play 43, amp: 1.0, attack: 0.001, sustain: 0.06, release: 0.30
+      sleep COUNT_TICK_GAP if i < tens - 1
+    end
+
+    if units > 0
+      sleep COUNT_GROUP_GAP
+      units.times do |i|
+        play 55, amp: 0.72, attack: 0.001, sustain: 0.015, release: 0.13
+        if i < units - 1
+          if (i + 1) % GROUP_SIZE == 0
+            sleep COUNT_GROUP_GAP
+          else
+            sleep COUNT_TICK_GAP
+          end
+        end
+      end
+    end
+  end
+
   sleep MARKER_GAP
 end
 
