@@ -2,6 +2,8 @@ name: Well, Fuck. Corpus Acquisition
 
 on:
   workflow_dispatch:
+  issues:
+    types: [opened]
 
 permissions:
   contents: read
@@ -11,7 +13,34 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  validate-issue-command:
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    outputs:
+      valid: ${{ steps.check.outputs.valid }}
+    steps:
+      - id: check
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          python - <<'PY'
+          import json, os
+          if os.environ["ISSUE_AUTHOR"] != "Satobloc":
+              raise SystemExit("Issue command not authorized.")
+          if not os.environ["ISSUE_TITLE"].startswith("[workbench]"):
+              raise SystemExit("Issue title must begin with [workbench].")
+          payload = json.loads(os.environ["ISSUE_BODY"])
+          if payload.get("command") != "well-fuck-corpus-acquire":
+              raise SystemExit("Unsupported command.")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write("valid=true\n")
+          PY
+
   acquire:
+    needs: [validate-issue-command]
+    if: always() && (github.event_name == 'workflow_dispatch' || needs.validate-issue-command.outputs.valid == 'true')
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
