@@ -46,8 +46,13 @@ else
     fragment_finish = fragment_start + 0.35
 
     puts ""
-    puts "SAMPLE #{sample_number}/#{TEST_PATHS.length}"
-    puts "FILE: #{picked_path}"
+    short_name = picked_path.split(/[\\\\\/]/).last
+    puts "=============================================="
+    puts "SAMPLE ID: #{sample_number}"
+    puts "FILENAME: #{short_name}"
+    puts "FULL PATH: #{picked_path}"
+    puts "=============================================="
+    puts "AUDITION: #{sample_number} | #{short_name}"
     puts "Playing an excerpt of up to about 4 seconds at normal speed."
 
     # At 20 BPM, 1.20 beats sustain + 0.10 beats release = 3.9 seconds.
@@ -63,7 +68,7 @@ else
     # Let the excerpt finish before the counter begins.
     sleep SAMPLE_WAIT
 
-    puts "COUNT #{sample_number}"
+    puts "TOCKER #{sample_number}"
     use_synth :pluck
 
     sample_number.times do |i|
@@ -89,5 +94,6 @@ else
 
   puts ""
   puts "CHARACTER SURVEY COMPLETE."
+  puts "For favourites, note SAMPLE ID and FILENAME from the log."
   puts "Scheduled #{TEST_PATHS.length} distinct file samples."
 end
