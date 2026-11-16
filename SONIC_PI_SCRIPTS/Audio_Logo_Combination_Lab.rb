@@ -1,175 +1,166 @@
 # HYPERFLIRT AUDIO LOGO COMBINATION LAB
 # Sonic Pi 4.5 / Sonic Pi 4.x
 #
-# Three source recordings are layered and treated as one short audio mark.
-# This first prototype chooses a fresh trio from the library and prints
-# the exact paths. Replace SOURCE_PATHS with three quoted paths from a
-# favourite survey run when you want to pin those exact recordings.
+# Revision 2: source-identifiable, deliberately contrasting treatments.
+# Uses the exact three files from the previous run log, in fixed order.
+# First hear each source alone, then hear three treatments built from
+# the same trio. This makes it possible to identify what is doing what.
 #
-# Three treatments use the SAME trio:
-# 1. BRIGHT LIFT  - blended texture + rising major-colour motif
-# 2. POP START    - punchier, more percussive, slightly dirtier
-# 3. THE WINK     - echo articulation + a quick high-note flourish
+# The three survey favourites (sample numbers 3, 4, 10) are NOT assumed
+# to be these three files. Their paths were not present in the log supplied.
 #
-# Preloads only the three selected files. No whole-library random pulls.
+# All source fragments are preloaded before playback.
 
 BPM = 20
 use_bpm BPM
 
-LIBRARY_GLOB = "D:/HYPERFLIRT/**"
+SOURCE_PATHS = [
+  "D:/HYPERFLIRT/SAMPLES/MELODIC SAMPLES/WORLD/chinese-traditional-3.wav",
+  "D:/HYPERFLIRT/my TRACS (old)/TABLA_PERFORMANCE_1.wav",
+  "D:/HYPERFLIRT/2pop_song_skeleton_glithcy_v2.wav"
+]
 
-# To pin exact favourites, replace nil with three full file paths:
-# SOURCE_PATHS = [
-#   "D:/HYPERFLIRT/favourite_one.wav",
-#   "D:/HYPERFLIRT/favourite_two.wav",
-#   "D:/HYPERFLIRT/favourite_three.wav"
-# ]
-SOURCE_PATHS = nil
+SAMPLE_AMP = 0.90
+SAMPLE_SUSTAIN = 0.80
+SAMPLE_RELEASE = 0.05
+SOURCE_GAP = 0.75
+TAKE_GAP = 1.0
 
-SAMPLE_AMP = 0.82
-SAMPLE_SUSTAIN = 0.48
-SAMPLE_RELEASE = 0.04
-SAMPLE_WAIT = 0.62
+puts "Preloading the three identified source files..."
+SOURCE_PATHS.each_with_index do |path, i|
+  puts "SOURCE #{i + 1}: #{path}"
+end
+load_samples SOURCE_PATHS
+sleep 2
+puts "Preload complete."
 
-puts "Indexing Hyperflirt library..."
-LIBRARY_PATHS = sample_paths(LIBRARY_GLOB)
-puts "Indexed #{LIBRARY_PATHS.length} supported files."
+# Use fixed, distinct excerpt positions so comparisons are repeatable.
+SOURCE_STARTS = [0.18, 0.32, 0.12]
+SOURCE_FINISHES = [0.58, 0.72, 0.52]
 
- $source_paths_for_lab = SOURCE_PATHS
+define :play_source do |index, amp=0.90, rate=1|
+  sample SOURCE_PATHS[index],
+    start: SOURCE_STARTS[index],
+    finish: SOURCE_FINISHES[index],
+    rate: rate,
+    amp: amp,
+    attack: 0.01,
+    sustain: SAMPLE_SUSTAIN,
+    release: SAMPLE_RELEASE
+end
 
-if $source_paths_for_lab.nil?
-  if LIBRARY_PATHS.length < 3
-    puts "ERROR: Need at least three supported files."
-  else
-    $source_paths_for_lab = LIBRARY_PATHS.shuffle.take(3)
+define :play_source_blend do |amp_scale=1.0|
+  # Small stagger creates a three-part composite instead of a single
+  # transient pile-up. Each source remains independently identifiable.
+  play_source 0, 0.72 * amp_scale
+  sleep 0.10
+  play_source 1, 0.72 * amp_scale
+  sleep 0.10
+  play_source 2, 0.68 * amp_scale
+end
+
+define :start_signature do
+  # A clear, upbeat "start" gesture: short low pop, then rising major
+  # pentatonic notes. The synth is deliberately brief and secondary.
+  use_synth :pluck
+  play 60, amp: 0.30, attack: 0.001, decay: 0.045, sustain: 0, release: 0.05
+  sleep 0.10
+  use_synth :pretty_bell
+  play 72, amp: 0.20, attack: 0.003, sustain: 0.01, release: 0.16
+  sleep 0.10
+  play 76, amp: 0.20, attack: 0.003, sustain: 0.01, release: 0.16
+  sleep 0.10
+  play 79, amp: 0.22, attack: 0.003, sustain: 0.01, release: 0.18
+  sleep 0.10
+  play 84, amp: 0.25, attack: 0.003, sustain: 0.01, release: 0.24
+end
+
+define :wink_signature do
+  use_synth :pretty_bell
+  play 91, amp: 0.22, attack: 0.002, sustain: 0.005, release: 0.08
+  sleep 0.07
+  play 96, amp: 0.25, attack: 0.002, sustain: 0.005, release: 0.10
+  sleep 0.09
+  play 100, amp: 0.20, attack: 0.002, sustain: 0.005, release: 0.24
+end
+
+# ------------------------------------------------------------
+# PART A: IDENTIFY THE RAW MATERIAL
+# Each file plays alone, with no effects and no synths.
+# ------------------------------------------------------------
+puts ""
+puts "PART A | RAW SOURCES, ONE AT A TIME"
+
+puts "SOURCE 1 SOLO | CHINESE TRADITIONAL"
+play_source 0, 0.95
+sleep SOURCE_GAP
+
+puts "SOURCE 2 SOLO | TABLA PERFORMANCE"
+play_source 1, 0.95
+sleep SOURCE_GAP
+
+puts "SOURCE 3 SOLO | POP SONG SKELETON GLITCHY"
+play_source 2, 0.95
+sleep TAKE_GAP
+
+# ------------------------------------------------------------
+# PART B: COMBINE WITHOUT EFFECTS
+# Baseline lets the ear hear the blend before processing.
+# ------------------------------------------------------------
+puts ""
+puts "TAKE 1 | DRY THREE-SOURCE BLEND"
+play_source_blend 0.85
+sleep 0.95
+start_signature
+sleep TAKE_GAP
+
+# ------------------------------------------------------------
+# PART C: THREE CLEARLY DIFFERENT EFFECT TREATMENTS
+# ------------------------------------------------------------
+
+# TAKE 2: RADIO / CUT-THROUGH
+# Strong high-pass + audible bit reduction. Deliberately narrow,
+# bright and slightly crunchy, like a little electronic chirp.
+puts ""
+puts "TAKE 2 | RADIO SPARK"
+with_fx :hpf, cutoff: 78, mix: 1.0 do
+  with_fx :bitcrusher, bits: 8, sample_rate: 12000, mix: 0.72 do
+    play_source_blend 0.82
+  end
+end
+sleep 0.80
+start_signature
+sleep TAKE_GAP
+
+# TAKE 3: BIG, ROUND, BOUNCY
+# Low-pass softens the edges; distortion adds body; short echo
+# creates a bouncing tail rather than a long wash.
+puts ""
+puts "TAKE 3 | BOUNCE / POP"
+with_fx :lpf, cutoff: 105, mix: 0.72 do
+  with_fx :distortion, distort: 0.28, mix: 0.55 do
+    with_fx :echo, phase: 0.10, decay: 0.30, mix: 0.28 do
+      play_source_blend 0.72
+    end
+  end
+end
+sleep 0.80
+start_signature
+sleep TAKE_GAP
+
+# TAKE 4: GLASSY WINK
+# Stronger echo and reverb turn the same attacks into a bright,
+# spatial, smiling tail. High notes arrive only after the blend.
+puts ""
+puts "TAKE 4 | GLASS WINK"
+with_fx :reverb, room: 0.72, mix: 0.42 do
+  with_fx :echo, phase: 0.14, decay: 0.58, mix: 0.42 do
+    play_source_blend 0.72
+    sleep 0.22
+    wink_signature
   end
 end
 
-if $source_paths_for_lab.nil? || $source_paths_for_lab.length != 3
-  puts "ERROR: SOURCE_PATHS must contain exactly three file paths."
-else
-  puts ""
-  puts "COMBINATION SOURCES:"
-   $source_paths_for_lab.each_with_index do |path, i|
-    puts "SOURCE #{i + 1}: #{path}"
-  end
-
-  puts "Preloading the three sources..."
-  load_samples $source_paths_for_lab
-  sleep 2
-  puts "Ready."
-
-  # Select a different excerpt point for each source, but reuse those
-  # positions in all three treatments for a fair A/B/C comparison.
-  $source_starts_for_lab = [rrand(0.05, 0.45), rrand(0.05, 0.45), rrand(0.05, 0.45)]
-
-  define :play_source do |index, amp=0.82, rate=1|
-    sample $source_paths_for_lab[index],
-      start: $source_starts_for_lab[index],
-      finish: $source_starts_for_lab[index] + 0.30,
-      rate: rate,
-      amp: amp,
-      attack: 0.01,
-      sustain: SAMPLE_SUSTAIN,
-      release: SAMPLE_RELEASE
-  end
-
-  define :bright_motif do
-    use_synth :pretty_bell
-    play 72, amp: 0.19, attack: 0.005, sustain: 0.02, release: 0.22
-    sleep 0.07
-    play 76, amp: 0.19, attack: 0.005, sustain: 0.02, release: 0.22
-    sleep 0.07
-    play 79, amp: 0.21, attack: 0.005, sustain: 0.02, release: 0.24
-    sleep 0.07
-    play 84, amp: 0.23, attack: 0.005, sustain: 0.02, release: 0.30
-    sleep 0.10
-    play 91, amp: 0.18, attack: 0.003, sustain: 0.01, release: 0.34
-  end
-
-  define :wink_motif do
-    use_synth :pretty_bell
-    play 91, amp: 0.20, attack: 0.002, sustain: 0.01, release: 0.10
-    sleep 0.06
-    play 96, amp: 0.24, attack: 0.002, sustain: 0.01, release: 0.12
-    sleep 0.08
-    play 100, amp: 0.17, attack: 0.002, sustain: 0.01, release: 0.32
-  end
-
-  # ------------------------------------------------------------
-  # TAKE 1: BRIGHT LIFT
-  # The three recordings overlap. One stays relatively natural,
-  # one is filtered and echoed, one gets a little digital sparkle.
-  # ------------------------------------------------------------
-  puts ""
-  puts "TAKE 1 | BRIGHT LIFT"
-  with_fx :reverb, room: 0.62, mix: 0.24 do
-    play_source 0, 0.78
-    sleep 0.06
-    with_fx :echo, phase: 0.12, decay: 0.42, mix: 0.20 do
-      with_fx :lpf, cutoff: 112 do
-        play_source 1, 0.70
-      end
-    end
-    sleep 0.06
-    with_fx :bitcrusher, bits: 10, sample_rate: 18000, mix: 0.18 do
-      play_source 2, 0.64
-    end
-    sleep 0.18
-    bright_motif
-  end
-  sleep SAMPLE_WAIT
-
-  # ------------------------------------------------------------
-  # TAKE 2: POP START
-  # More attack and grit, with a compact rising signal.
-  # ------------------------------------------------------------
-  puts ""
-  puts "TAKE 2 | POP START"
-  with_fx :reverb, room: 0.38, mix: 0.14 do
-    with_fx :distortion, distort: 0.16, mix: 0.18 do
-      play_source 0, 0.82
-    end
-    sleep 0.05
-    with_fx :hpf, cutoff: 72 do
-      with_fx :echo, phase: 0.09, decay: 0.28, mix: 0.14 do
-        play_source 1, 0.72
-      end
-    end
-    sleep 0.05
-    play_source 2, 0.62, 1.15
-    sleep 0.18
-    use_synth :pluck
-    play 60, amp: 0.22, attack: 0.001, decay: 0.04, sustain: 0, release: 0.05
-    sleep 0.08
-    bright_motif
-  end
-  sleep SAMPLE_WAIT
-
-  # ------------------------------------------------------------
-  # TAKE 3: THE WINK
-  # The source blend is softened, then the high transient is
-  # repeated by echo. The final notes act like a little signature.
-  # ------------------------------------------------------------
-  puts ""
-  puts "TAKE 3 | THE WINK"
-  with_fx :reverb, room: 0.72, mix: 0.25 do
-    with_fx :echo, phase: 0.16, decay: 0.55, mix: 0.24 do
-      play_source 0, 0.66
-      sleep 0.07
-      with_fx :lpf, cutoff: 96 do
-        play_source 1, 0.70
-      end
-      sleep 0.07
-      with_fx :bitcrusher, bits: 12, sample_rate: 22000, mix: 0.12 do
-        play_source 2, 0.58
-      end
-      sleep 0.22
-      wink_motif
-    end
-  end
-
-  puts ""
-  puts "COMBINATION LAB COMPLETE."
-  puts "Same three recordings, three different treatments."
-end
+puts ""
+puts "COMBINATION LAB COMPLETE."
+puts "The log names every source and every treatment."
