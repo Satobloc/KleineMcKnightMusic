@@ -2,57 +2,47 @@
 # Sonic Pi 4.5 / Sonic Pi 4.x
 #
 # 30 short audio-logo experiments.
-# Every logo draws RANDOM audio fragments from the entire D:/HYPERFLIRT
-# library, not just the SAMPLES folder, then combines them with synths
-# and effects. Four high TICKS, then one low TOCK, mark each group of five.
+# Every logo draws random fragments from the entire D:/HYPERFLIRT library,
+# then combines them with synths and effects. Four high TICKS, then one low
+# TOCK, mark each group of five.
 #
-# Based on Hyperflirt_Audio_Atlas.csv:
-#   1,270 catalogued files
-#   601 WAV + 476 MP3 + 112 FLAC = 1,189 Sonic Pi-supported files
-#   81 M4A files are omitted because Sonic Pi's sample-pack index does not
-#   list M4A as a supported format.
+# The sample list is obtained from Sonic Pi itself with sample_paths.
+# This avoids a guessed file count or hard-coded index range.
+# Sonic Pi's recursive sample-path cache makes later runs faster.
 #
-# Sonic Pi supports recursive sample-pack sources with /** and integer
-# indexing. The first run may take a moment while Sonic Pi indexes the pool.
-#
-# CHANGE LIBRARY_ROOT if your library is elsewhere.
-# SAMPLE_INDEX_MAX is based on the current atlas; adjust if your library changes.
-#
-# This is an exploratory sampler: it intentionally pulls from full tracks,
-# sound effects, single hits, loops, recordings and samples. It uses tiny,
-# sped-up fragments so full songs become raw sonic material.
-#
-# Run the whole buffer. Log entries identify logo number and sample indices.
-# Note favourites as 01 yes / 02 maybe / etc.
+# Run the whole buffer. Note favourites as 01 yes / 02 maybe / etc.
 
 use_bpm 120
-use_random_seed 161116
-
 # ---------- SETTINGS ----------
 LIBRARY_ROOT = "D:/HYPERFLIRT"
 LIBRARY_GLOB = "D:/HYPERFLIRT/**"
-SAMPLE_INDEX_MAX = 1188
 LOGO_COUNT = 30
 GROUP_SIZE = 5
 LOGO_GAP = 0.48
 MARKER_GAP = 0.22
 
-# Sample fragments: narrow windows + accelerated playback keep long files brief.
-# The window is a fraction of the source file, not seconds.
-WINDOW_MIN = 0.0015
-WINDOW_MAX = 0.0045
-RATE_MIN = 3.0
-RATE_MAX = 8.0
+# Ask Sonic Pi for the actual recursive file list. This is the authoritative
+# candidate pool for this installation, not an atlas-derived estimate.
+puts "Indexing the Hyperflirt sample library..."
+LIBRARY_PATHS = sample_paths(LIBRARY_GLOB)
+puts "Indexed #{LIBRARY_PATHS.length} supported audio files."
 
+# Sample fragments are targeted by audible duration, not a guessed fraction
+# of the source file. This keeps a 3-minute track and a 0.2-second one-shot
+# in roughly the same logo-sized sonic territory.
 # ---------- RANDOM WHOLE-LIBRARY SAMPLE ENGINE ----------
 define :library_fragment do |amp=0.22, rate_lo=1.8, rate_hi=5.5|
-  pick = rrand_i(0, SAMPLE_INDEX_MAX)
-  head = rrand(0.0, 0.94)
-  width = rrand(WINDOW_MIN, WINDOW_MAX)
-  tail = [head + width, 0.999].min
+  picked_path = LIBRARY_PATHS.choose
+  source_seconds = sample_duration picked_path
   speed = rrand(rate_lo, rate_hi)
-  puts "    library pull: index #{pick} | start #{head.round(3)} | rate #{speed.round(2)}"
-  sample LIBRARY_GLOB, pick,
+  target_seconds = rrand(0.075, 0.19)
+  width = (target_seconds * speed) / [source_seconds, 0.001].max
+  width = [[width, 0.95].min, 0.001].max
+  head = rrand(0.0, [0.999 - width, 0.0].max)
+  tail = head + width
+  short_name = picked_path.split("/").last
+  puts "    library pull: #{short_name} | ~#{target_seconds.round(2)}s | rate #{speed.round(2)}"
+  sample picked_path,
     start: head, finish: tail, rate: speed, amp: amp,
     pan: rrand(-0.65, 0.65)
 end
@@ -77,7 +67,7 @@ define :audio_logo do |n|
     puts "01 | GLASS COMET"
     with_fx :reverb, room: 0.78, mix: 0.32 do
       with_fx :echo, phase: 0.10, decay: 0.38, mix: 0.20 do
-        in_thread { library_fragment 0.18 }
+        library_fragment 0.18
         spark [76, 83, 88], :pretty_bell, 0.30, 0.48
         sleep 0.12
         spark 96, :pretty_bell, 0.23, 0.45
@@ -98,7 +88,7 @@ define :audio_logo do |n|
   when 3
     puts "03 | PRISM LIFT"
     with_fx :reverb, room: 0.82, mix: 0.34 do
-      in_thread { library_fragment 0.15, 2.8, 6.0 }
+      library_fragment 0.15, 2.8, 6.0
       spark 72, :sine, 0.24, 0.20
       sleep 0.08
       spark 79, :sine, 0.23, 0.20
@@ -131,7 +121,7 @@ define :audio_logo do |n|
     puts "06 | BOOT SEQUENCE"
     with_fx :bitcrusher, bits: 8, sample_rate: 12000, mix: 0.22 do
       with_fx :reverb, room: 0.35, mix: 0.12 do
-        in_thread { library_fragment 0.18, 3.0, 6.0 }
+        library_fragment 0.18, 3.0, 6.0
         spark 48, :fm, 0.25, 0.18
         sleep 0.10
         spark 72, :fm, 0.23, 0.16
@@ -154,7 +144,7 @@ define :audio_logo do |n|
   when 8
     puts "08 | SOFT CIRCUIT"
     with_fx :reverb, room: 0.55, mix: 0.2 do
-      in_thread { library_fragment 0.16 }
+      library_fragment 0.16
       spark 60, :sine, 0.24, 0.15
       sleep 0.09
       spark 72, :sine, 0.23, 0.15
@@ -175,7 +165,7 @@ define :audio_logo do |n|
     puts "10 | NEON DOOR"
     with_fx :reverb, room: 0.65, mix: 0.22 do
       with_fx :distortion, distort: 0.12, mix: 0.15 do
-        in_thread { library_fragment 0.20, 2.2, 4.5 }
+        library_fragment 0.20, 2.2, 4.5
         spark 52, :dsaw, 0.22, 0.20
         sleep 0.12
         spark [76, 83, 91], :pretty_bell, 0.23, 0.42
@@ -195,7 +185,7 @@ define :audio_logo do |n|
   when 12
     puts "12 | THUMBPRINT"
     with_fx :reverb, room: 0.5, mix: 0.2 do
-      in_thread { library_fragment 0.17 }
+      library_fragment 0.17
       spark 67, :pluck, 0.30, 0.20
       sleep 0.11
       spark 74, :pluck, 0.26, 0.20
@@ -221,7 +211,7 @@ define :audio_logo do |n|
   when 15
     puts "15 | AUT HARP AURORA"
     with_fx :reverb, room: 0.78, mix: 0.32 do
-      in_thread { library_fragment 0.17 }
+      library_fragment 0.17
       spark [67, 74, 79, 86], :pretty_bell, 0.21, 0.58
       sleep 0.09
       spark 98, :pretty_bell, 0.20, 0.48
@@ -239,7 +229,7 @@ define :audio_logo do |n|
   when 17
     puts "17 | RUBBER COMET"
     with_fx :echo, phase: 0.09, decay: 0.28, mix: 0.2 do
-      in_thread { library_fragment 0.15 }
+      library_fragment 0.15
       spark 55, :tb303, 0.18, 0.13
       sleep 0.08
       spark 79, :tb303, 0.17, 0.13
@@ -258,7 +248,7 @@ define :audio_logo do |n|
     puts "19 | LIQUID METAL"
     with_fx :reverb, room: 0.6, mix: 0.22 do
       with_fx :echo, phase: 0.10, decay: 0.34, mix: 0.2 do
-        in_thread { library_fragment 0.16, 2.8, 6.0 }
+        library_fragment 0.16, 2.8, 6.0
         spark 64, :fm, 0.21, 0.11
         sleep 0.07
         spark 83, :fm, 0.20, 0.11
@@ -278,7 +268,7 @@ define :audio_logo do |n|
   when 21
     puts "21 | BRASS AND GLASS"
     with_fx :reverb, room: 0.72, mix: 0.28 do
-      in_thread { library_fragment 0.16 }
+      library_fragment 0.16
       spark 60, :prophet, 0.18, 0.15
       sleep 0.12
       spark [72, 79, 84], :pretty_bell, 0.24, 0.48
@@ -296,7 +286,7 @@ define :audio_logo do |n|
   when 23
     puts "23 | CELESTIAL STAMP"
     with_fx :reverb, room: 0.9, mix: 0.34 do
-      in_thread { library_fragment 0.16 }
+      library_fragment 0.16
       spark 72, :sine, 0.17, 0.22
       sleep 0.12
       spark 84, :pretty_bell, 0.26, 0.46
@@ -317,7 +307,7 @@ define :audio_logo do |n|
     puts "25 | RIBBON FINISH"
     with_fx :echo, phase: 0.105, decay: 0.38, mix: 0.2 do
       with_fx :reverb, room: 0.8, mix: 0.28 do
-        in_thread { library_fragment 0.16 }
+        library_fragment 0.16
         spark 76, :tri, 0.20, 0.13
         sleep 0.08
         spark 83, :tri, 0.20, 0.13
@@ -339,7 +329,7 @@ define :audio_logo do |n|
   when 27
     puts "27 | CHIME AND CIRCUIT"
     with_fx :echo, phase: 0.08, decay: 0.3, mix: 0.2 do
-      in_thread { library_fragment 0.16 }
+      library_fragment 0.16
       spark 96, :pulse, 0.17, 0.09
       sleep 0.10
       spark 88, :pretty_bell, 0.24, 0.42
@@ -359,7 +349,7 @@ define :audio_logo do |n|
   when 29
     puts "29 | CHORDAL SPARK"
     with_fx :reverb, room: 0.9, mix: 0.36 do
-      in_thread { library_fragment 0.15 }
+      library_fragment 0.15
       spark [72, 79, 84, 91], :pretty_bell, 0.18, 0.58
       sleep 0.08
       spark 100, :pretty_bell, 0.19, 0.48
@@ -369,7 +359,7 @@ define :audio_logo do |n|
     puts "30 | THE SIGNATURE"
     with_fx :reverb, room: 0.8, mix: 0.28 do
       with_fx :echo, phase: 0.09, decay: 0.34, mix: 0.18 do
-        in_thread { library_fragment 0.18, 2.5, 5.5 }
+        library_fragment 0.18, 2.5, 5.5
         spark 72, :fm, 0.17, 0.12
         sleep 0.09
         spark 79, :fm, 0.17, 0.12
@@ -400,7 +390,7 @@ puts "=============================================="
 puts "WHOLE-LIBRARY AUDIO LOGO AUDITION"
 puts "30 designs | six groups | four TICKS then TOCK"
 puts "Library: #{LIBRARY_GLOB}"
-puts "Index range: 0..#{SAMPLE_INDEX_MAX}"
+puts "Indexed sample count: #{LIBRARY_PATHS.length}"
 puts "First run may take time while Sonic Pi indexes files."
 puts "=============================================="
 
