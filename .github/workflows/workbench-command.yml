@@ -25,7 +25,7 @@ jobs:
           if command not in {"hopper-trial", "well-fuck-corpus-acquire"}:
               raise SystemExit("Unsupported command.")
           with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-              f.write(f"command={command}\\n")
+              f.write(f"command={command}\n")
           if command == "hopper-trial":
               lyrics = int(payload.get("lyrics_chars", 1800))
               styles = int(payload.get("styles_chars", 500))
@@ -35,9 +35,9 @@ jobs:
               if seed is not None:
                   seed = int(seed)
               with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-                  f.write(f"lyrics_chars={lyrics}\\nstyles_chars={styles}\\n")
+                  f.write(f"lyrics_chars={lyrics}\nstyles_chars={styles}\n")
                   if seed is not None:
-                      f.write(f"seed={seed}\\n")
+                      f.write(f"seed={seed}\n")
           PY
 
       - name: Check out prototype code
