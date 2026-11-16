@@ -1,15 +1,16 @@
-# HYPERFLIRT AUDIO LOGO COMBINATION LAB
+# HYPERFLIRT AUDIO LOGO BLENDING LAB
 # Sonic Pi 4.5 / Sonic Pi 4.x
 #
-# Revision 2: source-identifiable, deliberately contrasting treatments.
-# Uses the exact three files from the previous run log, in fixed order.
-# First hear each source alone, then hear three treatments built from
-# the same trio. This makes it possible to identify what is doing what.
+# The previous lab staggered sources and added a separate synth motif.
+# This version tests actual composite blending: all three source samples
+# begin together, overlap for several seconds, and occupy different
+# spectral / textural roles. No melody is added over the top.
 #
-# The three survey favourites (sample numbers 3, 4, 10) are NOT assumed
-# to be these three files. Their paths were not present in the log supplied.
+# Uses the three paths from the previous run log. These are NOT yet the
+# user's remembered survey favourites 3, 4, and 10.
 #
-# All source fragments are preloaded before playback.
+# Each take uses the same source positions for fair comparison.
+# Preload before playback. Tocker marks every take.
 
 BPM = 20
 use_bpm BPM
@@ -20,37 +21,36 @@ SOURCE_PATHS = [
   "D:/HYPERFLIRT/2pop_song_skeleton_glithcy_v2.wav"
 ]
 
-SAMPLE_AMP = 0.90
-SAMPLE_SUSTAIN = 0.80
-SAMPLE_RELEASE = 0.05
-SOURCE_GAP = 1.0
-TAKE_GAP = 1.0
+SOURCE_STARTS = [0.18, 0.32, 0.12]
+SOURCE_FINISHES = [0.58, 0.72, 0.52]
 
-puts "Preloading the three identified source files..."
+SAMPLE_SUSTAIN = 0.80
+SAMPLE_RELEASE = 0.10
+BLEND_WAIT = 1.10
+TAKE_GAP = 0.50
+
+puts "Preloading three source files..."
 SOURCE_PATHS.each_with_index do |path, i|
-  puts "SOURCE #{i + 1}: #{path}"
+  puts "SOURCE #{i + 1}: #{path.split("/").last}"
+  puts "PATH #{i + 1}: #{path}"
 end
 load_samples SOURCE_PATHS
 sleep 2
 puts "Preload complete."
 
-# Use fixed, distinct excerpt positions so comparisons are repeatable.
-SOURCE_STARTS = [0.18, 0.32, 0.12]
-SOURCE_FINISHES = [0.58, 0.72, 0.52]
-
-define :play_source do |index, amp=0.90, rate=1|
+define :play_source do |index, amp=0.60, rate=1, attack_time=0.03|
   sample SOURCE_PATHS[index],
     start: SOURCE_STARTS[index],
     finish: SOURCE_FINISHES[index],
     rate: rate,
     amp: amp,
-    attack: 0.01,
+    attack: attack_time,
     sustain: SAMPLE_SUSTAIN,
     release: SAMPLE_RELEASE
 end
 
-
-# The familiar cumulative wooden tocker, restored between every section.
+# The tocker: cumulative count, with the tenth and completed decades
+# accented. Kept outside the sample/effect stack.
 define :play_tocker do |count|
   use_synth :pluck
   count.times do |i|
@@ -72,125 +72,66 @@ define :play_tocker do |count|
   sleep 0.30
 end
 
-define :play_source_blend do |amp_scale=1.0|
-  # Small stagger creates a three-part composite instead of a single
-  # transient pile-up. Each source remains independently identifiable.
-  play_source 0, 0.72 * amp_scale
-  sleep 0.10
-  play_source 1, 0.72 * amp_scale
-  sleep 0.10
-  play_source 2, 0.68 * amp_scale
-end
-
-define :start_signature do
-  # A clear, upbeat "start" gesture: short low pop, then rising major
-  # pentatonic notes. The synth is deliberately brief and secondary.
-  use_synth :pluck
-  play 60, amp: 0.30, attack: 0.001, decay: 0.045, sustain: 0, release: 0.05
-  sleep 0.10
-  use_synth :pretty_bell
-  play 72, amp: 0.20, attack: 0.003, sustain: 0.01, release: 0.16
-  sleep 0.10
-  play 76, amp: 0.20, attack: 0.003, sustain: 0.01, release: 0.16
-  sleep 0.10
-  play 79, amp: 0.22, attack: 0.003, sustain: 0.01, release: 0.18
-  sleep 0.10
-  play 84, amp: 0.25, attack: 0.003, sustain: 0.01, release: 0.24
-end
-
-define :wink_signature do
-  use_synth :pretty_bell
-  play 91, amp: 0.22, attack: 0.002, sustain: 0.005, release: 0.08
-  sleep 0.07
-  play 96, amp: 0.25, attack: 0.002, sustain: 0.005, release: 0.10
-  sleep 0.09
-  play 100, amp: 0.20, attack: 0.002, sustain: 0.005, release: 0.24
-end
-
 # ------------------------------------------------------------
-# PART A: IDENTIFY THE RAW MATERIAL
-# Each file plays alone, with no effects and no synths.
+# TAKE 1: TRUE SIMULTANEOUS STACK
+# All three samples are triggered at the same moment, not in sequence.
+# A shared reverb bus gives them one acoustic space.
 # ------------------------------------------------------------
 puts ""
-puts "PART A | RAW SOURCES, ONE AT A TIME"
-
-puts "SOURCE 1 SOLO | CHINESE TRADITIONAL"
-play_source 0, 0.95
-sleep SOURCE_GAP
+puts "TAKE 1 | SIMULTANEOUS STACK"
+with_fx :reverb, room: 0.58, mix: 0.22 do
+  play_source 0, 0.48, 1.0, 0.06
+  play_source 1, 0.48, 1.0, 0.06
+  play_source 2, 0.42, 1.0, 0.06
+  sleep BLEND_WAIT
+end
+sleep TAKE_GAP
 play_tocker 1
 
-puts "SOURCE 2 SOLO | TABLA PERFORMANCE"
-play_source 1, 0.95
-sleep SOURCE_GAP
+# ------------------------------------------------------------
+# TAKE 2: FREQUENCY-CARVED BLEND
+# Same onset, but each source gets a different spectral job:
+# source 1 supplies body, source 2 supplies upper percussion,
+# source 3 supplies a bright, grainy edge. Shared room glues them.
+# ------------------------------------------------------------
+puts ""
+puts "TAKE 2 | FREQUENCY-CARVED BLEND"
+with_fx :reverb, room: 0.52, mix: 0.25 do
+  with_fx :lpf, cutoff: 78, mix: 1.0 do
+    play_source 0, 0.66, 0.82, 0.08
+  end
+  with_fx :hpf, cutoff: 76, mix: 1.0 do
+    play_source 1, 0.58, 1.0, 0.08
+  end
+  with_fx :bitcrusher, bits: 10, sample_rate: 16000, mix: 0.34 do
+    play_source 2, 0.48, 1.08, 0.08
+  end
+  sleep BLEND_WAIT
+end
+sleep TAKE_GAP
 play_tocker 2
 
-puts "SOURCE 3 SOLO | POP SONG SKELETON GLITCHY"
-play_source 2, 0.95
-sleep TAKE_GAP
-play_tocker 3
-
 # ------------------------------------------------------------
-# PART B: COMBINE WITHOUT EFFECTS
-# Baseline lets the ear hear the blend before processing.
+# TAKE 3: MELT / GLUE
+# All three start together and pass through a common saturation,
+# echo and reverb chain. Slightly different rates blur their edges.
+# This is the most transformed treatment.
 # ------------------------------------------------------------
 puts ""
-puts "TAKE 1 | DRY THREE-SOURCE BLEND"
-play_source_blend 0.85
-sleep 0.95
-start_signature
-sleep TAKE_GAP
-play_tocker 4
-
-# ------------------------------------------------------------
-# PART C: THREE CLEARLY DIFFERENT EFFECT TREATMENTS
-# ------------------------------------------------------------
-
-# TAKE 2: RADIO / CUT-THROUGH
-# Strong high-pass + audible bit reduction. Deliberately narrow,
-# bright and slightly crunchy, like a little electronic chirp.
-puts ""
-puts "TAKE 2 | RADIO SPARK"
-with_fx :hpf, cutoff: 78, mix: 1.0 do
-  with_fx :bitcrusher, bits: 8, sample_rate: 12000, mix: 0.72 do
-    play_source_blend 0.82
-  end
-end
-sleep 0.80
-start_signature
-sleep TAKE_GAP
-play_tocker 6
-play_tocker 5
-
-# TAKE 3: BIG, ROUND, BOUNCY
-# Low-pass softens the edges; distortion adds body; short echo
-# creates a bouncing tail rather than a long wash.
-puts ""
-puts "TAKE 3 | BOUNCE / POP"
-with_fx :lpf, cutoff: 105, mix: 0.72 do
-  with_fx :distortion, distort: 0.28, mix: 0.55 do
-    with_fx :echo, phase: 0.10, decay: 0.30, mix: 0.28 do
-      play_source_blend 0.72
+puts "TAKE 3 | MELT / GLUE"
+with_fx :reverb, room: 0.76, mix: 0.36 do
+  with_fx :echo, phase: 0.12, decay: 0.48, mix: 0.30 do
+    with_fx :distortion, distort: 0.20, mix: 0.30 do
+      play_source 0, 0.52, 0.90, 0.10
+      play_source 1, 0.48, 1.08, 0.10
+      play_source 2, 0.42, 0.96, 0.10
+      sleep BLEND_WAIT
     end
   end
 end
-sleep 0.80
-start_signature
 sleep TAKE_GAP
-
-# TAKE 4: GLASSY WINK
-# Stronger echo and reverb turn the same attacks into a bright,
-# spatial, smiling tail. High notes arrive only after the blend.
-puts ""
-puts "TAKE 4 | GLASS WINK"
-with_fx :reverb, room: 0.72, mix: 0.42 do
-  with_fx :echo, phase: 0.14, decay: 0.58, mix: 0.42 do
-    play_source_blend 0.72
-    sleep 0.22
-    wink_signature
-  end
-end
-play_tocker 7
+play_tocker 3
 
 puts ""
-puts "COMBINATION LAB COMPLETE."
-puts "The log names every source and every treatment."
+puts "BLENDING LAB COMPLETE."
+puts "Three simultaneous composites, with no added melodic synth line."
