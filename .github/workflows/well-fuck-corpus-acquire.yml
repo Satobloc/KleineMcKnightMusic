@@ -1,0 +1,38 @@
+name: Well, Fuck. Corpus Acquisition
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: well-fuck-corpus-acquisition
+  cancel-in-progress: false
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Acquire and verify approved corpus archives
+        run: |
+          python SIMULATION_WORKDESKS/WELL_FUCK/tools/acquire_language_corpora.py \
+            --manifest SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/source_manifest.json \
+            --out SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming
+
+      - name: Upload original archives and acquisition report
+        uses: actions/upload-artifact@v4
+        with:
+          name: well-fuck-language-corpus-intake-${{ github.run_number }}
+          path: SIMULATION_WORKDESKS/WELL_FUCK/data/corpora/incoming/
+          if-no-files-found: error
+          retention-days: 30
