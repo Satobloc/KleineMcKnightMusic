@@ -1,9 +1,11 @@
 # HYPERFLIRT SAMPLE CHARACTER SURVEY
 # Sonic Pi 4.5 / Sonic Pi 4.x
 #
-# A slightly longer listening pass: 12 distinct files selected randomly
-# from Sonic Pi's recursive sample_paths index. Each file gets one
-# unpitched excerpt, followed by the cumulative tock counter.
+# A listening pass: 12 distinct files selected across library folders.
+# It first takes one random file from each available folder group, then
+# fills any remaining slots from the unselected library. This reduces the
+# chance that one genre or directory dominates a survey by accident.
+# Each file gets one unpitched excerpt, followed by the cumulative tock.
 #
 # Preloads only this small batch before playback.
 # No effects, synth layers, or playback-rate changes.
@@ -31,8 +33,20 @@ puts "Sonic Pi indexed #{LIBRARY_PATHS.length} supported audio files."
 if LIBRARY_PATHS.empty?
   puts "ERROR: Sonic Pi found no supported audio files. Nothing to audition."
 else
-  TEST_PATHS = LIBRARY_PATHS.shuffle.take(TEST_COUNT)
+  # Group by the first folder below the library's immediate category folder.
+  # For example, WORLD and ELECTRONIC remain separate survey pools.
+  folder_groups = LIBRARY_PATHS.group_by do |path|
+    parts = path.split("/")
+    parts.length > 4 ? parts[0..3].join("/") : parts[0..-2].join("/")
+  end
+
+  folder_firsts = folder_groups.values.map { |paths| paths.choose }
+  diversified = folder_firsts.shuffle
+  remaining = LIBRARY_PATHS - diversified
+  TEST_PATHS = (diversified + remaining.shuffle).take(TEST_COUNT)
+
   puts "Selected #{TEST_PATHS.length} distinct files, without replacement."
+  puts "Folder groups represented: #{[folder_groups.length, TEST_COUNT].min}."
   puts "Preloading this small batch. Please wait..."
 
   load_samples TEST_PATHS
@@ -50,6 +64,7 @@ else
     puts "=============================================="
     puts "SAMPLE ID: #{sample_number}"
     puts "FILENAME: #{short_name}"
+    puts "FOLDER: #{picked_path.split("/")[0..-2].last}"
     puts "FULL PATH: #{picked_path}"
     puts "=============================================="
     puts "AUDITION: #{sample_number} | #{short_name}"
