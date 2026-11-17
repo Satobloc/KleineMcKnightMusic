@@ -1,0 +1,7 @@
+HATCHLINGS			Current WC	Target WC	
+Prologue			253	500	words
+Book	I:	Flotsam	12,511	28,339	words
+Book	II:	Americana	11,850	16,670	words
+Book	III:	Joviana	5,148	16,670	words
+Book	IV:	Rogues	15,654	20,004	words
+			45,416	82,183	
