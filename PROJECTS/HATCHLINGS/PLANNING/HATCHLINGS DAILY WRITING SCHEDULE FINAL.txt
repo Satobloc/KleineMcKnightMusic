@@ -1,0 +1,38 @@
+WEEK	DAY		BOOK	TASK	TARGET	ACTUAL	COMPLETE
+1	Su	1	Book I: Flotsam	Write Luce's release from captivity and Ivan’s execution, focusing on emotional impact and tone.	1,000		FALSE
+1	M	2	Book I: Flotsam	Draft Luce’s chaotic escape from the shipping container, highlighting his injuries and psychological state.	1,000		FALSE
+1	T	3	Book I: Flotsam	Introduce the Banguingui village, emphasizing its structure, culture, and the resourcefulness of its inhabitants.	1,000		FALSE
+1	W	4	Book I: Flotsam	Show Luce’s initial integration into the Banguingui community, including language struggles and cultural missteps.	1,000		FALSE
+1	R	5	Book I: Flotsam	Develop the discovery of the Chinese submarine and Luce’s role in deciphering its contents. Highlight tensions with the village leader.	1,000		FALSE
+1	F	6	Book I: Flotsam	Detail the pirate attack and subsequent civil war, exploring Luce’s sense of alienation and role in the conflict.	1,000		FALSE
+1	Sa	7	Book I: Flotsam	Continue expanding missing scenes, including Luce’s growing relationship with Noe and challenges in the Banguingui community.	2,000		FALSE
+2	Su	8	Book I: Flotsam	Continue expanding missing scenes, including Luce’s growing relationship with Noe and challenges in the Banguingui community.	2,000		FALSE
+2	M	9	Book I: Flotsam	Write Luce’s departure from the Banguingui, focusing on his feelings of loss and contacting the Midway Authority.	2,000		FALSE
+2	T	10	Book I: Flotsam	Write Luce’s departure from the Banguingui, focusing on his feelings of loss and contacting the Midway Authority.	2,000		FALSE
+2	W	11	Book I: Flotsam	Write Luce’s arrival at Midway Island and transfer to Portland, focusing on his “awkward homecoming.”	1,000		FALSE
+2	R	12	Book II: Americana	Detail Luce’s relationships with the Stangs, emphasizing the emotional awkwardness of living with his supposed parents.	1,000		FALSE
+2	F	13	Book II: Americana	Explore Luce’s struggles with stimulant addiction, tying it to themes of trauma and survival.	1,000		FALSE
+2	Sa	14	Book II: Americana	Write scenes of Luce’s growing fascination with Jovian culture, explaining how he accesses information and what excites him.	1,000		FALSE
+3	Su	15	Book II: Americana	Focus on Luce’s efforts to process his trauma and engage in therapy, and how his interest in Jovians offers mental escape.	1,000		FALSE
+3	M	16	Book III: Joviana	Describe Luce’s journey to the Jovian research platform, including his hopes, fears, and initial impressions.	1,000		FALSE
+3	T	17	Book III: Joviana	Write Luce’s experiences as a cook on the platform and his frustration with limited access to research, introducing the Koryak avatar’s return.	1,000		FALSE
+3	W	18	Book III: Joviana	Detail Ehrmfell’s injury, its impact on their relationship, and how it changes Luce’s status on the platform.	1,000		FALSE
+3	R	19	Book III: Joviana	Explore the rivalry between Ehrmfell and Hwaih-Wuw and its consequences for the research team, including Luce’s perspective.	1,000		FALSE
+3	F	20	Book III: Joviana	Develop the Jovians' evolving motivations, knowledge of the rogue planet, and conflicts with humans, weaving in Luce’s role.	3,000		FALSE
+3	Sa	21	Book III: Joviana	Develop the Jovians' evolving motivations, knowledge of the rogue planet, and conflicts with humans, weaving in Luce’s role.	3,000		FALSE
+4	Su	22	Book III: Joviana	Develop the Jovians' evolving motivations, knowledge of the rogue planet, and conflicts with humans, weaving in Luce’s role.	3,000		FALSE
+4	M	23	Book III: Joviana	Write scenes of Luce grappling with his understanding of the Jovians and ethical dilemmas.	1,000		FALSE
+4	T	24	Book IV: Rogues	Develop the mission to the rogue planet, including the team’s preparations, Ehrmfell’s role, and Koryak avatar’s return.	1,000		FALSE
+4	W	25	Book IV: Rogues	Write Luce’s interactions with Robin and Moos on the ship, focusing on their differing views about life, children, and the mission.	1,000		FALSE
+4	R	26	Book IV: Rogues	Describe the rogue planet’s culture, biology, and technology. Explore conflicts between humans, Jovians, and Rogues.	3,000		FALSE
+4	F	27	Book IV: Rogues	Describe the rogue planet’s culture, biology, and technology. Explore conflicts between humans, Jovians, and Rogues.	3,000		FALSE
+4	Sa	28	Book IV: Rogues	Describe the rogue planet’s culture, biology, and technology. Explore conflicts between humans, Jovians, and Rogues.	3,000		FALSE
+5	Su	29	Book IV: Rogues	Write Luce’s reflections as he serves as a mediator, focusing on his internal conflicts and the mission’s implications.	1,000		FALSE
+5	M	30	Book IV: Rogues	Draft the climactic scene where tensions peak between humans and Rogues, setting up an ambiguous ending.	1,000		FALSE
+5	T	31	Book IV: Rogues	Craft the ambiguous ending, leaving unresolved but meaningful questions about humanity, survival, and identity.	1,000		FALSE
+5	W	32	REVISIONS	Revisit and polish scenes from Book I, ensuring smooth transitions and consistency.	1,000		FALSE
+5	R	33	REVISIONS	Review Book II, focusing on character arcs and thematic connections to Luce’s trauma and adaptation.	1,000		FALSE
+5	F	34	REVISIONS	Revise Book III, ensuring clarity in the science fiction elements and Luce’s evolving role with the Jovians.	1,000		FALSE
+5	Sa	35	REVISIONS	Review Book IV, ensuring the rogue planet’s culture and conflicts integrate with the conclusion.	1,000		FALSE
+6	Su	36	REVISIONS	Final read-through of the manuscript, addressing gaps, transitions, and inconsistencies.	2,000		FALSE
+6	M	37	REVISIONS	Final read-through of the manuscript, addressing gaps, transitions, and inconsistencies.	2,000		FALSE
