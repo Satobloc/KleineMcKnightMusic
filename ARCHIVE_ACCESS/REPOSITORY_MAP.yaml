@@ -1,0 +1,38 @@
+schema_version: 1
+updated: 2026-11-18
+repository: Satobloc/KleineMcKnightMusic
+purpose: modular composition and music-systems workshop
+access_layer:
+  root_guide: ARCHIVE_ACCESS/README.md
+primary_routes:
+  project_map: SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/00_PROJECT_MAP.md
+  onboarding: SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/14_ONBOARDING_AND_CONTINUITY.md
+  operating_protocol: SUNO_WORKDESKS/SUNO_LLM_WORKSHOP_v0.1/13_OPERATING_PROTOCOL.md
+  conversations: CONVERSATIONS/README.md
+  external_mining: EXTERNAL_MINING/README.md
+  source_hopper: tools/source_hopper.py
+  source_queries: tools/source_queries.yaml
+  corpus_method: corpus/SUNO_CORPUS_METHOD.md
+  toolbox_method: docs/TOOLBOX_METHOD.md
+  toolbox_registry: toolbox/registry.yaml
+  simulation_workdesk: SIMULATION_WORKDESKS/WELL_FUCK/README.md
+evidence_types:
+  - source_artifact
+  - user_observation
+  - assistant_interpretation
+  - measurement
+  - repeated_observation
+  - hypothesis
+  - project_decision
+  - rights_or_privacy_status
+boundaries:
+  preserve_originals: true
+  no_silent_normalization: true
+  human_listening_remains_distinct_from_measurement: true
+  generative_model_observations_are_version_bound: true
+  public_availability_does_not_establish_republication_rights: true
+coverage:
+  entries_at_initial_scan: 862
+  scan_method: GitHub recursive tree on main
+  tree_truncated: false
+  note: Count includes directory entries and is a snapshot.
