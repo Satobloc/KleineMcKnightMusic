@@ -1,0 +1,45 @@
+schema_version: 1
+search_contract:
+  required_fields:
+    - question
+    - scope_paths
+    - search_terms
+    - method
+    - coverage
+    - exact_locators
+    - evidence_types
+    - unresolved_gaps
+  methods:
+    - exact_filename
+    - exact_text
+    - indexed_code_search
+    - source_hopper
+    - bounded_full_text_scan
+    - json_conversation_parse
+    - csv_record_lookup
+    - sonic_pi_code_inspection
+    - audio_metadata
+    - audio_measurement
+    - human_listening_review
+  coverage_values:
+    - complete_for_declared_scope
+    - bounded_partial
+    - index_only
+    - unavailable
+    - truncated
+  locator_fields:
+    - repository
+    - branch_or_commit
+    - path
+    - record_or_case_id
+    - page_or_line_or_timestamp
+    - git_blob_sha
+    - sha256
+  safeguards:
+    - preserve_source_prompt_lyric_audio_and_code_verbatim
+    - distinguish_listening_observation_from_measurement
+    - bind_behavior_claims_to_model_version_and_settings
+    - never_promote_hypothesis_to_rule_without_repeated_evidence
+    - inspect_underlying_artifacts_before_substantive_claims
+    - check_rights_privacy_before_sharing_or_publishing
+    - report_search_gaps_and_resumable_cursor
