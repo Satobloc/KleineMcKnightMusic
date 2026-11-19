@@ -82,6 +82,10 @@ The initial recursive Git tree scan of `main` found 862 entries (including direc
 
 Counts are a snapshot; regenerate from the live tree when needed.
 
+## Cross-repository research integration
+
+For SAT/H(s)H research that needs historical physics context, use HsH's existing [Mersearch worker route](https://github.com/Satobloc/HsH/blob/main/WORKSPACES/COMMON/MERSEARCH_WORKER_START_HERE.md). The Mersearch bridge is specifically for the three SAT/H(s)H archives and is not a music-corpus index. Keep the music repository's own source hoppers, experiment records, and evidence model authoritative for music work. Do not route private music lyrics or audio into physics archive indexing.
+
 ## Next infrastructure work
 
 - [ ] Reconcile repository inventory against current manifests and hopper indexes.
