@@ -1,0 +1,3 @@
+track,duration_seconds,original_sample_rate,channels,analysis_sample_rate,frame_hop_seconds,frames,sha256,rhythm_mean_nonlocal_similarity,rhythm_p95_nonlocal_similarity,tonal_mean_nonlocal_similarity,tonal_p95_nonlocal_similarity,timbre_mean_nonlocal_similarity,timbre_p95_nonlocal_similarity
+000 Falcon Wind Falcon.wav,252.36,48000,2,11025,0.5,505,bbf3ba0654c0a75a0b586278e723fc9f9089b31f77fbce62ff3c57d6ad60a724,-0.031141,0.561637,0.617458,0.914459,-0.000127,0.556593
+0000 Squidgy Pocalypse Yodel.wav,198.0,48000,2,11025,0.5,397,653fc17173cd2157534562ac46ffcb239f338b1bedf9727385926b2c18874614,-0.025935,0.526159,0.542885,0.906760,-0.007198,0.543094
